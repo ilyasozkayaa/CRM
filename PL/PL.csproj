@@ -98,11 +98,11 @@
     <Compile Include="CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Personeller\frmPersonelEkle.cs">
+    <Compile Include="Personeller\frmPersonel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personeller\frmPersonelEkle.Designer.cs">
-      <DependentUpon>frmPersonelEkle.cs</DependentUpon>
+    <Compile Include="Personeller\frmPersonel.Designer.cs">
+      <DependentUpon>frmPersonel.cs</DependentUpon>
     </Compile>
     <Compile Include="Profilim\frmBilgilerim.cs">
       <SubType>Form</SubType>
@@ -157,8 +157,8 @@
     <EmbeddedResource Include="KasaIslemleri\frmSatisIslemleri.resx">
       <DependentUpon>frmSatisIslemleri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personeller\frmPersonelEkle.resx">
-      <DependentUpon>frmPersonelEkle.cs</DependentUpon>
+    <EmbeddedResource Include="Personeller\frmPersonel.resx">
+      <DependentUpon>frmPersonel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profilim\frmBilgilerim.resx">
       <DependentUpon>frmBilgilerim.cs</DependentUpon>
