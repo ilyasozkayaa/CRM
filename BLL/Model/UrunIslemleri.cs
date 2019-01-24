@@ -9,24 +9,159 @@ namespace BLL.Model
 {
     public class UrunIslemleri : IUrunIslemleri
     {
+        CRMContext ent = new CRMContext();
+
+        public bool SatisiIptalEt(int SatisId)
+        {
+            bool sonuc = false;
+            List<SatisDetay> IptalEdilecekSatis = (from sd in ent.SatisDetays where sd.SatısId == SatisId select sd).ToList();
+            foreach (SatisDetay item in IptalEdilecekSatis)
+            {
+                Urun IadeEdilenUrun = (from u in ent.Uruns where u.Id == item.UrunId select u).FirstOrDefault();
+                try
+                {
+                    item.Silindi = true;
+                    IadeEdilenUrun.StokMiktarı += item.Miktar;
+                    ent.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+
+                    string message = ex.Message;
+                }           
+            }
+
+
+            return sonuc;
+        }
+
+        public bool TekKategorideIade(int SatisDetayId, int UrunID, int Miktar)
+        {
+            bool sonuc = true;
+            SatisDetay sd = (from s in ent.SatisDetays where s.Id == SatisDetayId select s).FirstOrDefault();
+            Urun IadeEdilenUrun = (from u in ent.Uruns where u.Id == sd.UrunId select u).FirstOrDefault();
+            try
+            {
+                if(sd.Miktar==Miktar)
+                {
+                    sd.Silindi = true;
+                    IadeEdilenUrun.StokMiktarı += sd.Miktar;
+                    ent.SaveChanges();
+                }
+                else
+                {
+                    sd.Miktar -= Miktar;
+                    IadeEdilenUrun.StokMiktarı += Miktar;
+                    ent.SaveChanges();
+                }
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return sonuc;
+            
+        }
+
+        public Urun urunBul(int ID)
+        {
+            Urun urun = new Urun();
+            try
+            {
+                urun = (from u in ent.Uruns where u.Id == ID select u).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return urun;
+        }
+
+        public Urun UrunBul(string UrunAdi)
+        {
+            Urun urun = new Urun();
+            try
+            {
+                urun = (from u in ent.Uruns where u.UrunAdi == UrunAdi select u).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return urun;
+        }
+
         public bool urunEkle(Urun u)
         {
-            throw new NotImplementedException();
+
+            bool sonuc = false;
+            try
+            {
+                ent.Uruns.Add(u);
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return sonuc;
         }
 
         public bool urunGuncelle(Urun u)
         {
-            throw new NotImplementedException();
-        }
+            bool sonuc = true;
+            Urun DegisecekUrun = (from d in ent.Uruns where d.Id == u.Id select d).FirstOrDefault();
+            try
+            {
+                DegisecekUrun.KategoriId = u.KategoriId;
+                DegisecekUrun.UrunAdi = u.UrunAdi;
+                DegisecekUrun.Kalip = u.Kalip;
+                DegisecekUrun.Beden = u.Beden;
+                DegisecekUrun.Malzemesi = u.Malzemesi;
+                DegisecekUrun.ÜretimYeri = u.ÜretimYeri;
+                DegisecekUrun.StokMiktarı = u.StokMiktarı;
+                DegisecekUrun.KritikEsik = u.KritikEsik;
+                DegisecekUrun.AlisFiyat = u.AlisFiyat;
+                DegisecekUrun.SatisFiyat = u.SatisFiyat;
+                DegisecekUrun.Renk = u.Renk;
 
-        public bool urunIade(int satısID)
-        {
-            throw new NotImplementedException();
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return sonuc;
         }
 
         public bool urunSil(int ID)
         {
-            throw new NotImplementedException();
+            bool sonuc = true;
+            Urun DegisecekUrun = (from u in ent.Uruns where u.Id == ID select u).FirstOrDefault();
+            try
+            {
+                DegisecekUrun.Silindi = true;
+
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return sonuc;
         }
     }
+
+       
+    
 }
