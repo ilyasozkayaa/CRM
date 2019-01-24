@@ -41,10 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\IPromosyonPirimIslemleri.cs" />
+    <Compile Include="Model\IPromosyonPrimIslemleri.cs" />
     <Compile Include="Model\IPersonelMusteriIslemleri.cs" />
     <Compile Include="Model\IRaporIslemleri.cs" />
     <Compile Include="Model\IUrunIslemleri.cs" />
+    <Compile Include="Model\PersonelMusteriIslemleri.cs" />
+    <Compile Include="Model\PromosyonPrimIslemleri.cs" />
+    <Compile Include="Model\RaporIslemleri.cs" />
+    <Compile Include="Model\UrunIslemleri.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

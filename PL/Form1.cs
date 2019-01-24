@@ -21,7 +21,7 @@ namespace PL
         private void Form1_Load(object sender, EventArgs e)
         {
             ent.Database.CreateIfNotExists();
-            dgv1.DataSource = ent.Uruns.ToList();
+            //dgv1.DataSource = ent.Uruns.ToList();
             
         }
 
@@ -30,6 +30,9 @@ namespace PL
 
         }
 
-       
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
