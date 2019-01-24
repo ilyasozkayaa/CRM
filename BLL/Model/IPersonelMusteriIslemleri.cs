@@ -20,7 +20,7 @@ namespace BLL.Model
         bool musteriSil(int ID);
         bool musteriGüncelle(Musteri p);
         List<Musteri> musterileriGetir();
-        Musteri musterileriGetir(int ID);
+        Musteri musteriGetir(int ID);
 
 
 
