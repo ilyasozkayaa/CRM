@@ -59,10 +59,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKampanyalar.cs">
+    <Compile Include="KampanyaBilgileri\frmKampanyaBilgilendirme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKampanyalar.Designer.cs">
+    <Compile Include="KampanyaBilgileri\frmKampanyaBilgilendirme.Designer.cs">
+      <DependentUpon>frmKampanyaBilgilendirme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KampanyaBilgileri\frmKampanyalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KampanyaBilgileri\frmKampanyalar.Designer.cs">
       <DependentUpon>frmKampanyalar.cs</DependentUpon>
     </Compile>
     <Compile Include="KasaIslemleri\frmUrunIade.cs">
@@ -92,6 +98,12 @@
     <Compile Include="CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Personeller\frmPersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personeller\frmPersonelEkle.Designer.cs">
+      <DependentUpon>frmPersonelEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profilim\frmBilgilerim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,16 +118,31 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Urunler\UrunIslemleri.cs">
+    <Compile Include="Urunler\frmKategoriEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Urunler\UrunIslemleri.Designer.cs">
-      <DependentUpon>UrunIslemleri.cs</DependentUpon>
+    <Compile Include="Urunler\frmKategoriEkle.Designer.cs">
+      <DependentUpon>frmKategoriEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Urunler\frmUrunEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urunler\frmUrunEkle.Designer.cs">
+      <DependentUpon>frmUrunEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Urunler\frmUrunStokİslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urunler\frmUrunStokİslemleri.Designer.cs">
+      <DependentUpon>frmUrunStokİslemleri.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmKampanyalar.resx">
+    <EmbeddedResource Include="KampanyaBilgileri\frmKampanyaBilgilendirme.resx">
+      <DependentUpon>frmKampanyaBilgilendirme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KampanyaBilgileri\frmKampanyalar.resx">
       <DependentUpon>frmKampanyalar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KasaIslemleri\frmUrunIade.resx">
@@ -130,8 +157,14 @@
     <EmbeddedResource Include="KasaIslemleri\frmSatisIslemleri.resx">
       <DependentUpon>frmSatisIslemleri.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Personeller\frmPersonelEkle.resx">
+      <DependentUpon>frmPersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Profilim\frmBilgilerim.resx">
       <DependentUpon>frmBilgilerim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profilim\frmGorevlerim.resx">
+      <DependentUpon>frmGorevlerim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -143,8 +176,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Urunler\UrunIslemleri.resx">
-      <DependentUpon>UrunIslemleri.cs</DependentUpon>
+    <EmbeddedResource Include="Urunler\frmKategoriEkle.resx">
+      <DependentUpon>frmKategoriEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urunler\frmUrunEkle.resx">
+      <DependentUpon>frmUrunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urunler\frmUrunStokİslemleri.resx">
+      <DependentUpon>frmUrunStokİslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -179,5 +218,6 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

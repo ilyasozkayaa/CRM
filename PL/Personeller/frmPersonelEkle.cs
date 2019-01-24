@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PL.Urunler
+namespace PL.Personeller
 {
-    public partial class UrunIslemleri : Form
+    public partial class frmPersonelEkle : Form
     {
-        public UrunIslemleri()
+        public frmPersonelEkle()
         {
             InitializeComponent();
-        }
-
-        private void UrunIslemleri_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
