@@ -20,7 +20,7 @@ namespace PL
         CRMContext ent = new CRMContext();
         private void Form1_Load(object sender, EventArgs e)
         {
-            ent.Database.CreateIfNotExists();
+            
             //dgv1.DataSource = ent.Uruns.ToList();
             
         }
