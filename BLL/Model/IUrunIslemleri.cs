@@ -12,7 +12,12 @@ namespace BLL.Model
         bool urunEkle(Urun u);
         bool urunGuncelle(Urun u);
         bool urunSil(int ID);
-        bool urunIade(int satısID);
+        Urun urunBul(int ID);
+        Urun UrunBul(string UrunAdi);
+        List<Urun> KategoriyeGoreUrunGetir(int ktgID);
+        List<Urun> TumUrunleriGetir();
+        bool TekKategorideIade(int SatisDetayId, int UrunID, int Miktar);
+        bool SatisiIptalEt(int SatisId);
 
     }
 }

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace BLL.Model
 {
-   public interface IRaporIslemleri
+   public class RaporIslemleri : IRaporIslemleri
     {
-
+        public RaporIslemleri()
+        {
+        }
     }
 }
