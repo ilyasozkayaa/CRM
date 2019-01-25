@@ -605,6 +605,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(637, 80);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(173, 230);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 146;
             this.pictureBox1.TabStop = false;
             // 
@@ -618,7 +619,7 @@
             this.btnResimEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResimEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnResimEkle.ForeColor = System.Drawing.Color.White;
-            this.btnResimEkle.Location = new System.Drawing.Point(637, 328);
+            this.btnResimEkle.Location = new System.Drawing.Point(652, 328);
             this.btnResimEkle.Name = "btnResimEkle";
             this.btnResimEkle.Size = new System.Drawing.Size(84, 52);
             this.btnResimEkle.TabIndex = 147;
