@@ -28,46 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelHeader1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.txtKategoriAd = new System.Windows.Forms.TextBox();
+            this.txtAciklama = new System.Windows.Forms.TextBox();
+            this.btnKatagoriEkle = new System.Windows.Forms.Button();
+            this.btnKategoriSil = new System.Windows.Forms.Button();
+            this.btnKategoriGuncelle = new System.Windows.Forms.Button();
+            this.panelHeader2 = new System.Windows.Forms.Panel();
+            this.panelKategoriEkle = new System.Windows.Forms.Panel();
+            this.panelDataGridView = new System.Windows.Forms.Panel();
+            this.dgKatagoriListe = new System.Windows.Forms.DataGridView();
+            this.panelHeader1.SuspendLayout();
+            this.panelKategoriEkle.SuspendLayout();
+            this.panelDataGridView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgKatagoriListe)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelHeader1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1054, 41);
-            this.panel1.TabIndex = 7;
+            this.panelHeader1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelHeader1.Controls.Add(this.label13);
+            this.panelHeader1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader1.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader1.Name = "panelHeader1";
+            this.panelHeader1.Size = new System.Drawing.Size(1054, 41);
+            this.panelHeader1.TabIndex = 7;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(152, 9);
+            this.label13.Location = new System.Drawing.Point(0, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(137, 20);
+            this.label13.Size = new System.Drawing.Size(231, 31);
             this.label13.TabIndex = 0;
             this.label13.Text = "KATEGORİ EKLE";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(236, 106);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(106, 54);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 17);
+            this.label7.Size = new System.Drawing.Size(95, 20);
             this.label7.TabIndex = 26;
             this.label7.Text = "Kategori Adı";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -75,103 +84,149 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(236, 144);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(106, 89);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 17);
+            this.label6.Size = new System.Drawing.Size(73, 20);
             this.label6.TabIndex = 27;
             this.label6.Text = "Açıklama";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // textBox1
+            // txtKategoriAd
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(339, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 26);
-            this.textBox1.TabIndex = 31;
+            this.txtKategoriAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKategoriAd.Location = new System.Drawing.Point(209, 51);
+            this.txtKategoriAd.Name = "txtKategoriAd";
+            this.txtKategoriAd.Size = new System.Drawing.Size(226, 26);
+            this.txtKategoriAd.TabIndex = 31;
             // 
-            // textBox2
+            // txtAciklama
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.Location = new System.Drawing.Point(339, 138);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(226, 115);
-            this.textBox2.TabIndex = 31;
+            this.txtAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAciklama.Location = new System.Drawing.Point(209, 86);
+            this.txtAciklama.Multiline = true;
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(226, 115);
+            this.txtAciklama.TabIndex = 31;
             // 
-            // button2
+            // btnKatagoriEkle
             // 
-            this.button2.BackColor = System.Drawing.Color.SteelBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(260, 303);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 56);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "EKLE";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnKatagoriEkle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnKatagoriEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKatagoriEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKatagoriEkle.ForeColor = System.Drawing.Color.White;
+            this.btnKatagoriEkle.Location = new System.Drawing.Point(162, 232);
+            this.btnKatagoriEkle.Name = "btnKatagoriEkle";
+            this.btnKatagoriEkle.Size = new System.Drawing.Size(100, 50);
+            this.btnKatagoriEkle.TabIndex = 32;
+            this.btnKatagoriEkle.Text = "EKLE";
+            this.btnKatagoriEkle.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnKategoriSil
             // 
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(497, 303);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 56);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "SİL";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnKategoriSil.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnKategoriSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKategoriSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKategoriSil.ForeColor = System.Drawing.Color.White;
+            this.btnKategoriSil.Location = new System.Drawing.Point(385, 232);
+            this.btnKategoriSil.Name = "btnKategoriSil";
+            this.btnKategoriSil.Size = new System.Drawing.Size(100, 50);
+            this.btnKategoriSil.TabIndex = 33;
+            this.btnKategoriSil.Text = "SİL";
+            this.btnKategoriSil.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnKategoriGuncelle
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(377, 303);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 56);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "GÜNCELLE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnKategoriGuncelle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnKategoriGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKategoriGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKategoriGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnKategoriGuncelle.Location = new System.Drawing.Point(275, 232);
+            this.btnKategoriGuncelle.Name = "btnKategoriGuncelle";
+            this.btnKategoriGuncelle.Size = new System.Drawing.Size(100, 50);
+            this.btnKategoriGuncelle.TabIndex = 34;
+            this.btnKategoriGuncelle.Text = "GÜNCELLE";
+            this.btnKategoriGuncelle.UseVisualStyleBackColor = false;
+            // 
+            // panelHeader2
+            // 
+            this.panelHeader2.BackColor = System.Drawing.Color.White;
+            this.panelHeader2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader2.Location = new System.Drawing.Point(0, 41);
+            this.panelHeader2.Name = "panelHeader2";
+            this.panelHeader2.Size = new System.Drawing.Size(1054, 80);
+            this.panelHeader2.TabIndex = 36;
+            // 
+            // panelKategoriEkle
+            // 
+            this.panelKategoriEkle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelKategoriEkle.Controls.Add(this.txtAciklama);
+            this.panelKategoriEkle.Controls.Add(this.label6);
+            this.panelKategoriEkle.Controls.Add(this.btnKatagoriEkle);
+            this.panelKategoriEkle.Controls.Add(this.label7);
+            this.panelKategoriEkle.Controls.Add(this.btnKategoriSil);
+            this.panelKategoriEkle.Controls.Add(this.txtKategoriAd);
+            this.panelKategoriEkle.Controls.Add(this.btnKategoriGuncelle);
+            this.panelKategoriEkle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelKategoriEkle.Location = new System.Drawing.Point(0, 121);
+            this.panelKategoriEkle.Name = "panelKategoriEkle";
+            this.panelKategoriEkle.Size = new System.Drawing.Size(527, 376);
+            this.panelKategoriEkle.TabIndex = 37;
+            // 
+            // panelDataGridView
+            // 
+            this.panelDataGridView.Controls.Add(this.dgKatagoriListe);
+            this.panelDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDataGridView.Location = new System.Drawing.Point(527, 121);
+            this.panelDataGridView.Name = "panelDataGridView";
+            this.panelDataGridView.Size = new System.Drawing.Size(527, 376);
+            this.panelDataGridView.TabIndex = 38;
+            // 
+            // dgKatagoriListe
+            // 
+            this.dgKatagoriListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgKatagoriListe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgKatagoriListe.Location = new System.Drawing.Point(0, 0);
+            this.dgKatagoriListe.Name = "dgKatagoriListe";
+            this.dgKatagoriListe.Size = new System.Drawing.Size(527, 376);
+            this.dgKatagoriListe.TabIndex = 0;
             // 
             // frmKategoriEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 497);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelDataGridView);
+            this.Controls.Add(this.panelKategoriEkle);
+            this.Controls.Add(this.panelHeader2);
+            this.Controls.Add(this.panelHeader1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmKategoriEkle";
             this.Text = "frmKategoriEkle";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelHeader1.ResumeLayout(false);
+            this.panelHeader1.PerformLayout();
+            this.panelKategoriEkle.ResumeLayout(false);
+            this.panelKategoriEkle.PerformLayout();
+            this.panelDataGridView.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgKatagoriListe)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelHeader1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtKategoriAd;
+        private System.Windows.Forms.TextBox txtAciklama;
+        private System.Windows.Forms.Button btnKatagoriEkle;
+        private System.Windows.Forms.Button btnKategoriSil;
+        private System.Windows.Forms.Button btnKategoriGuncelle;
+        private System.Windows.Forms.Panel panelHeader2;
+        private System.Windows.Forms.Panel panelKategoriEkle;
+        private System.Windows.Forms.Panel panelDataGridView;
+        private System.Windows.Forms.DataGridView dgKatagoriListe;
     }
 }

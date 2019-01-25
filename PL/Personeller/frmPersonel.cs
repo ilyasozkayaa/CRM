@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,21 +18,55 @@ namespace PL.Personeller
             InitializeComponent();
         }
         string dosyayolu;
-        Bitmap bmp;
-    
-        private void button3_Click(object sender, EventArgs e)
+        //Bitmap bmp;
+
+      
+        
+
+        
+        private void pbFoto_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            dosyayolu = openFileDialog1.FileName;
-            bmp = new Bitmap(dosyayolu);
-            pictureBox1.Image = bmp;
+            OpenFileDialog dosya1 = new OpenFileDialog();
+            dosya1.ShowDialog();
+            dosyayolu = dosya1.FileName;
+            pbFoto.ImageLocation = dosyayolu;
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnResimKaydet_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Filter = "(*.jpg)|*.jpg";
-            saveFileDialog1.ShowDialog();
-            bmp.Save(saveFileDialog1.FileName);
+           
+            SaveFileDialog dosya = new SaveFileDialog();  //yeni bir kaydetme diyaloğu oluşturuyoruz.
+
+            dosya.Filter = "jpeg dosyası(*.jpg)|*.jpg|Bitmap(*.bmp)|*.bmp";//.bmp veya .jpg olarak kayıt imkanı sağlıyoruz.
+
+            dosya.Title = "Kayıt";//diğaloğumuzun başlığını belirliyoruz.
+
+            dosya.FileName = "resim.jpeg";//kaydedilen resmimizin adını 'resim' olarak belirliyoruz.
+
+            //pbFoto.Image.Save("C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm");
+            //dosya.InitialDirectory = "C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm";
+
+           
+
+            
+            
+        
+                string hedef = Path.Combine("C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm", dosya.FileName);
+                File.Copy(dosyayolu, hedef);
+             
+
+            }
+
+        private void panelPersonelResim_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
-}
+    }
+

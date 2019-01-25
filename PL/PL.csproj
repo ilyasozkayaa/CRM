@@ -104,6 +104,12 @@
     <Compile Include="Personeller\frmPersonel.Designer.cs">
       <DependentUpon>frmPersonel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personeller\frmTasima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personeller\frmTasima.Designer.cs">
+      <DependentUpon>frmTasima.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profilim\frmBilgilerim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Personeller\frmPersonel.resx">
       <DependentUpon>frmPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personeller\frmTasima.resx">
+      <DependentUpon>frmTasima.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profilim\frmBilgilerim.resx">
       <DependentUpon>frmBilgilerim.cs</DependentUpon>
