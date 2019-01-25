@@ -33,14 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,27 +46,183 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmAnasayfa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmAnasayfa.Designer.cs">
+      <DependentUpon>frmAnasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiris.Designer.cs">
+      <DependentUpon>frmGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmUrunIade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmUrunIade.Designer.cs">
+      <DependentUpon>frmUrunIade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmUyeKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmUyeKayit.Designer.cs">
+      <DependentUpon>frmUyeKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmUyeMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmUyeMusteri.Designer.cs">
+      <DependentUpon>frmUyeMusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmSatisIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmSatisIslemleri.Designer.cs">
+      <DependentUpon>frmSatisIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciDetay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KullaniciDetay.Designer.cs">
+      <DependentUpon>KullaniciDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\frmPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\frmPersonel.Designer.cs">
+      <DependentUpon>frmPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\GorevAtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\GorevAtama.Designer.cs">
+      <DependentUpon>GorevAtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Personeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Personeller.Designer.cs">
+      <DependentUpon>Personeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profilim\frmBilgilerim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profilim\frmBilgilerim.Designer.cs">
+      <DependentUpon>frmBilgilerim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profilim\frmGorevlerim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profilim\frmGorevlerim.Designer.cs">
+      <DependentUpon>frmGorevlerim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CircularPictureBox.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Urunler\frmKategoriEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urunler\frmKategoriEkle.Designer.cs">
+      <DependentUpon>frmKategoriEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Urunler\frmUrunEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urunler\frmUrunEkle.Designer.cs">
+      <DependentUpon>frmUrunEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Urunler\frmUrunStokİslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urunler\frmUrunStokİslemleri.Designer.cs">
+      <DependentUpon>frmUrunStokİslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LOGO.Designer.cs">
+      <DependentUpon>LOGO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Header.Designer.cs">
+      <DependentUpon>Header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GorevKarti.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GorevKarti.Designer.cs">
+      <DependentUpon>GorevKarti.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAnasayfa.resx">
+      <DependentUpon>frmAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGiris.resx">
+      <DependentUpon>frmGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KasaIslemleri\frmUrunIade.resx">
+      <DependentUpon>frmUrunIade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KasaIslemleri\frmUyeKayit.resx">
+      <DependentUpon>frmUyeKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KasaIslemleri\frmUyeMusteri.resx">
+      <DependentUpon>frmUyeMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KasaIslemleri\frmSatisIslemleri.resx">
+      <DependentUpon>frmSatisIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciDetay.resx">
+      <DependentUpon>KullaniciDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGO.resx">
+      <DependentUpon>LOGO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\frmPersonel.resx">
+      <DependentUpon>frmPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\GorevAtama.resx">
+      <DependentUpon>GorevAtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Personeller.resx">
+      <DependentUpon>Personeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profilim\frmBilgilerim.resx">
+      <DependentUpon>frmBilgilerim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profilim\frmGorevlerim.resx">
+      <DependentUpon>frmGorevlerim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="packages.config" />
+    <EmbeddedResource Include="Urunler\frmKategoriEkle.resx">
+      <DependentUpon>frmKategoriEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urunler\frmUrunEkle.resx">
+      <DependentUpon>frmUrunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urunler\frmUrunStokİslemleri.resx">
+      <DependentUpon>frmUrunStokİslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Header.resx">
+      <DependentUpon>Header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GorevKarti.resx">
+      <DependentUpon>GorevKarti.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -85,9 +234,115 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_register-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_badge-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashregister.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kampanya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marketin2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marketing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marketing3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\persons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profileicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uparrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hanger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\launchpad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personelFoto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-virtual-machine-32 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-multiply-32 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-horizontal-line-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notifred.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bow-tie-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bow-tie-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
