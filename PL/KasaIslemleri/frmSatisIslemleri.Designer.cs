@@ -37,8 +37,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.circularPictureBox1 = new PL.CircularPictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -46,8 +48,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.circularPictureBox1 = new PL.CircularPictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -61,7 +61,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(553, 70);
+            this.panel1.Size = new System.Drawing.Size(1054, 70);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -124,7 +124,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(211, 390);
+            this.panel2.Size = new System.Drawing.Size(211, 427);
             this.panel2.TabIndex = 5;
             // 
             // panel4
@@ -142,7 +142,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(211, 390);
+            this.panel4.Size = new System.Drawing.Size(211, 427);
             this.panel4.TabIndex = 6;
             // 
             // button7
@@ -157,6 +157,19 @@
             this.button7.TabIndex = 9;
             this.button7.Text = "Üye Olmadan Devam Et";
             this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.SteelBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(29, 60);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(158, 43);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Üye Müşteri";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -175,6 +188,17 @@
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "label5";
+            // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.circularPictureBox1.Image = global::PL.Properties.Resources.images1;
+            this.circularPictureBox1.Location = new System.Drawing.Point(6, 353);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(38, 34);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox1.TabIndex = 6;
+            this.circularPictureBox1.TabStop = false;
             // 
             // label4
             // 
@@ -250,38 +274,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(211, 70);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(339, 390);
+            this.panel3.Size = new System.Drawing.Size(339, 427);
             this.panel3.TabIndex = 6;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.SteelBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(29, 60);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(158, 43);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Üye Müşteri";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.circularPictureBox1.Image = global::PL.Properties.Resources.images1;
-            this.circularPictureBox1.Location = new System.Drawing.Point(6, 353);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(38, 34);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 6;
-            this.circularPictureBox1.TabStop = false;
             // 
             // frmSatisIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 460);
+            this.ClientSize = new System.Drawing.Size(1054, 497);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);

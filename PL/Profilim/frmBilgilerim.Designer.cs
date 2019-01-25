@@ -30,6 +30,8 @@
         {
             this.circularPictureBox1 = new PL.CircularPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblAdi = new System.Windows.Forms.Label();
+            this.lblSoyAdi = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.lblSoyAdi = new System.Windows.Forms.Label();
-            this.lblAdi = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             // 
             this.circularPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.circularPictureBox1.Image = global::PL.Properties.Resources.images1;
-            this.circularPictureBox1.Location = new System.Drawing.Point(17, 41);
+            this.circularPictureBox1.Location = new System.Drawing.Point(70, 47);
             this.circularPictureBox1.Name = "circularPictureBox1";
             this.circularPictureBox1.Size = new System.Drawing.Size(139, 92);
             this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -87,9 +87,31 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(587, 90);
+            this.panel1.Size = new System.Drawing.Size(1054, 90);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblAdi
+            // 
+            this.lblAdi.AutoSize = true;
+            this.lblAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAdi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAdi.Location = new System.Drawing.Point(233, 34);
+            this.lblAdi.Name = "lblAdi";
+            this.lblAdi.Size = new System.Drawing.Size(50, 26);
+            this.lblAdi.TabIndex = 2;
+            this.lblAdi.Text = "Adı ";
+            // 
+            // lblSoyAdi
+            // 
+            this.lblSoyAdi.AutoSize = true;
+            this.lblSoyAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSoyAdi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSoyAdi.Location = new System.Drawing.Point(204, 60);
+            this.lblSoyAdi.Name = "lblSoyAdi";
+            this.lblSoyAdi.Size = new System.Drawing.Size(79, 26);
+            this.lblSoyAdi.TabIndex = 2;
+            this.lblSoyAdi.Text = "Soyadı";
             // 
             // label3
             // 
@@ -221,28 +243,6 @@
             this.label16.Size = new System.Drawing.Size(106, 17);
             this.label16.TabIndex = 6;
             this.label16.Text = "Genel Bilgiler";
-            // 
-            // lblSoyAdi
-            // 
-            this.lblSoyAdi.AutoSize = true;
-            this.lblSoyAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSoyAdi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSoyAdi.Location = new System.Drawing.Point(174, 58);
-            this.lblSoyAdi.Name = "lblSoyAdi";
-            this.lblSoyAdi.Size = new System.Drawing.Size(79, 26);
-            this.lblSoyAdi.TabIndex = 2;
-            this.lblSoyAdi.Text = "Soyadı";
-            // 
-            // lblAdi
-            // 
-            this.lblAdi.AutoSize = true;
-            this.lblAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAdi.Location = new System.Drawing.Point(177, 34);
-            this.lblAdi.Name = "lblAdi";
-            this.lblAdi.Size = new System.Drawing.Size(50, 26);
-            this.lblAdi.TabIndex = 2;
-            this.lblAdi.Text = "Adı ";
             // 
             // label18
             // 
@@ -418,7 +418,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 558);
+            this.ClientSize = new System.Drawing.Size(1054, 497);
             this.Controls.Add(this.circularPictureBox1);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.label32);
