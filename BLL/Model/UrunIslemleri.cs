@@ -11,6 +11,14 @@ namespace BLL.Model
     {
         CRMContext ent = new CRMContext();
 
+        public List<Urun> KategoriyeGoreUrunGetir(int ktgID)
+        {
+            List<Urun> KategoriyeGoreUrunListesi = new List<Urun>();
+            KategoriyeGoreUrunListesi = (from u in ent.Uruns where u.KategoriId == ktgID select u).ToList();
+
+            return KategoriyeGoreUrunListesi;
+        }
+
         public bool SatisiIptalEt(int SatisId)
         {
             bool sonuc = false;
@@ -63,6 +71,14 @@ namespace BLL.Model
             }
             return sonuc;
             
+        }
+
+        public List<Urun> TumUrunleriGetir()
+        {
+            List<Urun> Urunler = new List<Urun>();
+            Urunler = (from u in ent.Uruns where u.Silindi == false select u).ToList();
+
+            return Urunler;
         }
 
         public Urun urunBul(int ID)

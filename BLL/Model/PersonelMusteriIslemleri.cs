@@ -76,7 +76,7 @@ namespace BLL.Model
         public List<Musteri> musterileriGetir()
         {
             List<Musteri> MusteriListesi = new List<Musteri>();
-            MusteriListesi = ent.Musteris.ToList();
+            MusteriListesi = (from m in ent.Musteris where m.Silindi == false select m).ToList();
 
             return MusteriListesi;
         }
@@ -170,7 +170,7 @@ namespace BLL.Model
         public List<Personel> personelleriGetir()
         {
             List<Personel> PersonelListesi = new List<Personel>();
-            PersonelListesi = (from p in ent.Personels select p).ToList();
+            PersonelListesi = (from p in ent.Personels where p.Silindi==false select p).ToList();
 
             return PersonelListesi;
         }

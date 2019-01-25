@@ -14,6 +14,8 @@ namespace BLL.Model
         bool urunSil(int ID);
         Urun urunBul(int ID);
         Urun UrunBul(string UrunAdi);
+        List<Urun> KategoriyeGoreUrunGetir(int ktgID);
+        List<Urun> TumUrunleriGetir();
         bool TekKategorideIade(int SatisDetayId, int UrunID, int Miktar);
         bool SatisiIptalEt(int SatisId);
 
