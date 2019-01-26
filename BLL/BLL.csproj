@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Genel.cs" />
+    <Compile Include="Model\IGenel.cs" />
     <Compile Include="Model\IPromosyonPrimIslemleri.cs" />
     <Compile Include="Model\IPersonelMusteriIslemleri.cs" />
     <Compile Include="Model\IRaporIslemleri.cs" />

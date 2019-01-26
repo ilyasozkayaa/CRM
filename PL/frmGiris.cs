@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace PL
         {
             InitializeComponent();
         }
+        Genel Gnl = new Genel();
 
         private void frmGiris_Load(object sender, EventArgs e)
         {
@@ -24,19 +26,23 @@ namespace PL
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int KullaniciId = 12345;
-            int KulaniciSifre = 12345;
-            if (KullaniciId.ToString()==txtId.Text && KulaniciSifre.ToString()==txtParola.Text)
+            if (txtId.Text.Trim()!="" && txtParola.Text.Trim()!="")
             {
-                this.Close();
-                Form frm = new frmAnasayfa();
-                frm.Show();
+                if(Gnl.giris(txtId.Text,txtParola.Text)!=0)
+                {
+                    Form frm = new frmAnasayfa();
+                    frm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Bilgilerinizi kontrol ediniz!!!", "Hatalı Giriş!");
+                }
             }
             else
             {
-                MessageBox.Show("Yanlış parola veya kullanıcı adı");
-
+                MessageBox.Show("Şifre ve Parolanızı Giriniz!!!", "Eksik bilgi Girişi Yaptınız!");
             }
+           
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
