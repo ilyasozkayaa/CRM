@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,12 @@ namespace PL.Profilim
             InitializeComponent();
         }
 
+        Degiskentanimla deg = new Degiskentanimla();
         private void frmBilgilerim_Load(object sender, EventArgs e)
         {
-
+            PersonelMusteriIslemleri per = new PersonelMusteriIslemleri();
+            per.PersonelGetir(deg.Id);
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

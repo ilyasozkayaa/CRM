@@ -18,7 +18,7 @@ namespace PL
             InitializeComponent();
         }
         Genel Gnl = new Genel();
-
+        Degiskentanimla deg = new Degiskentanimla();
         private void frmGiris_Load(object sender, EventArgs e)
         {
 
@@ -26,9 +26,13 @@ namespace PL
 
         private void button2_Click(object sender, EventArgs e)
         {
+            PersonelMusteriIslemleri prm = new PersonelMusteriIslemleri();
             if (txtId.Text.Trim()!="" && txtParola.Text.Trim()!="")
             {
-                if(Gnl.giris(txtId.Text,txtParola.Text)!=0)
+                int GirisId = Gnl.giris(txtId.Text, txtParola.Text);
+                deg.Id = prm.UsersIdyeGorePersoneliGetirme(GirisId);
+                
+                if (GirisId!=0)
                 {
                     Form frm = new frmAnasayfa();
                     frm.Show();

@@ -52,7 +52,7 @@ namespace PL.Personeller
             personelList.Adres = txtAdres.Text;
             personelList.Email = txtEmail.Text;
             personelList.Image = gen.imagePath;
-            personelList.Cinsiyet = cbCinsiyet.SelectedValue.ToString();
+            personelList.Cinsiyet = cbCinsiyet.SelectedItem.ToString();
             personelList.IseGirisTarihi = dateİseGiris.Value;
             personelList.IstenCikisTarihi = dateİseGiris.Value;
             bool sonuc = pmi.personelEkle(personelList);
@@ -88,7 +88,7 @@ namespace PL.Personeller
 
             
             //File.Copy(dosyayolu, hedef);
-            File.Move(dosyayolu, "C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm" +txtAd.Text+""+txtSoyad.Text+".jpg");
+            File.Move(dosyayolu, "C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm\\" +txtAd.Text+""+txtSoyad.Text+".jpg");
             string hedef = Path.Combine("C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm\\"+txtAd.Text+""+ txtSoyad.Text+".jpg");
             gen.imagePath = hedef;
 

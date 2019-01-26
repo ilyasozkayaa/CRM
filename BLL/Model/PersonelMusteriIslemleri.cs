@@ -117,6 +117,12 @@ namespace BLL.Model
             return sonuc;
 
         }
+        public int UsersIdyeGorePersoneliGetirme(int ID)// personel tablosundaki UsersId kolonunagore arama yapıpo satırı getirdım ve return gelen satırdalkı  ıd yı aldım.
+        {
+            Personel prsnl = new Personel();
+            prsnl = (from p in ent.Personels where p.UserId == ID select p).FirstOrDefault();
+            return prsnl.Id;
+        }
 
         public Personel PersonelGetir(int ID)
         {
