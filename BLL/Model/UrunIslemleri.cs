@@ -11,11 +11,68 @@ namespace BLL.Model
     {
         CRMContext ent = new CRMContext();
 
+        public bool KategoriEkle(Kategori k)
+        {
+
+            bool sonuc = false;
+            try
+            {
+                ent.Kategoris.Add(k);
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+
+
+            return sonuc;
+        }
+
+        public bool KategoriGuncelle(Kategori k)
+        {
+            bool sonuc = false;
+            Kategori DegisecekKtg = (from ktg in ent.Kategoris where ktg.Id == k.Id select ktg).FirstOrDefault();
+            try
+            {
+                DegisecekKtg.KategoriAdi = k.KategoriAdi;
+                DegisecekKtg.Aciklama = k.Aciklama;
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return sonuc;
+        }
+
         public List<Kategori> kategorileriGetir()
         {
             List<Kategori> ktgListesi = new List<Kategori>();
-            ktgListesi = ent.Kategoris.ToList();
+            ktgListesi = (from k in ent.Kategoris where k.Silindi == false select k).ToList();
             return ktgListesi;
+        }
+
+        public bool KategoriSil(int ID)
+        {
+            bool sonuc = false;
+            Kategori silicenekKtg = (from k in ent.Kategoris where k.Id == ID select k).FirstOrDefault();
+            try
+            {
+                silicenekKtg.Silindi = true;
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return sonuc;
         }
 
         public List<Urun> KategoriyeGoreUrunGetir(int ktgID)
