@@ -15,10 +15,10 @@ namespace DAL.Context
         [Key]
         public int Id { get; set; }
         [Required]
-        [StringLength(30)]
+        
         public string KategoriAdi { get; set; }
         [Required]
-        [StringLength(30)]
+        
         public string Aciklama { get; set; }
         [DefaultValue(false)]
         public bool Silindi { get; set; }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Context
 {
-    [Table("Urunler")]
+    [Table("Ürünler")]
    public class Urun
     {
         [Key]
@@ -17,22 +17,22 @@ namespace DAL.Context
         [Required]
         public int KategoriId { get; set; }
         [Required]
-        [StringLength(30)]
+        
         public string UrunAdi { get; set; }
         [Required]
-        [StringLength(20)]
+        
         public string Kalip { get; set; }
         [Required]
-        [StringLength(20)]
+        
         public string Beden { get; set; }
         [Required]
-        [StringLength(20)]
+        
         public string Malzemesi { get; set; }
         [Required]
-        [StringLength(20)]
+        
         public string Renk { get; set; }
         [Required]
-        [StringLength(20)]
+        
         public string ÜretimYeri { get; set; }
         [Required]
         public int StokMiktarı { get; set; }
