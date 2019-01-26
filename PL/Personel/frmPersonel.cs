@@ -67,6 +67,11 @@ namespace PL.Personeller
         {
 
         }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 
