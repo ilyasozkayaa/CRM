@@ -33,6 +33,7 @@ namespace PL
                 {
                     Form frm = new frmAnasayfa();
                     frm.Show();
+                    this.Visible = false;
                 }
                 else
                 {
