@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPersonel));
             this.panelHeader1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,7 +56,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.cbAskerlik = new System.Windows.Forms.ComboBox();
             this.txtEngelAciklama = new System.Windows.Forms.TextBox();
-            this.txt = new System.Windows.Forms.DateTimePicker();
+            this.dtpDogumT = new System.Windows.Forms.DateTimePicker();
             this.cbEgitim = new System.Windows.Forms.ComboBox();
             this.txtAdres = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -163,7 +162,7 @@
             this.panelPersonelKisisel.Controls.Add(this.label14);
             this.panelPersonelKisisel.Controls.Add(this.cbAskerlik);
             this.panelPersonelKisisel.Controls.Add(this.txtEngelAciklama);
-            this.panelPersonelKisisel.Controls.Add(this.txt);
+            this.panelPersonelKisisel.Controls.Add(this.dtpDogumT);
             this.panelPersonelKisisel.Controls.Add(this.cbEgitim);
             this.panelPersonelKisisel.Controls.Add(this.txtAdres);
             this.panelPersonelKisisel.Controls.Add(this.txtEmail);
@@ -289,11 +288,10 @@
             this.cbDogumYeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbDogumYeri.FormattingEnabled = true;
             this.cbDogumYeri.Items.AddRange(new object[] {
-            "İlkokul",
-            "Ortaokul",
-            "Lise",
-            "Lisans",
-            "Yüksek Lisans"});
+            "Sivas",
+            "Ankara",
+            "İstanbul",
+            "Bursa"});
             this.cbDogumYeri.Location = new System.Drawing.Point(113, 148);
             this.cbDogumYeri.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.cbDogumYeri.Name = "cbDogumYeri";
@@ -411,14 +409,14 @@
             this.txtEngelAciklama.Size = new System.Drawing.Size(159, 113);
             this.txtEngelAciklama.TabIndex = 180;
             // 
-            // txt
+            // dtpDogumT
             // 
-            this.txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt.Location = new System.Drawing.Point(113, 115);
-            this.txt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(135, 26);
-            this.txt.TabIndex = 157;
+            this.dtpDogumT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtpDogumT.Location = new System.Drawing.Point(113, 115);
+            this.dtpDogumT.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.dtpDogumT.Name = "dtpDogumT";
+            this.dtpDogumT.Size = new System.Drawing.Size(135, 26);
+            this.dtpDogumT.TabIndex = 157;
             // 
             // cbEgitim
             // 
@@ -626,16 +624,17 @@
             // 
             // pbFoto
             // 
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFoto.ErrorImage = null;
-            this.pbFoto.Image = ((System.Drawing.Image)(resources.GetObject("pbFoto.Image")));
             this.pbFoto.ImageLocation = "";
-            this.pbFoto.Location = new System.Drawing.Point(158, 6);
+            this.pbFoto.Location = new System.Drawing.Point(115, 19);
             this.pbFoto.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.pbFoto.Name = "pbFoto";
-            this.pbFoto.Size = new System.Drawing.Size(175, 206);
+            this.pbFoto.Size = new System.Drawing.Size(165, 179);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbFoto.TabIndex = 175;
             this.pbFoto.TabStop = false;
+            this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click_1);
             // 
             // frmPersonel
             // 
@@ -679,7 +678,7 @@
         private System.Windows.Forms.TextBox txtTCKNo;
         private System.Windows.Forms.MaskedTextBox txtTelefon;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker txt;
+        private System.Windows.Forms.DateTimePicker dtpDogumT;
         private System.Windows.Forms.TextBox txtAdres;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label15;
@@ -707,11 +706,11 @@
         private System.Windows.Forms.ComboBox cbAskerlik;
         private System.Windows.Forms.TextBox txtEngelAciklama;
         private System.Windows.Forms.ComboBox cbEgitim;
-        private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.TextBox txtKullaniciSifre;
         private System.Windows.Forms.TextBox txtKullaniciAd;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.PictureBox pbFoto;
     }
 }

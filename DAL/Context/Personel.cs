@@ -13,29 +13,29 @@ namespace DAL.Context
    public class Personel
     {
         [Key]
-        public int Id { get; set; }
+        public int       Id { get; set; }
         [Required]
-        public string Ad { get; set; }
+        public string    Ad { get; set; }
         [Required]
-        public string Soyad { get; set; }
+        public string    Soyad { get; set; }
         [Required]
-        public string TCKNo { get; set; }
+        public string    TCKNo { get; set; }
         [Required]
-        public string Telefon { get; set; }
+        public string    Telefon { get; set; }
         [Required]
-        public DateTime DogumTarihi { get; set; }
-        public string DogumYeri { get; set; }
+        public DateTime   DogumTarihi { get; set; }
+        public string     DogumYeri { get; set; }
         [Required]
-        public string Adres { get; set; }
+        public string     Adres { get; set; }
         [Required]
-        public string Email { get; set; }
+        public string     Email { get; set; }
         [Required]
-        public string Image { get; set; }
+        public string    Image { get; set; }
         [Required]
-        public string Cinsiyet { get; set; }
+        public string     Cinsiyet { get; set; }
         [Required]
-        public DateTime IseGirisTarihi { get; set; }
-        public DateTime IstenCikisTarihi { get; set; }
+        public DateTime   IseGirisTarihi { get; set; }
+        public DateTime   IstenCikisTarihi { get; set; }
         public string MedeniHal { get; set; }
         [Required]
         public string AskerlikDurumu { get; set; }

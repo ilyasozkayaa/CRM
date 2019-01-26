@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 using DAL.Context;
 
 namespace BLL.Model
-{
+{ 
     public class Genel : IGenel
     {
+       
+
         CRMContext ent = new CRMContext();
         public void FormAcikmi()
         {
             throw new NotImplementedException();
         }
-
+        
         public int giris(string KullaniciAdi, string parola)
         {
 
@@ -57,5 +59,11 @@ namespace BLL.Model
             throw new NotImplementedException();
         }
 
+    }
+
+    public class Degiskentanimla
+    {
+        public int Id { get; set; }
+        public string imagePath { get; set; }
     }
 }

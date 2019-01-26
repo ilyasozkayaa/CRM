@@ -84,14 +84,14 @@
             this.txtParola.Name = "txtParola";
             this.txtParola.PasswordChar = '•';
             this.txtParola.Size = new System.Drawing.Size(116, 20);
-            this.txtParola.TabIndex = 2;
+            this.txtParola.TabIndex = 1;
             // 
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(108, 187);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(116, 20);
-            this.txtId.TabIndex = 3;
+            this.txtId.TabIndex = 0;
             // 
             // label2
             // 
@@ -180,6 +180,7 @@
             this.Name = "frmGiris";
             this.Text = "frmGiris";
             this.Load += new System.EventHandler(this.frmGiris_Load);
+            this.Enter += new System.EventHandler(this.button2_Click);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

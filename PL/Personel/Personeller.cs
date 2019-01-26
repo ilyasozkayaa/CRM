@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PL.Personeller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace PL.Personel
         public Personeller()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPersonel form = new frmPersonel();
+            form.ShowDialog();
         }
     }
 }
