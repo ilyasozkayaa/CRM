@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,8 @@ namespace PL.Personeller
         string dosyayolu;
         //Bitmap bmp;
 
-      
+        PersonelMusteriIslemleri pmi = new PersonelMusteriIslemleri();
+
         
 
         
@@ -64,6 +66,11 @@ namespace PL.Personeller
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
         {
 
         }
