@@ -32,8 +32,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panelHeader2 = new System.Windows.Forms.Panel();
             this.panelUunBilgileri = new System.Windows.Forms.Panel();
-            this.panelUrundgv = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnUrunEkle = new System.Windows.Forms.Button();
             this.btnUrunSil = new System.Windows.Forms.Button();
             this.btnUrunGuncelle = new System.Windows.Forms.Button();
@@ -60,6 +58,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelUrundgv = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelHeader1.SuspendLayout();
             this.panelUunBilgileri.SuspendLayout();
             this.panelUrundgv.SuspendLayout();
@@ -130,24 +130,6 @@
             this.panelUunBilgileri.Name = "panelUunBilgileri";
             this.panelUunBilgileri.Size = new System.Drawing.Size(527, 376);
             this.panelUunBilgileri.TabIndex = 8;
-            // 
-            // panelUrundgv
-            // 
-            this.panelUrundgv.Controls.Add(this.dataGridView1);
-            this.panelUrundgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelUrundgv.Location = new System.Drawing.Point(527, 121);
-            this.panelUrundgv.Name = "panelUrundgv";
-            this.panelUrundgv.Size = new System.Drawing.Size(527, 376);
-            this.panelUrundgv.TabIndex = 9;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(527, 376);
-            this.dataGridView1.TabIndex = 0;
             // 
             // btnUrunEkle
             // 
@@ -432,6 +414,24 @@
             this.label1.Size = new System.Drawing.Size(47, 20);
             this.label1.TabIndex = 53;
             this.label1.Text = "Renk";
+            // 
+            // panelUrundgv
+            // 
+            this.panelUrundgv.Controls.Add(this.dataGridView1);
+            this.panelUrundgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelUrundgv.Location = new System.Drawing.Point(527, 121);
+            this.panelUrundgv.Name = "panelUrundgv";
+            this.panelUrundgv.Size = new System.Drawing.Size(527, 376);
+            this.panelUrundgv.TabIndex = 9;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(527, 376);
+            this.dataGridView1.TabIndex = 0;
             // 
             // frmUrunEkle
             // 
