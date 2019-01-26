@@ -25,6 +25,8 @@ namespace DAL.Context
         public virtual DbSet<UrunStokHareket> UrunStokHarekets { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UrunIade> UrunIades { get; set; }
+        public virtual DbSet<Gorev> Gorevs { get; set; }
+        public virtual DbSet<GorevDetay> GorevDetays { get; set; }
 
 
     }
