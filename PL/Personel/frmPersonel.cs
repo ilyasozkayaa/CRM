@@ -89,7 +89,7 @@ namespace PL.Personeller
             
             //File.Copy(dosyayolu, hedef);
             File.Move(dosyayolu, "C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm" +txtAd.Text+""+txtSoyad.Text+".jpg");
-            string hedef = Path.Combine("C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm"+txtAd.Text+""+ txtSoyad.Text+".jpg");
+            string hedef = Path.Combine("C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm\\"+txtAd.Text+""+ txtSoyad.Text+".jpg");
             gen.imagePath = hedef;
 
         }
