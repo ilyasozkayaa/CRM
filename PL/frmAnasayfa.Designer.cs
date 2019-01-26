@@ -533,7 +533,7 @@
             this.kullaniciDetay1.BackColor = System.Drawing.Color.SteelBlue;
             this.kullaniciDetay1.Dock = System.Windows.Forms.DockStyle.Right;
             this.kullaniciDetay1.Location = new System.Drawing.Point(650, 0);
-            this.kullaniciDetay1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kullaniciDetay1.Margin = new System.Windows.Forms.Padding(4);
             this.kullaniciDetay1.Name = "kullaniciDetay1";
             this.kullaniciDetay1.Size = new System.Drawing.Size(184, 50);
             this.kullaniciDetay1.TabIndex = 5;
