@@ -145,7 +145,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(304, 45);
             this.panel7.TabIndex = 1;
-         
             // 
             // label2
             // 
