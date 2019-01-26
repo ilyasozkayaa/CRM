@@ -69,7 +69,7 @@ namespace PL.KasaIslemleri
                 }
                 else
                 {
-                    MessageBox.Show("İşlem Gerçekleşemedi!!!","İade İşlemi Esnasında Bir Hata Oluştu!!!")
+                    MessageBox.Show("İşlem Gerçekleşemedi!!!", "İade İşlemi Esnasında Bir Hata Oluştu!!!");
                 }
             }
             catch (Exception ex)
