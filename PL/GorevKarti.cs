@@ -18,7 +18,7 @@ namespace PL
             this.Size = MinimumSize;
             
            
-                int a = clbGorevİcerik.SelectedItems.Count / clbGorevİcerik.Items.Count;
+                int a = clbGorevİcerik.CheckedItems.Count / clbGorevİcerik.Items.Count;
                 progressBar1.Value = a * 100;
                 lblYuzde.Text = "%" + progressBar1.Value.ToString();    
 
@@ -60,5 +60,7 @@ namespace PL
             progressBar1.Value = (int)a * 100;
             lblYuzde.Text = "%" + progressBar1.Value.ToString();
         }
+
+      
     }
 }

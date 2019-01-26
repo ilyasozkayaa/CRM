@@ -165,13 +165,13 @@
 
         #endregion
         private System.Windows.Forms.Panel pnlheader;
-        private System.Windows.Forms.Label lblGorevAdi;
         private System.Windows.Forms.Panel pnlGorevDetay;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.CheckedListBox clbGorevİcerik;
         private System.Windows.Forms.Panel pnlMembers;
-        private CircularPictureBox cpbMember;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblYuzde;
+        public System.Windows.Forms.Label lblGorevAdi;
+        public System.Windows.Forms.CheckedListBox clbGorevİcerik;
+        public CircularPictureBox cpbMember;
     }
 }

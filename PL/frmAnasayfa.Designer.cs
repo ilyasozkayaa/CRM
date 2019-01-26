@@ -331,6 +331,8 @@
             this.btnBilgiler.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBilgiler.FlatAppearance.BorderSize = 0;
             this.btnBilgiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBilgiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBilgiler.ForeColor = System.Drawing.Color.White;
             this.btnBilgiler.Location = new System.Drawing.Point(0, 41);
             this.btnBilgiler.Name = "btnBilgiler";
             this.btnBilgiler.Size = new System.Drawing.Size(150, 41);
