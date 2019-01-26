@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Context
 {
-    [Table("Satış Detayları")]
+    [Table("SatisDetaylari")]
    public class SatisDetay
     {
         [Key]

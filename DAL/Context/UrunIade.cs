@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Context
 {
-    [Table("Ürün İadeleri")]
+    [Table("UrunIadeleri")]
     public class UrunIade
     {
         [Key]

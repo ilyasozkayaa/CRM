@@ -29,9 +29,9 @@ namespace PL
             if (txtId.Text.Trim()!="" && txtParola.Text.Trim()!="")
             {
                 if(Gnl.giris(txtId.Text,txtParola.Text)!=0)
-                {
+                {                   
                     Form frm = new frmAnasayfa();
-                    frm.Show();
+                    frm.Show();                   
                 }
                 else
                 {

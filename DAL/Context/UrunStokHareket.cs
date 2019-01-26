@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Context
 {
-    [Table("Ürün Stok Hareketleri")]
+    [Table("UrunStokHareketleri")]
    public class UrunStokHareket
     {
         [Key]
@@ -19,6 +19,7 @@ namespace DAL.Context
         [Required]
         public int Miktar { get; set; }
         [Required]
+        [StringLength(20)]
         public string IslemTürü { get; set; }
 
         //[ForeignKey("UrunId")]
