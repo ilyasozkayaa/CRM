@@ -11,12 +11,43 @@ namespace BLL.Model
     {
         CRMContext ent = new CRMContext();
 
+        public List<Kategori> kategorileriGetir()
+        {
+            List<Kategori> ktgListesi = new List<Kategori>();
+            ktgListesi = ent.Kategoris.ToList();
+            return ktgListesi;
+        }
+
         public List<Urun> KategoriyeGoreUrunGetir(int ktgID)
         {
             List<Urun> KategoriyeGoreUrunListesi = new List<Urun>();
             KategoriyeGoreUrunListesi = (from u in ent.Uruns where u.KategoriId == ktgID select u).ToList();
 
             return KategoriyeGoreUrunListesi;
+        }
+
+        public List<SatisDetay> SatisDetayGetir(int ID)
+        {
+            List<SatisDetay> sdListesi = new List<SatisDetay>();
+            try
+            {
+                sdListesi=(from sd in ent.SatisDetays where sd.SatısId == ID select sd).ToList();
+
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            
+            return sdListesi;
+        }
+
+        public List<SatisDetay> SatisDetaylarinHepsiniGetir()
+        {
+            List<SatisDetay> satisDetayListesi = new List<SatisDetay>();
+            satisDetayListesi = ent.SatisDetays.ToList();
+            return satisDetayListesi;
         }
 
         public bool SatisiIptalEt(int SatisId)
@@ -42,6 +73,7 @@ namespace BLL.Model
 
             return sonuc;
         }
+
 
         public bool TekKategorideIade(int SatisDetayId, int UrunID, int Miktar)
         {

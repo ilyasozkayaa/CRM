@@ -18,6 +18,9 @@ namespace BLL.Model
         List<Urun> TumUrunleriGetir();
         bool TekKategorideIade(int SatisDetayId, int UrunID, int Miktar);
         bool SatisiIptalEt(int SatisId);
+        List<Kategori> kategorileriGetir();
+        List<SatisDetay> SatisDetayGetir(int ID);
+        List<SatisDetay> SatisDetaylarinHepsiniGetir();
 
     }
 }
