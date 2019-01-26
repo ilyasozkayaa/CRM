@@ -13,6 +13,7 @@ namespace DAL.Context
         public CRMContext() : base ("CRMContext")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<CRMContext, Configuration>("CRMContext"));
+            this.Configuration.LazyLoadingEnabled = false;
         }
         public virtual DbSet<Kategori> Kategoris { get; set; }
         public virtual DbSet<Musteri> Musteris { get; set; }

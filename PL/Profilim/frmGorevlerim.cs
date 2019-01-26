@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PL.Profilim
+namespace PL
 {
     public partial class frmGorevlerim : Form
     {
@@ -16,5 +16,19 @@ namespace PL.Profilim
         {
             InitializeComponent();
         }
+
+        private void frmGorevlerim_Load(object sender, EventArgs e)
+        {
+            pnlGorevKarti p = new pnlGorevKarti();
+            pnlGorevKarti c = new pnlGorevKarti();
+            pnlGorevKarti v = new pnlGorevKarti();
+            flpYapilacak.Controls.Add(p);
+            flpYapilacak.Controls.Add(c);
+            flpYapilan.Controls.Add(v);
+            
+
+        }
+
+        
     }
 }

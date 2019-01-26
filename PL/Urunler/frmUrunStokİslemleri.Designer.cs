@@ -31,13 +31,13 @@
             this.panelHeader1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panelHeader2 = new System.Windows.Forms.Panel();
-            this.panelStok = new System.Windows.Forms.Panel();
-            this.paneldgvStok = new System.Windows.Forms.Panel();
-            this.btnStokEkle = new System.Windows.Forms.Button();
             this.btnUrunAra = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtUrunId = new System.Windows.Forms.TextBox();
+            this.panelStok = new System.Windows.Forms.Panel();
+            this.btnStokEkle = new System.Windows.Forms.Button();
             this.txtSonStok = new System.Windows.Forms.TextBox();
             this.txtEklenenStok = new System.Windows.Forms.TextBox();
-            this.txtUrunId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.paneldgvStok = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelHeader1.SuspendLayout();
             this.panelHeader2.SuspendLayout();
@@ -89,6 +89,37 @@
             this.panelHeader2.Size = new System.Drawing.Size(1054, 80);
             this.panelHeader2.TabIndex = 9;
             // 
+            // btnUrunAra
+            // 
+            this.btnUrunAra.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUrunAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUrunAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunAra.ForeColor = System.Drawing.Color.White;
+            this.btnUrunAra.Location = new System.Drawing.Point(268, 20);
+            this.btnUrunAra.Name = "btnUrunAra";
+            this.btnUrunAra.Size = new System.Drawing.Size(78, 26);
+            this.btnUrunAra.TabIndex = 62;
+            this.btnUrunAra.Text = "ARA";
+            this.btnUrunAra.UseVisualStyleBackColor = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Location = new System.Drawing.Point(21, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(65, 20);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "Ürün ID";
+            // 
+            // txtUrunId
+            // 
+            this.txtUrunId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUrunId.Location = new System.Drawing.Point(106, 20);
+            this.txtUrunId.Name = "txtUrunId";
+            this.txtUrunId.Size = new System.Drawing.Size(156, 26);
+            this.txtUrunId.TabIndex = 60;
+            // 
             // panelStok
             // 
             this.panelStok.Controls.Add(this.btnStokEkle);
@@ -108,15 +139,6 @@
             this.panelStok.Size = new System.Drawing.Size(527, 376);
             this.panelStok.TabIndex = 10;
             // 
-            // paneldgvStok
-            // 
-            this.paneldgvStok.Controls.Add(this.dataGridView1);
-            this.paneldgvStok.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.paneldgvStok.Location = new System.Drawing.Point(527, 121);
-            this.paneldgvStok.Name = "paneldgvStok";
-            this.paneldgvStok.Size = new System.Drawing.Size(527, 376);
-            this.paneldgvStok.TabIndex = 11;
-            // 
             // btnStokEkle
             // 
             this.btnStokEkle.BackColor = System.Drawing.Color.SteelBlue;
@@ -129,19 +151,6 @@
             this.btnStokEkle.TabIndex = 61;
             this.btnStokEkle.Text = "EKLE";
             this.btnStokEkle.UseVisualStyleBackColor = false;
-            // 
-            // btnUrunAra
-            // 
-            this.btnUrunAra.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnUrunAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUrunAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunAra.ForeColor = System.Drawing.Color.White;
-            this.btnUrunAra.Location = new System.Drawing.Point(268, 20);
-            this.btnUrunAra.Name = "btnUrunAra";
-            this.btnUrunAra.Size = new System.Drawing.Size(78, 26);
-            this.btnUrunAra.TabIndex = 62;
-            this.btnUrunAra.Text = "ARA";
-            this.btnUrunAra.UseVisualStyleBackColor = false;
             // 
             // txtSonStok
             // 
@@ -159,14 +168,6 @@
             this.txtEklenenStok.Name = "txtEklenenStok";
             this.txtEklenenStok.Size = new System.Drawing.Size(145, 26);
             this.txtEklenenStok.TabIndex = 59;
-            // 
-            // txtUrunId
-            // 
-            this.txtUrunId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunId.Location = new System.Drawing.Point(106, 20);
-            this.txtUrunId.Name = "txtUrunId";
-            this.txtUrunId.Size = new System.Drawing.Size(156, 26);
-            this.txtUrunId.TabIndex = 60;
             // 
             // label6
             // 
@@ -248,15 +249,14 @@
             this.label1.TabIndex = 56;
             this.label1.Text = "Ürün ID";
             // 
-            // label12
+            // paneldgvStok
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(21, 21);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 20);
-            this.label12.TabIndex = 57;
-            this.label12.Text = "Ürün ID";
+            this.paneldgvStok.Controls.Add(this.dataGridView1);
+            this.paneldgvStok.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneldgvStok.Location = new System.Drawing.Point(527, 121);
+            this.paneldgvStok.Name = "paneldgvStok";
+            this.paneldgvStok.Size = new System.Drawing.Size(527, 376);
+            this.paneldgvStok.TabIndex = 11;
             // 
             // dataGridView1
             // 

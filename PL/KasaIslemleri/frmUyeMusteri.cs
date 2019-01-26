@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PL.KasaIslemleri
+namespace PL
 {
     public partial class frmUyeMusteri : Form
     {
@@ -27,9 +27,9 @@ namespace PL.KasaIslemleri
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

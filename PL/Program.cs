@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,13 @@ namespace PL
         [STAThread]
         static void Main()
         {
+            using (CRMContext ent = new CRMContext())
+            {
+                ent.Database.CreateIfNotExists();
+            }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Personeller.frmPersonel());
+            Application.Run(new  frmGiris());
         }
     }
 }

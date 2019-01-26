@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Model
 {
-   public interface IPersonelIslemleri
+   public interface IPersonelMusteriIslemleri
     {
         bool personelEkle(Personel p);
         bool personelSil(int ID);
@@ -20,7 +20,7 @@ namespace BLL.Model
         bool musteriSil(int ID);
         bool musteriGüncelle(Musteri p);
         List<Musteri> musterileriGetir();
-        Musteri musterileriGetir(int ID);
+        Musteri musteriGetir(int ID);
 
 
 

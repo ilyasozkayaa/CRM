@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Crmdenemeee.Profilim
+namespace PL.Profilim
 {
     public partial class frmBilgilerim : Form
     {

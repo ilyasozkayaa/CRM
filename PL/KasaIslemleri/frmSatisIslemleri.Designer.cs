@@ -1,4 +1,4 @@
-﻿namespace Crmdenemeee.KasaIslemleri
+﻿namespace PL.KasaIslemleri
 {
     partial class frmSatisIslemleri
     {
@@ -28,50 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlHeader = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.circularPictureBox1 = new PL.CircularPictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.circularPictureBox2 = new PL.CircularPictureBox();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).BeginInit();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnIade = new System.Windows.Forms.Button();
+            this.btnYeniMust = new System.Windows.Forms.Button();
+            this.btnUyesiz = new System.Windows.Forms.Button();
+            this.btnUyemusteri = new System.Windows.Forms.Button();
+            this.pnlBilgi = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pnlContent = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlHeader.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.pnlBilgi.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlHeader
             // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(847, 70);
-            this.panel1.TabIndex = 0;
+            this.pnlHeader.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlHeader.Controls.Add(this.panel1);
+            this.pnlHeader.Controls.Add(this.label1);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1054, 35);
+            this.pnlHeader.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(217, 23);
+            this.label1.Location = new System.Drawing.Point(-4, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "SATIŞ İŞLEMLERİ";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(12, 212);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 43);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Ürün İade";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Telefon Numarası:";
             // 
             // label3
             // 
@@ -81,190 +105,200 @@
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 3;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(102, 6);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 4;
+            // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 70);
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(847, 80);
-            this.panel2.TabIndex = 4;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.circularPictureBox2);
-            this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.button4);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.circularPictureBox1);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 150);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(422, 347);
-            this.panel3.TabIndex = 5;
+            this.panel2.Size = new System.Drawing.Size(211, 462);
+            this.panel2.TabIndex = 5;
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.btnIade);
+            this.panel4.Controls.Add(this.btnYeniMust);
+            this.panel4.Controls.Add(this.btnUyesiz);
+            this.panel4.Controls.Add(this.btnUyemusteri);
+            this.panel4.Controls.Add(this.pnlBilgi);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(422, 150);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(421, 347);
+            this.panel4.Size = new System.Drawing.Size(211, 462);
             this.panel4.TabIndex = 6;
             // 
-            // button7
+            // btnIade
             // 
-            this.button7.BackColor = System.Drawing.Color.SteelBlue;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(134, 108);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(158, 43);
-            this.button7.TabIndex = 27;
-            this.button7.Text = "Üye Olmadan Devam Et";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnIade.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnIade.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnIade.FlatAppearance.BorderSize = 0;
+            this.btnIade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnIade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIade.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnIade.ForeColor = System.Drawing.Color.White;
+            this.btnIade.Location = new System.Drawing.Point(0, 222);
+            this.btnIade.Name = "btnIade";
+            this.btnIade.Size = new System.Drawing.Size(211, 50);
+            this.btnIade.TabIndex = 14;
+            this.btnIade.Text = "Ürün İade";
+            this.btnIade.UseVisualStyleBackColor = false;
+            this.btnIade.Click += new System.EventHandler(this.btnIade_Click);
             // 
-            // button4
+            // btnYeniMust
             // 
-            this.button4.BackColor = System.Drawing.Color.SteelBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(136, 59);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(158, 43);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "Üye Müşteri";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnYeniMust.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnYeniMust.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnYeniMust.FlatAppearance.BorderSize = 0;
+            this.btnYeniMust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnYeniMust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYeniMust.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnYeniMust.ForeColor = System.Drawing.Color.White;
+            this.btnYeniMust.Location = new System.Drawing.Point(0, 172);
+            this.btnYeniMust.Name = "btnYeniMust";
+            this.btnYeniMust.Size = new System.Drawing.Size(211, 50);
+            this.btnYeniMust.TabIndex = 13;
+            this.btnYeniMust.Text = "Yeni Müşteri";
+            this.btnYeniMust.UseVisualStyleBackColor = false;
+            this.btnYeniMust.Click += new System.EventHandler(this.btnYeniMust_Click);
             // 
-            // label6
+            // btnUyesiz
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(208, 372);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "label6";
+            this.btnUyesiz.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUyesiz.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUyesiz.FlatAppearance.BorderSize = 0;
+            this.btnUyesiz.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnUyesiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUyesiz.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUyesiz.ForeColor = System.Drawing.Color.White;
+            this.btnUyesiz.Location = new System.Drawing.Point(0, 122);
+            this.btnUyesiz.Name = "btnUyesiz";
+            this.btnUyesiz.Size = new System.Drawing.Size(211, 50);
+            this.btnUyesiz.TabIndex = 12;
+            this.btnUyesiz.Text = "Üye Olmadan Devam Et";
+            this.btnUyesiz.UseVisualStyleBackColor = false;
+            this.btnUyesiz.Click += new System.EventHandler(this.btnUyesiz_Click);
             // 
-            // label5
+            // btnUyemusteri
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(167, 372);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "label5";
+            this.btnUyemusteri.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUyemusteri.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUyemusteri.FlatAppearance.BorderSize = 0;
+            this.btnUyemusteri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnUyemusteri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUyemusteri.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUyemusteri.ForeColor = System.Drawing.Color.White;
+            this.btnUyemusteri.Location = new System.Drawing.Point(0, 72);
+            this.btnUyemusteri.Name = "btnUyemusteri";
+            this.btnUyemusteri.Size = new System.Drawing.Size(211, 50);
+            this.btnUyemusteri.TabIndex = 11;
+            this.btnUyemusteri.Text = "Üye Müşteri";
+            this.btnUyemusteri.UseVisualStyleBackColor = false;
+            this.btnUyemusteri.Click += new System.EventHandler(this.btnUyemusteri_Click);
             // 
-            // circularPictureBox1
+            // pnlBilgi
             // 
-            this.circularPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.circularPictureBox1.Image = global::PL.Properties.Resources.images1;
-            this.circularPictureBox1.Location = new System.Drawing.Point(113, 352);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(38, 34);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 24;
-            this.circularPictureBox1.TabStop = false;
+            this.pnlBilgi.BackColor = System.Drawing.Color.White;
+            this.pnlBilgi.Controls.Add(this.textBox2);
+            this.pnlBilgi.Controls.Add(this.label4);
+            this.pnlBilgi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlBilgi.Location = new System.Drawing.Point(0, 0);
+            this.pnlBilgi.Name = "pnlBilgi";
+            this.pnlBilgi.Size = new System.Drawing.Size(211, 72);
+            this.pnlBilgi.TabIndex = 10;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(105, 19);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(3, 16);
+            this.label4.Location = new System.Drawing.Point(6, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 20);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Telefon Numarası";
+            this.label4.Size = new System.Drawing.Size(93, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Telefon Numarası:";
             // 
-            // textBox2
+            // button2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.Location = new System.Drawing.Point(136, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 26);
-            this.textBox2.TabIndex = 22;
+            this.button2.BackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(102, 32);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(78, 27);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "İşlemYap";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // button3
             // 
-            this.button5.BackColor = System.Drawing.Color.SteelBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(136, 162);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(158, 43);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "Yeni Müşteri";
-            this.button5.UseVisualStyleBackColor = false;
+            this.button3.BackColor = System.Drawing.Color.SteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(110, 212);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(70, 43);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Yeni Müşteri";
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // pnlContent
             // 
-            this.button6.BackColor = System.Drawing.Color.SteelBlue;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(136, 213);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(158, 43);
-            this.button6.TabIndex = 20;
-            this.button6.Text = "Ürün İade";
-            this.button6.UseVisualStyleBackColor = false;
+            this.pnlContent.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContent.Location = new System.Drawing.Point(211, 35);
+            this.pnlContent.Name = "pnlContent";
+            this.pnlContent.Size = new System.Drawing.Size(843, 462);
+            this.pnlContent.TabIndex = 6;
             // 
-            // label2
+            // panel1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(103, 325);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "label2";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(62, 325);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "label7";
-            // 
-            // circularPictureBox2
-            // 
-            this.circularPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.circularPictureBox2.Image = global::PL.Properties.Resources.images1;
-            this.circularPictureBox2.Location = new System.Drawing.Point(8, 305);
-            this.circularPictureBox2.Name = "circularPictureBox2";
-            this.circularPictureBox2.Size = new System.Drawing.Size(38, 34);
-            this.circularPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox2.TabIndex = 28;
-            this.circularPictureBox2.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1054, 10);
+            this.panel1.TabIndex = 1;
             // 
             // frmSatisIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 497);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(1054, 497);
+            this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSatisIslemleri";
             this.Text = "frmKasaIslemleri";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox2)).EndInit();
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.pnlBilgi.ResumeLayout(false);
+            this.pnlBilgi.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,23 +306,24 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private PL.CircularPictureBox circularPictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private PL.CircularPictureBox circularPictureBox2;
+        private System.Windows.Forms.Button btnIade;
+        private System.Windows.Forms.Button btnYeniMust;
+        private System.Windows.Forms.Button btnUyesiz;
+        private System.Windows.Forms.Button btnUyemusteri;
+        private System.Windows.Forms.Panel pnlBilgi;
+        private System.Windows.Forms.Panel panel1;
     }
 }

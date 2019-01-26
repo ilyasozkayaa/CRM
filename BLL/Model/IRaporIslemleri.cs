@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BLL.Model
 {
-    interface IRaporIslemleri
+   public interface IRaporIslemleri
     {
+
     }
 }
