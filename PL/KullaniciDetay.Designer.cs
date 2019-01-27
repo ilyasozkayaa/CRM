@@ -75,7 +75,7 @@
             this.Controls.Add(this.lblAdi);
             this.Controls.Add(this.circularPictureBox1);
             this.Name = "KullaniciDetay";
-            this.Size = new System.Drawing.Size(262, 50);
+            this.Size = new System.Drawing.Size(251, 50);
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

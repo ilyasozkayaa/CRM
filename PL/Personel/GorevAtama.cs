@@ -39,7 +39,7 @@ namespace PL.Personel
         private void circularPictureBox2_Click(object sender, EventArgs e)
         {
             clbGorevBolum.Items.Remove(clbGorevBolum.SelectedItem);
-            
+            cbpsil.Visible = false;
         }
 
         private void GorevAtama_Load(object sender, EventArgs e)
@@ -54,15 +54,15 @@ namespace PL.Personel
             if (a!=-1)
             {
                 txtGorevBolumu.Text = clbGorevBolum.Items[a].ToString();
+                
             }
-            
-                       
+
         }
         GorevHareketler hareket = new GorevHareketler();
         PersonelMusteriIslemleri pb = new PersonelMusteriIslemleri();
         ArrayList pers = new ArrayList();
         List<KullaniciDetay> a = new List<KullaniciDetay>();
-     
+        KullaniciDetay b = new KullaniciDetay();
         private void cpbPersEkle_Click(object sender, EventArgs e)
         {
          
@@ -70,10 +70,10 @@ namespace PL.Personel
             pers.Add(txtPersonelId.Text);
             int pid = Convert.ToInt32(txtPersonelId.Text);
             KullaniciDetay b = new KullaniciDetay();
-            //DAL.Context.Personel p = new DAL.Context.Personel();
-            //p = pb.PersonelGetir(pid);
-            //a.lblAdi.Text = p.Ad;
-            //a.lblSoyAdi.Text = p.Soyad;
+            DAL.Context.Personel p = new DAL.Context.Personel();
+            p = pb.PersonelGetir(pid);
+            b.lblAdi.Text = p.Ad;
+            b.lblSoyAdi.Text = p.Soyad;
             b.circularPictureBox1.Image = Resources.icons8_businessman_48;
 
 
@@ -86,21 +86,24 @@ namespace PL.Personel
             txtPersonelId.Focus();
 
         }
+
+
         Gorev grv = new Gorev();
         private void btnKartEkle_Click(object sender, EventArgs e)
         {
             
             
             grv.BaslangicTarihi = dtpGiris.Value;
-            grv.BitisTarihi = dtpGiris.Value;
+            grv.BitisTarihi = dtpCikis.Value;
             grv.GorevAdi = lblGorevAdi.Text;            
             
             hareket.GorevEkle(grv);          
            
             pnlGorevKarti gk = new pnlGorevKarti();
-            gk.clbGorevİcerik = clbGorevBolum;
+            gk.lblGorevAdi.Text = lblGorevAdi.Text;
+            gk.pnlGorevDetay.Controls.Add(clbGorevBolum);
             gk.lblGorevAdi = lblGorevAdi;
-            gk.cpbMember.Image = Resources.icons8_businessman_48;
+            gk.pnlMembers.Controls.Add(b.circularPictureBox1);
             pnlGorevKartlarim.Controls.Add(gk);
 
             List<GorevKayit> gkd = new List<GorevKayit>();            
@@ -138,6 +141,7 @@ namespace PL.Personel
         private void btnGorevAta_Click(object sender, EventArgs e)
         {
             btnGorevAta.Enabled = false;
+            txtPersonelId.Focus();
         }
     }
 }
