@@ -566,7 +566,7 @@
             this.panelPersonelResim.Name = "panelPersonelResim";
             this.panelPersonelResim.Size = new System.Drawing.Size(527, 401);
             this.panelPersonelResim.TabIndex = 104;
-            this.panelPersonelResim.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPersonelResim_Paint);
+          //  this.panelPersonelResim.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPersonelResim_Paint);
             // 
             // btnKaydet
             // 

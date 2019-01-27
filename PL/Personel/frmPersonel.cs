@@ -25,16 +25,6 @@ namespace PL.Personeller
         PersonelMusteriIslemleri pmi = new PersonelMusteriIslemleri();
         Degiskentanimla gen = new Degiskentanimla();
 
-
-
-
-      
-
-        private void panelPersonelResim_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
@@ -43,6 +33,8 @@ namespace PL.Personeller
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             DAL.Context.Personel personelList = new DAL.Context.Personel();
+            DAL.Context.User user = new DAL.Context.User();
+            string KullaniciAdi, KullaniciSifre;
             personelList.Ad      = txtAd.Text;
             personelList.Soyad   = txtSoyad.Text;
             personelList.TCKNo   = txtTCKNo.Text;
@@ -55,14 +47,30 @@ namespace PL.Personeller
             personelList.Cinsiyet  = cbCinsiyet.SelectedItem.ToString();
             personelList.IseGirisTarihi = dateİseGiris.Value;
             personelList.IstenCikisTarihi = dateİseGiris.Value;
-            personelList.UserId = Convert.ToInt32(cbPozisyon.SelectedValue);
-            //personelList.KullaniciAdi = txtSoyad.Text + txtAd.Text.Substring(0, 1);
-            //personelList.KullaniciSifre = txtSoyad.Text.Substring(0, 1) + dateTimePicker1.Value.Year + txtTC.Text.Substring(8);
+            personelList.UserId = cbPozisyon.SelectedIndex;
+            KullaniciAdi = txtSoyad.Text + txtAd.Text.Substring(0, 1);
+            KullaniciSifre = txtSoyad.Text.Substring(0, 1) + dtpDogumT.Value.Year + txtTCKNo.Text.Substring(8);
+            txtKullaniciAd.Text = KullaniciAdi;
+            txtKullaniciSifre.Text = KullaniciSifre;
+            user.KullaniciAdi = KullaniciAdi;
+            user.Parola = KullaniciSifre;
+            user.YetkiDüzeyi = cbPozisyon.SelectedItem.ToString();
+            bool result = pmi.UserEkle(user);
+            if (result)
+            {
+                MessageBox.Show("User kaydı  basarılı");
+
+            }
+            else
+            {
+                MessageBox.Show("User kaydı basarısız");
+            }
 
             bool sonuc = pmi.personelEkle(personelList);
             if (sonuc)
             {
                 MessageBox.Show("kayıt basarılı");
+               
             }
             else
             {
