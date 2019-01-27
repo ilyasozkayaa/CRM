@@ -129,7 +129,7 @@ namespace BLL.Model
             Personel prsnl = new Personel();
             try
             {
-                 prsnl = (from p in ent.Personels where p.Id == ID select p).FirstOrDefault();
+                prsnl = (from p in ent.Personels where p.Id == ID select p).FirstOrDefault();
             }
             catch (Exception ex)
             {

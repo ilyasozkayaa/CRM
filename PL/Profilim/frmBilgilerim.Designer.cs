@@ -46,36 +46,36 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelHeader1 = new System.Windows.Forms.Panel();
             this.circularPictureBox1 = new PL.CircularPictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panelHeader2 = new System.Windows.Forms.Panel();
+            this.labelSoyad = new System.Windows.Forms.Label();
+            this.labelAd = new System.Windows.Forms.Label();
+            this.panelHeader3 = new System.Windows.Forms.Panel();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.panelGenelGilgi = new System.Windows.Forms.Panel();
+            this.txtTCKNo = new System.Windows.Forms.TextBox();
+            this.txtEgitimDurumu = new System.Windows.Forms.TextBox();
+            this.txtDogumTarihi = new System.Windows.Forms.TextBox();
+            this.txtDogumYeri = new System.Windows.Forms.TextBox();
+            this.panelIsBilgileri = new System.Windows.Forms.Panel();
+            this.txtEngel = new System.Windows.Forms.TextBox();
+            this.txtAskerlik = new System.Windows.Forms.TextBox();
+            this.txtMedeniHal = new System.Windows.Forms.TextBox();
+            this.txtBaslangic = new System.Windows.Forms.TextBox();
+            this.panelIletisimBilgileri = new System.Windows.Forms.Panel();
+            this.txtAdres = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtTel = new System.Windows.Forms.TextBox();
+            this.panelGenelPerformans = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
+            this.panelHeader1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panelHeader3.SuspendLayout();
+            this.panelGenelGilgi.SuspendLayout();
+            this.panelIsBilgileri.SuspendLayout();
+            this.panelIletisimBilgileri.SuspendLayout();
+            this.panelGenelPerformans.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -260,20 +260,20 @@
             this.label28.TabIndex = 9;
             this.label28.Text = "label20";
             // 
-            // panel2
+            // panelHeader1
             // 
-            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.circularPictureBox1);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.label33);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1054, 102);
-            this.panel2.TabIndex = 12;
+            this.panelHeader1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelHeader1.Controls.Add(this.circularPictureBox1);
+            this.panelHeader1.Controls.Add(this.panelHeader2);
+            this.panelHeader1.Controls.Add(this.labelSoyad);
+            this.panelHeader1.Controls.Add(this.labelAd);
+            this.panelHeader1.Controls.Add(this.panelHeader3);
+            this.panelHeader1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.panelHeader1.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader1.Name = "panelHeader1";
+            this.panelHeader1.Size = new System.Drawing.Size(1054, 102);
+            this.panelHeader1.TabIndex = 12;
             // 
             // circularPictureBox1
             // 
@@ -285,215 +285,215 @@
             this.circularPictureBox1.TabIndex = 9;
             this.circularPictureBox1.TabStop = false;
             // 
-            // panel7
+            // panelHeader2
             // 
-            this.panel7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 51);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1054, 12);
-            this.panel7.TabIndex = 1;
+            this.panelHeader2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelHeader2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelHeader2.Location = new System.Drawing.Point(0, 51);
+            this.panelHeader2.Name = "panelHeader2";
+            this.panelHeader2.Size = new System.Drawing.Size(1054, 12);
+            this.panelHeader2.TabIndex = 1;
             // 
-            // label33
+            // labelSoyad
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(189, 23);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(79, 26);
-            this.label33.TabIndex = 8;
-            this.label33.Text = "Soyad";
+            this.labelSoyad.AutoSize = true;
+            this.labelSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelSoyad.ForeColor = System.Drawing.Color.White;
+            this.labelSoyad.Location = new System.Drawing.Point(189, 23);
+            this.labelSoyad.Name = "labelSoyad";
+            this.labelSoyad.Size = new System.Drawing.Size(79, 26);
+            this.labelSoyad.TabIndex = 8;
+            this.labelSoyad.Text = "Soyad";
             // 
-            // label2
+            // labelAd
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(142, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 26);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Ad";
+            this.labelAd.AutoSize = true;
+            this.labelAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelAd.ForeColor = System.Drawing.Color.White;
+            this.labelAd.Location = new System.Drawing.Point(142, 23);
+            this.labelAd.Name = "labelAd";
+            this.labelAd.Size = new System.Drawing.Size(41, 26);
+            this.labelAd.TabIndex = 7;
+            this.labelAd.Text = "Ad";
             // 
-            // panel1
+            // panelHeader3
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 63);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1054, 39);
-            this.panel1.TabIndex = 1;
+            this.panelHeader3.BackColor = System.Drawing.Color.White;
+            this.panelHeader3.Controls.Add(this.btnGuncelle);
+            this.panelHeader3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelHeader3.Location = new System.Drawing.Point(0, 63);
+            this.panelHeader3.Name = "panelHeader3";
+            this.panelHeader3.Size = new System.Drawing.Size(1054, 39);
+            this.panelHeader3.TabIndex = 1;
             // 
-            // button1
+            // btnGuncelle
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(939, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Güncelle";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGuncelle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnGuncelle.FlatAppearance.BorderSize = 0;
+            this.btnGuncelle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnGuncelle.Location = new System.Drawing.Point(939, 0);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(115, 39);
+            this.btnGuncelle.TabIndex = 0;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = false;
             // 
-            // panel3
+            // panelGenelGilgi
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 102);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(220, 395);
-            this.panel3.TabIndex = 13;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panelGenelGilgi.BackColor = System.Drawing.Color.White;
+            this.panelGenelGilgi.Controls.Add(this.txtTCKNo);
+            this.panelGenelGilgi.Controls.Add(this.txtEgitimDurumu);
+            this.panelGenelGilgi.Controls.Add(this.txtDogumTarihi);
+            this.panelGenelGilgi.Controls.Add(this.txtDogumYeri);
+            this.panelGenelGilgi.Controls.Add(this.label15);
+            this.panelGenelGilgi.Controls.Add(this.label16);
+            this.panelGenelGilgi.Controls.Add(this.label4);
+            this.panelGenelGilgi.Controls.Add(this.label3);
+            this.panelGenelGilgi.Controls.Add(this.label7);
+            this.panelGenelGilgi.Controls.Add(this.label6);
+            this.panelGenelGilgi.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelGenelGilgi.Location = new System.Drawing.Point(0, 102);
+            this.panelGenelGilgi.Name = "panelGenelGilgi";
+            this.panelGenelGilgi.Size = new System.Drawing.Size(220, 395);
+            this.panelGenelGilgi.TabIndex = 13;
+            this.panelGenelGilgi.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // textBox5
+            // txtTCKNo
             // 
-            this.textBox5.Location = new System.Drawing.Point(114, 41);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 12;
+            this.txtTCKNo.Location = new System.Drawing.Point(114, 40);
+            this.txtTCKNo.Name = "txtTCKNo";
+            this.txtTCKNo.ReadOnly = true;
+            this.txtTCKNo.Size = new System.Drawing.Size(100, 20);
+            this.txtTCKNo.TabIndex = 12;
             // 
-            // textBox4
+            // txtEgitimDurumu
             // 
-            this.textBox4.Location = new System.Drawing.Point(114, 124);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 13;
+            this.txtEgitimDurumu.Location = new System.Drawing.Point(114, 122);
+            this.txtEgitimDurumu.Name = "txtEgitimDurumu";
+            this.txtEgitimDurumu.ReadOnly = true;
+            this.txtEgitimDurumu.Size = new System.Drawing.Size(100, 20);
+            this.txtEgitimDurumu.TabIndex = 13;
             // 
-            // textBox3
+            // txtDogumTarihi
             // 
-            this.textBox3.Location = new System.Drawing.Point(114, 98);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 12;
+            this.txtDogumTarihi.Location = new System.Drawing.Point(114, 96);
+            this.txtDogumTarihi.Name = "txtDogumTarihi";
+            this.txtDogumTarihi.ReadOnly = true;
+            this.txtDogumTarihi.Size = new System.Drawing.Size(100, 20);
+            this.txtDogumTarihi.TabIndex = 12;
             // 
-            // textBox2
+            // txtDogumYeri
             // 
-            this.textBox2.Location = new System.Drawing.Point(114, 67);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.txtDogumYeri.Location = new System.Drawing.Point(114, 67);
+            this.txtDogumYeri.Name = "txtDogumYeri";
+            this.txtDogumYeri.ReadOnly = true;
+            this.txtDogumYeri.Size = new System.Drawing.Size(100, 20);
+            this.txtDogumYeri.TabIndex = 11;
             // 
-            // panel4
+            // panelIsBilgileri
             // 
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Controls.Add(this.textBox8);
-            this.panel4.Controls.Add(this.textBox7);
-            this.panel4.Controls.Add(this.textBox6);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.label17);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(220, 102);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(220, 395);
-            this.panel4.TabIndex = 14;
+            this.panelIsBilgileri.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelIsBilgileri.Controls.Add(this.txtEngel);
+            this.panelIsBilgileri.Controls.Add(this.txtAskerlik);
+            this.panelIsBilgileri.Controls.Add(this.txtMedeniHal);
+            this.panelIsBilgileri.Controls.Add(this.label10);
+            this.panelIsBilgileri.Controls.Add(this.label17);
+            this.panelIsBilgileri.Controls.Add(this.txtBaslangic);
+            this.panelIsBilgileri.Controls.Add(this.label12);
+            this.panelIsBilgileri.Controls.Add(this.label13);
+            this.panelIsBilgileri.Controls.Add(this.label14);
+            this.panelIsBilgileri.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelIsBilgileri.Location = new System.Drawing.Point(220, 102);
+            this.panelIsBilgileri.Name = "panelIsBilgileri";
+            this.panelIsBilgileri.Size = new System.Drawing.Size(220, 395);
+            this.panelIsBilgileri.TabIndex = 14;
             // 
-            // textBox8
+            // txtEngel
             // 
-            this.textBox8.Location = new System.Drawing.Point(117, 125);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 14;
+            this.txtEngel.Location = new System.Drawing.Point(117, 125);
+            this.txtEngel.Name = "txtEngel";
+            this.txtEngel.ReadOnly = true;
+            this.txtEngel.Size = new System.Drawing.Size(100, 20);
+            this.txtEngel.TabIndex = 14;
             // 
-            // textBox7
+            // txtAskerlik
             // 
-            this.textBox7.Location = new System.Drawing.Point(117, 99);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 13;
+            this.txtAskerlik.Location = new System.Drawing.Point(117, 99);
+            this.txtAskerlik.Name = "txtAskerlik";
+            this.txtAskerlik.ReadOnly = true;
+            this.txtAskerlik.Size = new System.Drawing.Size(100, 20);
+            this.txtAskerlik.TabIndex = 13;
             // 
-            // textBox6
+            // txtMedeniHal
             // 
-            this.textBox6.Location = new System.Drawing.Point(117, 72);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 12;
+            this.txtMedeniHal.Location = new System.Drawing.Point(117, 72);
+            this.txtMedeniHal.Name = "txtMedeniHal";
+            this.txtMedeniHal.ReadOnly = true;
+            this.txtMedeniHal.Size = new System.Drawing.Size(100, 20);
+            this.txtMedeniHal.TabIndex = 12;
             // 
-            // textBox1
+            // txtBaslangic
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 10;
+            this.txtBaslangic.Location = new System.Drawing.Point(117, 46);
+            this.txtBaslangic.Name = "txtBaslangic";
+            this.txtBaslangic.ReadOnly = true;
+            this.txtBaslangic.Size = new System.Drawing.Size(100, 20);
+            this.txtBaslangic.TabIndex = 10;
             // 
-            // panel5
+            // panelIletisimBilgileri
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.textBox11);
-            this.panel5.Controls.Add(this.textBox10);
-            this.panel5.Controls.Add(this.textBox9);
-            this.panel5.Controls.Add(this.label19);
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(440, 102);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(220, 395);
-            this.panel5.TabIndex = 15;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            this.panelIletisimBilgileri.BackColor = System.Drawing.Color.White;
+            this.panelIletisimBilgileri.Controls.Add(this.txtAdres);
+            this.panelIletisimBilgileri.Controls.Add(this.txtEmail);
+            this.panelIletisimBilgileri.Controls.Add(this.txtTel);
+            this.panelIletisimBilgileri.Controls.Add(this.label19);
+            this.panelIletisimBilgileri.Controls.Add(this.label9);
+            this.panelIletisimBilgileri.Controls.Add(this.label8);
+            this.panelIletisimBilgileri.Controls.Add(this.label5);
+            this.panelIletisimBilgileri.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelIletisimBilgileri.Location = new System.Drawing.Point(440, 102);
+            this.panelIletisimBilgileri.Name = "panelIletisimBilgileri";
+            this.panelIletisimBilgileri.Size = new System.Drawing.Size(220, 395);
+            this.panelIletisimBilgileri.TabIndex = 15;
+            this.panelIletisimBilgileri.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
-            // textBox11
+            // txtAdres
             // 
-            this.textBox11.Location = new System.Drawing.Point(114, 102);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 13;
+            this.txtAdres.Location = new System.Drawing.Point(114, 102);
+            this.txtAdres.Name = "txtAdres";
+            this.txtAdres.ReadOnly = true;
+            this.txtAdres.Size = new System.Drawing.Size(100, 20);
+            this.txtAdres.TabIndex = 13;
             // 
-            // textBox10
+            // txtEmail
             // 
-            this.textBox10.Location = new System.Drawing.Point(114, 75);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 12;
+            this.txtEmail.Location = new System.Drawing.Point(114, 75);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
+            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.TabIndex = 12;
             // 
-            // textBox9
+            // txtTel
             // 
-            this.textBox9.Location = new System.Drawing.Point(114, 46);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 11;
+            this.txtTel.Location = new System.Drawing.Point(114, 46);
+            this.txtTel.Name = "txtTel";
+            this.txtTel.ReadOnly = true;
+            this.txtTel.Size = new System.Drawing.Size(100, 20);
+            this.txtTel.TabIndex = 11;
             // 
-            // panel6
+            // panelGenelPerformans
             // 
-            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(660, 102);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(394, 395);
-            this.panel6.TabIndex = 16;
+            this.panelGenelPerformans.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelGenelPerformans.Controls.Add(this.label1);
+            this.panelGenelPerformans.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelGenelPerformans.Location = new System.Drawing.Point(660, 102);
+            this.panelGenelPerformans.Name = "panelGenelPerformans";
+            this.panelGenelPerformans.Size = new System.Drawing.Size(394, 395);
+            this.panelGenelPerformans.TabIndex = 16;
             // 
             // label1
             // 
@@ -510,11 +510,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 497);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelGenelPerformans);
+            this.Controls.Add(this.panelIletisimBilgileri);
+            this.Controls.Add(this.panelIsBilgileri);
+            this.Controls.Add(this.panelGenelGilgi);
+            this.Controls.Add(this.panelHeader1);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label11);
@@ -522,18 +522,18 @@
             this.Name = "frmBilgilerim";
             this.Text = "Bilgilerim";
             this.Load += new System.EventHandler(this.frmBilgilerim_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelHeader1.ResumeLayout(false);
+            this.panelHeader1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.panelHeader3.ResumeLayout(false);
+            this.panelGenelGilgi.ResumeLayout(false);
+            this.panelGenelGilgi.PerformLayout();
+            this.panelIsBilgileri.ResumeLayout(false);
+            this.panelIsBilgileri.PerformLayout();
+            this.panelIletisimBilgileri.ResumeLayout(false);
+            this.panelIletisimBilgileri.PerformLayout();
+            this.panelGenelPerformans.ResumeLayout(false);
+            this.panelGenelPerformans.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -558,28 +558,28 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panelHeader1;
+        private System.Windows.Forms.Panel panelGenelGilgi;
+        private System.Windows.Forms.Panel panelIsBilgileri;
+        private System.Windows.Forms.Panel panelIletisimBilgileri;
+        private System.Windows.Forms.Panel panelGenelPerformans;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelHeader3;
+        private System.Windows.Forms.Label labelSoyad;
+        private System.Windows.Forms.Label labelAd;
+        private System.Windows.Forms.Button btnGuncelle;
         private CircularPictureBox circularPictureBox1;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Panel panelHeader2;
+        private System.Windows.Forms.TextBox txtBaslangic;
+        private System.Windows.Forms.TextBox txtTCKNo;
+        private System.Windows.Forms.TextBox txtEgitimDurumu;
+        private System.Windows.Forms.TextBox txtDogumTarihi;
+        private System.Windows.Forms.TextBox txtDogumYeri;
+        private System.Windows.Forms.TextBox txtEngel;
+        private System.Windows.Forms.TextBox txtAskerlik;
+        private System.Windows.Forms.TextBox txtMedeniHal;
+        private System.Windows.Forms.TextBox txtAdres;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtTel;
     }
 }

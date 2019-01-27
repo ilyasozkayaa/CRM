@@ -43,16 +43,16 @@ namespace PL.Personeller
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             DAL.Context.Personel personelList = new DAL.Context.Personel();
-            personelList.Ad = txtAd.Text;
-            personelList.Soyad = txtSoyad.Text;
-            personelList.TCKNo = txtTCKNo.Text;
+            personelList.Ad      = txtAd.Text;
+            personelList.Soyad   = txtSoyad.Text;
+            personelList.TCKNo   = txtTCKNo.Text;
             personelList.Telefon = txtTelefon.Text;
             personelList.DogumTarihi = dtpDogumT.Value;
             personelList.DogumYeri = cbDogumYeri.SelectedItem.ToString();
-            personelList.Adres = txtAdres.Text;
-            personelList.Email = txtEmail.Text;
-            personelList.Image = gen.imagePath;
-            personelList.Cinsiyet = cbCinsiyet.SelectedItem.ToString();
+            personelList.Adres     = txtAdres.Text;
+            personelList.Email     = txtEmail.Text;
+            personelList.Image     = gen.imagePath;
+            personelList.Cinsiyet  = cbCinsiyet.SelectedItem.ToString();
             personelList.IseGirisTarihi = dateİseGiris.Value;
             personelList.IstenCikisTarihi = dateİseGiris.Value;
             bool sonuc = pmi.personelEkle(personelList);
