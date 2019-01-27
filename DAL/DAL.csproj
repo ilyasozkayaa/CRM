@@ -51,6 +51,7 @@
     <Compile Include="Context\CRMContext.cs" />
     <Compile Include="Context\Gorev.cs" />
     <Compile Include="Context\GorevDetay.cs" />
+    <Compile Include="Context\GorevKayit.cs" />
     <Compile Include="Context\Kategori.cs" />
     <Compile Include="Context\Musteri.cs" />
     <Compile Include="Context\Personel.cs" />

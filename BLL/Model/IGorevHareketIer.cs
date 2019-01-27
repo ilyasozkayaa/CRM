@@ -9,7 +9,9 @@ namespace BLL.Model
 {
    public interface IGorevHareketIer
     {
-        bool gorevEkle(Gorev g);
+        bool GorevEkle(Gorev u);
+        bool GorevDetayEkle(List<GorevDetay> u);
+        bool GorevKayıtEkle(List<GorevKayit> u);
 
     }
 }

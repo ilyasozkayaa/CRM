@@ -9,20 +9,24 @@ using System.Threading.Tasks;
 
 namespace DAL.Context
 {
-    [Table("GorevDetaylari")]
-    public class GorevDetay
+      public class GorevKayit
     {
-
         [Key]
         public int Id { get; set; }
         [Required]
         public int GorevId { get; set; }
         [Required]
-        public string DetayAdi { get; set; }        
-        [DefaultValue(false)]
+        public int PersonelId { get; set; }
+        [DefaultValue(0)]
         public bool Silindi { get; set; }
 
-       
-        public virtual Gorev Gorev { get; set; }
-    }   
+
+        [ForeignKey("PersonelId")]
+        public virtual Personel Personel { get; set; }
+        public virtual List<Gorev> Gorevs { get; set; }
+    }
+    
+        
+
+    
 }

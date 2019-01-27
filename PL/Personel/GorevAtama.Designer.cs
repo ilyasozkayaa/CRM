@@ -34,8 +34,8 @@
             this.pnlPersonelHeader = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.PnlPersonelEkle = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpCikis = new System.Windows.Forms.DateTimePicker();
+            this.dtpGiris = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbpsil = new PL.CircularPictureBox();
@@ -50,7 +50,7 @@
             this.clbGorevBolum = new System.Windows.Forms.CheckedListBox();
             this.pnlGorevAdi = new System.Windows.Forms.Panel();
             this.lblGorevAdi = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGorevAta = new System.Windows.Forms.Button();
             this.pnlGorevHeader = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlGorevIcerik = new System.Windows.Forms.Panel();
@@ -61,8 +61,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlPersList = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtPersonelAdi = new System.Windows.Forms.TextBox();
             this.Personel = new System.Windows.Forms.Label();
             this.txtPersonelId = new System.Windows.Forms.TextBox();
             this.cpbPersEkle = new PL.CircularPictureBox();
@@ -70,7 +68,7 @@
             this.btnKartEkle = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnKaydet = new System.Windows.Forms.Button();
             this.nlHeader.SuspendLayout();
             this.flwPersonelsec.SuspendLayout();
             this.pnlPersonelHeader.SuspendLayout();
@@ -154,8 +152,8 @@
             // PnlPersonelEkle
             // 
             this.PnlPersonelEkle.BackColor = System.Drawing.Color.Gainsboro;
-            this.PnlPersonelEkle.Controls.Add(this.dateTimePicker2);
-            this.PnlPersonelEkle.Controls.Add(this.dateTimePicker1);
+            this.PnlPersonelEkle.Controls.Add(this.dtpCikis);
+            this.PnlPersonelEkle.Controls.Add(this.dtpGiris);
             this.PnlPersonelEkle.Controls.Add(this.label9);
             this.PnlPersonelEkle.Controls.Add(this.label7);
             this.PnlPersonelEkle.Controls.Add(this.cbpsil);
@@ -171,19 +169,19 @@
             this.PnlPersonelEkle.Size = new System.Drawing.Size(427, 159);
             this.PnlPersonelEkle.TabIndex = 1;
             // 
-            // dateTimePicker2
+            // dtpCikis
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(148, 133);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 13;
+            this.dtpCikis.Location = new System.Drawing.Point(148, 133);
+            this.dtpCikis.Name = "dtpCikis";
+            this.dtpCikis.Size = new System.Drawing.Size(200, 20);
+            this.dtpCikis.TabIndex = 13;
             // 
-            // dateTimePicker1
+            // dtpGiris
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(149, 96);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dtpGiris.Location = new System.Drawing.Point(149, 96);
+            this.dtpGiris.Name = "dtpGiris";
+            this.dtpGiris.Size = new System.Drawing.Size(200, 20);
+            this.dtpGiris.TabIndex = 12;
             // 
             // label9
             // 
@@ -310,7 +308,7 @@
             // pnlGorevAdi
             // 
             this.pnlGorevAdi.Controls.Add(this.lblGorevAdi);
-            this.pnlGorevAdi.Controls.Add(this.button1);
+            this.pnlGorevAdi.Controls.Add(this.btnGorevAta);
             this.pnlGorevAdi.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlGorevAdi.Location = new System.Drawing.Point(0, 0);
             this.pnlGorevAdi.Name = "pnlGorevAdi";
@@ -320,7 +318,7 @@
             // lblGorevAdi
             // 
             this.lblGorevAdi.AutoSize = true;
-            this.lblGorevAdi.BackColor = System.Drawing.Color.White;
+            this.lblGorevAdi.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblGorevAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGorevAdi.ForeColor = System.Drawing.Color.SteelBlue;
             this.lblGorevAdi.Location = new System.Drawing.Point(9, 16);
@@ -329,19 +327,20 @@
             this.lblGorevAdi.TabIndex = 1;
             this.lblGorevAdi.Text = "Görev Adi";
             // 
-            // button1
+            // btnGorevAta
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(315, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 43);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Göreve Ata";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGorevAta.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnGorevAta.FlatAppearance.BorderSize = 0;
+            this.btnGorevAta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGorevAta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGorevAta.ForeColor = System.Drawing.Color.White;
+            this.btnGorevAta.Location = new System.Drawing.Point(315, 9);
+            this.btnGorevAta.Name = "btnGorevAta";
+            this.btnGorevAta.Size = new System.Drawing.Size(106, 43);
+            this.btnGorevAta.TabIndex = 2;
+            this.btnGorevAta.Text = "Göreve Ata";
+            this.btnGorevAta.UseVisualStyleBackColor = false;
+            this.btnGorevAta.Click += new System.EventHandler(this.btnGorevAta_Click);
             // 
             // pnlGorevHeader
             // 
@@ -434,47 +433,27 @@
             // pnlPersList
             // 
             this.pnlPersList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPersList.Location = new System.Drawing.Point(0, 80);
+            this.pnlPersList.Location = new System.Drawing.Point(0, 65);
             this.pnlPersList.Name = "pnlPersList";
-            this.pnlPersList.Size = new System.Drawing.Size(292, 190);
+            this.pnlPersList.Size = new System.Drawing.Size(292, 205);
             this.pnlPersList.TabIndex = 12;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.txtPersonelAdi);
             this.panel6.Controls.Add(this.Personel);
             this.panel6.Controls.Add(this.txtPersonelId);
             this.panel6.Controls.Add(this.cpbPersEkle);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(292, 80);
+            this.panel6.Size = new System.Drawing.Size(292, 65);
             this.panel6.TabIndex = 11;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(11, 51);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 20);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Personel Adı";
-            // 
-            // txtPersonelAdi
-            // 
-            this.txtPersonelAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPersonelAdi.Location = new System.Drawing.Point(115, 48);
-            this.txtPersonelAdi.Name = "txtPersonelAdi";
-            this.txtPersonelAdi.Size = new System.Drawing.Size(100, 26);
-            this.txtPersonelAdi.TabIndex = 10;
             // 
             // Personel
             // 
             this.Personel.AutoSize = true;
             this.Personel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Personel.Location = new System.Drawing.Point(11, 12);
+            this.Personel.Location = new System.Drawing.Point(20, 21);
             this.Personel.Name = "Personel";
             this.Personel.Size = new System.Drawing.Size(89, 20);
             this.Personel.TabIndex = 8;
@@ -483,7 +462,7 @@
             // txtPersonelId
             // 
             this.txtPersonelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPersonelId.Location = new System.Drawing.Point(115, 9);
+            this.txtPersonelId.Location = new System.Drawing.Point(115, 18);
             this.txtPersonelId.Name = "txtPersonelId";
             this.txtPersonelId.Size = new System.Drawing.Size(100, 26);
             this.txtPersonelId.TabIndex = 7;
@@ -491,7 +470,7 @@
             // cpbPersEkle
             // 
             this.cpbPersEkle.Image = global::PL.Properties.Resources.icons8_ok_48;
-            this.cpbPersEkle.Location = new System.Drawing.Point(230, 18);
+            this.cpbPersEkle.Location = new System.Drawing.Point(230, 6);
             this.cpbPersEkle.Name = "cpbPersEkle";
             this.cpbPersEkle.Size = new System.Drawing.Size(48, 48);
             this.cpbPersEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -533,29 +512,29 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightGray;
-            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.btnKaydet);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(430, 451);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(624, 46);
             this.panel4.TabIndex = 5;
             // 
-            // button3
+            // btnKaydet
             // 
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::PL.Properties.Resources.plus;
-            this.button3.Location = new System.Drawing.Point(518, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 46);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Kaydet";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnKaydet.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnKaydet.FlatAppearance.BorderSize = 0;
+            this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.ForeColor = System.Drawing.Color.White;
+            this.btnKaydet.Image = global::PL.Properties.Resources.plus;
+            this.btnKaydet.Location = new System.Drawing.Point(518, 0);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(106, 46);
+            this.btnKaydet.TabIndex = 4;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKaydet.UseVisualStyleBackColor = false;
             // 
             // GorevAtama
             // 
@@ -614,7 +593,7 @@
         private System.Windows.Forms.Panel pnlGorevIcerik;
         private System.Windows.Forms.Panel pnlGorevHeader;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGorevAta;
         private System.Windows.Forms.TextBox txtGorevBolumu;
         private System.Windows.Forms.TextBox txtGorevAdi;
         private System.Windows.Forms.Label label3;
@@ -634,18 +613,16 @@
         private System.Windows.Forms.Label lblGorevAdi;
         private CircularPictureBox cbpsil;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Panel pnlPersList;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label Personel;
         private System.Windows.Forms.TextBox txtPersonelId;
         private CircularPictureBox cpbPersEkle;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtPersonelAdi;
         private System.Windows.Forms.Panel pnlGorevKartlarim;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpCikis;
+        private System.Windows.Forms.DateTimePicker dtpGiris;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
     }

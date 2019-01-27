@@ -14,9 +14,7 @@ namespace DAL.Context
         [Key]
         public int Id { get; set; }
         [Required]
-        public string GorevAdi { get; set; }
-        [Required]
-        public int PersonelId { get; set; }
+        public string GorevAdi { get; set; }        
         [Required]
         public DateTime BaslangicTarihi { get; set; }
         [Required]
@@ -25,13 +23,7 @@ namespace DAL.Context
         public bool Tamamlandi { get; set; }
         [DefaultValue(0)]
         public bool Silindi { get; set; }
-
-
-
-
-        [ForeignKey("PersonelId")]
-        public virtual Personel Personel { get; set; }       
-
+      
         public virtual List<GorevDetay> GorevDetays { get; set; }
     }
 }
