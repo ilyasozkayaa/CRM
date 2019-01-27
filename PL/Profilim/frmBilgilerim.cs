@@ -17,14 +17,14 @@ namespace PL.Profilim
         {
             InitializeComponent();
         }
-    
+        PersonelMusteriIslemleri per = new PersonelMusteriIslemleri();
+        DAL.Context.Personel prsl = new DAL.Context.Personel();
         Degiskentanimla deg = new Degiskentanimla();
         private void frmBilgilerim_Load(object sender, EventArgs e)
         {
-            PersonelMusteriIslemleri per = new PersonelMusteriIslemleri();
-            DAL.Context.Personel prsl = new DAL.Context.Personel();
-            //per.PersonelGetir(deg.Id);
-            int gelenId=per.UsersIdyeGorePersoneliGetirme(deg.Id);
+            
+            per.PersonelGetir(deg.Id);
+            int gelenId = per.UsersIdyeGorePersoneliGetirme(deg.Id);
             prsl = per.PersonelGetir(gelenId);
             txtTCKNo.Text = prsl.TCKNo;
             txtDogumYeri.Text = prsl.DogumYeri;
@@ -42,32 +42,57 @@ namespace PL.Profilim
 
 
 
-            
+
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void panelGenelGilgi_Paint(object sender, PaintEventArgs e)
         {
-            
+            int gelenId = per.UsersIdyeGorePersoneliGetirme(deg.Id);
+            prsl = per.PersonelGetir(gelenId);
+            foreach (Control oda in panelGenelBilgi.Controls)
+            {
+                if (oda.GetType() == typeof(TextBox))
+                {
+                    txtTCKNo.Text = prsl.TCKNo;
+                    txtDogumYeri.Text = prsl.DogumYeri;
+                    txtDogumTarihi.Text = prsl.DogumTarihi.ToShortDateString();
+                    txtEgitimDurumu.Text = prsl.EgitimDurumu;
+                }
+            }
+
+
+
+
+           
+            //prsl = per.PersonelGetir(gelenId);
+            //txtTCKNo.Text = prsl.TCKNo;
+            //txtDogumYeri.Text = prsl.DogumYeri;
+            //txtDogumTarihi.Text = prsl.DogumTarihi.ToShortDateString();
+            //txtEgitimDurumu.Text = prsl.EgitimDurumu;
+
         }
 
-        private void circularPictureBox1_Click(object sender, EventArgs e)
+        //private void panelIsBilgileri_Paint(object sender, PaintEventArgs e)
+        //{
+        //    int gelenId = per.UsersIdyeGorePersoneliGetirme(deg.Id);
+        //    prsl = per.PersonelGetir(gelenId);
+        //    txtBaslangic.Text = prsl.IseGirisTarihi.ToShortDateString();
+        //    txtMedeniHal.Text = prsl.MedeniHal;
+        //    txtAskerlik.Text = prsl.AskerlikDurumu;
+        //    txtEngel.Text = prsl.EngelDurumu;
+
+        //}
+
+        private void panelIletisimBilgileri_Paint(object sender, PaintEventArgs e)
         {
-
+            int gelenId = per.UsersIdyeGorePersoneliGetirme(deg.Id);
+            prsl = per.PersonelGetir(gelenId);
+            txtTel.Text = prsl.Telefon;
+            txtEmail.Text = prsl.Email;
+            txtAdres.Text = prsl.Adres;
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
+        private void panelIsBilgileri_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -76,6 +76,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbPozisyon = new System.Windows.Forms.ComboBox();
             this.panelHeader1.SuspendLayout();
             this.panelPersonelKisisel.SuspendLayout();
             this.panelPersonelResim.SuspendLayout();
@@ -551,6 +553,8 @@
             // 
             // panelPersonelResim
             // 
+            this.panelPersonelResim.Controls.Add(this.cbPozisyon);
+            this.panelPersonelResim.Controls.Add(this.label10);
             this.panelPersonelResim.Controls.Add(this.btnKaydet);
             this.panelPersonelResim.Controls.Add(this.txtKullaniciSifre);
             this.panelPersonelResim.Controls.Add(this.txtKullaniciAd);
@@ -570,7 +574,7 @@
             this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.ForeColor = System.Drawing.Color.White;
-            this.btnKaydet.Location = new System.Drawing.Point(168, 314);
+            this.btnKaydet.Location = new System.Drawing.Point(171, 343);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(148, 31);
             this.btnKaydet.TabIndex = 180;
@@ -580,7 +584,7 @@
             // 
             // txtKullaniciSifre
             // 
-            this.txtKullaniciSifre.Location = new System.Drawing.Point(168, 271);
+            this.txtKullaniciSifre.Location = new System.Drawing.Point(171, 305);
             this.txtKullaniciSifre.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtKullaniciSifre.Multiline = true;
             this.txtKullaniciSifre.Name = "txtKullaniciSifre";
@@ -591,7 +595,7 @@
             // 
             // txtKullaniciAd
             // 
-            this.txtKullaniciAd.Location = new System.Drawing.Point(168, 231);
+            this.txtKullaniciAd.Location = new System.Drawing.Point(170, 264);
             this.txtKullaniciAd.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtKullaniciAd.Multiline = true;
             this.txtKullaniciAd.Name = "txtKullaniciAd";
@@ -604,7 +608,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label24.Location = new System.Drawing.Point(66, 237);
+            this.label24.Location = new System.Drawing.Point(74, 270);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(84, 17);
@@ -615,7 +619,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label25.Location = new System.Drawing.Point(66, 277);
+            this.label25.Location = new System.Drawing.Point(74, 310);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(93, 17);
@@ -627,7 +631,7 @@
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFoto.ErrorImage = null;
             this.pbFoto.ImageLocation = "";
-            this.pbFoto.Location = new System.Drawing.Point(115, 19);
+            this.pbFoto.Location = new System.Drawing.Point(154, 19);
             this.pbFoto.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(165, 179);
@@ -635,6 +639,31 @@
             this.pbFoto.TabIndex = 175;
             this.pbFoto.TabStop = false;
             this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click_1);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(74, 230);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 17);
+            this.label10.TabIndex = 182;
+            this.label10.Text = "Pozisyon";
+            // 
+            // cbPozisyon
+            // 
+            this.cbPozisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbPozisyon.FormattingEnabled = true;
+            this.cbPozisyon.Items.AddRange(new object[] {
+            "Seçiniz",
+            "Kasiyer",
+            "Yönetici",
+            "Eleman"});
+            this.cbPozisyon.Location = new System.Drawing.Point(169, 225);
+            this.cbPozisyon.Name = "cbPozisyon";
+            this.cbPozisyon.Size = new System.Drawing.Size(148, 28);
+            this.cbPozisyon.TabIndex = 183;
             // 
             // frmPersonel
             // 
@@ -712,5 +741,7 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.PictureBox pbFoto;
+        private System.Windows.Forms.ComboBox cbPozisyon;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -53,7 +53,7 @@
             this.labelAd = new System.Windows.Forms.Label();
             this.panelHeader3 = new System.Windows.Forms.Panel();
             this.btnGuncelle = new System.Windows.Forms.Button();
-            this.panelGenelGilgi = new System.Windows.Forms.Panel();
+            this.panelGenelBilgi = new System.Windows.Forms.Panel();
             this.txtTCKNo = new System.Windows.Forms.TextBox();
             this.txtEgitimDurumu = new System.Windows.Forms.TextBox();
             this.txtDogumTarihi = new System.Windows.Forms.TextBox();
@@ -72,7 +72,7 @@
             this.panelHeader1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.panelHeader3.SuspendLayout();
-            this.panelGenelGilgi.SuspendLayout();
+            this.panelGenelBilgi.SuspendLayout();
             this.panelIsBilgileri.SuspendLayout();
             this.panelIletisimBilgileri.SuspendLayout();
             this.panelGenelPerformans.SuspendLayout();
@@ -164,7 +164,6 @@
             this.label11.Size = new System.Drawing.Size(90, 13);
             this.label11.TabIndex = 5;
             this.label11.Text = "İşten Çıkış Tarihi :";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
@@ -175,7 +174,6 @@
             this.label12.Size = new System.Drawing.Size(86, 17);
             this.label12.TabIndex = 5;
             this.label12.Text = "Medeni Hali:";
-            this.label12.Click += new System.EventHandler(this.label11_Click);
             // 
             // label13
             // 
@@ -186,7 +184,6 @@
             this.label13.Size = new System.Drawing.Size(115, 17);
             this.label13.TabIndex = 5;
             this.label13.Text = "Askerlik Durumu:";
-            this.label13.Click += new System.EventHandler(this.label11_Click);
             // 
             // label14
             // 
@@ -197,7 +194,6 @@
             this.label14.Size = new System.Drawing.Size(102, 17);
             this.label14.TabIndex = 5;
             this.label14.Text = "Engel Durumu:";
-            this.label14.Click += new System.EventHandler(this.label11_Click);
             // 
             // label15
             // 
@@ -208,7 +204,6 @@
             this.label15.Size = new System.Drawing.Size(108, 17);
             this.label15.TabIndex = 5;
             this.label15.Text = "Eğitim Durumu: ";
-            this.label15.Click += new System.EventHandler(this.label11_Click);
             // 
             // label16
             // 
@@ -342,25 +337,25 @@
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
             // 
-            // panelGenelGilgi
+            // panelGenelBilgi
             // 
-            this.panelGenelGilgi.BackColor = System.Drawing.Color.White;
-            this.panelGenelGilgi.Controls.Add(this.txtTCKNo);
-            this.panelGenelGilgi.Controls.Add(this.txtEgitimDurumu);
-            this.panelGenelGilgi.Controls.Add(this.txtDogumTarihi);
-            this.panelGenelGilgi.Controls.Add(this.txtDogumYeri);
-            this.panelGenelGilgi.Controls.Add(this.label15);
-            this.panelGenelGilgi.Controls.Add(this.label16);
-            this.panelGenelGilgi.Controls.Add(this.label4);
-            this.panelGenelGilgi.Controls.Add(this.label3);
-            this.panelGenelGilgi.Controls.Add(this.label7);
-            this.panelGenelGilgi.Controls.Add(this.label6);
-            this.panelGenelGilgi.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelGenelGilgi.Location = new System.Drawing.Point(0, 102);
-            this.panelGenelGilgi.Name = "panelGenelGilgi";
-            this.panelGenelGilgi.Size = new System.Drawing.Size(220, 395);
-            this.panelGenelGilgi.TabIndex = 13;
-            this.panelGenelGilgi.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panelGenelBilgi.BackColor = System.Drawing.Color.White;
+            this.panelGenelBilgi.Controls.Add(this.txtTCKNo);
+            this.panelGenelBilgi.Controls.Add(this.txtEgitimDurumu);
+            this.panelGenelBilgi.Controls.Add(this.txtDogumTarihi);
+            this.panelGenelBilgi.Controls.Add(this.txtDogumYeri);
+            this.panelGenelBilgi.Controls.Add(this.label15);
+            this.panelGenelBilgi.Controls.Add(this.label16);
+            this.panelGenelBilgi.Controls.Add(this.label4);
+            this.panelGenelBilgi.Controls.Add(this.label3);
+            this.panelGenelBilgi.Controls.Add(this.label7);
+            this.panelGenelBilgi.Controls.Add(this.label6);
+            this.panelGenelBilgi.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelGenelBilgi.Location = new System.Drawing.Point(0, 102);
+            this.panelGenelBilgi.Name = "panelGenelBilgi";
+            this.panelGenelBilgi.Size = new System.Drawing.Size(220, 395);
+            this.panelGenelBilgi.TabIndex = 13;
+            this.panelGenelBilgi.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGenelGilgi_Paint);
             // 
             // txtTCKNo
             // 
@@ -411,6 +406,7 @@
             this.panelIsBilgileri.Name = "panelIsBilgileri";
             this.panelIsBilgileri.Size = new System.Drawing.Size(220, 395);
             this.panelIsBilgileri.TabIndex = 14;
+            this.panelIsBilgileri.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIsBilgileri_Paint);
             // 
             // txtEngel
             // 
@@ -459,7 +455,7 @@
             this.panelIletisimBilgileri.Name = "panelIletisimBilgileri";
             this.panelIletisimBilgileri.Size = new System.Drawing.Size(220, 395);
             this.panelIletisimBilgileri.TabIndex = 15;
-            this.panelIletisimBilgileri.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            this.panelIletisimBilgileri.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIletisimBilgileri_Paint);
             // 
             // txtAdres
             // 
@@ -513,7 +509,7 @@
             this.Controls.Add(this.panelGenelPerformans);
             this.Controls.Add(this.panelIletisimBilgileri);
             this.Controls.Add(this.panelIsBilgileri);
-            this.Controls.Add(this.panelGenelGilgi);
+            this.Controls.Add(this.panelGenelBilgi);
             this.Controls.Add(this.panelHeader1);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label18);
@@ -526,8 +522,8 @@
             this.panelHeader1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.panelHeader3.ResumeLayout(false);
-            this.panelGenelGilgi.ResumeLayout(false);
-            this.panelGenelGilgi.PerformLayout();
+            this.panelGenelBilgi.ResumeLayout(false);
+            this.panelGenelBilgi.PerformLayout();
             this.panelIsBilgileri.ResumeLayout(false);
             this.panelIsBilgileri.PerformLayout();
             this.panelIletisimBilgileri.ResumeLayout(false);
@@ -559,7 +555,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Panel panelHeader1;
-        private System.Windows.Forms.Panel panelGenelGilgi;
+        private System.Windows.Forms.Panel panelGenelBilgi;
         private System.Windows.Forms.Panel panelIsBilgileri;
         private System.Windows.Forms.Panel panelIletisimBilgileri;
         private System.Windows.Forms.Panel panelGenelPerformans;

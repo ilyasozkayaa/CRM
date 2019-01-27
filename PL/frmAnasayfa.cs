@@ -1,4 +1,5 @@
-﻿using PL.KasaIslemleri;
+﻿using BLL.Model;
+using PL.KasaIslemleri;
 using PL.Personel;
 using PL.Profilim;
 using PL.Properties;
@@ -136,6 +137,7 @@ namespace PL
         {
             frmBilgilerim frm = new frmBilgilerim();
             FormAc(frm);
+           
         }
 
         private void btnGörevlerim_Click(object sender, EventArgs e)
@@ -230,6 +232,13 @@ namespace PL
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+     
+        private void pnlContent_Paint(object sender, PaintEventArgs e)
+        {
+
+            
 
         }
     }

@@ -55,14 +55,18 @@ namespace PL.Personeller
             personelList.Cinsiyet  = cbCinsiyet.SelectedItem.ToString();
             personelList.IseGirisTarihi = dateİseGiris.Value;
             personelList.IstenCikisTarihi = dateİseGiris.Value;
+            personelList.UserId = Convert.ToInt32(cbPozisyon.SelectedValue);
+            //personelList.KullaniciAdi = txtSoyad.Text + txtAd.Text.Substring(0, 1);
+            //personelList.KullaniciSifre = txtSoyad.Text.Substring(0, 1) + dateTimePicker1.Value.Year + txtTC.Text.Substring(8);
+
             bool sonuc = pmi.personelEkle(personelList);
             if (sonuc)
             {
-                MessageBox.Show("kayı basarılı");
+                MessageBox.Show("kayıt basarılı");
             }
             else
             {
-                MessageBox.Show("kayı basarısız");
+                MessageBox.Show("kayıt basarısız");
             }
 
 
