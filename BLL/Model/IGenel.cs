@@ -10,7 +10,7 @@ namespace BLL.Model
    public interface IGenel
     {
         int giris(string KullaniciAdi, string parola);
-        bool ParolaSifirla(int prsnlID,string YeniParola);
+        bool ParolaSifirla(string prsnlID,string YeniParola);
         void Temizle();
         void FormAcikmi();
     }

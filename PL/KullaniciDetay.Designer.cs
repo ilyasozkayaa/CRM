@@ -39,7 +39,7 @@
             this.lblSoyAdi.AutoSize = true;
             this.lblSoyAdi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSoyAdi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSoyAdi.Location = new System.Drawing.Point(99, 16);
+            this.lblSoyAdi.Location = new System.Drawing.Point(137, 16);
             this.lblSoyAdi.Name = "lblSoyAdi";
             this.lblSoyAdi.Size = new System.Drawing.Size(62, 19);
             this.lblSoyAdi.TabIndex = 11;
@@ -75,7 +75,7 @@
             this.Controls.Add(this.lblAdi);
             this.Controls.Add(this.circularPictureBox1);
             this.Name = "KullaniciDetay";
-            this.Size = new System.Drawing.Size(184, 50);
+            this.Size = new System.Drawing.Size(251, 50);
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -84,8 +84,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblSoyAdi;
-        private System.Windows.Forms.Label lblAdi;
-        private CircularPictureBox circularPictureBox1;
+        public System.Windows.Forms.Label lblSoyAdi;
+        public System.Windows.Forms.Label lblAdi;
+        public CircularPictureBox circularPictureBox1;
     }
 }

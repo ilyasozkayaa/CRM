@@ -59,7 +59,9 @@
             this.btnUrunEk = new System.Windows.Forms.Button();
             this.btnKategoriekle = new System.Windows.Forms.Button();
             this.btnUrun = new System.Windows.Forms.Button();
-            this.btnUrun1 = new System.Windows.Forms.Button();
+            this.btnKasa = new System.Windows.Forms.Button();
+            this.btnRapor = new System.Windows.Forms.Button();
+            this.btnKampanya = new System.Windows.Forms.Button();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.kullaniciDetay1 = new PL.KullaniciDetay();
             this.pnlSaat = new System.Windows.Forms.Panel();
@@ -288,7 +290,9 @@
             this.flpMenu.Controls.Add(this.panel3);
             this.flpMenu.Controls.Add(this.pnlPersoneSekme);
             this.flpMenu.Controls.Add(this.pnlUrun);
-            this.flpMenu.Controls.Add(this.btnUrun1);
+            this.flpMenu.Controls.Add(this.btnKasa);
+            this.flpMenu.Controls.Add(this.btnRapor);
+            this.flpMenu.Controls.Add(this.btnKampanya);
             this.flpMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpMenu.Location = new System.Drawing.Point(50, 50);
             this.flpMenu.Name = "flpMenu";
@@ -310,6 +314,10 @@
             // btnGörevlerim
             // 
             this.btnGörevlerim.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGörevlerim.FlatAppearance.BorderSize = 0;
+            this.btnGörevlerim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGörevlerim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGörevlerim.ForeColor = System.Drawing.Color.White;
             this.btnGörevlerim.Location = new System.Drawing.Point(0, 82);
             this.btnGörevlerim.Name = "btnGörevlerim";
             this.btnGörevlerim.Size = new System.Drawing.Size(150, 41);
@@ -321,6 +329,10 @@
             // btnBilgiler
             // 
             this.btnBilgiler.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBilgiler.FlatAppearance.BorderSize = 0;
+            this.btnBilgiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBilgiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBilgiler.ForeColor = System.Drawing.Color.White;
             this.btnBilgiler.Location = new System.Drawing.Point(0, 41);
             this.btnBilgiler.Name = "btnBilgiler";
             this.btnBilgiler.Size = new System.Drawing.Size(150, 41);
@@ -344,6 +356,7 @@
             this.btnProfile.Size = new System.Drawing.Size(150, 41);
             this.btnProfile.TabIndex = 0;
             this.btnProfile.Text = "Profilim";
+            this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnProfile.UseVisualStyleBackColor = false;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
@@ -411,6 +424,7 @@
             this.btnPersonel.Size = new System.Drawing.Size(150, 43);
             this.btnPersonel.TabIndex = 10;
             this.btnPersonel.Text = "Personel";
+            this.btnPersonel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPersonel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnPersonel.UseVisualStyleBackColor = false;
             this.btnPersonel.Click += new System.EventHandler(this.btnPersonel_Click);
@@ -498,24 +512,58 @@
             this.btnUrun.Size = new System.Drawing.Size(150, 41);
             this.btnUrun.TabIndex = 14;
             this.btnUrun.Text = "Ürün";
+            this.btnUrun.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUrun.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnUrun.UseVisualStyleBackColor = false;
             this.btnUrun.Click += new System.EventHandler(this.btnUrun_Click);
             // 
-            // btnUrun1
+            // btnKasa
             // 
-            this.btnUrun1.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnUrun1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUrun1.FlatAppearance.BorderSize = 0;
-            this.btnUrun1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUrun1.ForeColor = System.Drawing.Color.White;
-            this.btnUrun1.Location = new System.Drawing.Point(3, 151);
-            this.btnUrun1.Name = "btnUrun1";
-            this.btnUrun1.Size = new System.Drawing.Size(150, 41);
-            this.btnUrun1.TabIndex = 0;
-            this.btnUrun1.Text = "Kasa";
-            this.btnUrun1.UseVisualStyleBackColor = false;
-            this.btnUrun1.Click += new System.EventHandler(this.btnUrun1_Click);
+            this.btnKasa.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnKasa.FlatAppearance.BorderSize = 0;
+            this.btnKasa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKasa.ForeColor = System.Drawing.Color.White;
+            this.btnKasa.Location = new System.Drawing.Point(3, 151);
+            this.btnKasa.Name = "btnKasa";
+            this.btnKasa.Size = new System.Drawing.Size(150, 41);
+            this.btnKasa.TabIndex = 0;
+            this.btnKasa.Text = "Kasa";
+            this.btnKasa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKasa.UseVisualStyleBackColor = false;
+            this.btnKasa.Click += new System.EventHandler(this.btnUrun1_Click);
+            // 
+            // btnRapor
+            // 
+            this.btnRapor.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnRapor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRapor.FlatAppearance.BorderSize = 0;
+            this.btnRapor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnRapor.ForeColor = System.Drawing.Color.White;
+            this.btnRapor.Location = new System.Drawing.Point(3, 198);
+            this.btnRapor.Name = "btnRapor";
+            this.btnRapor.Size = new System.Drawing.Size(150, 41);
+            this.btnRapor.TabIndex = 11;
+            this.btnRapor.Text = "Rapor";
+            this.btnRapor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRapor.UseVisualStyleBackColor = false;
+            // 
+            // btnKampanya
+            // 
+            this.btnKampanya.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnKampanya.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKampanya.FlatAppearance.BorderSize = 0;
+            this.btnKampanya.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKampanya.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKampanya.ForeColor = System.Drawing.Color.White;
+            this.btnKampanya.Location = new System.Drawing.Point(3, 245);
+            this.btnKampanya.Name = "btnKampanya";
+            this.btnKampanya.Size = new System.Drawing.Size(150, 41);
+            this.btnKampanya.TabIndex = 12;
+            this.btnKampanya.Text = "Kampanya";
+            this.btnKampanya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKampanya.UseVisualStyleBackColor = false;
             // 
             // pnlFooter
             // 
@@ -533,7 +581,7 @@
             this.kullaniciDetay1.BackColor = System.Drawing.Color.SteelBlue;
             this.kullaniciDetay1.Dock = System.Windows.Forms.DockStyle.Right;
             this.kullaniciDetay1.Location = new System.Drawing.Point(650, 0);
-            this.kullaniciDetay1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kullaniciDetay1.Margin = new System.Windows.Forms.Padding(4);
             this.kullaniciDetay1.Name = "kullaniciDetay1";
             this.kullaniciDetay1.Size = new System.Drawing.Size(184, 50);
             this.kullaniciDetay1.TabIndex = 5;
@@ -669,7 +717,9 @@
         private System.Windows.Forms.Timer timer5;
         private System.Windows.Forms.Button btnUrunEk;
         private System.Windows.Forms.Button btnKategoriekle;
-        private System.Windows.Forms.Button btnUrun1;
+        private System.Windows.Forms.Button btnKasa;
+        private System.Windows.Forms.Button btnRapor;
+        private System.Windows.Forms.Button btnKampanya;
     }
 }
 
