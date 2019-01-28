@@ -52,10 +52,8 @@
             this.txtTCKNo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTelefon = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.cbAskerlik = new System.Windows.Forms.ComboBox();
-            this.txtEngelAciklama = new System.Windows.Forms.TextBox();
             this.dtpDogumT = new System.Windows.Forms.DateTimePicker();
             this.cbEgitim = new System.Windows.Forms.ComboBox();
             this.txtAdres = new System.Windows.Forms.TextBox();
@@ -70,14 +68,14 @@
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.panelPersonelResim = new System.Windows.Forms.Panel();
+            this.cbPozisyon = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.txtKullaniciSifre = new System.Windows.Forms.TextBox();
             this.txtKullaniciAd = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.pbFoto = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cbPozisyon = new System.Windows.Forms.ComboBox();
             this.panelHeader1.SuspendLayout();
             this.panelPersonelKisisel.SuspendLayout();
             this.panelPersonelResim.SuspendLayout();
@@ -160,10 +158,8 @@
             this.panelPersonelKisisel.Controls.Add(this.txtTCKNo);
             this.panelPersonelKisisel.Controls.Add(this.label5);
             this.panelPersonelKisisel.Controls.Add(this.txtTelefon);
-            this.panelPersonelKisisel.Controls.Add(this.label1);
             this.panelPersonelKisisel.Controls.Add(this.label14);
             this.panelPersonelKisisel.Controls.Add(this.cbAskerlik);
-            this.panelPersonelKisisel.Controls.Add(this.txtEngelAciklama);
             this.panelPersonelKisisel.Controls.Add(this.dtpDogumT);
             this.panelPersonelKisisel.Controls.Add(this.cbEgitim);
             this.panelPersonelKisisel.Controls.Add(this.txtAdres);
@@ -186,7 +182,7 @@
             // dateİseGiris
             // 
             this.dateİseGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateİseGiris.Location = new System.Drawing.Point(466, 323);
+            this.dateİseGiris.Location = new System.Drawing.Point(466, 209);
             this.dateİseGiris.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.dateİseGiris.Name = "dateİseGiris";
             this.dateİseGiris.Size = new System.Drawing.Size(157, 23);
@@ -234,7 +230,7 @@
             // dateİstenCikis
             // 
             this.dateİstenCikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateİstenCikis.Location = new System.Drawing.Point(466, 352);
+            this.dateİstenCikis.Location = new System.Drawing.Point(466, 241);
             this.dateİstenCikis.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.dateİstenCikis.Name = "dateİstenCikis";
             this.dateİstenCikis.Size = new System.Drawing.Size(157, 23);
@@ -278,7 +274,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label22.Location = new System.Drawing.Point(331, 354);
+            this.label22.Location = new System.Drawing.Point(331, 243);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(124, 20);
@@ -328,7 +324,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label23.Location = new System.Drawing.Point(332, 325);
+            this.label23.Location = new System.Drawing.Point(332, 211);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(109, 20);
@@ -364,18 +360,6 @@
             this.txtTelefon.Size = new System.Drawing.Size(135, 26);
             this.txtTelefon.TabIndex = 158;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(329, 201);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 60);
-            this.label1.TabIndex = 184;
-            this.label1.Text = "Engel Durumu\r\nVar ise \r\nAçıklama";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -400,16 +384,6 @@
             this.cbAskerlik.Name = "cbAskerlik";
             this.cbAskerlik.Size = new System.Drawing.Size(157, 28);
             this.cbAskerlik.TabIndex = 177;
-            // 
-            // txtEngelAciklama
-            // 
-            this.txtEngelAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtEngelAciklama.Location = new System.Drawing.Point(466, 200);
-            this.txtEngelAciklama.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtEngelAciklama.Multiline = true;
-            this.txtEngelAciklama.Name = "txtEngelAciklama";
-            this.txtEngelAciklama.Size = new System.Drawing.Size(159, 113);
-            this.txtEngelAciklama.TabIndex = 180;
             // 
             // dtpDogumT
             // 
@@ -566,7 +540,32 @@
             this.panelPersonelResim.Name = "panelPersonelResim";
             this.panelPersonelResim.Size = new System.Drawing.Size(527, 401);
             this.panelPersonelResim.TabIndex = 104;
-          //  this.panelPersonelResim.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPersonelResim_Paint);
+            this.panelPersonelResim.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPersonelResim_Paint);
+            // 
+            // cbPozisyon
+            // 
+            this.cbPozisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbPozisyon.FormattingEnabled = true;
+            this.cbPozisyon.Items.AddRange(new object[] {
+            "Seçiniz",
+            "Kasiyer",
+            "Yönetici",
+            "Eleman"});
+            this.cbPozisyon.Location = new System.Drawing.Point(169, 225);
+            this.cbPozisyon.Name = "cbPozisyon";
+            this.cbPozisyon.Size = new System.Drawing.Size(148, 28);
+            this.cbPozisyon.TabIndex = 183;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(74, 230);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 17);
+            this.label10.TabIndex = 182;
+            this.label10.Text = "Pozisyon";
             // 
             // btnKaydet
             // 
@@ -640,31 +639,6 @@
             this.pbFoto.TabStop = false;
             this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click_1);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(74, 230);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 17);
-            this.label10.TabIndex = 182;
-            this.label10.Text = "Pozisyon";
-            // 
-            // cbPozisyon
-            // 
-            this.cbPozisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbPozisyon.FormattingEnabled = true;
-            this.cbPozisyon.Items.AddRange(new object[] {
-            "Seçiniz",
-            "Kasiyer",
-            "Yönetici",
-            "Eleman"});
-            this.cbPozisyon.Location = new System.Drawing.Point(169, 225);
-            this.cbPozisyon.Name = "cbPozisyon";
-            this.cbPozisyon.Size = new System.Drawing.Size(148, 28);
-            this.cbPozisyon.TabIndex = 183;
-            // 
             // frmPersonel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -731,9 +705,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbAskerlik;
-        private System.Windows.Forms.TextBox txtEngelAciklama;
         private System.Windows.Forms.ComboBox cbEgitim;
         private System.Windows.Forms.TextBox txtKullaniciSifre;
         private System.Windows.Forms.TextBox txtKullaniciAd;

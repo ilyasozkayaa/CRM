@@ -1,5 +1,5 @@
 ﻿using BLL.Model;
-using PL.KasaIslemleri;
+
 using PL.Personel;
 using PL.Profilim;
 using PL.Properties;
@@ -192,8 +192,8 @@ namespace PL
 
         private void btnKasa_Click(object sender, EventArgs e)
         {
-            frmSatisIslemleri frm = new frmSatisIslemleri();
-            FormAc(frm);
+            //frmSatisIslemleri frm = new frmSatisIslemleri();
+            //FormAc(frm);
         }
 
         private void btnUrun_Click(object sender, EventArgs e)
@@ -226,8 +226,8 @@ namespace PL
 
         private void btnUrun1_Click(object sender, EventArgs e)
         {
-            frmSatisIslemleri frm = new frmSatisIslemleri();
-            FormAc(frm);
+            //frmSatisIslemleri frm = new frmSatisIslemleri();
+            //FormAc(frm);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

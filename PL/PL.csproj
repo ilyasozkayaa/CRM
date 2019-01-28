@@ -65,30 +65,6 @@
     <Compile Include="frmGiris.Designer.cs">
       <DependentUpon>frmGiris.cs</DependentUpon>
     </Compile>
-    <Compile Include="KasaIslemleri\frmUrunIade.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KasaIslemleri\frmUrunIade.Designer.cs">
-      <DependentUpon>frmUrunIade.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KasaIslemleri\frmUyeKayit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KasaIslemleri\frmUyeKayit.Designer.cs">
-      <DependentUpon>frmUyeKayit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KasaIslemleri\frmUyeMusteri.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KasaIslemleri\frmUyeMusteri.Designer.cs">
-      <DependentUpon>frmUyeMusteri.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KasaIslemleri\frmSatisIslemleri.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KasaIslemleri\frmSatisIslemleri.Designer.cs">
-      <DependentUpon>frmSatisIslemleri.cs</DependentUpon>
-    </Compile>
     <Compile Include="KullaniciDetay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -176,18 +152,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGiris.resx">
       <DependentUpon>frmGiris.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KasaIslemleri\frmUrunIade.resx">
-      <DependentUpon>frmUrunIade.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KasaIslemleri\frmUyeKayit.resx">
-      <DependentUpon>frmUyeKayit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KasaIslemleri\frmUyeMusteri.resx">
-      <DependentUpon>frmUyeMusteri.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KasaIslemleri\frmSatisIslemleri.resx">
-      <DependentUpon>frmSatisIslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KullaniciDetay.resx">
       <DependentUpon>KullaniciDetay.cs</DependentUpon>

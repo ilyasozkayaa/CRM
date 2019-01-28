@@ -24,6 +24,7 @@ namespace PL.Personeller
 
         PersonelMusteriIslemleri pmi = new PersonelMusteriIslemleri();
         Degiskentanimla gen = new Degiskentanimla();
+        CRMContext ent = new CRMContext();
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
@@ -33,7 +34,7 @@ namespace PL.Personeller
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             DAL.Context.Personel personelList = new DAL.Context.Personel();
-            DAL.Context.User user = new DAL.Context.User();
+           User user = new User();
             string KullaniciAdi, KullaniciSifre;
             personelList.Ad      = txtAd.Text;
             personelList.Soyad   = txtSoyad.Text;
@@ -43,13 +44,17 @@ namespace PL.Personeller
             personelList.DogumYeri = cbDogumYeri.SelectedItem.ToString();
             personelList.Adres     = txtAdres.Text;
             personelList.Email     = txtEmail.Text;
+            personelList.AskerlikDurumu = cbAskerlik.SelectedItem.ToString();
+            personelList.EgitimDurumu = cbEgitim.SelectedItem.ToString();
+            personelList.EngelDurumu = cbEngel.ToString();
+            personelList.MedeniHal = cbMedeniHal.SelectedItem.ToString();
             personelList.Image     = gen.imagePath;
             personelList.Cinsiyet  = cbCinsiyet.SelectedItem.ToString();
             personelList.IseGirisTarihi = dateİseGiris.Value;
             personelList.IstenCikisTarihi = dateİseGiris.Value;
             personelList.UserId = cbPozisyon.SelectedIndex;
             KullaniciAdi = txtSoyad.Text + txtAd.Text.Substring(0, 1);
-            KullaniciSifre = txtSoyad.Text.Substring(0, 1) + dtpDogumT.Value.Year + txtTCKNo.Text.Substring(8);
+            KullaniciSifre = txtSoyad.Text.Substring(0, 1) + dtpDogumT.Value.Year + txtTCKNo.Text.Substring(3);
             txtKullaniciAd.Text = KullaniciAdi;
             txtKullaniciSifre.Text = KullaniciSifre;
             user.KullaniciAdi = KullaniciAdi;
@@ -103,6 +108,11 @@ namespace PL.Personeller
             File.Move(dosyayolu, "C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm\\" +txtAd.Text+""+txtSoyad.Text+".jpg");
             string hedef = Path.Combine("C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm\\"+txtAd.Text+""+ txtSoyad.Text+".jpg");
             gen.imagePath = hedef;
+
+        }
+
+        private void panelPersonelResim_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
