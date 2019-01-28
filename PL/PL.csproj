@@ -101,6 +101,12 @@
     <Compile Include="Personel\frmPersonel.Designer.cs">
       <DependentUpon>frmPersonel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personel\frmTümünüSorgula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\frmTümünüSorgula.Designer.cs">
+      <DependentUpon>frmTümünüSorgula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personel\GorevAtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Personel\frmPersonel.resx">
       <DependentUpon>frmPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\frmTümünüSorgula.resx">
+      <DependentUpon>frmTümünüSorgula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personel\GorevAtama.resx">
       <DependentUpon>GorevAtama.cs</DependentUpon>
