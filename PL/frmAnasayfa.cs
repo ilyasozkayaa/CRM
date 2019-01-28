@@ -49,6 +49,9 @@ namespace PL
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
             timer3.Start();
             lblTarih.Text = DateTime.Now.ToString("hh:mm:ss tt");
             lbltoday.Text = DateTime.Today.ToShortDateString();

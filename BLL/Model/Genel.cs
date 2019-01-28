@@ -32,14 +32,14 @@ namespace BLL.Model
             }
             return ID;
         }
-
-        public bool ParolaSifirla(int prsnlID, string YeniParola)
+        
+        public bool ParolaSifirla(string prsnlID, string YeniParola)
         {
             User ParolasiDegisecek = new User();
             bool sonuc = false;
             try
             {
-                ParolasiDegisecek = (from u in ent.Users where u.Id == prsnlID select u).FirstOrDefault();
+                ParolasiDegisecek = (from u in ent.Users where u.KullaniciAdi == prsnlID select u).FirstOrDefault();
                 ParolasiDegisecek.Parola = YeniParola;
                 ent.SaveChanges();
                 sonuc = true;

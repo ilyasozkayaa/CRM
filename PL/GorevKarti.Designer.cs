@@ -33,15 +33,11 @@
             this.lblGorevAdi = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pnlGorevDetay = new System.Windows.Forms.Panel();
-            this.clbGorevİcerik = new System.Windows.Forms.CheckedListBox();
             this.pnlMembers = new System.Windows.Forms.Panel();
             this.lblYuzde = new System.Windows.Forms.Label();
-            this.cpbMember = new PL.CircularPictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlheader.SuspendLayout();
-            this.pnlGorevDetay.SuspendLayout();
             this.pnlMembers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpbMember)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlheader
@@ -58,12 +54,11 @@
             // lblGorevAdi
             // 
             this.lblGorevAdi.AutoSize = true;
-            this.lblGorevAdi.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblGorevAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblGorevAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGorevAdi.ForeColor = System.Drawing.Color.White;
-            this.lblGorevAdi.Location = new System.Drawing.Point(0, 0);
+            this.lblGorevAdi.Location = new System.Drawing.Point(3, 6);
             this.lblGorevAdi.Name = "lblGorevAdi";
-            this.lblGorevAdi.Size = new System.Drawing.Size(71, 17);
+            this.lblGorevAdi.Size = new System.Drawing.Size(79, 20);
             this.lblGorevAdi.TabIndex = 0;
             this.lblGorevAdi.Text = "Görev Adı";
             // 
@@ -78,7 +73,6 @@
             // pnlGorevDetay
             // 
             this.pnlGorevDetay.BackColor = System.Drawing.Color.White;
-            this.pnlGorevDetay.Controls.Add(this.clbGorevİcerik);
             this.pnlGorevDetay.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlGorevDetay.Location = new System.Drawing.Point(0, 29);
             this.pnlGorevDetay.MaximumSize = new System.Drawing.Size(304, 99);
@@ -87,26 +81,11 @@
             this.pnlGorevDetay.Size = new System.Drawing.Size(304, 99);
             this.pnlGorevDetay.TabIndex = 4;
             // 
-            // clbGorevİcerik
-            // 
-            this.clbGorevİcerik.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clbGorevİcerik.FormattingEnabled = true;
-            this.clbGorevİcerik.Items.AddRange(new object[] {
-            "1.Aşama",
-            "2.Aşama",
-            "3.Aşama"});
-            this.clbGorevİcerik.Location = new System.Drawing.Point(0, 0);
-            this.clbGorevİcerik.Name = "clbGorevİcerik";
-            this.clbGorevİcerik.Size = new System.Drawing.Size(304, 99);
-            this.clbGorevİcerik.TabIndex = 0;
-            this.clbGorevİcerik.SelectedIndexChanged += new System.EventHandler(this.clbGorevİcerik_SelectedIndexChanged);
-            // 
             // pnlMembers
             // 
             this.pnlMembers.BackColor = System.Drawing.Color.GhostWhite;
             this.pnlMembers.Controls.Add(this.lblYuzde);
             this.pnlMembers.Controls.Add(this.progressBar1);
-            this.pnlMembers.Controls.Add(this.cpbMember);
             this.pnlMembers.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMembers.Location = new System.Drawing.Point(0, 128);
             this.pnlMembers.MaximumSize = new System.Drawing.Size(304, 35);
@@ -126,17 +105,6 @@
             this.lblYuzde.TabIndex = 3;
             this.lblYuzde.Text = "%XXX";
             // 
-            // cpbMember
-            // 
-            this.cpbMember.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cpbMember.Image = global::PL.Properties.Resources.personelFoto;
-            this.cpbMember.Location = new System.Drawing.Point(269, 0);
-            this.cpbMember.Name = "cpbMember";
-            this.cpbMember.Size = new System.Drawing.Size(35, 35);
-            this.cpbMember.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cpbMember.TabIndex = 0;
-            this.cpbMember.TabStop = false;
-            // 
             // timer1
             // 
             this.timer1.Interval = 15;
@@ -155,23 +123,19 @@
             this.Size = new System.Drawing.Size(304, 160);
             this.pnlheader.ResumeLayout(false);
             this.pnlheader.PerformLayout();
-            this.pnlGorevDetay.ResumeLayout(false);
             this.pnlMembers.ResumeLayout(false);
             this.pnlMembers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpbMember)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel pnlheader;
-        private System.Windows.Forms.Label lblGorevAdi;
-        private System.Windows.Forms.Panel pnlGorevDetay;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.CheckedListBox clbGorevİcerik;
-        private System.Windows.Forms.Panel pnlMembers;
-        private CircularPictureBox cpbMember;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label lblYuzde;
+        public System.Windows.Forms.Label lblGorevAdi;
+        public System.Windows.Forms.Panel pnlGorevDetay;
+        public System.Windows.Forms.Panel pnlMembers;
+        public System.Windows.Forms.ProgressBar progressBar1;
+        public System.Windows.Forms.Label lblYuzde;
     }
 }
