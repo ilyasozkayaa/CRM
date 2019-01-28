@@ -32,6 +32,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.panelHeader2 = new System.Windows.Forms.Panel();
             this.panelUunBilgileri = new System.Windows.Forms.Panel();
+            this.btnUrunEkle = new System.Windows.Forms.Button();
+            this.btnUrunSil = new System.Windows.Forms.Button();
+            this.btnUrunGuncelle = new System.Windows.Forms.Button();
             this.cbUretimYeri = new System.Windows.Forms.ComboBox();
             this.cbMalzeme = new System.Windows.Forms.ComboBox();
             this.cbKalip = new System.Windows.Forms.ComboBox();
@@ -57,9 +60,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelUrundgv = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnUrunEkle = new System.Windows.Forms.Button();
-            this.btnUrunSil = new System.Windows.Forms.Button();
-            this.btnUrunGuncelle = new System.Windows.Forms.Button();
             this.panelHeader1.SuspendLayout();
             this.panelUunBilgileri.SuspendLayout();
             this.panelUrundgv.SuspendLayout();
@@ -72,7 +72,7 @@
             this.panelHeader1.Controls.Add(this.label13);
             this.panelHeader1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader1.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHeader1.Margin = new System.Windows.Forms.Padding(4);
             this.panelHeader1.Name = "panelHeader1";
             this.panelHeader1.Size = new System.Drawing.Size(1405, 50);
             this.panelHeader1.TabIndex = 6;
@@ -96,7 +96,7 @@
             this.panelHeader2.BackColor = System.Drawing.Color.White;
             this.panelHeader2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader2.Location = new System.Drawing.Point(0, 50);
-            this.panelHeader2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHeader2.Margin = new System.Windows.Forms.Padding(4);
             this.panelHeader2.Name = "panelHeader2";
             this.panelHeader2.Size = new System.Drawing.Size(1405, 98);
             this.panelHeader2.TabIndex = 7;
@@ -131,10 +131,59 @@
             this.panelUunBilgileri.Controls.Add(this.label1);
             this.panelUunBilgileri.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelUunBilgileri.Location = new System.Drawing.Point(0, 148);
-            this.panelUunBilgileri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelUunBilgileri.Margin = new System.Windows.Forms.Padding(4);
             this.panelUunBilgileri.Name = "panelUunBilgileri";
             this.panelUunBilgileri.Size = new System.Drawing.Size(703, 464);
             this.panelUunBilgileri.TabIndex = 8;
+            // 
+            // btnUrunEkle
+            // 
+            this.btnUrunEkle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUrunEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUrunEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunEkle.ForeColor = System.Drawing.Color.White;
+            this.btnUrunEkle.Image = global::PL.Properties.Resources.plus_5_321;
+            this.btnUrunEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUrunEkle.Location = new System.Drawing.Point(90, 370);
+            this.btnUrunEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUrunEkle.Name = "btnUrunEkle";
+            this.btnUrunEkle.Size = new System.Drawing.Size(152, 49);
+            this.btnUrunEkle.TabIndex = 78;
+            this.btnUrunEkle.Text = "   EKLE";
+            this.btnUrunEkle.UseVisualStyleBackColor = false;
+            // 
+            // btnUrunSil
+            // 
+            this.btnUrunSil.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUrunSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUrunSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunSil.ForeColor = System.Drawing.Color.White;
+            this.btnUrunSil.Image = global::PL.Properties.Resources.delete_32;
+            this.btnUrunSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUrunSil.Location = new System.Drawing.Point(468, 370);
+            this.btnUrunSil.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUrunSil.Name = "btnUrunSil";
+            this.btnUrunSil.Size = new System.Drawing.Size(133, 49);
+            this.btnUrunSil.TabIndex = 77;
+            this.btnUrunSil.Text = "   SİL";
+            this.btnUrunSil.UseVisualStyleBackColor = false;
+            this.btnUrunSil.Click += new System.EventHandler(this.btnUrunSil_Click);
+            // 
+            // btnUrunGuncelle
+            // 
+            this.btnUrunGuncelle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUrunGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUrunGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnUrunGuncelle.Image = global::PL.Properties.Resources.available_updates_32;
+            this.btnUrunGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUrunGuncelle.Location = new System.Drawing.Point(287, 370);
+            this.btnUrunGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUrunGuncelle.Name = "btnUrunGuncelle";
+            this.btnUrunGuncelle.Size = new System.Drawing.Size(152, 49);
+            this.btnUrunGuncelle.TabIndex = 76;
+            this.btnUrunGuncelle.Text = "     GÜNCELLE";
+            this.btnUrunGuncelle.UseVisualStyleBackColor = false;
             // 
             // cbUretimYeri
             // 
@@ -148,7 +197,7 @@
             "XL",
             "XXL"});
             this.cbUretimYeri.Location = new System.Drawing.Point(467, 102);
-            this.cbUretimYeri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbUretimYeri.Margin = new System.Windows.Forms.Padding(4);
             this.cbUretimYeri.Name = "cbUretimYeri";
             this.cbUretimYeri.Size = new System.Drawing.Size(207, 33);
             this.cbUretimYeri.TabIndex = 75;
@@ -165,7 +214,7 @@
             "XL",
             "XXL"});
             this.cbMalzeme.Location = new System.Drawing.Point(107, 315);
-            this.cbMalzeme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMalzeme.Margin = new System.Windows.Forms.Padding(4);
             this.cbMalzeme.Name = "cbMalzeme";
             this.cbMalzeme.Size = new System.Drawing.Size(215, 33);
             this.cbMalzeme.TabIndex = 74;
@@ -182,7 +231,7 @@
             "XL",
             "XXL"});
             this.cbKalip.Location = new System.Drawing.Point(108, 273);
-            this.cbKalip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbKalip.Margin = new System.Windows.Forms.Padding(4);
             this.cbKalip.Name = "cbKalip";
             this.cbKalip.Size = new System.Drawing.Size(213, 33);
             this.cbKalip.TabIndex = 73;
@@ -192,7 +241,7 @@
             this.cbUrunAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbUrunAdi.FormattingEnabled = true;
             this.cbUrunAdi.Location = new System.Drawing.Point(107, 148);
-            this.cbUrunAdi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbUrunAdi.Margin = new System.Windows.Forms.Padding(4);
             this.cbUrunAdi.Name = "cbUrunAdi";
             this.cbUrunAdi.Size = new System.Drawing.Size(213, 33);
             this.cbUrunAdi.TabIndex = 72;
@@ -209,7 +258,7 @@
             "XL",
             "XXL"});
             this.cbBeden.Location = new System.Drawing.Point(108, 231);
-            this.cbBeden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbBeden.Margin = new System.Windows.Forms.Padding(4);
             this.cbBeden.Name = "cbBeden";
             this.cbBeden.Size = new System.Drawing.Size(213, 33);
             this.cbBeden.TabIndex = 71;
@@ -219,7 +268,7 @@
             this.cbKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbKategori.FormattingEnabled = true;
             this.cbKategori.Location = new System.Drawing.Point(105, 106);
-            this.cbKategori.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbKategori.Margin = new System.Windows.Forms.Padding(4);
             this.cbKategori.Name = "cbKategori";
             this.cbKategori.Size = new System.Drawing.Size(213, 33);
             this.cbKategori.TabIndex = 70;
@@ -229,7 +278,7 @@
             this.cbRenk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbRenk.FormattingEnabled = true;
             this.cbRenk.Location = new System.Drawing.Point(105, 190);
-            this.cbRenk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbRenk.Margin = new System.Windows.Forms.Padding(4);
             this.cbRenk.Name = "cbRenk";
             this.cbRenk.Size = new System.Drawing.Size(213, 33);
             this.cbRenk.TabIndex = 69;
@@ -238,7 +287,7 @@
             // 
             this.txtAlisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAlisFiyati.Location = new System.Drawing.Point(467, 233);
-            this.txtAlisFiyati.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAlisFiyati.Margin = new System.Windows.Forms.Padding(4);
             this.txtAlisFiyati.Name = "txtAlisFiyati";
             this.txtAlisFiyati.Size = new System.Drawing.Size(207, 30);
             this.txtAlisFiyati.TabIndex = 67;
@@ -247,7 +296,7 @@
             // 
             this.txtSatisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSatisFiyati.Location = new System.Drawing.Point(467, 272);
-            this.txtSatisFiyati.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSatisFiyati.Margin = new System.Windows.Forms.Padding(4);
             this.txtSatisFiyati.Name = "txtSatisFiyati";
             this.txtSatisFiyati.Size = new System.Drawing.Size(207, 30);
             this.txtSatisFiyati.TabIndex = 68;
@@ -256,7 +305,7 @@
             // 
             this.txtKritikEsik.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKritikEsik.Location = new System.Drawing.Point(467, 190);
-            this.txtKritikEsik.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKritikEsik.Margin = new System.Windows.Forms.Padding(4);
             this.txtKritikEsik.Name = "txtKritikEsik";
             this.txtKritikEsik.Size = new System.Drawing.Size(207, 30);
             this.txtKritikEsik.TabIndex = 66;
@@ -265,7 +314,7 @@
             // 
             this.txtStokMiktari.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtStokMiktari.Location = new System.Drawing.Point(468, 148);
-            this.txtStokMiktari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStokMiktari.Margin = new System.Windows.Forms.Padding(4);
             this.txtStokMiktari.Name = "txtStokMiktari";
             this.txtStokMiktari.Size = new System.Drawing.Size(207, 30);
             this.txtStokMiktari.TabIndex = 65;
@@ -409,7 +458,7 @@
             this.panelUrundgv.Controls.Add(this.dataGridView1);
             this.panelUrundgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUrundgv.Location = new System.Drawing.Point(703, 148);
-            this.panelUrundgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelUrundgv.Margin = new System.Windows.Forms.Padding(4);
             this.panelUrundgv.Name = "panelUrundgv";
             this.panelUrundgv.Size = new System.Drawing.Size(702, 464);
             this.panelUrundgv.TabIndex = 9;
@@ -419,59 +468,10 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(702, 464);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btnUrunEkle
-            // 
-            this.btnUrunEkle.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnUrunEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUrunEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunEkle.ForeColor = System.Drawing.Color.White;
-            this.btnUrunEkle.Image = global::PL.Properties.Resources.plus_5_321;
-            this.btnUrunEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrunEkle.Location = new System.Drawing.Point(90, 370);
-            this.btnUrunEkle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUrunEkle.Name = "btnUrunEkle";
-            this.btnUrunEkle.Size = new System.Drawing.Size(152, 49);
-            this.btnUrunEkle.TabIndex = 78;
-            this.btnUrunEkle.Text = "   EKLE";
-            this.btnUrunEkle.UseVisualStyleBackColor = false;
-            // 
-            // btnUrunSil
-            // 
-            this.btnUrunSil.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnUrunSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUrunSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunSil.ForeColor = System.Drawing.Color.White;
-            this.btnUrunSil.Image = global::PL.Properties.Resources.delete_32;
-            this.btnUrunSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrunSil.Location = new System.Drawing.Point(468, 370);
-            this.btnUrunSil.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUrunSil.Name = "btnUrunSil";
-            this.btnUrunSil.Size = new System.Drawing.Size(133, 49);
-            this.btnUrunSil.TabIndex = 77;
-            this.btnUrunSil.Text = "   SİL";
-            this.btnUrunSil.UseVisualStyleBackColor = false;
-            this.btnUrunSil.Click += new System.EventHandler(this.btnUrunSil_Click);
-            // 
-            // btnUrunGuncelle
-            // 
-            this.btnUrunGuncelle.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnUrunGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUrunGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnUrunGuncelle.Image = global::PL.Properties.Resources.available_updates_32;
-            this.btnUrunGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrunGuncelle.Location = new System.Drawing.Point(287, 370);
-            this.btnUrunGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUrunGuncelle.Name = "btnUrunGuncelle";
-            this.btnUrunGuncelle.Size = new System.Drawing.Size(152, 49);
-            this.btnUrunGuncelle.TabIndex = 76;
-            this.btnUrunGuncelle.Text = "     GÜNCELLE";
-            this.btnUrunGuncelle.UseVisualStyleBackColor = false;
             // 
             // frmUrunEkle
             // 
@@ -483,7 +483,7 @@
             this.Controls.Add(this.panelHeader2);
             this.Controls.Add(this.panelHeader1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmUrunEkle";
             this.Text = "frmUrunEkle";
             this.Load += new System.EventHandler(this.frmUrunEkle_Load);

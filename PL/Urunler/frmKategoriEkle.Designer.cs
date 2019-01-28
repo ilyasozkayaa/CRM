@@ -36,11 +36,11 @@
             this.txtAciklama = new System.Windows.Forms.TextBox();
             this.panelHeader2 = new System.Windows.Forms.Panel();
             this.panelKategoriEkle = new System.Windows.Forms.Panel();
-            this.panelDataGridView = new System.Windows.Forms.Panel();
-            this.dgKatagoriListe = new System.Windows.Forms.DataGridView();
             this.btnUrunEkle = new System.Windows.Forms.Button();
             this.btnUrunSil = new System.Windows.Forms.Button();
             this.btnUrunGuncelle = new System.Windows.Forms.Button();
+            this.panelDataGridView = new System.Windows.Forms.Panel();
+            this.dgKatagoriListe = new System.Windows.Forms.DataGridView();
             this.panelHeader1.SuspendLayout();
             this.panelKategoriEkle.SuspendLayout();
             this.panelDataGridView.SuspendLayout();
@@ -53,7 +53,7 @@
             this.panelHeader1.Controls.Add(this.label13);
             this.panelHeader1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader1.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHeader1.Margin = new System.Windows.Forms.Padding(4);
             this.panelHeader1.Name = "panelHeader1";
             this.panelHeader1.Size = new System.Drawing.Size(1405, 50);
             this.panelHeader1.TabIndex = 7;
@@ -100,7 +100,7 @@
             // 
             this.txtKategoriAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtKategoriAd.Location = new System.Drawing.Point(279, 63);
-            this.txtKategoriAd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtKategoriAd.Margin = new System.Windows.Forms.Padding(4);
             this.txtKategoriAd.Name = "txtKategoriAd";
             this.txtKategoriAd.Size = new System.Drawing.Size(300, 30);
             this.txtKategoriAd.TabIndex = 31;
@@ -109,7 +109,7 @@
             // 
             this.txtAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAciklama.Location = new System.Drawing.Point(279, 106);
-            this.txtAciklama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Size = new System.Drawing.Size(300, 141);
@@ -120,7 +120,7 @@
             this.panelHeader2.BackColor = System.Drawing.Color.White;
             this.panelHeader2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader2.Location = new System.Drawing.Point(0, 50);
-            this.panelHeader2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHeader2.Margin = new System.Windows.Forms.Padding(4);
             this.panelHeader2.Name = "panelHeader2";
             this.panelHeader2.Size = new System.Drawing.Size(1405, 98);
             this.panelHeader2.TabIndex = 36;
@@ -137,30 +137,10 @@
             this.panelKategoriEkle.Controls.Add(this.txtKategoriAd);
             this.panelKategoriEkle.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelKategoriEkle.Location = new System.Drawing.Point(0, 148);
-            this.panelKategoriEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelKategoriEkle.Margin = new System.Windows.Forms.Padding(4);
             this.panelKategoriEkle.Name = "panelKategoriEkle";
             this.panelKategoriEkle.Size = new System.Drawing.Size(703, 464);
             this.panelKategoriEkle.TabIndex = 37;
-            // 
-            // panelDataGridView
-            // 
-            this.panelDataGridView.Controls.Add(this.dgKatagoriListe);
-            this.panelDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDataGridView.Location = new System.Drawing.Point(703, 148);
-            this.panelDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panelDataGridView.Name = "panelDataGridView";
-            this.panelDataGridView.Size = new System.Drawing.Size(702, 464);
-            this.panelDataGridView.TabIndex = 38;
-            // 
-            // dgKatagoriListe
-            // 
-            this.dgKatagoriListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgKatagoriListe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgKatagoriListe.Location = new System.Drawing.Point(0, 0);
-            this.dgKatagoriListe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgKatagoriListe.Name = "dgKatagoriListe";
-            this.dgKatagoriListe.Size = new System.Drawing.Size(702, 464);
-            this.dgKatagoriListe.TabIndex = 0;
             // 
             // btnUrunEkle
             // 
@@ -210,6 +190,26 @@
             this.btnUrunGuncelle.Text = "     GÜNCELLE";
             this.btnUrunGuncelle.UseVisualStyleBackColor = false;
             // 
+            // panelDataGridView
+            // 
+            this.panelDataGridView.Controls.Add(this.dgKatagoriListe);
+            this.panelDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDataGridView.Location = new System.Drawing.Point(703, 148);
+            this.panelDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.panelDataGridView.Name = "panelDataGridView";
+            this.panelDataGridView.Size = new System.Drawing.Size(702, 464);
+            this.panelDataGridView.TabIndex = 38;
+            // 
+            // dgKatagoriListe
+            // 
+            this.dgKatagoriListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgKatagoriListe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgKatagoriListe.Location = new System.Drawing.Point(0, 0);
+            this.dgKatagoriListe.Margin = new System.Windows.Forms.Padding(4);
+            this.dgKatagoriListe.Name = "dgKatagoriListe";
+            this.dgKatagoriListe.Size = new System.Drawing.Size(702, 464);
+            this.dgKatagoriListe.TabIndex = 0;
+            // 
             // frmKategoriEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -220,7 +220,7 @@
             this.Controls.Add(this.panelHeader2);
             this.Controls.Add(this.panelHeader1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmKategoriEkle";
             this.Text = "frmKategoriEkle";
             this.panelHeader1.ResumeLayout(false);
