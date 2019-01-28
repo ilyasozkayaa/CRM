@@ -41,5 +41,10 @@ namespace PL.Urunler
         {
 
         }
+
+        private void btnUrunSil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -34,11 +34,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtKategoriAd = new System.Windows.Forms.TextBox();
             this.txtAciklama = new System.Windows.Forms.TextBox();
-            this.btnKatagoriEkle = new System.Windows.Forms.Button();
-            this.btnKategoriSil = new System.Windows.Forms.Button();
-            this.btnKategoriGuncelle = new System.Windows.Forms.Button();
             this.panelHeader2 = new System.Windows.Forms.Panel();
             this.panelKategoriEkle = new System.Windows.Forms.Panel();
+            this.btnUrunEkle = new System.Windows.Forms.Button();
+            this.btnUrunSil = new System.Windows.Forms.Button();
+            this.btnUrunGuncelle = new System.Windows.Forms.Button();
             this.panelDataGridView = new System.Windows.Forms.Panel();
             this.dgKatagoriListe = new System.Windows.Forms.DataGridView();
             this.panelHeader1.SuspendLayout();
@@ -57,20 +57,19 @@
             this.panelHeader1.Name = "panelHeader1";
             this.panelHeader1.Size = new System.Drawing.Size(1405, 50);
             this.panelHeader1.TabIndex = 7;
-            this.panelHeader1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHeader1_Paint);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(0, 0);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(291, 39);
+            this.label13.Size = new System.Drawing.Size(699, 34);
             this.label13.TabIndex = 0;
-            this.label13.Text = "KATEGORİ EKLE";
+            this.label13.Text = "                                                         KATEGORİ EKLE";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -116,51 +115,6 @@
             this.txtAciklama.Size = new System.Drawing.Size(300, 141);
             this.txtAciklama.TabIndex = 31;
             // 
-            // btnKatagoriEkle
-            // 
-            this.btnKatagoriEkle.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnKatagoriEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKatagoriEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKatagoriEkle.ForeColor = System.Drawing.Color.White;
-            this.btnKatagoriEkle.Location = new System.Drawing.Point(216, 286);
-            this.btnKatagoriEkle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKatagoriEkle.Name = "btnKatagoriEkle";
-            this.btnKatagoriEkle.Size = new System.Drawing.Size(133, 62);
-            this.btnKatagoriEkle.TabIndex = 32;
-            this.btnKatagoriEkle.Text = "EKLE";
-            this.btnKatagoriEkle.UseVisualStyleBackColor = false;
-            this.btnKatagoriEkle.Click += new System.EventHandler(this.btnKatagoriEkle_Click);
-            // 
-            // btnKategoriSil
-            // 
-            this.btnKategoriSil.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnKategoriSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKategoriSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKategoriSil.ForeColor = System.Drawing.Color.White;
-            this.btnKategoriSil.Location = new System.Drawing.Point(513, 286);
-            this.btnKategoriSil.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKategoriSil.Name = "btnKategoriSil";
-            this.btnKategoriSil.Size = new System.Drawing.Size(133, 62);
-            this.btnKategoriSil.TabIndex = 33;
-            this.btnKategoriSil.Text = "SİL";
-            this.btnKategoriSil.UseVisualStyleBackColor = false;
-            this.btnKategoriSil.Click += new System.EventHandler(this.btnKategoriSil_Click);
-            // 
-            // btnKategoriGuncelle
-            // 
-            this.btnKategoriGuncelle.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnKategoriGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKategoriGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKategoriGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnKategoriGuncelle.Location = new System.Drawing.Point(367, 286);
-            this.btnKategoriGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnKategoriGuncelle.Name = "btnKategoriGuncelle";
-            this.btnKategoriGuncelle.Size = new System.Drawing.Size(133, 62);
-            this.btnKategoriGuncelle.TabIndex = 34;
-            this.btnKategoriGuncelle.Text = "GÜNCELLE";
-            this.btnKategoriGuncelle.UseVisualStyleBackColor = false;
-            this.btnKategoriGuncelle.Click += new System.EventHandler(this.btnKategoriGuncelle_Click);
-            // 
             // panelHeader2
             // 
             this.panelHeader2.BackColor = System.Drawing.Color.White;
@@ -174,19 +128,67 @@
             // panelKategoriEkle
             // 
             this.panelKategoriEkle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelKategoriEkle.Controls.Add(this.btnUrunEkle);
+            this.panelKategoriEkle.Controls.Add(this.btnUrunSil);
+            this.panelKategoriEkle.Controls.Add(this.btnUrunGuncelle);
             this.panelKategoriEkle.Controls.Add(this.txtAciklama);
             this.panelKategoriEkle.Controls.Add(this.label6);
-            this.panelKategoriEkle.Controls.Add(this.btnKatagoriEkle);
             this.panelKategoriEkle.Controls.Add(this.label7);
-            this.panelKategoriEkle.Controls.Add(this.btnKategoriSil);
             this.panelKategoriEkle.Controls.Add(this.txtKategoriAd);
-            this.panelKategoriEkle.Controls.Add(this.btnKategoriGuncelle);
             this.panelKategoriEkle.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelKategoriEkle.Location = new System.Drawing.Point(0, 148);
             this.panelKategoriEkle.Margin = new System.Windows.Forms.Padding(4);
             this.panelKategoriEkle.Name = "panelKategoriEkle";
             this.panelKategoriEkle.Size = new System.Drawing.Size(703, 464);
             this.panelKategoriEkle.TabIndex = 37;
+            // 
+            // btnUrunEkle
+            // 
+            this.btnUrunEkle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUrunEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUrunEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunEkle.ForeColor = System.Drawing.Color.White;
+            this.btnUrunEkle.Image = global::PL.Properties.Resources.plus_5_321;
+            this.btnUrunEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUrunEkle.Location = new System.Drawing.Point(81, 287);
+            this.btnUrunEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUrunEkle.Name = "btnUrunEkle";
+            this.btnUrunEkle.Size = new System.Drawing.Size(152, 49);
+            this.btnUrunEkle.TabIndex = 81;
+            this.btnUrunEkle.Text = "   EKLE";
+            this.btnUrunEkle.UseVisualStyleBackColor = false;
+            // 
+            // btnUrunSil
+            // 
+            this.btnUrunSil.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUrunSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUrunSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunSil.ForeColor = System.Drawing.Color.White;
+            this.btnUrunSil.Image = global::PL.Properties.Resources.delete_32;
+            this.btnUrunSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUrunSil.Location = new System.Drawing.Point(459, 287);
+            this.btnUrunSil.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUrunSil.Name = "btnUrunSil";
+            this.btnUrunSil.Size = new System.Drawing.Size(133, 49);
+            this.btnUrunSil.TabIndex = 80;
+            this.btnUrunSil.Text = "   SİL";
+            this.btnUrunSil.UseVisualStyleBackColor = false;
+            // 
+            // btnUrunGuncelle
+            // 
+            this.btnUrunGuncelle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUrunGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUrunGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnUrunGuncelle.Image = global::PL.Properties.Resources.available_updates_32;
+            this.btnUrunGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUrunGuncelle.Location = new System.Drawing.Point(278, 287);
+            this.btnUrunGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUrunGuncelle.Name = "btnUrunGuncelle";
+            this.btnUrunGuncelle.Size = new System.Drawing.Size(152, 49);
+            this.btnUrunGuncelle.TabIndex = 79;
+            this.btnUrunGuncelle.Text = "     GÜNCELLE";
+            this.btnUrunGuncelle.UseVisualStyleBackColor = false;
             // 
             // panelDataGridView
             // 
@@ -204,13 +206,9 @@
             this.dgKatagoriListe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgKatagoriListe.Location = new System.Drawing.Point(0, 0);
             this.dgKatagoriListe.Margin = new System.Windows.Forms.Padding(4);
-            this.dgKatagoriListe.MultiSelect = false;
             this.dgKatagoriListe.Name = "dgKatagoriListe";
-            this.dgKatagoriListe.ReadOnly = true;
-            this.dgKatagoriListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgKatagoriListe.Size = new System.Drawing.Size(702, 464);
             this.dgKatagoriListe.TabIndex = 0;
-            this.dgKatagoriListe.DoubleClick += new System.EventHandler(this.dgKatagoriListe_DoubleClick);
             // 
             // frmKategoriEkle
             // 
@@ -243,12 +241,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtKategoriAd;
         private System.Windows.Forms.TextBox txtAciklama;
-        private System.Windows.Forms.Button btnKatagoriEkle;
-        private System.Windows.Forms.Button btnKategoriSil;
-        private System.Windows.Forms.Button btnKategoriGuncelle;
         private System.Windows.Forms.Panel panelHeader2;
         private System.Windows.Forms.Panel panelKategoriEkle;
         private System.Windows.Forms.Panel panelDataGridView;
         private System.Windows.Forms.DataGridView dgKatagoriListe;
+        private System.Windows.Forms.Button btnUrunEkle;
+        private System.Windows.Forms.Button btnUrunSil;
+        private System.Windows.Forms.Button btnUrunGuncelle;
     }
 }
