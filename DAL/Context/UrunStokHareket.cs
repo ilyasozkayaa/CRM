@@ -19,6 +19,7 @@ namespace DAL.Context
         [Required]
         public int Miktar { get; set; }
         [Required]
+        
         public string IslemTürü { get; set; }
 
         //[ForeignKey("UrunId")]

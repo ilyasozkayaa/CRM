@@ -17,16 +17,22 @@ namespace DAL.Context
         [Required]
         public int KategoriId { get; set; }
         [Required]
+        
         public string UrunAdi { get; set; }
         [Required]
+        
         public string Kalip { get; set; }
         [Required]
+        
         public string Beden { get; set; }
         [Required]
+        
         public string Malzemesi { get; set; }
         [Required]
+        
         public string Renk { get; set; }
         [Required]
+        
         public string ÜretimYeri { get; set; }
         [Required]
         public int StokMiktarı { get; set; }
