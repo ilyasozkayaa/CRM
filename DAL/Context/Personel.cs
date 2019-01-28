@@ -36,6 +36,7 @@ namespace DAL.Context
         [Required]
         public DateTime   IseGirisTarihi { get; set; }
         public DateTime   IstenCikisTarihi { get; set; }
+        [Required]
         public string MedeniHal { get; set; }
         [Required]
         public string AskerlikDurumu { get; set; }

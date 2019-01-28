@@ -21,7 +21,22 @@ namespace PL.Personel
         private void button1_Click(object sender, EventArgs e)
         {
             frmPersonel form = new frmPersonel();
-            form.ShowDialog();
+            FormAc(form);
+        }
+        private void FormAc(Form AF)
+        {
+            foreach (Control F in this.panel3.Controls)
+            {
+                if (F is Form)
+                {
+                    Form MF = (Form)F;
+                    MF.Close();
+                }
+            }
+            AF.TopLevel = false;
+            this.panel3.Controls.Add(AF);
+            AF.Dock = DockStyle.Fill;
+            AF.Show();
         }
     }
 }

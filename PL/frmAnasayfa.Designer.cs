@@ -63,7 +63,6 @@
             this.btnRapor = new System.Windows.Forms.Button();
             this.btnKampanya = new System.Windows.Forms.Button();
             this.pnlFooter = new System.Windows.Forms.Panel();
-            this.kullaniciDetay1 = new PL.KullaniciDetay();
             this.pnlSaat = new System.Windows.Forms.Panel();
             this.lbltoday = new System.Windows.Forms.Label();
             this.lblTarih = new System.Windows.Forms.Label();
@@ -71,6 +70,7 @@
             this.pnlContent = new System.Windows.Forms.Panel();
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
+            this.kullaniciDetay1 = new PL.KullaniciDetay();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -576,16 +576,6 @@
             this.pnlFooter.Size = new System.Drawing.Size(834, 50);
             this.pnlFooter.TabIndex = 10;
             // 
-            // kullaniciDetay1
-            // 
-            this.kullaniciDetay1.BackColor = System.Drawing.Color.SteelBlue;
-            this.kullaniciDetay1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.kullaniciDetay1.Location = new System.Drawing.Point(650, 0);
-            this.kullaniciDetay1.Margin = new System.Windows.Forms.Padding(4);
-            this.kullaniciDetay1.Name = "kullaniciDetay1";
-            this.kullaniciDetay1.Size = new System.Drawing.Size(184, 50);
-            this.kullaniciDetay1.TabIndex = 5;
-            // 
             // pnlSaat
             // 
             this.pnlSaat.BackColor = System.Drawing.Color.SteelBlue;
@@ -647,6 +637,16 @@
             // 
             this.timer5.Interval = 15;
             this.timer5.Tick += new System.EventHandler(this.timer5_Tick);
+            // 
+            // kullaniciDetay1
+            // 
+            this.kullaniciDetay1.BackColor = System.Drawing.Color.SteelBlue;
+            this.kullaniciDetay1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.kullaniciDetay1.Location = new System.Drawing.Point(650, 0);
+            this.kullaniciDetay1.Margin = new System.Windows.Forms.Padding(4);
+            this.kullaniciDetay1.Name = "kullaniciDetay1";
+            this.kullaniciDetay1.Size = new System.Drawing.Size(184, 50);
+            this.kullaniciDetay1.TabIndex = 5;
             // 
             // frmAnasayfa
             // 

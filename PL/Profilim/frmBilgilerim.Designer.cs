@@ -490,6 +490,7 @@
             this.panelGenelPerformans.Name = "panelGenelPerformans";
             this.panelGenelPerformans.Size = new System.Drawing.Size(394, 395);
             this.panelGenelPerformans.TabIndex = 16;
+            this.panelGenelPerformans.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGenelPerformans_Paint);
             // 
             // label1
             // 

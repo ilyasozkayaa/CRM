@@ -96,5 +96,10 @@ namespace PL.Profilim
         {
 
         }
+
+        private void panelGenelPerformans_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

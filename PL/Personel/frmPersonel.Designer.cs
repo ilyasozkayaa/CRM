@@ -39,7 +39,6 @@
             this.dateİseGiris = new System.Windows.Forms.DateTimePicker();
             this.cbCinsiyet = new System.Windows.Forms.ComboBox();
             this.cbEngel = new System.Windows.Forms.ComboBox();
-            this.cbMedenıHal = new System.Windows.Forms.ComboBox();
             this.dateİstenCikis = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -76,6 +75,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.pbFoto = new System.Windows.Forms.PictureBox();
+            this.cbMedeni = new System.Windows.Forms.ComboBox();
             this.panelHeader1.SuspendLayout();
             this.panelPersonelKisisel.SuspendLayout();
             this.panelPersonelResim.SuspendLayout();
@@ -142,10 +142,10 @@
             // 
             // panelPersonelKisisel
             // 
+            this.panelPersonelKisisel.Controls.Add(this.cbMedeni);
             this.panelPersonelKisisel.Controls.Add(this.dateİseGiris);
             this.panelPersonelKisisel.Controls.Add(this.cbCinsiyet);
             this.panelPersonelKisisel.Controls.Add(this.cbEngel);
-            this.panelPersonelKisisel.Controls.Add(this.cbMedenıHal);
             this.panelPersonelKisisel.Controls.Add(this.dateİstenCikis);
             this.panelPersonelKisisel.Controls.Add(this.label8);
             this.panelPersonelKisisel.Controls.Add(this.label7);
@@ -213,19 +213,6 @@
             this.cbEngel.Name = "cbEngel";
             this.cbEngel.Size = new System.Drawing.Size(157, 28);
             this.cbEngel.TabIndex = 179;
-            // 
-            // cbMedenıHal
-            // 
-            this.cbMedenıHal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbMedenıHal.FormattingEnabled = true;
-            this.cbMedenıHal.Items.AddRange(new object[] {
-            "Evli",
-            "Bekar"});
-            this.cbMedenıHal.Location = new System.Drawing.Point(466, 44);
-            this.cbMedenıHal.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.cbMedenıHal.Name = "cbMedenıHal";
-            this.cbMedenıHal.Size = new System.Drawing.Size(157, 28);
-            this.cbMedenıHal.TabIndex = 174;
             // 
             // dateİstenCikis
             // 
@@ -639,6 +626,19 @@
             this.pbFoto.TabStop = false;
             this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click_1);
             // 
+            // cbMedeni
+            // 
+            this.cbMedeni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbMedeni.FormattingEnabled = true;
+            this.cbMedeni.Items.AddRange(new object[] {
+            "E",
+            "K"});
+            this.cbMedeni.Location = new System.Drawing.Point(466, 47);
+            this.cbMedeni.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.cbMedeni.Name = "cbMedeni";
+            this.cbMedeni.Size = new System.Drawing.Size(157, 28);
+            this.cbMedeni.TabIndex = 189;
+            // 
             // frmPersonel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -694,7 +694,6 @@
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.ComboBox cbCinsiyet;
-        private System.Windows.Forms.ComboBox cbMedenıHal;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateİseGiris;
@@ -715,5 +714,6 @@
         private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.ComboBox cbPozisyon;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cbMedeni;
     }
 }
