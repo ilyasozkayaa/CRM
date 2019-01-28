@@ -145,7 +145,7 @@
             this.btnStokEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStokEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnStokEkle.ForeColor = System.Drawing.Color.White;
-            this.btnStokEkle.Location = new System.Drawing.Point(364, 229);
+            this.btnStokEkle.Location = new System.Drawing.Point(362, 191);
             this.btnStokEkle.Name = "btnStokEkle";
             this.btnStokEkle.Size = new System.Drawing.Size(80, 26);
             this.btnStokEkle.TabIndex = 61;

@@ -15,20 +15,27 @@ namespace DAL.Context
         [Key]
         public int Id { get; set; }
         [Required]
+        
         public string Ad { get; set; }
         [Required]
+        
         public string Soyad { get; set; }
         [Required]
         public DateTime DogumTarihi { get; set; }
         [Required]
+        
         public string TCKNo { get; set; }
         [Required]
+        
         public string Sehir { get; set; }
         [Required]
+        
         public string Adres { get; set; }
         [Required]
+        
         public string Telefon { get; set; }
         [Required]
+        
         public string EMail { get; set; }
         [DefaultValue(false)]
         public bool Silindi { get; set; }
