@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL.Model;
+using DAL.Context;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,8 +19,23 @@ namespace PL
             InitializeComponent();
         }
 
+        GorevHareketler gh = new GorevHareketler();
         private void frmGorevlerim_Load(object sender, EventArgs e)
         {
+            Gorev grv = new Gorev();
+            GorevDetay gty = new GorevDetay();
+            GorevHareketler ghk = new GorevHareketler();
+
+            int grvId=gh.UsersIdByGorevId(GenelDegiskenler.PersonId);
+            gh.GorevGetir(grvId);
+            if (true)
+            {
+                pnlGorevKarti grvk = new pnlGorevKarti();
+            }
+            else
+            {
+
+            }
             pnlGorevKarti p = new pnlGorevKarti();
             pnlGorevKarti c = new pnlGorevKarti();
             pnlGorevKarti v = new pnlGorevKarti();

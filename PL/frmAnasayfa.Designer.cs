@@ -63,7 +63,6 @@
             this.btnRapor = new System.Windows.Forms.Button();
             this.btnKampanya = new System.Windows.Forms.Button();
             this.pnlFooter = new System.Windows.Forms.Panel();
-            this.kullaniciDetay1 = new PL.KullaniciDetay();
             this.pnlSaat = new System.Windows.Forms.Panel();
             this.lbltoday = new System.Windows.Forms.Label();
             this.lblTarih = new System.Windows.Forms.Label();
@@ -548,6 +547,7 @@
             this.btnRapor.Text = "Rapor";
             this.btnRapor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRapor.UseVisualStyleBackColor = false;
+            this.btnRapor.Click += new System.EventHandler(this.btnRapor_Click);
             // 
             // btnKampanya
             // 
@@ -564,27 +564,17 @@
             this.btnKampanya.Text = "Kampanya";
             this.btnKampanya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKampanya.UseVisualStyleBackColor = false;
+            this.btnKampanya.Click += new System.EventHandler(this.btnKampanya_Click);
             // 
             // pnlFooter
             // 
             this.pnlFooter.BackColor = System.Drawing.Color.SteelBlue;
-            this.pnlFooter.Controls.Add(this.kullaniciDetay1);
             this.pnlFooter.Controls.Add(this.pnlSaat);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFooter.Location = new System.Drawing.Point(206, 550);
             this.pnlFooter.Name = "pnlFooter";
             this.pnlFooter.Size = new System.Drawing.Size(834, 50);
             this.pnlFooter.TabIndex = 10;
-            // 
-            // kullaniciDetay1
-            // 
-            this.kullaniciDetay1.BackColor = System.Drawing.Color.SteelBlue;
-            this.kullaniciDetay1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.kullaniciDetay1.Location = new System.Drawing.Point(650, 0);
-            this.kullaniciDetay1.Margin = new System.Windows.Forms.Padding(4);
-            this.kullaniciDetay1.Name = "kullaniciDetay1";
-            this.kullaniciDetay1.Size = new System.Drawing.Size(184, 50);
-            this.kullaniciDetay1.TabIndex = 5;
             // 
             // pnlSaat
             // 
@@ -698,7 +688,6 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button btnClose;
-        private KullaniciDetay kullaniciDetay1;
         private System.Windows.Forms.Panel pnlFooter;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Timer timer3;

@@ -28,33 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblSoyAdi = new System.Windows.Forms.Label();
             this.lblAdi = new System.Windows.Forms.Label();
+            this.lblSoyAdi = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.circularPictureBox1 = new PL.CircularPictureBox();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblSoyAdi
-            // 
-            this.lblSoyAdi.AutoSize = true;
-            this.lblSoyAdi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSoyAdi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSoyAdi.Location = new System.Drawing.Point(137, 16);
-            this.lblSoyAdi.Name = "lblSoyAdi";
-            this.lblSoyAdi.Size = new System.Drawing.Size(62, 19);
-            this.lblSoyAdi.TabIndex = 11;
-            this.lblSoyAdi.Text = "Soyadı";
             // 
             // lblAdi
             // 
             this.lblAdi.AutoSize = true;
             this.lblAdi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAdi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAdi.Location = new System.Drawing.Point(61, 16);
+            this.lblAdi.Location = new System.Drawing.Point(3, 15);
             this.lblAdi.Name = "lblAdi";
             this.lblAdi.Size = new System.Drawing.Size(34, 19);
             this.lblAdi.TabIndex = 10;
             this.lblAdi.Text = "Adı";
+            // 
+            // lblSoyAdi
+            // 
+            this.lblSoyAdi.AutoSize = true;
+            this.lblSoyAdi.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSoyAdi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSoyAdi.Location = new System.Drawing.Point(-4, 15);
+            this.lblSoyAdi.Name = "lblSoyAdi";
+            this.lblSoyAdi.Size = new System.Drawing.Size(62, 19);
+            this.lblSoyAdi.TabIndex = 13;
+            this.lblSoyAdi.Text = "Soyadı";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblSoyAdi);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(139, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(75, 50);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblAdi);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(73, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(66, 50);
+            this.panel3.TabIndex = 13;
             // 
             // circularPictureBox1
             // 
@@ -71,21 +93,25 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.Controls.Add(this.lblSoyAdi);
-            this.Controls.Add(this.lblAdi);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.circularPictureBox1);
             this.Name = "KullaniciDetay";
-            this.Size = new System.Drawing.Size(251, 50);
+            this.Size = new System.Drawing.Size(214, 50);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        public System.Windows.Forms.Label lblSoyAdi;
         public System.Windows.Forms.Label lblAdi;
         public CircularPictureBox circularPictureBox1;
+        public System.Windows.Forms.Label lblSoyAdi;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

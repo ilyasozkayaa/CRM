@@ -61,26 +61,31 @@ namespace PL.Personel
         GorevHareketler hareket = new GorevHareketler();
         PersonelMusteriIslemleri pb = new PersonelMusteriIslemleri();
         ArrayList pers = new ArrayList();
-        List<KullaniciDetay> a = new List<KullaniciDetay>();
         KullaniciDetay b = new KullaniciDetay();
         private void cpbPersEkle_Click(object sender, EventArgs e)
         {
          
             
-            pers.Add(txtPersonelId.Text);
+           
             int pid = Convert.ToInt32(txtPersonelId.Text);
             KullaniciDetay b = new KullaniciDetay();
             DAL.Context.Personel p = new DAL.Context.Personel();
-            p = pb.PersonelGetir(pid);
-            b.lblAdi.Text = p.Ad;
-            b.lblSoyAdi.Text = p.Soyad;
-            b.circularPictureBox1.Image = Resources.icons8_businessman_48;
 
 
+            try
+            {
+                p = pb.PersonelGetir(pid);
+                b.lblAdi.Text = p.Ad;
+                b.lblSoyAdi.Text = p.Soyad;
+                b.circularPictureBox1.Image = Resources.icons8_businessman_48;
+                flpPersList.Controls.Add(b);
+                pers.Add(p.Id);
+            }
+            catch (Exception)
+            {
 
-
-            pnlPersList.Controls.Add(b);
-            
+                MessageBox.Show("Geçerli bir ID giriniz.");
+            }           
 
             txtPersonelId.Clear();
             txtPersonelId.Focus();
@@ -88,37 +93,49 @@ namespace PL.Personel
         }
 
 
-        Gorev grv = new Gorev();
+        pnlGorevKarti gk = new pnlGorevKarti();
         private void btnKartEkle_Click(object sender, EventArgs e)
-        {
+        {          
             
-            
-            grv.BaslangicTarihi = dtpGiris.Value;
-            grv.BitisTarihi = dtpCikis.Value;
-            grv.GorevAdi = lblGorevAdi.Text;            
-            
-            hareket.GorevEkle(grv);          
-           
-            pnlGorevKarti gk = new pnlGorevKarti();
             gk.lblGorevAdi.Text = lblGorevAdi.Text;
             gk.pnlGorevDetay.Controls.Add(clbGorevBolum);
             gk.lblGorevAdi = lblGorevAdi;
             gk.pnlMembers.Controls.Add(b.circularPictureBox1);
             pnlGorevKartlarim.Controls.Add(gk);
+        }
 
-            List<GorevKayit> gkd = new List<GorevKayit>();            
-           
-                foreach (string p in pers)
+        private void btnGorevAta_Click(object sender, EventArgs e)
+        {
+            btnGorevAta.Enabled = false;
+            txtPersonelId.Focus();
+        }
+        Gorev grv = new Gorev();
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+
+            grv.BaslangicTarihi = dtpGiris.Value;
+            grv.BitisTarihi = dtpCikis.Value;
+            grv.GorevAdi = lblGorevAdi.Text;
+            hareket.GorevEkle(grv);
+
+
+
+            List<GorevKayit> gkd = new List<GorevKayit>();
+            if (pers.Count > 0)
+            {
+                foreach (int p in pers)
                 {
                     GorevKayit gkyt = new GorevKayit();
-                    gkyt.PersonelId = Convert.ToInt32(p);
+                    gkyt.PersonelId = p;
                     gkyt.GorevId = grv.Id;
                     gkd.Add(gkyt);
                 }
 
                 hareket.GorevKayıtEkle(gkd);
-            
-           
+            }
+            else
+                MessageBox.Show("En az 1 tane personel atanmalı.", "Items", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
             List<GorevDetay> gd = new List<GorevDetay>();
             if (clbGorevBolum.Items.Count > 0)
@@ -130,18 +147,23 @@ namespace PL.Personel
                     dty.GorevId = grv.Id;
                     gd.Add(dty);
                 }
-
-                hareket.GorevDetayEkle(gd); 
+               
+                hareket.GorevDetayEkle(gd);
+                MessageBox.Show("Görev kartı başarıyla oluşturuldu.");
+                gk.Visible = false;
+                txtGorevAdi.Clear();
+                txtGorevBolumu.Clear();
+                txtPersonelId.Clear();
+                txtGorevAdi.Focus();
             }
             else
                 MessageBox.Show("Detay alanı boş geçilemez.", "Items", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+        
         }
 
-        private void btnGorevAta_Click(object sender, EventArgs e)
+        private void cppGsil_Click(object sender, EventArgs e)
         {
-            btnGorevAta.Enabled = false;
-            txtPersonelId.Focus();
+            lblGorevAdi.Text="";
         }
     }
 }

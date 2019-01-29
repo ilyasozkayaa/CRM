@@ -1,4 +1,5 @@
-﻿using PL.KasaIslemleri;
+﻿using BLL.Model;
+using PL.KasaIslemleri;
 using PL.Personel;
 using PL.Profilim;
 using PL.Properties;
@@ -45,15 +46,26 @@ namespace PL
         }
 
 
-
+        PersonelMusteriIslemleri pmi = new PersonelMusteriIslemleri();
         private void Form1_Load(object sender, EventArgs e)
         {
+            DAL.Context.Personel p = new DAL.Context.Personel();
+            p=pmi.PersonelGetir(GenelDegiskenler.PersonId);
+            KullaniciDetay kd = new KullaniciDetay();
+            kd.lblAdi.Text = p.Ad;
+            kd.lblSoyAdi.Text = p.Soyad;
+            kd.circularPictureBox1.Image = Resources.icons8_businessman_48;
+            kd.Dock = DockStyle.Right;
+            pnlFooter.Controls.Add(kd);
 
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(0, 0);
             timer3.Start();
             lblTarih.Text = DateTime.Now.ToString("hh:mm:ss tt");
             lbltoday.Text = DateTime.Today.ToShortDateString();
+
+
+
         }       
 
   
@@ -137,12 +149,14 @@ namespace PL
 
         private void btnBilgiler_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             frmBilgilerim frm = new frmBilgilerim();
             FormAc(frm);
         }
 
         private void btnGörevlerim_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             frmGorevlerim frm = new frmGorevlerim();
             FormAc(frm);
         }
@@ -181,12 +195,14 @@ namespace PL
 
         private void btnPersoneller_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             Personel.Personeller frm = new Personel.Personeller();
             FormAc(frm);
         }
 
         private void btnGorevAta_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             GorevAtama frm = new GorevAtama();
             FormAc(frm);
         }
@@ -209,24 +225,28 @@ namespace PL
 
         private void btnKategoriekle_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             frmKategoriEkle frm = new frmKategoriEkle();
             FormAc(frm);
         }
 
         private void btnUrunEk_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             frmUrunEkle frm = new frmUrunEkle();
             FormAc(frm);
         }
 
         private void btnStok_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             frmUrunStokİslemleri frm = new frmUrunStokİslemleri();
             FormAc(frm);
         }
 
         private void btnUrun1_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             frmSatisIslemleri frm = new frmSatisIslemleri();
             FormAc(frm);
         }
@@ -234,6 +254,16 @@ namespace PL
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnRapor_Click(object sender, EventArgs e)
+        {
+            timer2.Start();
+        }
+
+        private void btnKampanya_Click(object sender, EventArgs e)
+        {
+            timer2.Start();
         }
     }
 }

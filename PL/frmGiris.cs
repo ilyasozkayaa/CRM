@@ -27,9 +27,14 @@ namespace PL
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (txtId.Text.Trim()!="" && txtParola.Text.Trim()!="")
+            PersonelMusteriIslemleri prm = new PersonelMusteriIslemleri();
+            if (txtId.Text.Trim() != "" && txtParola.Text.Trim() != "")
             {
-                if(Gnl.giris(txtId.Text,txtParola.Text)!=0)
+                int GirisId = Gnl.giris(txtId.Text, txtParola.Text);
+                GenelDegiskenler.PersonId= prm.UsersIdyeGorePersoneliGetirme(GirisId);
+                
+
+                if (GirisId != 0)
                 {
                     Form frm = new frmAnasayfa();
                     frm.Show();
@@ -44,7 +49,7 @@ namespace PL
             {
                 MessageBox.Show("Şifre ve Parolanızı Giriniz!!!", "Eksik bilgi Girişi Yaptınız!");
             }
-           
+
         }
 
         private void btnCikis_Click(object sender, EventArgs e)
