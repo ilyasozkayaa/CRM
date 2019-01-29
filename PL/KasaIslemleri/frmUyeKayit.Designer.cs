@@ -39,18 +39,18 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtSehir = new System.Windows.Forms.TextBox();
+            this.txtAdi = new System.Windows.Forms.TextBox();
+            this.txtSoyadi = new System.Windows.Forms.TextBox();
+            this.txtTCKNo = new System.Windows.Forms.TextBox();
+            this.txtAdres = new System.Windows.Forms.TextBox();
+            this.txtEMail = new System.Windows.Forms.TextBox();
+            this.BtnKaydet = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.TxtMaskedTelefon = new System.Windows.Forms.MaskedTextBox();
+            this.DTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -180,85 +180,70 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "Şehir :";
             // 
-            // textBox5
+            // txtSehir
             // 
-            this.textBox5.Location = new System.Drawing.Point(196, 369);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(132, 22);
-            this.textBox5.TabIndex = 2;
+            this.txtSehir.Location = new System.Drawing.Point(196, 369);
+            this.txtSehir.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSehir.Name = "txtSehir";
+            this.txtSehir.Size = new System.Drawing.Size(132, 22);
+            this.txtSehir.TabIndex = 2;
             // 
-            // textBox1
+            // txtAdi
             // 
-            this.textBox1.Location = new System.Drawing.Point(196, 50);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 2;
+            this.txtAdi.Location = new System.Drawing.Point(196, 50);
+            this.txtAdi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdi.Name = "txtAdi";
+            this.txtAdi.Size = new System.Drawing.Size(132, 22);
+            this.txtAdi.TabIndex = 2;
             // 
-            // textBox2
+            // txtSoyadi
             // 
-            this.textBox2.Location = new System.Drawing.Point(196, 84);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 22);
-            this.textBox2.TabIndex = 2;
+            this.txtSoyadi.Location = new System.Drawing.Point(196, 84);
+            this.txtSoyadi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoyadi.Name = "txtSoyadi";
+            this.txtSoyadi.Size = new System.Drawing.Size(132, 22);
+            this.txtSoyadi.TabIndex = 2;
             // 
-            // textBox3
+            // txtTCKNo
             // 
-            this.textBox3.Location = new System.Drawing.Point(196, 150);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 22);
-            this.textBox3.TabIndex = 2;
+            this.txtTCKNo.Location = new System.Drawing.Point(196, 117);
+            this.txtTCKNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTCKNo.Name = "txtTCKNo";
+            this.txtTCKNo.Size = new System.Drawing.Size(132, 22);
+            this.txtTCKNo.TabIndex = 2;
             // 
-            // textBox8
+            // txtAdres
             // 
-            this.textBox8.Location = new System.Drawing.Point(196, 117);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(132, 22);
-            this.textBox8.TabIndex = 2;
+            this.txtAdres.Location = new System.Drawing.Point(196, 257);
+            this.txtAdres.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdres.Multiline = true;
+            this.txtAdres.Name = "txtAdres";
+            this.txtAdres.Size = new System.Drawing.Size(132, 104);
+            this.txtAdres.TabIndex = 2;
             // 
-            // textBox4
+            // txtEMail
             // 
-            this.textBox4.Location = new System.Drawing.Point(196, 257);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(132, 104);
-            this.textBox4.TabIndex = 2;
+            this.txtEMail.Location = new System.Drawing.Point(196, 225);
+            this.txtEMail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEMail.Name = "txtEMail";
+            this.txtEMail.Size = new System.Drawing.Size(132, 22);
+            this.txtEMail.TabIndex = 2;
             // 
-            // textBox7
+            // BtnKaydet
             // 
-            this.textBox7.Location = new System.Drawing.Point(196, 225);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(132, 22);
-            this.textBox7.TabIndex = 2;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(196, 188);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(132, 22);
-            this.textBox6.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::PL.Properties.Resources.add_user_2_321;
-            this.button1.Location = new System.Drawing.Point(196, 417);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 41);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "         Kaydet";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnKaydet.BackColor = System.Drawing.Color.SteelBlue;
+            this.BtnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnKaydet.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnKaydet.ForeColor = System.Drawing.Color.White;
+            this.BtnKaydet.Image = global::PL.Properties.Resources.add_user_2_321;
+            this.BtnKaydet.Location = new System.Drawing.Point(196, 417);
+            this.BtnKaydet.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnKaydet.Name = "BtnKaydet";
+            this.BtnKaydet.Size = new System.Drawing.Size(132, 41);
+            this.BtnKaydet.TabIndex = 3;
+            this.BtnKaydet.Text = "         Kaydet";
+            this.BtnKaydet.UseVisualStyleBackColor = false;
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // panel2
             // 
@@ -271,23 +256,23 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.DTimePicker);
+            this.panel3.Controls.Add(this.TxtMaskedTelefon);
+            this.panel3.Controls.Add(this.txtSehir);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.BtnKaydet);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.textBox6);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.textBox7);
+            this.panel3.Controls.Add(this.txtEMail);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.txtAdres);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.textBox8);
+            this.panel3.Controls.Add(this.txtTCKNo);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.textBox3);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtSoyadi);
+            this.panel3.Controls.Add(this.txtAdi);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(345, 43);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
@@ -303,6 +288,22 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(425, 526);
             this.panel4.TabIndex = 6;
+            // 
+            // TxtMaskedTelefon
+            // 
+            this.TxtMaskedTelefon.Location = new System.Drawing.Point(196, 185);
+            this.TxtMaskedTelefon.Mask = "0000000000";
+            this.TxtMaskedTelefon.Name = "TxtMaskedTelefon";
+            this.TxtMaskedTelefon.Size = new System.Drawing.Size(133, 22);
+            this.TxtMaskedTelefon.TabIndex = 4;
+            this.TxtMaskedTelefon.ValidatingType = typeof(int);
+            // 
+            // DTimePicker
+            // 
+            this.DTimePicker.Location = new System.Drawing.Point(196, 150);
+            this.DTimePicker.Name = "DTimePicker";
+            this.DTimePicker.Size = new System.Drawing.Size(133, 22);
+            this.DTimePicker.TabIndex = 5;
             // 
             // frmUyeKayit
             // 
@@ -339,18 +340,18 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtSehir;
+        private System.Windows.Forms.TextBox txtAdi;
+        private System.Windows.Forms.TextBox txtSoyadi;
+        private System.Windows.Forms.TextBox txtTCKNo;
+        private System.Windows.Forms.TextBox txtAdres;
+        private System.Windows.Forms.TextBox txtEMail;
+        private System.Windows.Forms.Button BtnKaydet;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DateTimePicker DTimePicker;
+        private System.Windows.Forms.MaskedTextBox TxtMaskedTelefon;
     }
 }
