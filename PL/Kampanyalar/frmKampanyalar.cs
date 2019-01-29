@@ -24,20 +24,31 @@ namespace PL.Kampanyalar
         private void frmKampanyalar_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = ppi.promosyonlarıGetir();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[1].Width = 350;
+            dataGridView1.Columns[2].Width = 220;
+            dataGridView1.Columns[3].Width = 220;
+            dataGridView1.Columns[4].Width = 220;
         }
         
         private void button1_Click(object sender, EventArgs e)
         {
-            DateTime dt = DateTime.Now;
-            if (dt==DateTime.Now)
-               
-                {
-                MessageBox.Show("Anneler Günü İndirimi");
-                }
-          else 
+            //List<Promosyon> PromosyonListesi = new List<Promosyon>();
+            DateTime GununTarihi = DateTime.Now;
+            MessageBox.Show(GununTarihi.ToString());
+            foreach (Promosyon p in ppi.promosyonlarıGetir())
             {
-                MessageBox.Show("Yeni İndirim Bulunmamaktadır.");
+                if(p.BaslangıcTarihi.Month<=GununTarihi.Month && p.BaslangıcTarihi.Day <= GununTarihi.Day && p.BitisTarihi.Month >= GununTarihi.Month && p.BitisTarihi.Day >= GununTarihi.Day)
+                {
+                    MessageBox.Show("Promosyon var >> " + "   " + p.PromosyonAdi);
+                }
+                else
+                {
+                    MessageBox.Show("Bu Tarihte Promosyon Yok");
+                }
             }
+        
         }
     }
 }
