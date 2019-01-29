@@ -67,34 +67,32 @@
             this.label13.Location = new System.Drawing.Point(0, 0);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(699, 34);
+            this.label13.Size = new System.Drawing.Size(739, 34);
             this.label13.TabIndex = 0;
-            this.label13.Text = "                                                         KATEGORİ EKLE";
+            this.label13.Text = "                                                              KATEGORİ EKLE";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(141, 66);
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(117, 67);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 25);
+            this.label7.Size = new System.Drawing.Size(141, 23);
             this.label7.TabIndex = 26;
-            this.label7.Text = "Kategori Adı";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.label7.Text = "Kategori Adı :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(141, 110);
+            this.label6.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(117, 111);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 25);
+            this.label6.Size = new System.Drawing.Size(109, 23);
             this.label6.TabIndex = 27;
-            this.label6.Text = "Açıklama";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label6.Text = "Açıklama :";
             // 
             // txtKategoriAd
             // 
@@ -153,10 +151,11 @@
             this.btnUrunEkle.Location = new System.Drawing.Point(81, 287);
             this.btnUrunEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnUrunEkle.Name = "btnUrunEkle";
-            this.btnUrunEkle.Size = new System.Drawing.Size(152, 49);
+            this.btnUrunEkle.Size = new System.Drawing.Size(152, 58);
             this.btnUrunEkle.TabIndex = 81;
-            this.btnUrunEkle.Text = "   EKLE";
+            this.btnUrunEkle.Text = "    EKLE";
             this.btnUrunEkle.UseVisualStyleBackColor = false;
+            this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
             // btnUrunSil
             // 
@@ -166,13 +165,14 @@
             this.btnUrunSil.ForeColor = System.Drawing.Color.White;
             this.btnUrunSil.Image = global::PL.Properties.Resources.delete_32;
             this.btnUrunSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrunSil.Location = new System.Drawing.Point(459, 287);
+            this.btnUrunSil.Location = new System.Drawing.Point(263, 287);
             this.btnUrunSil.Margin = new System.Windows.Forms.Padding(4);
             this.btnUrunSil.Name = "btnUrunSil";
-            this.btnUrunSil.Size = new System.Drawing.Size(133, 49);
+            this.btnUrunSil.Size = new System.Drawing.Size(164, 58);
             this.btnUrunSil.TabIndex = 80;
-            this.btnUrunSil.Text = "   SİL";
+            this.btnUrunSil.Text = "  SİL";
             this.btnUrunSil.UseVisualStyleBackColor = false;
+            this.btnUrunSil.Click += new System.EventHandler(this.btnUrunSil_Click);
             // 
             // btnUrunGuncelle
             // 
@@ -182,13 +182,14 @@
             this.btnUrunGuncelle.ForeColor = System.Drawing.Color.White;
             this.btnUrunGuncelle.Image = global::PL.Properties.Resources.available_updates_32;
             this.btnUrunGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrunGuncelle.Location = new System.Drawing.Point(278, 287);
+            this.btnUrunGuncelle.Location = new System.Drawing.Point(459, 287);
             this.btnUrunGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnUrunGuncelle.Name = "btnUrunGuncelle";
-            this.btnUrunGuncelle.Size = new System.Drawing.Size(152, 49);
+            this.btnUrunGuncelle.Size = new System.Drawing.Size(164, 58);
             this.btnUrunGuncelle.TabIndex = 79;
-            this.btnUrunGuncelle.Text = "     GÜNCELLE";
+            this.btnUrunGuncelle.Text = "        GÜNCELLE";
             this.btnUrunGuncelle.UseVisualStyleBackColor = false;
+            this.btnUrunGuncelle.Click += new System.EventHandler(this.btnUrunGuncelle_Click);
             // 
             // panelDataGridView
             // 
@@ -206,9 +207,13 @@
             this.dgKatagoriListe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgKatagoriListe.Location = new System.Drawing.Point(0, 0);
             this.dgKatagoriListe.Margin = new System.Windows.Forms.Padding(4);
+            this.dgKatagoriListe.MultiSelect = false;
             this.dgKatagoriListe.Name = "dgKatagoriListe";
+            this.dgKatagoriListe.ReadOnly = true;
+            this.dgKatagoriListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgKatagoriListe.Size = new System.Drawing.Size(702, 464);
             this.dgKatagoriListe.TabIndex = 0;
+            this.dgKatagoriListe.DoubleClick += new System.EventHandler(this.dgKatagoriListe_DoubleClick);
             // 
             // frmKategoriEkle
             // 
@@ -223,6 +228,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmKategoriEkle";
             this.Text = "frmKategoriEkle";
+            this.Load += new System.EventHandler(this.frmKategoriEkle_Load);
             this.panelHeader1.ResumeLayout(false);
             this.panelHeader1.PerformLayout();
             this.panelKategoriEkle.ResumeLayout(false);

@@ -65,6 +65,12 @@
     <Compile Include="frmGiris.Designer.cs">
       <DependentUpon>frmGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kampanyalar\frmKampanyalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kampanyalar\frmKampanyalar.Designer.cs">
+      <DependentUpon>frmKampanyalar.cs</DependentUpon>
+    </Compile>
     <Compile Include="KasaIslemleri\frmUrunIade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Raporlar\Raporlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar\Raporlar.Designer.cs">
+      <DependentUpon>Raporlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Urunler\frmKategoriEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +189,9 @@
     <EmbeddedResource Include="frmGiris.resx">
       <DependentUpon>frmGiris.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kampanyalar\frmKampanyalar.resx">
+      <DependentUpon>frmKampanyalar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KasaIslemleri\frmUrunIade.resx">
       <DependentUpon>frmUrunIade.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +229,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\Raporlar.resx">
+      <DependentUpon>Raporlar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Urunler\frmKategoriEkle.resx">
       <DependentUpon>frmKategoriEkle.cs</DependentUpon>
@@ -423,6 +441,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-2-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-christmas-gift-filled-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-import-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-import-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-christmas-gift-filled-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-import-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-christmas-gift-filled-322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-christmas-gift-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-christmas-gift-42.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -578,6 +578,7 @@
             this.btnRapor.Text = "Rapor";
             this.btnRapor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRapor.UseVisualStyleBackColor = false;
+            this.btnRapor.Click += new System.EventHandler(this.btnRapor_Click);
             // 
             // btnKampanya
             // 
@@ -595,6 +596,7 @@
             this.btnKampanya.Text = "Kampanya";
             this.btnKampanya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKampanya.UseVisualStyleBackColor = false;
+            this.btnKampanya.Click += new System.EventHandler(this.btnKampanya_Click);
             // 
             // pnlFooter
             // 
@@ -611,11 +613,10 @@
             // kullaniciDetay1
             // 
             this.kullaniciDetay1.BackColor = System.Drawing.Color.SteelBlue;
-            this.kullaniciDetay1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.kullaniciDetay1.Location = new System.Drawing.Point(867, 0);
+            this.kullaniciDetay1.Location = new System.Drawing.Point(741, 0);
             this.kullaniciDetay1.Margin = new System.Windows.Forms.Padding(5);
             this.kullaniciDetay1.Name = "kullaniciDetay1";
-            this.kullaniciDetay1.Size = new System.Drawing.Size(245, 62);
+            this.kullaniciDetay1.Size = new System.Drawing.Size(277, 62);
             this.kullaniciDetay1.TabIndex = 5;
             // 
             // pnlSaat

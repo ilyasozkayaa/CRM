@@ -12,5 +12,6 @@ namespace BLL.Model
         bool promosyonEkle(Promosyon p);
         bool promosyonSil(int ID);
         bool promosyonGuncelle(Promosyon p);
+        List<Promosyon> promosyonlarıGetir();
     }
 }

@@ -36,11 +36,11 @@
             this.BtnListele = new System.Windows.Forms.Button();
             this.BtnSorgula = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSoyadı = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAdı = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -85,11 +85,11 @@
             this.PnlPersonelArama.Controls.Add(this.BtnListele);
             this.PnlPersonelArama.Controls.Add(this.BtnSorgula);
             this.PnlPersonelArama.Controls.Add(this.label4);
-            this.PnlPersonelArama.Controls.Add(this.textBox3);
+            this.PnlPersonelArama.Controls.Add(this.txtSoyadı);
             this.PnlPersonelArama.Controls.Add(this.label3);
             this.PnlPersonelArama.Controls.Add(this.label2);
-            this.PnlPersonelArama.Controls.Add(this.textBox2);
-            this.PnlPersonelArama.Controls.Add(this.textBox1);
+            this.PnlPersonelArama.Controls.Add(this.txtAdı);
+            this.PnlPersonelArama.Controls.Add(this.txtID);
             this.PnlPersonelArama.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnlPersonelArama.Location = new System.Drawing.Point(0, 53);
             this.PnlPersonelArama.Margin = new System.Windows.Forms.Padding(4);
@@ -157,13 +157,14 @@
             this.BtnSorgula.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnSorgula.Image = global::PL.Properties.Resources.zoom_32;
             this.BtnSorgula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSorgula.Location = new System.Drawing.Point(19, 252);
+            this.BtnSorgula.Location = new System.Drawing.Point(22, 252);
             this.BtnSorgula.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSorgula.Name = "BtnSorgula";
             this.BtnSorgula.Size = new System.Drawing.Size(179, 43);
             this.BtnSorgula.TabIndex = 9;
             this.BtnSorgula.Text = "Sorgula";
             this.BtnSorgula.UseVisualStyleBackColor = false;
+            this.BtnSorgula.Click += new System.EventHandler(this.BtnSorgula_Click);
             // 
             // label4
             // 
@@ -176,13 +177,13 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Soyad :";
             // 
-            // textBox3
+            // txtSoyadı
             // 
-            this.textBox3.Location = new System.Drawing.Point(123, 130);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 22);
-            this.textBox3.TabIndex = 4;
+            this.txtSoyadı.Location = new System.Drawing.Point(123, 130);
+            this.txtSoyadı.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoyadı.Name = "txtSoyadı";
+            this.txtSoyadı.Size = new System.Drawing.Size(132, 22);
+            this.txtSoyadı.TabIndex = 4;
             // 
             // label3
             // 
@@ -206,21 +207,22 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Personel ID :";
             // 
-            // textBox2
+            // txtAdı
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 85);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 22);
-            this.textBox2.TabIndex = 1;
+            this.txtAdı.Location = new System.Drawing.Point(123, 85);
+            this.txtAdı.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdı.Name = "txtAdı";
+            this.txtAdı.Size = new System.Drawing.Size(132, 22);
+            this.txtAdı.TabIndex = 1;
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 42);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
-            this.textBox1.TabIndex = 0;
+            this.txtID.Location = new System.Drawing.Point(123, 42);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(132, 22);
+            this.txtID.TabIndex = 0;
             // 
             // panel3
             // 
@@ -289,11 +291,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PnlPersonelArama;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSoyadı;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAdı;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button BtnListele;
         private System.Windows.Forms.Button BtnSorgula;

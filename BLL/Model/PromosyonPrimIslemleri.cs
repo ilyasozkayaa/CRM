@@ -27,6 +27,8 @@ namespace BLL.Model
             return sonuc;
         }
 
+   
+
         public bool promosyonGuncelle(Promosyon p)
         {
             bool sonuc = false;
@@ -44,6 +46,16 @@ namespace BLL.Model
                 string message = ex.Message;
             }
             return sonuc;
+        }
+
+        public List<Promosyon> promosyonlarıGetir()
+        {
+            
+                List<Promosyon> promosyonlistesi = new List<Promosyon>();
+                promosyonlistesi = (from m in ent.Promosyons where m.Silindi == false select m).ToList();
+
+                return promosyonlistesi;
+            
         }
 
         public bool promosyonSil(int ID)

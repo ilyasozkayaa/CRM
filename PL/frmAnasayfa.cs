@@ -1,4 +1,5 @@
-﻿using PL.KasaIslemleri;
+﻿using PL.Kampanyalar;
+using PL.KasaIslemleri;
 using PL.Personel;
 using PL.Profilim;
 using PL.Properties;
@@ -234,6 +235,18 @@ namespace PL
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnRapor_Click(object sender, EventArgs e)
+        {
+            Raporlar frm = new Raporlar();
+            FormAc(frm);
+        }
+
+        private void btnKampanya_Click(object sender, EventArgs e)
+        {
+            frmKampanyalar frm = new frmKampanyalar();
+            FormAc(frm);
         }
     }
 }

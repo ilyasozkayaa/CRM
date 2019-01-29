@@ -31,28 +31,28 @@
             this.panelHeader1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panelHeader2 = new System.Windows.Forms.Panel();
+            this.BtnSorgula = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.txtUrunId = new System.Windows.Forms.TextBox();
             this.panelStok = new System.Windows.Forms.Panel();
+            this.btnStokEkle = new System.Windows.Forms.Button();
             this.txtSonStok = new System.Windows.Forms.TextBox();
             this.txtEklenenStok = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblAdet = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblRenk = new System.Windows.Forms.Label();
+            this.lblBeden = new System.Windows.Forms.Label();
+            this.lblAD = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.paneldgvStok = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnStokEkle = new System.Windows.Forms.Button();
-            this.BtnSorgula = new System.Windows.Forms.Button();
+            this.dgvUrunler = new System.Windows.Forms.DataGridView();
             this.panelHeader1.SuspendLayout();
             this.panelHeader2.SuspendLayout();
             this.panelStok.SuspendLayout();
             this.paneldgvStok.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHeader1
@@ -61,7 +61,7 @@
             this.panelHeader1.Controls.Add(this.label13);
             this.panelHeader1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader1.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHeader1.Margin = new System.Windows.Forms.Padding(4);
             this.panelHeader1.Name = "panelHeader1";
             this.panelHeader1.Size = new System.Drawing.Size(1405, 50);
             this.panelHeader1.TabIndex = 8;
@@ -87,10 +87,28 @@
             this.panelHeader2.Controls.Add(this.txtUrunId);
             this.panelHeader2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader2.Location = new System.Drawing.Point(0, 50);
-            this.panelHeader2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHeader2.Margin = new System.Windows.Forms.Padding(4);
             this.panelHeader2.Name = "panelHeader2";
             this.panelHeader2.Size = new System.Drawing.Size(1405, 98);
             this.panelHeader2.TabIndex = 9;
+            // 
+            // BtnSorgula
+            // 
+            this.BtnSorgula.BackColor = System.Drawing.Color.SteelBlue;
+            this.BtnSorgula.FlatAppearance.BorderSize = 0;
+            this.BtnSorgula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSorgula.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnSorgula.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnSorgula.Image = global::PL.Properties.Resources.zoom_32;
+            this.BtnSorgula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSorgula.Location = new System.Drawing.Point(408, 30);
+            this.BtnSorgula.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSorgula.Name = "BtnSorgula";
+            this.BtnSorgula.Size = new System.Drawing.Size(153, 43);
+            this.BtnSorgula.TabIndex = 61;
+            this.BtnSorgula.Text = "      Sorgula";
+            this.BtnSorgula.UseVisualStyleBackColor = false;
+            this.BtnSorgula.Click += new System.EventHandler(this.BtnSorgula_Click);
             // 
             // label12
             // 
@@ -107,7 +125,7 @@
             // 
             this.txtUrunId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtUrunId.Location = new System.Drawing.Point(179, 30);
-            this.txtUrunId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUrunId.Margin = new System.Windows.Forms.Padding(4);
             this.txtUrunId.Multiline = true;
             this.txtUrunId.Name = "txtUrunId";
             this.txtUrunId.Size = new System.Drawing.Size(153, 43);
@@ -118,26 +136,43 @@
             this.panelStok.Controls.Add(this.btnStokEkle);
             this.panelStok.Controls.Add(this.txtSonStok);
             this.panelStok.Controls.Add(this.txtEklenenStok);
-            this.panelStok.Controls.Add(this.label6);
+            this.panelStok.Controls.Add(this.lblAdet);
             this.panelStok.Controls.Add(this.label5);
-            this.panelStok.Controls.Add(this.label4);
-            this.panelStok.Controls.Add(this.label3);
-            this.panelStok.Controls.Add(this.label2);
+            this.panelStok.Controls.Add(this.lblRenk);
+            this.panelStok.Controls.Add(this.lblBeden);
+            this.panelStok.Controls.Add(this.lblAD);
             this.panelStok.Controls.Add(this.label8);
             this.panelStok.Controls.Add(this.label7);
-            this.panelStok.Controls.Add(this.label1);
+            this.panelStok.Controls.Add(this.lblID);
             this.panelStok.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelStok.Location = new System.Drawing.Point(0, 148);
-            this.panelStok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelStok.Margin = new System.Windows.Forms.Padding(4);
             this.panelStok.Name = "panelStok";
             this.panelStok.Size = new System.Drawing.Size(703, 464);
             this.panelStok.TabIndex = 10;
+            // 
+            // btnStokEkle
+            // 
+            this.btnStokEkle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnStokEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStokEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnStokEkle.ForeColor = System.Drawing.Color.White;
+            this.btnStokEkle.Image = global::PL.Properties.Resources.plus_5_32;
+            this.btnStokEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStokEkle.Location = new System.Drawing.Point(497, 229);
+            this.btnStokEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnStokEkle.Name = "btnStokEkle";
+            this.btnStokEkle.Size = new System.Drawing.Size(111, 41);
+            this.btnStokEkle.TabIndex = 61;
+            this.btnStokEkle.Text = "       Ekle";
+            this.btnStokEkle.UseVisualStyleBackColor = false;
+            this.btnStokEkle.Click += new System.EventHandler(this.btnStokEkle_Click);
             // 
             // txtSonStok
             // 
             this.txtSonStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSonStok.Location = new System.Drawing.Point(247, 306);
-            this.txtSonStok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSonStok.Margin = new System.Windows.Forms.Padding(4);
             this.txtSonStok.Multiline = true;
             this.txtSonStok.Name = "txtSonStok";
             this.txtSonStok.ReadOnly = true;
@@ -148,22 +183,22 @@
             // 
             this.txtEklenenStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtEklenenStok.Location = new System.Drawing.Point(247, 229);
-            this.txtEklenenStok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEklenenStok.Margin = new System.Windows.Forms.Padding(4);
             this.txtEklenenStok.Multiline = true;
             this.txtEklenenStok.Name = "txtEklenenStok";
             this.txtEklenenStok.Size = new System.Drawing.Size(195, 41);
             this.txtEklenenStok.TabIndex = 59;
             // 
-            // label6
+            // lblAdet
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(477, 148);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 25);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "Adet:";
+            this.lblAdet.AutoSize = true;
+            this.lblAdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAdet.Location = new System.Drawing.Point(477, 148);
+            this.lblAdet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAdet.Name = "lblAdet";
+            this.lblAdet.Size = new System.Drawing.Size(59, 25);
+            this.lblAdet.TabIndex = 49;
+            this.lblAdet.Text = "Adet:";
             // 
             // label5
             // 
@@ -176,38 +211,38 @@
             this.label5.TabIndex = 50;
             this.label5.Text = "Adet:";
             // 
-            // label4
+            // lblRenk
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(352, 148);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 25);
-            this.label4.TabIndex = 51;
-            this.label4.Text = "Renk";
+            this.lblRenk.AutoSize = true;
+            this.lblRenk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblRenk.Location = new System.Drawing.Point(352, 148);
+            this.lblRenk.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRenk.Name = "lblRenk";
+            this.lblRenk.Size = new System.Drawing.Size(57, 25);
+            this.lblRenk.TabIndex = 51;
+            this.lblRenk.Text = "Renk";
             // 
-            // label3
+            // lblBeden
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(279, 148);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 25);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "Beden";
+            this.lblBeden.AutoSize = true;
+            this.lblBeden.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBeden.Location = new System.Drawing.Point(279, 148);
+            this.lblBeden.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBeden.Name = "lblBeden";
+            this.lblBeden.Size = new System.Drawing.Size(69, 25);
+            this.lblBeden.TabIndex = 52;
+            this.lblBeden.Text = "Beden";
             // 
-            // label2
+            // lblAD
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(187, 148);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 25);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "Ürün Adı";
+            this.lblAD.AutoSize = true;
+            this.lblAD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAD.Location = new System.Drawing.Point(187, 148);
+            this.lblAD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAD.Name = "lblAD";
+            this.lblAD.Size = new System.Drawing.Size(88, 25);
+            this.lblAD.TabIndex = 53;
+            this.lblAD.Text = "Ürün Adı";
             // 
             // label8
             // 
@@ -231,69 +266,40 @@
             this.label7.TabIndex = 55;
             this.label7.Text = "Eklenen Stok :";
             // 
-            // label1
+            // lblID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(84, 148);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 25);
-            this.label1.TabIndex = 56;
-            this.label1.Text = "Ürün ID";
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblID.Location = new System.Drawing.Point(84, 148);
+            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(78, 25);
+            this.lblID.TabIndex = 56;
+            this.lblID.Text = "Ürün ID";
             // 
             // paneldgvStok
             // 
-            this.paneldgvStok.Controls.Add(this.dataGridView1);
+            this.paneldgvStok.Controls.Add(this.dgvUrunler);
             this.paneldgvStok.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneldgvStok.Location = new System.Drawing.Point(703, 148);
-            this.paneldgvStok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paneldgvStok.Margin = new System.Windows.Forms.Padding(4);
             this.paneldgvStok.Name = "paneldgvStok";
             this.paneldgvStok.Size = new System.Drawing.Size(702, 464);
             this.paneldgvStok.TabIndex = 11;
             // 
-            // dataGridView1
+            // dgvUrunler
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(702, 464);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // btnStokEkle
-            // 
-            this.btnStokEkle.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnStokEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStokEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnStokEkle.ForeColor = System.Drawing.Color.White;
-            this.btnStokEkle.Image = global::PL.Properties.Resources.plus_5_32;
-            this.btnStokEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStokEkle.Location = new System.Drawing.Point(497, 229);
-            this.btnStokEkle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnStokEkle.Name = "btnStokEkle";
-            this.btnStokEkle.Size = new System.Drawing.Size(111, 41);
-            this.btnStokEkle.TabIndex = 61;
-            this.btnStokEkle.Text = "       Ekle";
-            this.btnStokEkle.UseVisualStyleBackColor = false;
-            // 
-            // BtnSorgula
-            // 
-            this.BtnSorgula.BackColor = System.Drawing.Color.SteelBlue;
-            this.BtnSorgula.FlatAppearance.BorderSize = 0;
-            this.BtnSorgula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSorgula.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnSorgula.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnSorgula.Image = global::PL.Properties.Resources.zoom_32;
-            this.BtnSorgula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSorgula.Location = new System.Drawing.Point(408, 30);
-            this.BtnSorgula.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSorgula.Name = "BtnSorgula";
-            this.BtnSorgula.Size = new System.Drawing.Size(153, 43);
-            this.BtnSorgula.TabIndex = 61;
-            this.BtnSorgula.Text = "      Sorgula";
-            this.BtnSorgula.UseVisualStyleBackColor = false;
+            this.dgvUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvUrunler.Location = new System.Drawing.Point(0, 0);
+            this.dgvUrunler.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvUrunler.MultiSelect = false;
+            this.dgvUrunler.Name = "dgvUrunler";
+            this.dgvUrunler.ReadOnly = true;
+            this.dgvUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUrunler.Size = new System.Drawing.Size(702, 464);
+            this.dgvUrunler.TabIndex = 0;
+            this.dgvUrunler.DoubleClick += new System.EventHandler(this.dgvUrunler_DoubleClick);
             // 
             // frmUrunStokİslemleri
             // 
@@ -305,9 +311,10 @@
             this.Controls.Add(this.panelHeader2);
             this.Controls.Add(this.panelHeader1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmUrunStokİslemleri";
             this.Text = "frmUrunStokİslemleri";
+            this.Load += new System.EventHandler(this.frmUrunStokİslemleri_Load);
             this.panelHeader1.ResumeLayout(false);
             this.panelHeader1.PerformLayout();
             this.panelHeader2.ResumeLayout(false);
@@ -315,7 +322,7 @@
             this.panelStok.ResumeLayout(false);
             this.panelStok.PerformLayout();
             this.paneldgvStok.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,16 +338,16 @@
         private System.Windows.Forms.TextBox txtSonStok;
         private System.Windows.Forms.TextBox txtEklenenStok;
         private System.Windows.Forms.TextBox txtUrunId;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblAdet;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblRenk;
+        private System.Windows.Forms.Label lblBeden;
+        private System.Windows.Forms.Label lblAD;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvUrunler;
         private System.Windows.Forms.Button BtnSorgula;
     }
 }

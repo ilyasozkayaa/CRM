@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,178 @@ namespace BLL.Model
     public class UrunIslemleri : IUrunIslemleri
     {
         CRMContext ent = new CRMContext();
+
+        public bool kategoriekle(Kategori k)
+        {
+            bool sonuc = false;
+            Kategori Yeniktg = new Kategori();
+            try
+            {
+                Yeniktg.KategoriAdi = k.KategoriAdi;
+                Yeniktg.Aciklama = k.Aciklama;
+                Yeniktg.Silindi = false;
+                ent.Kategoris.Add(Yeniktg);
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+
+            return sonuc;
+        }
+
+        public bool KategoriEkleKontrol(string KategoriAdi)
+        {
+            bool sonuc = false;
+            Kategori ktg = (from k in ent.Kategoris where k.KategoriAdi == KategoriAdi select k).FirstOrDefault();
+            if (ktg != null)
+            {
+                sonuc = true;
+            }
+            return sonuc;
+        }
+
+        public Kategori KategoriGetir(int ID)
+        {
+            Kategori ktg = new Kategori();
+            try
+            {
+                ktg = (from k in ent.Kategoris where k.Id == ID select k).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+
+
+            return ktg;
+        }
+
+        public bool KategoriGuncelle(Kategori k)
+        {
+            Kategori Degisecekktg = (from ktg in ent.Kategoris where ktg.Id == k.Id select ktg).FirstOrDefault();
+            bool sonuc = false;
+            try
+            {
+                Degisecekktg.KategoriAdi = k.KategoriAdi;
+                Degisecekktg.Aciklama = k.Aciklama;
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return sonuc;
+        }
+
+        public bool KategoriGuncelleKontrol(int KategoriID, string KategoriAdi)
+        {
+            bool sonuc = false;
+            Kategori ktg = (from k in ent.Kategoris where k.KategoriAdi == KategoriAdi && k.Id != KategoriID select k).FirstOrDefault();
+            if (ktg != null)
+            {
+                sonuc = true;
+            }
+            return sonuc;
+        }
+
+        public List<Kategori> KategoriListesi()
+        {
+            List<Kategori> KtgList = new List<Kategori>();
+            KtgList = (from ktg in ent.Kategoris where ktg.Silindi == false select ktg).ToList();
+
+            return KtgList;
+        }
+
+        public bool kategoriSil(int ID)
+        {
+            bool sonuc = true;
+            Kategori SilinecekKtg = (from ktg in ent.Kategoris where ktg.Id == ID select ktg).FirstOrDefault();
+            try
+            {
+                SilinecekKtg.Silindi = true;
+                ent.SaveChanges();
+
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return sonuc;
+        }
+
+        public ArrayList KategoriyeGoreBedenGetir(int KategoriID)
+        {
+            string beden = "";
+            ArrayList KategoriyeGoreBedenListesi = new ArrayList();
+            foreach (Urun item in TumUrunleriGetir())
+            {
+                beden = item.Beden;
+                if (item.KategoriId == KategoriID)
+                {
+                    if (!KategoriyeGoreBedenListesi.Contains(beden))
+                    {
+                        KategoriyeGoreBedenListesi.Add(item.Beden);
+                    }
+                }
+            }
+
+
+
+
+            return KategoriyeGoreBedenListesi;
+        }
+
+        public ArrayList KategoriyeGoreKalipGetir(int KategoriID)
+        {
+            string kalip = "";
+            ArrayList KategoriyeGoreKalipListesi = new ArrayList();
+            foreach (Urun item in TumUrunleriGetir())
+            {
+                kalip = item.Kalip;
+                if (item.KategoriId == KategoriID)
+                {
+                    if (!KategoriyeGoreKalipListesi.Contains(kalip))
+                    {
+                        KategoriyeGoreKalipListesi.Add(item.Kalip);
+                    }
+                }
+            }
+
+
+
+
+            return KategoriyeGoreKalipListesi;
+        }
+
+        public ArrayList KategoriyeGoreMalzemeGetir(int KategoriID)
+        {
+            string Malzeme = "";
+            ArrayList KategoriyeGoreMalzemeListesi = new ArrayList();
+            foreach (Urun item in TumUrunleriGetir())
+            {
+                Malzeme = item.Beden;
+                if (item.KategoriId == KategoriID)
+                {
+                    if (!KategoriyeGoreMalzemeListesi.Contains(Malzeme))
+                    {
+                        KategoriyeGoreMalzemeListesi.Add(item.Malzemesi);
+                    }
+                }
+            }
+
+
+
+
+            return KategoriyeGoreMalzemeListesi;
+        }
 
         public List<Urun> KategoriyeGoreUrunGetir(int ktgID)
         {
@@ -40,6 +213,31 @@ namespace BLL.Model
             }
 
 
+            return sonuc;
+        }
+
+        public bool StokEkle(int UrunID, int ArtisMiktari)
+        {
+            bool sonuc = false;
+            Urun EklenecekUrun = (from u in ent.Uruns where u.Id == UrunID select u).FirstOrDefault();
+            UrunStokHareket SHareket = new UrunStokHareket();
+            try
+            {
+                EklenecekUrun.StokMiktarı += ArtisMiktari;
+
+                SHareket.IslemTürü = "Alınan";
+                SHareket.UrunId = UrunID;
+                SHareket.Miktar = ArtisMiktari;
+                SHareket.IslemTarihi = DateTime.Now;
+                ent.UrunStokHarekets.Add(SHareket);
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ec)
+            {
+
+                string message = ec.Message;
+            }
             return sonuc;
         }
 
@@ -129,6 +327,28 @@ namespace BLL.Model
             return sonuc;
         }
 
+        public bool UrunEkleKontrol(string UrunAdi, string renk, string beden, string Kalıp)
+        {
+            Urun u = new Urun();
+            bool varmi = false;
+            try
+            {
+                u = (from urun in ent.Uruns where urun.UrunAdi == UrunAdi && urun.Renk == renk && urun.Beden == beden && urun.Kalip == Kalıp select urun).FirstOrDefault();
+                if (u != null)
+                {
+                    varmi = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return varmi;
+        }
+
+
+
         public bool urunGuncelle(Urun u)
         {
             bool sonuc = true;
@@ -156,6 +376,26 @@ namespace BLL.Model
                 string message = ex.Message;
             }
             return sonuc;
+        }
+
+        public bool UrunGuncellemeKontrol(int ID, string UrunAdi, string renk, string beden, string Kalıp)
+        {
+            Urun u = new Urun();
+            bool varmi = false;
+            try
+            {
+                u = (from urun in ent.Uruns where urun.UrunAdi == UrunAdi && urun.Renk == renk && urun.Beden == beden && urun.Kalip == Kalıp && urun.Id!=ID select urun).FirstOrDefault();
+                if (u != null)
+                {
+                    varmi = true;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return varmi;
         }
 
         public bool urunSil(int ID)

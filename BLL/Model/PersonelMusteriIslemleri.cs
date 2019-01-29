@@ -133,6 +133,26 @@ namespace BLL.Model
             return prsnl;
         }
 
+     
+
+        public List<Personel> PersonelGetir(string Ad, string Soyad)
+        {
+            List<Personel> PersonelListesi = new List<Personel>();
+
+            try
+            {
+
+                PersonelListesi = (from P in ent.Personels where P.Ad == Ad && P.Soyad == Soyad select P).ToList();
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+
+            return PersonelListesi;
+        }
+
         public bool personelGüncelle(Personel p)
         {
             Personel prsnl = (from Personel in ent.Personels where Personel.Id == p.Id select p).FirstOrDefault();

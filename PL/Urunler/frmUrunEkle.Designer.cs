@@ -38,13 +38,13 @@
             this.cbUretimYeri = new System.Windows.Forms.ComboBox();
             this.cbMalzeme = new System.Windows.Forms.ComboBox();
             this.cbKalip = new System.Windows.Forms.ComboBox();
-            this.cbUrunAdi = new System.Windows.Forms.ComboBox();
             this.cbBeden = new System.Windows.Forms.ComboBox();
             this.cbKategori = new System.Windows.Forms.ComboBox();
-            this.cbRenk = new System.Windows.Forms.ComboBox();
             this.txtAlisFiyati = new System.Windows.Forms.TextBox();
             this.txtSatisFiyati = new System.Windows.Forms.TextBox();
+            this.txtRenk = new System.Windows.Forms.TextBox();
             this.txtKritikEsik = new System.Windows.Forms.TextBox();
+            this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.txtStokMiktari = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -59,11 +59,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelUrundgv = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvUrunler = new System.Windows.Forms.DataGridView();
             this.panelHeader1.SuspendLayout();
             this.panelUunBilgileri.SuspendLayout();
             this.panelUrundgv.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHeader1
@@ -109,13 +109,13 @@
             this.panelUunBilgileri.Controls.Add(this.cbUretimYeri);
             this.panelUunBilgileri.Controls.Add(this.cbMalzeme);
             this.panelUunBilgileri.Controls.Add(this.cbKalip);
-            this.panelUunBilgileri.Controls.Add(this.cbUrunAdi);
             this.panelUunBilgileri.Controls.Add(this.cbBeden);
             this.panelUunBilgileri.Controls.Add(this.cbKategori);
-            this.panelUunBilgileri.Controls.Add(this.cbRenk);
             this.panelUunBilgileri.Controls.Add(this.txtAlisFiyati);
             this.panelUunBilgileri.Controls.Add(this.txtSatisFiyati);
+            this.panelUunBilgileri.Controls.Add(this.txtRenk);
             this.panelUunBilgileri.Controls.Add(this.txtKritikEsik);
+            this.panelUunBilgileri.Controls.Add(this.txtUrunAdi);
             this.panelUunBilgileri.Controls.Add(this.txtStokMiktari);
             this.panelUunBilgileri.Controls.Add(this.label9);
             this.panelUunBilgileri.Controls.Add(this.label12);
@@ -151,6 +151,7 @@
             this.btnUrunEkle.TabIndex = 78;
             this.btnUrunEkle.Text = "   EKLE";
             this.btnUrunEkle.UseVisualStyleBackColor = false;
+            this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
             // btnUrunSil
             // 
@@ -184,18 +185,30 @@
             this.btnUrunGuncelle.TabIndex = 76;
             this.btnUrunGuncelle.Text = "     GÜNCELLE";
             this.btnUrunGuncelle.UseVisualStyleBackColor = false;
+            this.btnUrunGuncelle.Click += new System.EventHandler(this.btnUrunGuncelle_Click);
             // 
             // cbUretimYeri
             // 
             this.cbUretimYeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbUretimYeri.FormattingEnabled = true;
             this.cbUretimYeri.Items.AddRange(new object[] {
-            "XS",
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"});
+            "Türkiye",
+            "Yunanistan",
+            "Amerika",
+            "Gürcistan",
+            "İngiltere",
+            "İtalya",
+            "Irak",
+            "İran",
+            "Azerbaycan",
+            "Sudan",
+            "Katar",
+            "Mısır",
+            "Afganistan",
+            "Rusya",
+            "İsviçre",
+            "Fransa",
+            "İspanya"});
             this.cbUretimYeri.Location = new System.Drawing.Point(467, 102);
             this.cbUretimYeri.Margin = new System.Windows.Forms.Padding(4);
             this.cbUretimYeri.Name = "cbUretimYeri";
@@ -236,16 +249,6 @@
             this.cbKalip.Size = new System.Drawing.Size(213, 33);
             this.cbKalip.TabIndex = 73;
             // 
-            // cbUrunAdi
-            // 
-            this.cbUrunAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbUrunAdi.FormattingEnabled = true;
-            this.cbUrunAdi.Location = new System.Drawing.Point(107, 148);
-            this.cbUrunAdi.Margin = new System.Windows.Forms.Padding(4);
-            this.cbUrunAdi.Name = "cbUrunAdi";
-            this.cbUrunAdi.Size = new System.Drawing.Size(213, 33);
-            this.cbUrunAdi.TabIndex = 72;
-            // 
             // cbBeden
             // 
             this.cbBeden.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -272,16 +275,7 @@
             this.cbKategori.Name = "cbKategori";
             this.cbKategori.Size = new System.Drawing.Size(213, 33);
             this.cbKategori.TabIndex = 70;
-            // 
-            // cbRenk
-            // 
-            this.cbRenk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbRenk.FormattingEnabled = true;
-            this.cbRenk.Location = new System.Drawing.Point(105, 190);
-            this.cbRenk.Margin = new System.Windows.Forms.Padding(4);
-            this.cbRenk.Name = "cbRenk";
-            this.cbRenk.Size = new System.Drawing.Size(213, 33);
-            this.cbRenk.TabIndex = 69;
+            this.cbKategori.SelectedIndexChanged += new System.EventHandler(this.cbKategori_SelectedIndexChanged);
             // 
             // txtAlisFiyati
             // 
@@ -301,6 +295,15 @@
             this.txtSatisFiyati.Size = new System.Drawing.Size(207, 30);
             this.txtSatisFiyati.TabIndex = 68;
             // 
+            // txtRenk
+            // 
+            this.txtRenk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtRenk.Location = new System.Drawing.Point(107, 192);
+            this.txtRenk.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRenk.Name = "txtRenk";
+            this.txtRenk.Size = new System.Drawing.Size(207, 30);
+            this.txtRenk.TabIndex = 66;
+            // 
             // txtKritikEsik
             // 
             this.txtKritikEsik.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -310,6 +313,15 @@
             this.txtKritikEsik.Size = new System.Drawing.Size(207, 30);
             this.txtKritikEsik.TabIndex = 66;
             // 
+            // txtUrunAdi
+            // 
+            this.txtUrunAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUrunAdi.Location = new System.Drawing.Point(105, 148);
+            this.txtUrunAdi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUrunAdi.Name = "txtUrunAdi";
+            this.txtUrunAdi.Size = new System.Drawing.Size(207, 30);
+            this.txtUrunAdi.TabIndex = 65;
+            // 
             // txtStokMiktari
             // 
             this.txtStokMiktari.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -318,7 +330,6 @@
             this.txtStokMiktari.Name = "txtStokMiktari";
             this.txtStokMiktari.Size = new System.Drawing.Size(207, 30);
             this.txtStokMiktari.TabIndex = 65;
-            this.txtStokMiktari.TextChanged += new System.EventHandler(this.txtStokMiktari_TextChanged);
             // 
             // label9
             // 
@@ -407,7 +418,6 @@
             this.label3.Size = new System.Drawing.Size(64, 21);
             this.label3.TabIndex = 57;
             this.label3.Text = "Kalıp :";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label16
             // 
@@ -455,7 +465,7 @@
             // 
             // panelUrundgv
             // 
-            this.panelUrundgv.Controls.Add(this.dataGridView1);
+            this.panelUrundgv.Controls.Add(this.dgvUrunler);
             this.panelUrundgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUrundgv.Location = new System.Drawing.Point(703, 148);
             this.panelUrundgv.Margin = new System.Windows.Forms.Padding(4);
@@ -463,15 +473,19 @@
             this.panelUrundgv.Size = new System.Drawing.Size(702, 464);
             this.panelUrundgv.TabIndex = 9;
             // 
-            // dataGridView1
+            // dgvUrunler
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(702, 464);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvUrunler.Location = new System.Drawing.Point(0, 0);
+            this.dgvUrunler.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvUrunler.MultiSelect = false;
+            this.dgvUrunler.Name = "dgvUrunler";
+            this.dgvUrunler.ReadOnly = true;
+            this.dgvUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUrunler.Size = new System.Drawing.Size(702, 464);
+            this.dgvUrunler.TabIndex = 0;
+            this.dgvUrunler.DoubleClick += new System.EventHandler(this.dgvUrunler_DoubleClick);
             // 
             // frmUrunEkle
             // 
@@ -492,7 +506,7 @@
             this.panelUunBilgileri.ResumeLayout(false);
             this.panelUunBilgileri.PerformLayout();
             this.panelUrundgv.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -504,17 +518,15 @@
         private System.Windows.Forms.Panel panelHeader2;
         private System.Windows.Forms.Panel panelUunBilgileri;
         private System.Windows.Forms.Panel panelUrundgv;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvUrunler;
         private System.Windows.Forms.Button btnUrunEkle;
         private System.Windows.Forms.Button btnUrunSil;
         private System.Windows.Forms.Button btnUrunGuncelle;
         private System.Windows.Forms.ComboBox cbUretimYeri;
         private System.Windows.Forms.ComboBox cbMalzeme;
         private System.Windows.Forms.ComboBox cbKalip;
-        private System.Windows.Forms.ComboBox cbUrunAdi;
         private System.Windows.Forms.ComboBox cbBeden;
         private System.Windows.Forms.ComboBox cbKategori;
-        private System.Windows.Forms.ComboBox cbRenk;
         private System.Windows.Forms.TextBox txtAlisFiyati;
         private System.Windows.Forms.TextBox txtSatisFiyati;
         private System.Windows.Forms.TextBox txtKritikEsik;
@@ -531,5 +543,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtRenk;
+        private System.Windows.Forms.TextBox txtUrunAdi;
     }
 }
