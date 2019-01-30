@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblYenile = new System.Windows.Forms.Label();
+            this.btnCikis = new System.Windows.Forms.Button();
             this.txtParola = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lnkSifre = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnGiris = new System.Windows.Forms.Button();
             this.lblPersonelid = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnCikis = new System.Windows.Forms.Button();
             this.pnlDegis = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtp = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtp2 = new System.Windows.Forms.TextBox();
-            this.lblYenile = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtp = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.circularPictureBox1 = new PL.CircularPictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -62,6 +62,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(321, 84);
             this.panel1.TabIndex = 1;
+            // 
+            // lblYenile
+            // 
+            this.lblYenile.AutoSize = true;
+            this.lblYenile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblYenile.ForeColor = System.Drawing.Color.White;
+            this.lblYenile.Location = new System.Drawing.Point(37, 41);
+            this.lblYenile.Name = "lblYenile";
+            this.lblYenile.Size = new System.Drawing.Size(230, 29);
+            this.lblYenile.TabIndex = 7;
+            this.lblYenile.Text = "Parolanızı Yenileyin.";
+            // 
+            // btnCikis
+            // 
+            this.btnCikis.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCikis.FlatAppearance.BorderSize = 0;
+            this.btnCikis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCikis.Image = global::PL.Properties.Resources.deleteWhite;
+            this.btnCikis.Location = new System.Drawing.Point(266, 0);
+            this.btnCikis.Name = "btnCikis";
+            this.btnCikis.Size = new System.Drawing.Size(58, 31);
+            this.btnCikis.TabIndex = 9;
+            this.btnCikis.UseVisualStyleBackColor = false;
+            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
             // txtParola
             // 
@@ -111,6 +136,18 @@
             this.panel2.Size = new System.Drawing.Size(321, 39);
             this.panel2.TabIndex = 7;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::PL.Properties.Resources.help;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(46, 37);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // btnGiris
             // 
             this.btnGiris.BackColor = System.Drawing.Color.SteelBlue;
@@ -136,32 +173,6 @@
             this.lblPersonelid.TabIndex = 9;
             this.lblPersonelid.Text = "Personel ID";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::PL.Properties.Resources.help;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 37);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnCikis
-            // 
-            this.btnCikis.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnCikis.FlatAppearance.BorderSize = 0;
-            this.btnCikis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCikis.Image = global::PL.Properties.Resources.deleteWhite;
-            this.btnCikis.Location = new System.Drawing.Point(266, 0);
-            this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(58, 31);
-            this.btnCikis.TabIndex = 9;
-            this.btnCikis.UseVisualStyleBackColor = false;
-            this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
-            // 
             // pnlDegis
             // 
             this.pnlDegis.Controls.Add(this.label4);
@@ -170,41 +181,10 @@
             this.pnlDegis.Controls.Add(this.txtp);
             this.pnlDegis.Controls.Add(this.button2);
             this.pnlDegis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.pnlDegis.Location = new System.Drawing.Point(0, 86);
+            this.pnlDegis.Location = new System.Drawing.Point(0, 321);
             this.pnlDegis.Name = "pnlDegis";
-            this.pnlDegis.Size = new System.Drawing.Size(321, 279);
+            this.pnlDegis.Size = new System.Drawing.Size(321, 44);
             this.pnlDegis.TabIndex = 13;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.SteelBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(118, 174);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 38);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Yenile";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // txtp
-            // 
-            this.txtp.Location = new System.Drawing.Point(118, 63);
-            this.txtp.Name = "txtp";
-            this.txtp.Size = new System.Drawing.Size(121, 26);
-            this.txtp.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Parola";
             // 
             // label4
             // 
@@ -222,16 +202,36 @@
             this.txtp2.Size = new System.Drawing.Size(121, 26);
             this.txtp2.TabIndex = 5;
             // 
-            // lblYenile
+            // label3
             // 
-            this.lblYenile.AutoSize = true;
-            this.lblYenile.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYenile.ForeColor = System.Drawing.Color.White;
-            this.lblYenile.Location = new System.Drawing.Point(37, 41);
-            this.lblYenile.Name = "lblYenile";
-            this.lblYenile.Size = new System.Drawing.Size(230, 29);
-            this.lblYenile.TabIndex = 7;
-            this.lblYenile.Text = "Parolanızı Yenileyin.";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(38, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Parola";
+            // 
+            // txtp
+            // 
+            this.txtp.Location = new System.Drawing.Point(118, 63);
+            this.txtp.Name = "txtp";
+            this.txtp.Size = new System.Drawing.Size(121, 26);
+            this.txtp.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(118, 174);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(116, 38);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Yenile";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // circularPictureBox1
             // 
