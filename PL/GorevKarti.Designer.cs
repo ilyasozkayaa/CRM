@@ -31,18 +31,24 @@
             this.components = new System.ComponentModel.Container();
             this.pnlheader = new System.Windows.Forms.Panel();
             this.lblGorevAdi = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.lbl = new System.Windows.Forms.Label();
             this.pnlGorevDetay = new System.Windows.Forms.Panel();
+            this.clbDetay = new System.Windows.Forms.CheckedListBox();
             this.pnlMembers = new System.Windows.Forms.Panel();
-            this.lblYuzde = new System.Windows.Forms.Label();
+            this.lblBitis = new System.Windows.Forms.Label();
+            this.lblBaslangic = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.pnlheader.SuspendLayout();
+            this.pnlGorevDetay.SuspendLayout();
             this.pnlMembers.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlheader
             // 
             this.pnlheader.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlheader.Controls.Add(this.btnUpdate);
             this.pnlheader.Controls.Add(this.lblGorevAdi);
             this.pnlheader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlheader.Location = new System.Drawing.Point(0, 0);
@@ -62,17 +68,19 @@
             this.lblGorevAdi.TabIndex = 0;
             this.lblGorevAdi.Text = "Görev Adı";
             // 
-            // progressBar1
+            // lbl
             // 
-            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.progressBar1.Location = new System.Drawing.Point(0, 0);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(124, 35);
-            this.progressBar1.TabIndex = 1;
+            this.lbl.AutoSize = true;
+            this.lbl.Location = new System.Drawing.Point(3, 3);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(82, 13);
+            this.lbl.TabIndex = 1;
+            this.lbl.Text = "Başlangıç Tarihi";
             // 
             // pnlGorevDetay
             // 
             this.pnlGorevDetay.BackColor = System.Drawing.Color.White;
+            this.pnlGorevDetay.Controls.Add(this.clbDetay);
             this.pnlGorevDetay.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlGorevDetay.Location = new System.Drawing.Point(0, 29);
             this.pnlGorevDetay.MaximumSize = new System.Drawing.Size(304, 99);
@@ -81,11 +89,22 @@
             this.pnlGorevDetay.Size = new System.Drawing.Size(304, 99);
             this.pnlGorevDetay.TabIndex = 4;
             // 
+            // clbDetay
+            // 
+            this.clbDetay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clbDetay.FormattingEnabled = true;
+            this.clbDetay.Location = new System.Drawing.Point(0, 0);
+            this.clbDetay.Name = "clbDetay";
+            this.clbDetay.Size = new System.Drawing.Size(304, 99);
+            this.clbDetay.TabIndex = 0;
+            // 
             // pnlMembers
             // 
             this.pnlMembers.BackColor = System.Drawing.Color.GhostWhite;
-            this.pnlMembers.Controls.Add(this.lblYuzde);
-            this.pnlMembers.Controls.Add(this.progressBar1);
+            this.pnlMembers.Controls.Add(this.lblBitis);
+            this.pnlMembers.Controls.Add(this.lblBaslangic);
+            this.pnlMembers.Controls.Add(this.label1);
+            this.pnlMembers.Controls.Add(this.lbl);
             this.pnlMembers.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMembers.Location = new System.Drawing.Point(0, 128);
             this.pnlMembers.MaximumSize = new System.Drawing.Size(304, 35);
@@ -93,22 +112,49 @@
             this.pnlMembers.Size = new System.Drawing.Size(304, 35);
             this.pnlMembers.TabIndex = 5;
             // 
-            // lblYuzde
+            // lblBitis
             // 
-            this.lblYuzde.AutoSize = true;
-            this.lblYuzde.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblYuzde.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYuzde.ForeColor = System.Drawing.Color.DimGray;
-            this.lblYuzde.Location = new System.Drawing.Point(124, 0);
-            this.lblYuzde.Name = "lblYuzde";
-            this.lblYuzde.Size = new System.Drawing.Size(69, 25);
-            this.lblYuzde.TabIndex = 3;
-            this.lblYuzde.Text = "%XXX";
+            this.lblBitis.AutoSize = true;
+            this.lblBitis.Location = new System.Drawing.Point(91, 19);
+            this.lblBitis.Name = "lblBitis";
+            this.lblBitis.Size = new System.Drawing.Size(55, 13);
+            this.lblBitis.TabIndex = 4;
+            this.lblBitis.Text = "Bitiş Tarihi";
+            // 
+            // lblBaslangic
+            // 
+            this.lblBaslangic.AutoSize = true;
+            this.lblBaslangic.Location = new System.Drawing.Point(91, 3);
+            this.lblBaslangic.Name = "lblBaslangic";
+            this.lblBaslangic.Size = new System.Drawing.Size(82, 13);
+            this.lblBaslangic.TabIndex = 3;
+            this.lblBaslangic.Text = "Başlangıç Tarihi";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Bitiş Tarihi";
             // 
             // timer1
             // 
             this.timer1.Interval = 15;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Image = global::PL.Properties.Resources.icons8_available_updates_32;
+            this.btnUpdate.Location = new System.Drawing.Point(263, 0);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(38, 29);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // pnlGorevKarti
             // 
@@ -123,6 +169,7 @@
             this.Size = new System.Drawing.Size(304, 160);
             this.pnlheader.ResumeLayout(false);
             this.pnlheader.PerformLayout();
+            this.pnlGorevDetay.ResumeLayout(false);
             this.pnlMembers.ResumeLayout(false);
             this.pnlMembers.PerformLayout();
             this.ResumeLayout(false);
@@ -135,7 +182,11 @@
         public System.Windows.Forms.Label lblGorevAdi;
         public System.Windows.Forms.Panel pnlGorevDetay;
         public System.Windows.Forms.Panel pnlMembers;
-        public System.Windows.Forms.ProgressBar progressBar1;
-        public System.Windows.Forms.Label lblYuzde;
+        public System.Windows.Forms.CheckedListBox clbDetay;
+        private System.Windows.Forms.Label lbl;
+        public System.Windows.Forms.Label lblBitis;
+        public System.Windows.Forms.Label lblBaslangic;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnUpdate;
     }
 }

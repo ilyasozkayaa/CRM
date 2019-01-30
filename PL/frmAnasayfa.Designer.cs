@@ -38,6 +38,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnOturum = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -63,7 +64,6 @@
             this.btnRapor = new System.Windows.Forms.Button();
             this.btnKampanya = new System.Windows.Forms.Button();
             this.pnlFooter = new System.Windows.Forms.Panel();
-            this.kullaniciDetay1 = new PL.KullaniciDetay();
             this.pnlSaat = new System.Windows.Forms.Panel();
             this.lbltoday = new System.Windows.Forms.Label();
             this.lblTarih = new System.Windows.Forms.Label();
@@ -178,6 +178,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btnOturum);
             this.panel2.Controls.Add(this.btnHelp);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button7);
@@ -191,6 +192,20 @@
             this.panel2.Size = new System.Drawing.Size(50, 550);
             this.panel2.TabIndex = 8;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnOturum
+            // 
+            this.btnOturum.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnOturum.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnOturum.FlatAppearance.BorderSize = 0;
+            this.btnOturum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOturum.Image = global::PL.Properties.Resources.icons8_shutdown_32;
+            this.btnOturum.Location = new System.Drawing.Point(0, 460);
+            this.btnOturum.Name = "btnOturum";
+            this.btnOturum.Size = new System.Drawing.Size(50, 45);
+            this.btnOturum.TabIndex = 7;
+            this.btnOturum.UseVisualStyleBackColor = false;
+            this.btnOturum.Click += new System.EventHandler(this.btnOturum_Click);
             // 
             // btnHelp
             // 
@@ -548,6 +563,7 @@
             this.btnRapor.Text = "Rapor";
             this.btnRapor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRapor.UseVisualStyleBackColor = false;
+            this.btnRapor.Click += new System.EventHandler(this.btnRapor_Click);
             // 
             // btnKampanya
             // 
@@ -564,27 +580,17 @@
             this.btnKampanya.Text = "Kampanya";
             this.btnKampanya.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKampanya.UseVisualStyleBackColor = false;
+            this.btnKampanya.Click += new System.EventHandler(this.btnKampanya_Click);
             // 
             // pnlFooter
             // 
             this.pnlFooter.BackColor = System.Drawing.Color.SteelBlue;
-            this.pnlFooter.Controls.Add(this.kullaniciDetay1);
             this.pnlFooter.Controls.Add(this.pnlSaat);
             this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlFooter.Location = new System.Drawing.Point(206, 550);
             this.pnlFooter.Name = "pnlFooter";
             this.pnlFooter.Size = new System.Drawing.Size(834, 50);
             this.pnlFooter.TabIndex = 10;
-            // 
-            // kullaniciDetay1
-            // 
-            this.kullaniciDetay1.BackColor = System.Drawing.Color.SteelBlue;
-            this.kullaniciDetay1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.kullaniciDetay1.Location = new System.Drawing.Point(650, 0);
-            this.kullaniciDetay1.Margin = new System.Windows.Forms.Padding(4);
-            this.kullaniciDetay1.Name = "kullaniciDetay1";
-            this.kullaniciDetay1.Size = new System.Drawing.Size(184, 50);
-            this.kullaniciDetay1.TabIndex = 5;
             // 
             // pnlSaat
             // 
@@ -689,7 +695,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button btnPersonicon;
         private System.Windows.Forms.FlowLayoutPanel flpMenu;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnBilgiler;
@@ -699,7 +704,6 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button btnClose;
-        private KullaniciDetay kullaniciDetay1;
         private System.Windows.Forms.Panel pnlFooter;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Timer timer3;
@@ -721,6 +725,8 @@
         private System.Windows.Forms.Button btnKasa;
         private System.Windows.Forms.Button btnRapor;
         private System.Windows.Forms.Button btnKampanya;
+        public System.Windows.Forms.Button btnPersonicon;
+        private System.Windows.Forms.Button btnOturum;
     }
 }
 
