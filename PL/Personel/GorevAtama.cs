@@ -100,6 +100,8 @@ namespace PL.Personel
             gk.lblGorevAdi.Text = lblGorevAdi.Text;
             gk.pnlGorevDetay.Controls.Add(clbGorevBolum);
             gk.lblGorevAdi = lblGorevAdi;
+            gk.lblBaslangic.Text = dtpGiris.MinDate.ToShortDateString();
+            gk.lblBitis.Text = dtpCikis.MinDate.ToShortDateString() ;
             gk.clbDetay.Visible = false;
             gk.pnlMembers.Controls.Add(b.circularPictureBox1);
             pnlGorevKartlarim.Controls.Add(gk);
@@ -111,6 +113,7 @@ namespace PL.Personel
             txtPersonelId.Focus();
         }
         Gorev grv = new Gorev();
+
         private void btnKaydet_Click(object sender, EventArgs e)
         {
 

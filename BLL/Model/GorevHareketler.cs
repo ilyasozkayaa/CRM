@@ -120,6 +120,15 @@ namespace BLL.Model
             return Gorevlg;
 
         }
+        public GorevKayit KayıtGetir(int PersonelId)
+        {
+            GorevKayit Gorevlg = new GorevKayit();
+
+            Gorevlg = (from g in ent.GorevKayits where g.PersonelId == PersonelId select g).FirstOrDefault();
+
+            return Gorevlg;
+
+        }
         public ArrayList GorevIdArrayGetir(int PersonelId)
         {
             List<GorevKayit> Gorevlg = new List<GorevKayit>();
@@ -142,28 +151,6 @@ namespace BLL.Model
             return GorevLst;
 
         }
-        public List<Gorev> BitmemisGorevListGetir(int Id)
-        {
-            List<Gorev> GorevLst = new List<Gorev>();
-
-            GorevLst = (from g in ent.Gorevs where g.Id == Id && g.Tamamlandi == false select g).ToList();
-
-            return GorevLst;
-
-        }
-        public List<Gorev> BaslamamisGorevListGetir(int Id, DateTime today)
-        {
-            List<Gorev> GorevLst = new List<Gorev>();
-
-            GorevLst = (from g in ent.Gorevs where g.Id == Id && g.BaslangicTarihi >= today select g).ToList();
-
-            return GorevLst;
-
-        }
-
-
-    
-
     }
 
 }

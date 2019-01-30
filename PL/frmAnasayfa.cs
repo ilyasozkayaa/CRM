@@ -47,6 +47,7 @@ namespace PL
 
 
         PersonelMusteriIslemleri pmi = new PersonelMusteriIslemleri();
+        GorevHareketler grv = new GorevHareketler();
         private void Form1_Load(object sender, EventArgs e)
         {
             DAL.Context.Personel p = new DAL.Context.Personel();
@@ -57,6 +58,8 @@ namespace PL
             kd.circularPictureBox1.Image = Resources.icons8_businessman_48;
             kd.Dock = DockStyle.Right;
             pnlFooter.Controls.Add(kd);
+
+        
 
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(0, 0);

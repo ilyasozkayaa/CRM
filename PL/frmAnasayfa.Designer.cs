@@ -678,7 +678,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button btnPersonicon;
         private System.Windows.Forms.FlowLayoutPanel flpMenu;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnBilgiler;
@@ -709,6 +708,7 @@
         private System.Windows.Forms.Button btnKasa;
         private System.Windows.Forms.Button btnRapor;
         private System.Windows.Forms.Button btnKampanya;
+        public System.Windows.Forms.Button btnPersonicon;
     }
 }
 

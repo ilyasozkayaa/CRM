@@ -19,8 +19,11 @@ namespace DAL.Context
         public int PersonelId { get; set; }
         [DefaultValue(0)]
         public bool Tamamlandi { get; set; }
+        [DefaultValue(1)]
+        public bool Yeni { get; set; }
         [DefaultValue(0)]
         public bool Silindi { get; set; }
+        
 
 
         [ForeignKey("PersonelId")]

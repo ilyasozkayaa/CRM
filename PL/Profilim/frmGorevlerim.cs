@@ -1,5 +1,6 @@
 ﻿using BLL.Model;
 using DAL.Context;
+using PL.Properties;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -31,40 +32,40 @@ namespace PL
             grvId = gh.GorevIdArrayGetir(GenelDegiskenler.PersonId);
             foreach (int item in grvId)
             {
+                CircularPictureBox cpbx = new CircularPictureBox();
                 Gorev grv = new Gorev();
                 pnlGorevKarti grvk = new pnlGorevKarti();
                 grv =gh.GorevGetir(item);
                 grvdtys = gh.GorevDetayGetirbyGorevId(item);                
                 grvk.lblGorevAdi.Text = grv.GorevAdi;
-                
-               
-                    foreach (GorevDetay Gorevbolum in grvdtys)
+                grvk.lblBaslangic.Text = grv.BaslangicTarihi.ToShortDateString();
+                grvk.lblBitis.Text = grv.BitisTarihi.ToShortDateString();
+
+                //cpbx.Image = Resources.icons8_businessman_48;
+                //cpbx.Dock = DockStyle.Left;
+                //grvk.pnlMembers.Controls.Add(cpbx);
+
+                foreach (GorevDetay Gorevbolum in grvdtys)
                     {
                          grvk.clbDetay.Items.Add(Gorevbolum.DetayAdi);
-                         flpYapilacak.Controls.Add(grvk);
+                    if (grv.Tamamlandi)
+                    {
+                        flpBitmis.Controls.Add(grvk);
+                    }
+                    else
+                    {
+                        if (grv.BaslangicTarihi>DateTime.Today)
+                        {
+                            flpYapilacak.Controls.Add(grvk);
+                        }
+                        else
+                        {
+                            flpYapilan.Controls.Add(grvk);
+                        }
+                    }
+                         
                     }
             }
-            
-            
-   
-
-
-
-            //if (true)
-            //{
-            //    pnlGorevKarti grvk = new pnlGorevKarti();
-            //}
-            //else
-            //{
-
-            //}
-            //pnlGorevKarti p = new pnlGorevKarti();
-            //pnlGorevKarti c = new pnlGorevKarti();
-            //pnlGorevKarti v = new pnlGorevKarti();
-            //flpYapilacak.Controls.Add(p);
-            //flpYapilacak.Controls.Add(c);
-            //flpYapilan.Controls.Add(v);
-            
 
         }
 
