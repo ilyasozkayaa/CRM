@@ -9,7 +9,7 @@ namespace BLL.Model
 {
    public interface IPromosyonPrimIslemleri
     {
-        bool promosyonEkle(Promosyon p, int PromosyonOrani);
+        bool promosyonekle(Promosyon p);
         bool promosyonSil(int ID);
         bool promosyonGuncelle(Promosyon p);
         bool PromosyonEkleKontrol(string PromosyonAdi);

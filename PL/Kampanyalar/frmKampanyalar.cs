@@ -38,50 +38,67 @@ namespace PL.Kampanyalar
         private void btnPromosyonEkle_Click(object sender, EventArgs e)
         {
           
-                if (txtPromosyonAdi.Text.Trim() != "" && txtPromosyonOranı.Text.Trim() != "")
+            if (txtPromosyonAdi.Text.Trim() != "" && txtPromosyonOranı.Text.Trim() != "")
             {
-                if (ppi.PromosyonEkleKontrol(txtPromosyonAdi.Text))
-                {
-                    MessageBox.Show("Bu Promosyon Zaten Var.", "İşlem Yapılmadı.");
-                }
-                else
-                {
-                    Promosyon Yeniprm = new Promosyon();
-                    Yeniprm.PromosyonAdi = txtPromosyonAdi.Text;
-                   // Yeniprm.PromosyonOrani = txtPromosyonOranı.Text;
+                decimal porani = 0;
 
-                    if (ppi.promosyonEkle(Yeniprm))
+                if (decimal.TryParse(txtPromosyonOranı.Text, out porani))
+                {
+                    if (ppi.PromosyonEkleKontrol(txtPromosyonAdi.Text))
                     {
-                        MessageBox.Show("Kayıt İşlemi Tamamlandı.", "Kayıt Başarılı");
-                        dgvpromosyonlar.DataSource = ppi.promosyonlarıGetir();
-
+                        MessageBox.Show("Bu Promosyon Zaten Var.", "İşlem Yapılmadı.");
                     }
                     else
                     {
-                        MessageBox.Show("Kayıt İşlemi Tamamlanamadı!!!", "Kayıt Başarısız");
+                        Promosyon Yeniprm = new Promosyon();
+                        Yeniprm.PromosyonAdi = txtPromosyonAdi.Text;
+                        Yeniprm.PromosyonOrani = porani;
+                        Yeniprm.BaslangıcTarihi = dtimebaslangıc.Value;
+                        Yeniprm.BitisTarihi = dtimebitis.Value;
+                        Yeniprm.Silindi = false;
+
+                        if (ppi.promosyonekle(Yeniprm))
+                        {
+                            MessageBox.Show("Kayıt İşlemi Tamamlandı.", "Kayıt Başarılı");
+                            dgvpromosyonlar.DataSource = ppi.promosyonlarıGetir();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Promosyon Oranını 0,00 Şeklinde girdiğinize emin misiniz?", "Kayıt İşlemi Tamamlanamadı");
+                           
+                        }
                     }
                 }
-
+                else
+                {
+                    MessageBox.Show("Promosyon Oranını \" 0,00 \" Şeklinde Girdiğinize Emin Olunuz!!!","Hatalı Veri Girişi");
+                }
             }
             else
             {
                 MessageBox.Show("Gerekli Alanları Doldurunuz!!!");
             }
+
+
         }
 
         private void btnPromosyonSil_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Silmek İstediğinize Emin misiniz?", "Bilgileri Silinmek Üzere!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (ppi.promosyonSil(Convert.ToInt32(prmID)))
-                {
-                    MessageBox.Show("Promosyon Silindi.", "Silme İşlemi Başarılı.");
-                    dgvpromosyonlar.DataSource = ppi.promosyonlarıGetir();
-                }
-                else
-                {
-                    MessageBox.Show("Promosyon Silme İşlemi Başarısız", "Hata!!!");
-                }
+               
+
+                    if (ppi.promosyonSil(prmID))
+                    {
+                        MessageBox.Show("Promosyon Silindi.", "Silme İşlemi Başarılı.");
+                        dgvpromosyonlar.DataSource = ppi.promosyonlarıGetir();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Promosyon Silme İşlemi Başarısız", "Hata!!!");
+                    }
+              
             }
         }
 
@@ -89,29 +106,41 @@ namespace PL.Kampanyalar
         {
             if (txtPromosyonAdi.Text.Trim() != "" && txtPromosyonOranı.Text.Trim() != "")
             {
-                if (ppi.PromosyonGuncelleKontrol(prmID, txtPromosyonAdi.Text))
+                decimal poranı = 0;
+
+                if (decimal.TryParse(txtPromosyonOranı.Text, out poranı))
                 {
-                    MessageBox.Show("Bu İsimde Bir Promosyon Zaten Var.", "İşlem Gerçekleşmedi.");
-                }
-                else
-                {
-                    Promosyon DegisecekPRM = new Promosyon();
-                    DegisecekPRM.PromosyonAdi = txtPromosyonAdi.Text;
-                   // DegisecekPRM.PromosyonOrani = txtPromosyonOranı.Text;
-                    DegisecekPRM.Id = prmID;
-                    if (ppi.promosyonGuncelle(DegisecekPRM))
+
+                    if (ppi.PromosyonGuncelleKontrol(prmID, txtPromosyonAdi.Text))
                     {
-                        MessageBox.Show("Promosyon Güncellendi.", "İşlem Başarılı.");
-                        dgvpromosyonlar.DataSource = ppi.promosyonlarıGetir();
+                        MessageBox.Show("Bu İsimde Bir Promosyon Zaten Var.", "İşlem Gerçekleşmedi.");
                     }
                     else
                     {
-                        MessageBox.Show("Promosyon Güncellenemedi", "İşlem Başarısız");
+                        Promosyon DegisecekPRM = new Promosyon();
+                        DegisecekPRM.PromosyonAdi = txtPromosyonAdi.Text;
+                        DegisecekPRM.PromosyonOrani = poranı;
+                        DegisecekPRM.Id = prmID;
+                        if (ppi.promosyonGuncelle(DegisecekPRM))
+                        {
+                            MessageBox.Show("Promosyon Güncellendi.", "İşlem Başarılı.");
+                            dgvpromosyonlar.DataSource = ppi.promosyonlarıGetir();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Promosyon Güncellenemedi", "İşlem Başarısız");
+                        }
+
                     }
                 }
-
-
+                else
+                {
+                    MessageBox.Show("Promosyon Oranını 0,00 Şeklinde girdiğinize emin misiniz?", "Kayıt İşlemi Tamamlanamadı");
+                }
             }
+
+
+            
             else
             {
                 MessageBox.Show("Gerekli Alanları Doldurunuz.", "İşlem Gerçekleşmedi.");
@@ -134,6 +163,12 @@ namespace PL.Kampanyalar
             {
                 MessageBox.Show("Günün Promosyonu >>" + " " + p.PromosyonAdi + " " +" Oranı = " +  p.PromosyonOrani);
             }
-        }
+}
     }
 }
+
+
+
+
+
+

@@ -24,16 +24,14 @@ namespace BLL.Model
             return AktifPromosyonListesi;
         }
 
-        public bool promosyonEkle(Promosyon p)
+        public bool promosyonekle(Promosyon p)
         {
             bool sonuc = false;
-         Promosyon Yeniprm = new Promosyon();
+           
             try
             {
-                Yeniprm.PromosyonAdi = p.PromosyonAdi;
-                Yeniprm.PromosyonOrani = p.PromosyonOrani;
-                Yeniprm.Silindi = false;
-                ent.Promosyons.Add(Yeniprm);
+                
+                ent.Promosyons.Add(p);
                 ent.SaveChanges();
                 sonuc = true;
             }
@@ -46,21 +44,17 @@ namespace BLL.Model
             return sonuc;
         }
 
-        //public bool promosyonEkle(int PromosyonOranı, string PromosyonAdi)
-        //{
-        //    throw new NotImplementedException();
-        //}
 
-        public bool promosyonEkle(Promosyon p, int PromosyonOrani)
-        {
-            throw new NotImplementedException();
-        }
+
+
+
 
         public bool PromosyonEkleKontrol(string PromosyonAdi)
         {
 
                 bool sonuc = false;
-               Promosyon prm = (from p in ent.Promosyons where p.PromosyonAdi == PromosyonAdi select p).FirstOrDefault();
+               Promosyon prm = new Promosyon();
+            prm = (from p in ent.Promosyons where p.PromosyonAdi == PromosyonAdi && p.Silindi == false select p).FirstOrDefault();
                 if (prm != null)
                 {
                     sonuc = true;
@@ -77,7 +71,7 @@ namespace BLL.Model
             {
                 promosyon.PromosyonAdi = p.PromosyonAdi;
                 promosyon.PromosyonOrani = p.PromosyonOrani;
-
+                ent.SaveChanges();
                 sonuc = true;
             }
             catch (Exception ex)
@@ -91,7 +85,8 @@ namespace BLL.Model
         public bool PromosyonGuncelleKontrol(int PromosyonID, string PromosyonAdi)
         {
             bool sonuc = false;
-            Promosyon prm = (from p in ent.Promosyons where p.PromosyonAdi == PromosyonAdi && p.Id != PromosyonID select p).FirstOrDefault();
+            Promosyon prm = new Promosyon();
+            prm = (from p in ent.Promosyons where p.PromosyonAdi == PromosyonAdi && p.Id != PromosyonID select p).FirstOrDefault();
             if (prm != null)
             {
                 sonuc = true;
@@ -111,11 +106,13 @@ namespace BLL.Model
 
         public bool promosyonSil(int ID)
         {
-            bool sonuc = true;
+            bool sonuc = false;
             Promosyon SilinecekPromosyon = (from p in ent.Promosyons where p.Id == ID select p).FirstOrDefault();
             try
             {
                 SilinecekPromosyon.Silindi = true;
+                ent.SaveChanges();
+               sonuc = true;
             }
             catch (Exception ex)
             {

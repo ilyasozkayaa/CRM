@@ -21,7 +21,7 @@ namespace PL.KasaIslemleri
         UrunIslemleri Uislem = new UrunIslemleri();
         private void frmUrunIade_Load(object sender, EventArgs e)
         {
-
+            cbIade.SelectedIndex = 0;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
