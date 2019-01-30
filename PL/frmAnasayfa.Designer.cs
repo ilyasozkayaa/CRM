@@ -38,6 +38,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnOturum = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -177,6 +178,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.btnOturum);
             this.panel2.Controls.Add(this.btnHelp);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button7);
@@ -190,6 +192,20 @@
             this.panel2.Size = new System.Drawing.Size(50, 550);
             this.panel2.TabIndex = 8;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnOturum
+            // 
+            this.btnOturum.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnOturum.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnOturum.FlatAppearance.BorderSize = 0;
+            this.btnOturum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOturum.Image = global::PL.Properties.Resources.icons8_shutdown_32;
+            this.btnOturum.Location = new System.Drawing.Point(0, 460);
+            this.btnOturum.Name = "btnOturum";
+            this.btnOturum.Size = new System.Drawing.Size(50, 45);
+            this.btnOturum.TabIndex = 7;
+            this.btnOturum.UseVisualStyleBackColor = false;
+            this.btnOturum.Click += new System.EventHandler(this.btnOturum_Click);
             // 
             // btnHelp
             // 
@@ -709,6 +725,7 @@
         private System.Windows.Forms.Button btnRapor;
         private System.Windows.Forms.Button btnKampanya;
         public System.Windows.Forms.Button btnPersonicon;
+        private System.Windows.Forms.Button btnOturum;
     }
 }
 

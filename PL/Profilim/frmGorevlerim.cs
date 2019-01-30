@@ -20,7 +20,7 @@ namespace PL
         {
             InitializeComponent();
         }
-
+        PersonelMusteriIslemleri pmi = new PersonelMusteriIslemleri();
         GorevHareketler gh = new GorevHareketler();
         private void frmGorevlerim_Load(object sender, EventArgs e)
         {
@@ -44,9 +44,10 @@ namespace PL
                 //cpbx.Image = Resources.icons8_businessman_48;
                 //cpbx.Dock = DockStyle.Left;
                 //grvk.pnlMembers.Controls.Add(cpbx);
+                  
 
                 foreach (GorevDetay Gorevbolum in grvdtys)
-                    {
+                    { 
                          grvk.clbDetay.Items.Add(Gorevbolum.DetayAdi);
                     if (grv.Tamamlandi)
                     {

@@ -268,5 +268,13 @@ namespace PL
         {
             timer2.Start();
         }
+
+        private void btnOturum_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form n = new frmGiris();
+            n.Show();
+
+        }
     }
 }
