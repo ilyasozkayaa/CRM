@@ -118,5 +118,7 @@ namespace PL.Urunler
             dgKatagoriListe.Columns[2].Width = 300;
             dgKatagoriListe.Columns[3].Visible = false;
         }
+
+     
     }
 }

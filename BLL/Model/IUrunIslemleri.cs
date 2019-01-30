@@ -32,6 +32,12 @@ namespace BLL.Model
         bool KategoriGuncelleKontrol(int KategoriID, string KategoriAdi);
         bool UrunEkleKontrol(string UrunAdi, string renk, string beden, string Kalıp);
         bool UrunGuncellemeKontrol(int ID, string UrunAdi, string renk, string beden, string Kalıp);
-
+        bool SatisEkle(Satis s);
+        bool SatisDetayEkle(SatisDetay sd);
+        int SonSatisIDBul();
+        bool UrunStokGuncelle(int ID, int SatisMiktari);
+        List<SatisDetay> SatısDetaylariniGetir(int ID);
+        bool StokAzalt(int UrunID, int Miktar);
+        bool UrunIadeHareket(UrunIade Uiade);
     }
 }

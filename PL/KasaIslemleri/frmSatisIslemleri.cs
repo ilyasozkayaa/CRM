@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL.Model;
+using DAL.Context;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,8 @@ namespace PL.KasaIslemleri
         {
             InitializeComponent();
         }
+        PersonelMusteriIslemleri pmi = new PersonelMusteriIslemleri();
+        public static int MusteriID = 1177;
         private void FormAc(Form AF)
         {
             foreach (Control F in this.pnlContent.Controls)
@@ -54,6 +58,28 @@ namespace PL.KasaIslemleri
         {
             frmUrunIade frm = new frmUrunIade();
             FormAc(frm);
+        }
+
+        private void txtTelNO_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTelNO.Text.Trim().Length == 10)
+            {
+                Musteri m = new Musteri();
+                m = pmi.MusteriKayitlimi(txtTelNO.Text);
+                if (m != null)
+                {
+                    MusteriID = m.Id;
+                    MessageBox.Show("Müşteri Adı : " + m.Ad);
+                    frmUyeMusteri frm = new frmUyeMusteri();
+                    FormAc(frm);
+                    btnUyesiz.Enabled = false;
+                    btnYeniMust.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show("Bu telefon numarası sistemde kayıtlı değil!", "Yeni Müşteri");
+                }
+            }
         }
     }
 }

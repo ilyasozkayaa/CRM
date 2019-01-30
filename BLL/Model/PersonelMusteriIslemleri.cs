@@ -73,6 +73,23 @@ namespace BLL.Model
 
         }
 
+        public Musteri MusteriKayitlimi(string TelNO)
+        {
+            Musteri musteri = new Musteri();
+            try
+            {
+                musteri = (from m in ent.Musteris where m.Telefon == TelNO select m).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+
+
+            return musteri;
+        }
+
         public List<Musteri> musterileriGetir()
         {
             List<Musteri> MusteriListesi = new List<Musteri>();

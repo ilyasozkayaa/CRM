@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DAL.Context;
 
 namespace BLL.Model
@@ -192,6 +193,40 @@ namespace BLL.Model
             return KategoriyeGoreUrunListesi;
         }
 
+        public bool SatisDetayEkle(SatisDetay sd)
+        {
+            bool sonuc = false;
+            try
+            {
+                ent.SatisDetays.Add(sd);
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return sonuc;
+        }
+
+        public bool SatisEkle(Satis s)
+        {
+            bool sonuc = false;
+            try
+            {
+                ent.satis.Add(s);
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return sonuc;
+        }
+
         public bool SatisiIptalEt(int SatisId)
         {
             bool sonuc = false;
@@ -213,6 +248,44 @@ namespace BLL.Model
             }
 
 
+            return sonuc;
+        }
+
+        public List<SatisDetay> SatısDetaylariniGetir(int ID)
+        {
+            List<SatisDetay> sd = new List<SatisDetay>();
+            sd = (from sdetay in ent.SatisDetays where sdetay.SatısId == ID select sdetay).ToList();
+            return sd;
+        }
+
+        public int SonSatisIDBul()
+        {
+            int SonSatiısID = ent.satis.Max(s => s.Id); ;
+            return SonSatiısID;
+        }
+
+        public bool StokAzalt(int UrunID, int Miktar)
+        {
+            bool sonuc = false;
+            Urun EklenecekUrun = (from u in ent.Uruns where u.Id == UrunID select u).FirstOrDefault();
+            UrunStokHareket SHareket = new UrunStokHareket();
+            try
+            {
+                EklenecekUrun.StokMiktarı -= Miktar;
+
+                SHareket.IslemTürü = "Satılan";
+                SHareket.UrunId = UrunID;
+                SHareket.Miktar = Miktar;
+                SHareket.IslemTarihi = DateTime.Now;
+                ent.UrunStokHarekets.Add(SHareket);
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ec)
+            {
+
+                string message = ec.Message;
+            }
             return sonuc;
         }
 
@@ -248,7 +321,7 @@ namespace BLL.Model
             Urun IadeEdilenUrun = (from u in ent.Uruns where u.Id == sd.UrunId select u).FirstOrDefault();
             try
             {
-                if(sd.Miktar==Miktar)
+                if (sd.Miktar == Miktar)
                 {
                     sd.Silindi = true;
                     IadeEdilenUrun.StokMiktarı += sd.Miktar;
@@ -268,7 +341,7 @@ namespace BLL.Model
                 string message = ex.Message;
             }
             return sonuc;
-            
+
         }
 
         public List<Urun> TumUrunleriGetir()
@@ -398,6 +471,23 @@ namespace BLL.Model
             return varmi;
         }
 
+        public bool UrunIadeHareket(UrunIade Uiade)
+        {
+            bool sonuc = false;
+            try
+            {
+                ent.UrunIades.Add(Uiade);
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return sonuc;
+        }
+
         public bool urunSil(int ID)
         {
             bool sonuc = true;
@@ -407,6 +497,33 @@ namespace BLL.Model
                 DegisecekUrun.Silindi = true;
 
                 ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return sonuc;
+        }
+
+        public bool UrunStokGuncelle(int ID, int SatisMiktari)
+        {
+            bool sonuc = false;
+            Urun DegisecekUrun = (from d in ent.Uruns where d.Id == ID select d).FirstOrDefault();
+            try
+            {
+                if (DegisecekUrun.StokMiktarı < SatisMiktari)
+                {
+                    MessageBox.Show("Satılmak İstenilen Miktarda Ürün Depoda Mevcut Değil!!!");
+                }
+                else
+                {
+                    DegisecekUrun.StokMiktarı -= SatisMiktari;
+
+                    ent.SaveChanges();
+                }
+
                 sonuc = true;
             }
             catch (Exception ex)

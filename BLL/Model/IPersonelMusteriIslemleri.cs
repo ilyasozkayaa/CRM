@@ -22,7 +22,7 @@ namespace BLL.Model
         bool musteriGüncelle(Musteri p);
         List<Musteri> musterileriGetir();
         Musteri musteriGetir(int ID);
-
+        Musteri MusteriKayitlimi(string TelNO);
 
 
     }

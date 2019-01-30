@@ -35,29 +35,34 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSatis = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblAraToplam = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblGenelToplam = new System.Windows.Forms.Label();
+            this.lblKDV = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblToplam = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblIndirimMiktari = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSatis = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.lblAD = new System.Windows.Forms.Label();
+            this.lblSoyad = new System.Windows.Forms.Label();
+            this.lblMusteriNo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtAdet = new System.Windows.Forms.TextBox();
             this.pnlHeader.SuspendLayout();
             this.pnlMusteri.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSatis)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -82,6 +87,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(81, 37);
             this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pnlHeader
             // 
@@ -96,6 +102,9 @@
             // 
             // pnlMusteri
             // 
+            this.pnlMusteri.Controls.Add(this.lblMusteriNo);
+            this.pnlMusteri.Controls.Add(this.lblSoyad);
+            this.pnlMusteri.Controls.Add(this.lblAD);
             this.pnlMusteri.Controls.Add(this.label16);
             this.pnlMusteri.Controls.Add(this.label17);
             this.pnlMusteri.Controls.Add(this.label18);
@@ -142,15 +151,18 @@
             this.label18.TabIndex = 4;
             this.label18.Text = "SOYADI :";
             // 
-            // dataGridView1
+            // dgvSatis
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(638, 174);
-            this.dataGridView1.TabIndex = 6;
+            this.dgvSatis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSatis.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvSatis.Location = new System.Drawing.Point(0, 0);
+            this.dgvSatis.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvSatis.MultiSelect = false;
+            this.dgvSatis.Name = "dgvSatis";
+            this.dgvSatis.ReadOnly = true;
+            this.dgvSatis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSatis.Size = new System.Drawing.Size(638, 174);
+            this.dgvSatis.TabIndex = 6;
             // 
             // label5
             // 
@@ -163,15 +175,14 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "ARA TOPLAM :";
             // 
-            // label6
+            // lblAraToplam
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(535, 185);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 17);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "label6";
+            this.lblAraToplam.AutoSize = true;
+            this.lblAraToplam.Location = new System.Drawing.Point(535, 185);
+            this.lblAraToplam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAraToplam.Name = "lblAraToplam";
+            this.lblAraToplam.Size = new System.Drawing.Size(0, 17);
+            this.lblAraToplam.TabIndex = 9;
             // 
             // label7
             // 
@@ -196,25 +207,24 @@
             this.label8.Text = "TOPLAM :";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // label9
+            // lblGenelToplam
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(535, 293);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 17);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "label6";
+            this.lblGenelToplam.AutoSize = true;
+            this.lblGenelToplam.Location = new System.Drawing.Point(535, 293);
+            this.lblGenelToplam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGenelToplam.Name = "lblGenelToplam";
+            this.lblGenelToplam.Size = new System.Drawing.Size(0, 17);
+            this.lblGenelToplam.TabIndex = 9;
             // 
-            // label10
+            // lblKDV
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(535, 213);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 17);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "label6";
+            this.lblKDV.AutoSize = true;
+            this.lblKDV.Location = new System.Drawing.Point(535, 213);
+            this.lblKDV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblKDV.Name = "lblKDV";
+            this.lblKDV.Size = new System.Drawing.Size(36, 17);
+            this.lblKDV.TabIndex = 9;
+            this.lblKDV.Text = "%18";
             // 
             // label11
             // 
@@ -227,15 +237,14 @@
             this.label11.Text = "KAMPANYA KODU :";
             this.label11.Click += new System.EventHandler(this.label8_Click);
             // 
-            // label12
+            // lblToplam
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(535, 244);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 17);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "label6";
+            this.lblToplam.AutoSize = true;
+            this.lblToplam.Location = new System.Drawing.Point(535, 244);
+            this.lblToplam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblToplam.Name = "lblToplam";
+            this.lblToplam.Size = new System.Drawing.Size(0, 17);
+            this.lblToplam.TabIndex = 9;
             // 
             // label13
             // 
@@ -259,19 +268,20 @@
             this.label14.TabIndex = 11;
             this.label14.Text = "İNDİRİM :";
             // 
-            // label15
+            // lblIndirimMiktari
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(535, 270);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 17);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "label6";
+            this.lblIndirimMiktari.AutoSize = true;
+            this.lblIndirimMiktari.Location = new System.Drawing.Point(535, 270);
+            this.lblIndirimMiktari.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIndirimMiktari.Name = "lblIndirimMiktari";
+            this.lblIndirimMiktari.Size = new System.Drawing.Size(0, 17);
+            this.lblIndirimMiktari.TabIndex = 9;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.txtAdet);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.textBox1);
@@ -281,6 +291,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1124, 74);
             this.panel2.TabIndex = 12;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::PL.Properties.Resources.plus_5_321;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(727, 20);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(130, 46);
+            this.button3.TabIndex = 84;
+            this.button3.Text = "          EKLE";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel3
             // 
@@ -305,18 +332,18 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.comboBox1);
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.dataGridView1);
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.btnSatis);
+            this.panel5.Controls.Add(this.dgvSatis);
+            this.panel5.Controls.Add(this.lblKDV);
+            this.panel5.Controls.Add(this.lblToplam);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.label6);
+            this.panel5.Controls.Add(this.lblAraToplam);
             this.panel5.Controls.Add(this.label14);
-            this.panel5.Controls.Add(this.label15);
+            this.panel5.Controls.Add(this.lblIndirimMiktari);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.lblGenelToplam);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(219, 158);
@@ -333,21 +360,22 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 84;
             // 
-            // button1
+            // btnSatis
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::PL.Properties.Resources.plus_5_321;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(437, 345);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 46);
-            this.button1.TabIndex = 83;
-            this.button1.Text = "          EKLE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSatis.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSatis.ForeColor = System.Drawing.Color.White;
+            this.btnSatis.Image = global::PL.Properties.Resources.plus_5_321;
+            this.btnSatis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSatis.Location = new System.Drawing.Point(437, 345);
+            this.btnSatis.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSatis.Name = "btnSatis";
+            this.btnSatis.Size = new System.Drawing.Size(130, 46);
+            this.btnSatis.TabIndex = 83;
+            this.btnSatis.Text = "          EKLE";
+            this.btnSatis.UseVisualStyleBackColor = false;
+            this.btnSatis.Click += new System.EventHandler(this.btnSatis_Click);
             // 
             // button2
             // 
@@ -365,21 +393,48 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // lblAD
             // 
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::PL.Properties.Resources.plus_5_321;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(253, 20);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 46);
-            this.button3.TabIndex = 84;
-            this.button3.Text = "          EKLE";
-            this.button3.UseVisualStyleBackColor = false;
+            this.lblAD.AutoSize = true;
+            this.lblAD.Location = new System.Drawing.Point(53, 4);
+            this.lblAD.Name = "lblAD";
+            this.lblAD.Size = new System.Drawing.Size(46, 17);
+            this.lblAD.TabIndex = 6;
+            this.lblAD.Text = "label1";
+            // 
+            // lblSoyad
+            // 
+            this.lblSoyad.AutoSize = true;
+            this.lblSoyad.Location = new System.Drawing.Point(85, 28);
+            this.lblSoyad.Name = "lblSoyad";
+            this.lblSoyad.Size = new System.Drawing.Size(46, 17);
+            this.lblSoyad.TabIndex = 7;
+            this.lblSoyad.Text = "label2";
+            // 
+            // lblMusteriNo
+            // 
+            this.lblMusteriNo.AutoSize = true;
+            this.lblMusteriNo.Location = new System.Drawing.Point(118, 55);
+            this.lblMusteriNo.Name = "lblMusteriNo";
+            this.lblMusteriNo.Size = new System.Drawing.Size(46, 17);
+            this.lblMusteriNo.TabIndex = 8;
+            this.lblMusteriNo.Text = "label3";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(321, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 85;
+            this.label1.Text = "ADET";
+            // 
+            // txtAdet
+            // 
+            this.txtAdet.Location = new System.Drawing.Point(384, 28);
+            this.txtAdet.Name = "txtAdet";
+            this.txtAdet.Size = new System.Drawing.Size(100, 22);
+            this.txtAdet.TabIndex = 86;
             // 
             // frmUyeMusteri
             // 
@@ -399,7 +454,7 @@
             this.pnlHeader.ResumeLayout(false);
             this.pnlMusteri.ResumeLayout(false);
             this.pnlMusteri.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSatis)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -414,19 +469,19 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSatis;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblAraToplam;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblGenelToplam;
+        private System.Windows.Forms.Label lblKDV;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblToplam;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblIndirimMiktari;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
@@ -436,7 +491,12 @@
         private System.Windows.Forms.Label label18;
         public System.Windows.Forms.Panel pnlMusteri;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSatis;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblMusteriNo;
+        private System.Windows.Forms.Label lblSoyad;
+        private System.Windows.Forms.Label lblAD;
+        private System.Windows.Forms.TextBox txtAdet;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -10,12 +10,30 @@ namespace BLL.Model
     public class PromosyonPrimIslemleri : IPromosyonPrimIslemleri
     {
         CRMContext ent = new CRMContext();
+
+        public List<Promosyon> AktifPromosyonlar(DateTime Tarih)
+        {
+            List<Promosyon> AktifPromosyonListesi = new List<Promosyon>();
+            foreach (Promosyon p in promosyonlarıGetir())
+            {
+                if (p.BaslangıcTarihi.Month <= Tarih.Month && p.BaslangıcTarihi.Day <= Tarih.Day && (p.BitisTarihi.Month > Tarih.Month || p.BitisTarihi.Month == Tarih.Month && p.BitisTarihi.Day >= Tarih.Day))
+                {
+                    AktifPromosyonListesi.Add(p);
+                }
+            }
+            return AktifPromosyonListesi;
+        }
+
         public bool promosyonEkle(Promosyon p)
         {
             bool sonuc = false;
+         Promosyon Yeniprm = new Promosyon();
             try
             {
-                ent.Promosyons.Add(p);
+                Yeniprm.PromosyonAdi = p.PromosyonAdi;
+                Yeniprm.PromosyonOrani = p.PromosyonOrani;
+                Yeniprm.Silindi = false;
+                ent.Promosyons.Add(Yeniprm);
                 ent.SaveChanges();
                 sonuc = true;
             }
@@ -24,10 +42,32 @@ namespace BLL.Model
 
                 string message = ex.Message;
             }
+
             return sonuc;
         }
 
-   
+        //public bool promosyonEkle(int PromosyonOranı, string PromosyonAdi)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        public bool promosyonEkle(Promosyon p, int PromosyonOrani)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool PromosyonEkleKontrol(string PromosyonAdi)
+        {
+
+                bool sonuc = false;
+               Promosyon prm = (from p in ent.Promosyons where p.PromosyonAdi == PromosyonAdi select p).FirstOrDefault();
+                if (prm != null)
+                {
+                    sonuc = true;
+                }
+                return sonuc;
+            
+        }
 
         public bool promosyonGuncelle(Promosyon p)
         {
@@ -44,6 +84,17 @@ namespace BLL.Model
             {
 
                 string message = ex.Message;
+            }
+            return sonuc;
+        }
+
+        public bool PromosyonGuncelleKontrol(int PromosyonID, string PromosyonAdi)
+        {
+            bool sonuc = false;
+            Promosyon prm = (from p in ent.Promosyons where p.PromosyonAdi == PromosyonAdi && p.Id != PromosyonID select p).FirstOrDefault();
+            if (prm != null)
+            {
+                sonuc = true;
             }
             return sonuc;
         }

@@ -34,16 +34,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btnUrunEkle = new System.Windows.Forms.Button();
-            this.btnUrunSil = new System.Windows.Forms.Button();
-            this.btnUrunGuncelle = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtPromosyonOranı = new System.Windows.Forms.TextBox();
+            this.btnPromosyonEkle = new System.Windows.Forms.Button();
+            this.btnPromosyonSil = new System.Windows.Forms.Button();
+            this.btnPromosyonGuncelle = new System.Windows.Forms.Button();
+            this.txtPromosyonAdi = new System.Windows.Forms.TextBox();
+            this.dgvpromosyonlar = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvpromosyonlar)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,11 +91,11 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.btnUrunEkle);
-            this.panel2.Controls.Add(this.btnUrunSil);
-            this.panel2.Controls.Add(this.btnUrunGuncelle);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtPromosyonOranı);
+            this.panel2.Controls.Add(this.btnPromosyonEkle);
+            this.panel2.Controls.Add(this.btnPromosyonSil);
+            this.panel2.Controls.Add(this.btnPromosyonGuncelle);
+            this.panel2.Controls.Add(this.txtPromosyonAdi);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -120,83 +120,87 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // txtPromosyonOranı
             // 
-            this.textBox2.Location = new System.Drawing.Point(207, 58);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 22);
-            this.textBox2.TabIndex = 84;
+            this.txtPromosyonOranı.Location = new System.Drawing.Point(207, 58);
+            this.txtPromosyonOranı.Name = "txtPromosyonOranı";
+            this.txtPromosyonOranı.Size = new System.Drawing.Size(128, 22);
+            this.txtPromosyonOranı.TabIndex = 84;
             // 
-            // btnUrunEkle
+            // btnPromosyonEkle
             // 
-            this.btnUrunEkle.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnUrunEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUrunEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunEkle.ForeColor = System.Drawing.Color.White;
-            this.btnUrunEkle.Image = global::PL.Properties.Resources.plus_5_321;
-            this.btnUrunEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrunEkle.Location = new System.Drawing.Point(29, 104);
-            this.btnUrunEkle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUrunEkle.Name = "btnUrunEkle";
-            this.btnUrunEkle.Size = new System.Drawing.Size(170, 49);
-            this.btnUrunEkle.TabIndex = 81;
-            this.btnUrunEkle.Text = "   EKLE";
-            this.btnUrunEkle.UseVisualStyleBackColor = false;
+            this.btnPromosyonEkle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnPromosyonEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPromosyonEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPromosyonEkle.ForeColor = System.Drawing.Color.White;
+            this.btnPromosyonEkle.Image = global::PL.Properties.Resources.plus_5_321;
+            this.btnPromosyonEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPromosyonEkle.Location = new System.Drawing.Point(29, 104);
+            this.btnPromosyonEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPromosyonEkle.Name = "btnPromosyonEkle";
+            this.btnPromosyonEkle.Size = new System.Drawing.Size(170, 49);
+            this.btnPromosyonEkle.TabIndex = 81;
+            this.btnPromosyonEkle.Text = "   EKLE";
+            this.btnPromosyonEkle.UseVisualStyleBackColor = false;
+            this.btnPromosyonEkle.Click += new System.EventHandler(this.btnPromosyonEkle_Click);
             // 
-            // btnUrunSil
+            // btnPromosyonSil
             // 
-            this.btnUrunSil.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnUrunSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUrunSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunSil.ForeColor = System.Drawing.Color.White;
-            this.btnUrunSil.Image = global::PL.Properties.Resources.delete_32;
-            this.btnUrunSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrunSil.Location = new System.Drawing.Point(207, 104);
-            this.btnUrunSil.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUrunSil.Name = "btnUrunSil";
-            this.btnUrunSil.Size = new System.Drawing.Size(170, 49);
-            this.btnUrunSil.TabIndex = 80;
-            this.btnUrunSil.Text = "   SİL";
-            this.btnUrunSil.UseVisualStyleBackColor = false;
+            this.btnPromosyonSil.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnPromosyonSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPromosyonSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPromosyonSil.ForeColor = System.Drawing.Color.White;
+            this.btnPromosyonSil.Image = global::PL.Properties.Resources.delete_32;
+            this.btnPromosyonSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPromosyonSil.Location = new System.Drawing.Point(207, 104);
+            this.btnPromosyonSil.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPromosyonSil.Name = "btnPromosyonSil";
+            this.btnPromosyonSil.Size = new System.Drawing.Size(170, 49);
+            this.btnPromosyonSil.TabIndex = 80;
+            this.btnPromosyonSil.Text = "   SİL";
+            this.btnPromosyonSil.UseVisualStyleBackColor = false;
+            this.btnPromosyonSil.Click += new System.EventHandler(this.btnPromosyonSil_Click);
             // 
-            // btnUrunGuncelle
+            // btnPromosyonGuncelle
             // 
-            this.btnUrunGuncelle.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnUrunGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUrunGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnUrunGuncelle.Image = global::PL.Properties.Resources.available_updates_32;
-            this.btnUrunGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrunGuncelle.Location = new System.Drawing.Point(115, 161);
-            this.btnUrunGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUrunGuncelle.Name = "btnUrunGuncelle";
-            this.btnUrunGuncelle.Size = new System.Drawing.Size(170, 49);
-            this.btnUrunGuncelle.TabIndex = 79;
-            this.btnUrunGuncelle.Text = "        GÜNCELLE";
-            this.btnUrunGuncelle.UseVisualStyleBackColor = false;
+            this.btnPromosyonGuncelle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnPromosyonGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPromosyonGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPromosyonGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnPromosyonGuncelle.Image = global::PL.Properties.Resources.available_updates_32;
+            this.btnPromosyonGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPromosyonGuncelle.Location = new System.Drawing.Point(115, 161);
+            this.btnPromosyonGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPromosyonGuncelle.Name = "btnPromosyonGuncelle";
+            this.btnPromosyonGuncelle.Size = new System.Drawing.Size(170, 49);
+            this.btnPromosyonGuncelle.TabIndex = 79;
+            this.btnPromosyonGuncelle.Text = "        GÜNCELLE";
+            this.btnPromosyonGuncelle.UseVisualStyleBackColor = false;
+            this.btnPromosyonGuncelle.Click += new System.EventHandler(this.btnPromosyonGuncelle_Click);
             // 
-            // textBox1
+            // txtPromosyonAdi
             // 
-            this.textBox1.Location = new System.Drawing.Point(207, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 22);
-            this.textBox1.TabIndex = 2;
+            this.txtPromosyonAdi.Location = new System.Drawing.Point(207, 6);
+            this.txtPromosyonAdi.Name = "txtPromosyonAdi";
+            this.txtPromosyonAdi.Size = new System.Drawing.Size(128, 22);
+            this.txtPromosyonAdi.TabIndex = 2;
             // 
-            // dataGridView1
+            // dgvpromosyonlar
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(645, 407);
-            this.dataGridView1.TabIndex = 82;
+            this.dgvpromosyonlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvpromosyonlar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvpromosyonlar.Location = new System.Drawing.Point(0, 0);
+            this.dgvpromosyonlar.Name = "dgvpromosyonlar";
+            this.dgvpromosyonlar.ReadOnly = true;
+            this.dgvpromosyonlar.RowTemplate.Height = 24;
+            this.dgvpromosyonlar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvpromosyonlar.Size = new System.Drawing.Size(645, 407);
+            this.dgvpromosyonlar.TabIndex = 82;
+            this.dgvpromosyonlar.DoubleClick += new System.EventHandler(this.dgvpromosyonlar_DoubleClick);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.dgvpromosyonlar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(404, 100);
             this.panel3.Name = "panel3";
@@ -219,7 +223,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvpromosyonlar)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -232,13 +236,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnUrunEkle;
-        private System.Windows.Forms.Button btnUrunSil;
-        private System.Windows.Forms.Button btnUrunGuncelle;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtPromosyonAdi;
+        private System.Windows.Forms.Button btnPromosyonEkle;
+        private System.Windows.Forms.Button btnPromosyonSil;
+        private System.Windows.Forms.Button btnPromosyonGuncelle;
+        private System.Windows.Forms.DataGridView dgvpromosyonlar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPromosyonOranı;
         private System.Windows.Forms.Button button1;
     }
 }

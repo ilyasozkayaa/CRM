@@ -135,6 +135,7 @@
             this.panelUunBilgileri.Name = "panelUunBilgileri";
             this.panelUunBilgileri.Size = new System.Drawing.Size(703, 464);
             this.panelUunBilgileri.TabIndex = 8;
+            
             // 
             // btnUrunEkle
             // 

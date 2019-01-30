@@ -227,5 +227,7 @@ namespace PL.Urunler
                 MessageBox.Show("Satış Fiyatı İçin Sadece Sayısal Değer Giriniz!!!", "Hatalı Veri Girişi");
             }
         }
+
+     
     }
 }
