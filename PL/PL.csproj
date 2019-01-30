@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DAL\bin\Debug\DAL.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -331,10 +335,6 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{d72dfd94-d25d-4225-aa67-580b4475cc3f}</Project>
       <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{86dae353-ccdf-48fa-aa49-0a30d301c909}</Project>
-      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

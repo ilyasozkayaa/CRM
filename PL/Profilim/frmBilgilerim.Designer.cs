@@ -47,11 +47,12 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.panelHeader1 = new System.Windows.Forms.Panel();
-            this.circularPictureBox1 = new PL.CircularPictureBox();
-            this.panelHeader2 = new System.Windows.Forms.Panel();
-            this.labelSoyad = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.labelAd = new System.Windows.Forms.Label();
+            this.labelSoyad = new System.Windows.Forms.Label();
+            this.panelHeader2 = new System.Windows.Forms.Panel();
             this.panelHeader3 = new System.Windows.Forms.Panel();
+            this.btnOnay = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.panelGenelBilgi = new System.Windows.Forms.Panel();
             this.txtTCKNo = new System.Windows.Forms.TextBox();
@@ -69,13 +70,15 @@
             this.txtTel = new System.Windows.Forms.TextBox();
             this.panelGenelPerformans = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.circularPictureBox1 = new PL.CircularPictureBox();
             this.panelHeader1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.panelHeader3.SuspendLayout();
             this.panelGenelBilgi.SuspendLayout();
             this.panelIsBilgileri.SuspendLayout();
             this.panelIletisimBilgileri.SuspendLayout();
             this.panelGenelPerformans.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -258,10 +261,9 @@
             // panelHeader1
             // 
             this.panelHeader1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelHeader1.Controls.Add(this.panel1);
             this.panelHeader1.Controls.Add(this.circularPictureBox1);
             this.panelHeader1.Controls.Add(this.panelHeader2);
-            this.panelHeader1.Controls.Add(this.labelSoyad);
-            this.panelHeader1.Controls.Add(this.labelAd);
             this.panelHeader1.Controls.Add(this.panelHeader3);
             this.panelHeader1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -270,15 +272,38 @@
             this.panelHeader1.Size = new System.Drawing.Size(1054, 102);
             this.panelHeader1.TabIndex = 12;
             // 
-            // circularPictureBox1
+            // panel1
             // 
-            this.circularPictureBox1.Image = global::PL.Properties.Resources.images;
-            this.circularPictureBox1.Location = new System.Drawing.Point(3, 0);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(106, 96);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 9;
-            this.circularPictureBox1.TabStop = false;
+            this.panel1.Controls.Add(this.labelAd);
+            this.panel1.Controls.Add(this.labelSoyad);
+            this.panel1.Location = new System.Drawing.Point(132, 8);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 26);
+            this.panel1.TabIndex = 10;
+            // 
+            // labelAd
+            // 
+            this.labelAd.AutoSize = true;
+            this.labelAd.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelAd.ForeColor = System.Drawing.Color.White;
+            this.labelAd.Location = new System.Drawing.Point(79, 0);
+            this.labelAd.Name = "labelAd";
+            this.labelAd.Size = new System.Drawing.Size(41, 26);
+            this.labelAd.TabIndex = 7;
+            this.labelAd.Text = "Ad";
+            // 
+            // labelSoyad
+            // 
+            this.labelSoyad.AutoSize = true;
+            this.labelSoyad.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelSoyad.ForeColor = System.Drawing.Color.White;
+            this.labelSoyad.Location = new System.Drawing.Point(0, 0);
+            this.labelSoyad.Name = "labelSoyad";
+            this.labelSoyad.Size = new System.Drawing.Size(79, 26);
+            this.labelSoyad.TabIndex = 8;
+            this.labelSoyad.Text = "Soyad";
             // 
             // panelHeader2
             // 
@@ -289,37 +314,33 @@
             this.panelHeader2.Size = new System.Drawing.Size(1054, 12);
             this.panelHeader2.TabIndex = 1;
             // 
-            // labelSoyad
-            // 
-            this.labelSoyad.AutoSize = true;
-            this.labelSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelSoyad.ForeColor = System.Drawing.Color.White;
-            this.labelSoyad.Location = new System.Drawing.Point(189, 23);
-            this.labelSoyad.Name = "labelSoyad";
-            this.labelSoyad.Size = new System.Drawing.Size(79, 26);
-            this.labelSoyad.TabIndex = 8;
-            this.labelSoyad.Text = "Soyad";
-            // 
-            // labelAd
-            // 
-            this.labelAd.AutoSize = true;
-            this.labelAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelAd.ForeColor = System.Drawing.Color.White;
-            this.labelAd.Location = new System.Drawing.Point(142, 23);
-            this.labelAd.Name = "labelAd";
-            this.labelAd.Size = new System.Drawing.Size(41, 26);
-            this.labelAd.TabIndex = 7;
-            this.labelAd.Text = "Ad";
-            // 
             // panelHeader3
             // 
             this.panelHeader3.BackColor = System.Drawing.Color.White;
+            this.panelHeader3.Controls.Add(this.btnOnay);
             this.panelHeader3.Controls.Add(this.btnGuncelle);
             this.panelHeader3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelHeader3.Location = new System.Drawing.Point(0, 63);
             this.panelHeader3.Name = "panelHeader3";
             this.panelHeader3.Size = new System.Drawing.Size(1054, 39);
             this.panelHeader3.TabIndex = 1;
+            // 
+            // btnOnay
+            // 
+            this.btnOnay.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnOnay.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnOnay.FlatAppearance.BorderSize = 0;
+            this.btnOnay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
+            this.btnOnay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOnay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnOnay.ForeColor = System.Drawing.Color.White;
+            this.btnOnay.Location = new System.Drawing.Point(824, 0);
+            this.btnOnay.Name = "btnOnay";
+            this.btnOnay.Size = new System.Drawing.Size(115, 39);
+            this.btnOnay.TabIndex = 1;
+            this.btnOnay.Text = "Onayla";
+            this.btnOnay.UseVisualStyleBackColor = false;
+            this.btnOnay.Click += new System.EventHandler(this.btnOnay_Click);
             // 
             // btnGuncelle
             // 
@@ -336,6 +357,7 @@
             this.btnGuncelle.TabIndex = 0;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // panelGenelBilgi
             // 
@@ -355,7 +377,6 @@
             this.panelGenelBilgi.Name = "panelGenelBilgi";
             this.panelGenelBilgi.Size = new System.Drawing.Size(220, 395);
             this.panelGenelBilgi.TabIndex = 13;
-        
             // 
             // txtTCKNo
             // 
@@ -406,7 +427,6 @@
             this.panelIsBilgileri.Name = "panelIsBilgileri";
             this.panelIsBilgileri.Size = new System.Drawing.Size(220, 395);
             this.panelIsBilgileri.TabIndex = 14;
-   
             // 
             // txtEngel
             // 
@@ -455,30 +475,29 @@
             this.panelIletisimBilgileri.Name = "panelIletisimBilgileri";
             this.panelIletisimBilgileri.Size = new System.Drawing.Size(220, 395);
             this.panelIletisimBilgileri.TabIndex = 15;
-          //  this.panelIletisimBilgileri.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIletisimBilgileri_Paint);
             // 
             // txtAdres
             // 
-            this.txtAdres.Location = new System.Drawing.Point(114, 102);
+            this.txtAdres.Location = new System.Drawing.Point(95, 102);
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.ReadOnly = true;
-            this.txtAdres.Size = new System.Drawing.Size(100, 20);
+            this.txtAdres.Size = new System.Drawing.Size(119, 20);
             this.txtAdres.TabIndex = 13;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(114, 75);
+            this.txtEmail.Location = new System.Drawing.Point(95, 75);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.Size = new System.Drawing.Size(119, 20);
             this.txtEmail.TabIndex = 12;
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(114, 46);
+            this.txtTel.Location = new System.Drawing.Point(95, 46);
             this.txtTel.Name = "txtTel";
             this.txtTel.ReadOnly = true;
-            this.txtTel.Size = new System.Drawing.Size(100, 20);
+            this.txtTel.Size = new System.Drawing.Size(119, 20);
             this.txtTel.TabIndex = 11;
             // 
             // panelGenelPerformans
@@ -490,7 +509,6 @@
             this.panelGenelPerformans.Name = "panelGenelPerformans";
             this.panelGenelPerformans.Size = new System.Drawing.Size(394, 395);
             this.panelGenelPerformans.TabIndex = 16;
-           // this.panelGenelPerformans.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGenelPerformans_Paint);
             // 
             // label1
             // 
@@ -501,6 +519,16 @@
             this.label1.Size = new System.Drawing.Size(154, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Genel Performans";
+            // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.Image = global::PL.Properties.Resources.images;
+            this.circularPictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(106, 96);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox1.TabIndex = 9;
+            this.circularPictureBox1.TabStop = false;
             // 
             // frmBilgilerim
             // 
@@ -520,8 +548,8 @@
             this.Text = "Bilgilerim";
             this.Load += new System.EventHandler(this.frmBilgilerim_Load);
             this.panelHeader1.ResumeLayout(false);
-            this.panelHeader1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panelHeader3.ResumeLayout(false);
             this.panelGenelBilgi.ResumeLayout(false);
             this.panelGenelBilgi.PerformLayout();
@@ -531,6 +559,7 @@
             this.panelIletisimBilgileri.PerformLayout();
             this.panelGenelPerformans.ResumeLayout(false);
             this.panelGenelPerformans.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -578,5 +607,7 @@
         private System.Windows.Forms.TextBox txtAdres;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtTel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnOnay;
     }
 }

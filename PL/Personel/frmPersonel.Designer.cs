@@ -76,7 +76,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.pbFoto = new System.Windows.Forms.PictureBox();
-            this.btnKaydetDeneme = new System.Windows.Forms.Button();
             this.panelHeader1.SuspendLayout();
             this.panelPersonelKisisel.SuspendLayout();
             this.panelPersonelResim.SuspendLayout();
@@ -143,7 +142,6 @@
             // 
             // panelPersonelKisisel
             // 
-            this.panelPersonelKisisel.Controls.Add(this.btnKaydetDeneme);
             this.panelPersonelKisisel.Controls.Add(this.cbMedeni);
             this.panelPersonelKisisel.Controls.Add(this.dateİseGiris);
             this.panelPersonelKisisel.Controls.Add(this.cbCinsiyet);
@@ -579,7 +577,6 @@
             this.btnKaydet.TabIndex = 180;
             this.btnKaydet.Text = " KAYDET";
             this.btnKaydet.UseVisualStyleBackColor = false;
-           // this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // txtKullaniciSifre
             // 
@@ -636,16 +633,6 @@
             this.pbFoto.TabIndex = 175;
             this.pbFoto.TabStop = false;
             this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click);
-            // 
-            // btnKaydetDeneme
-            // 
-            this.btnKaydetDeneme.Location = new System.Drawing.Point(446, 328);
-            this.btnKaydetDeneme.Name = "btnKaydetDeneme";
-            this.btnKaydetDeneme.Size = new System.Drawing.Size(75, 23);
-            this.btnKaydetDeneme.TabIndex = 190;
-            this.btnKaydetDeneme.Text = "button1";
-            this.btnKaydetDeneme.UseVisualStyleBackColor = true;
-            this.btnKaydetDeneme.Click += new System.EventHandler(this.btnKaydetDeneme_Click);
             // 
             // frmPersonel
             // 
@@ -723,6 +710,5 @@
         private System.Windows.Forms.ComboBox cbPozisyon;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbMedeni;
-        private System.Windows.Forms.Button btnKaydetDeneme;
     }
 }

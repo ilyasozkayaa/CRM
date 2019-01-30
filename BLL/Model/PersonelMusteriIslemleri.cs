@@ -141,7 +141,9 @@ namespace BLL.Model
 
         public bool personelGüncelle(Personel p)
         {
-            Personel prsnl = (from Personel in ent.Personels where Personel.Id == p.Id select p).FirstOrDefault();
+            Personel prsnl = new Personel();
+            prsnl = (from pr in ent.Personels where pr.Id == p.Id select pr).FirstOrDefault();
+           
             bool sonuc = false;
             try
             {
@@ -153,14 +155,14 @@ namespace BLL.Model
                 prsnl.DogumYeri = p.DogumYeri;
                 prsnl.Adres = p.Adres;
                 prsnl.Email = p.Email;
-                prsnl.Image = p.Image;
-                prsnl.Cinsiyet = p.Cinsiyet;
-                prsnl.IstenCikisTarihi = p.IstenCikisTarihi;
+                // prsnl.Image = p.Image;
+                //prsnl.Cinsiyet = p.Cinsiyet;
+                //prsnl.IstenCikisTarihi = p.IstenCikisTarihi;
                 prsnl.MedeniHal = p.MedeniHal;
                 prsnl.AskerlikDurumu = p.AskerlikDurumu;
                 prsnl.EngelDurumu = p.EngelDurumu;
                 prsnl.EgitimDurumu = p.EgitimDurumu;
-                prsnl.UserId = p.UserId;
+                // prsnl.UserId = p.UserId;
 
                 ent.SaveChanges();
                 sonuc = true;
@@ -168,7 +170,7 @@ namespace BLL.Model
             catch (Exception ex)
             {
                 string message = ex.Message;
-                throw;
+                
             }
             return sonuc;
         }

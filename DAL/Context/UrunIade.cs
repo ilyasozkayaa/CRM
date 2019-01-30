@@ -17,7 +17,9 @@ namespace DAL.Context
         public int SatisId { get; set; }
         [Required]
         public DateTime IadeTarihi { get; set; }
-
+        public string IadeSebebi { get; set; }
+        public int IadeAdedi { get; set; }
+        public int UrunID { get; set; }
 
         [ForeignKey("SatisId")]
         public virtual UrunStokHareket  urunStokHareket { get; set; }
