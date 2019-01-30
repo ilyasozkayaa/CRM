@@ -9,6 +9,7 @@ namespace BLL.Model
     public class GenelDegiskenler
     {
         public static int PersonId;
+        public static string UserName;
         public static string image;
     }
 }

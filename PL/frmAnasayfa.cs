@@ -1,5 +1,6 @@
 ﻿using BLL.Model;
-
+using DAL.Context;
+using PL.KasaIslemleri;
 using PL.Personel;
 using PL.Profilim;
 using PL.Properties;
@@ -46,15 +47,42 @@ namespace PL
         }
 
 
-
+        PersonelMusteriIslemleri pmi = new PersonelMusteriIslemleri();
+        GorevHareketler grv = new GorevHareketler();
         private void Form1_Load(object sender, EventArgs e)
         {
+            DAL.Context.Personel p = new DAL.Context.Personel();
+            User u = new User();
+            p = pmi.PersonelGetir(GenelDegiskenler.PersonId);
+            u = pmi.UserGetir(GenelDegiskenler.UserName);
+            KullaniciDetay kd = new KullaniciDetay();
+            kd.lblAdi.Text = p.Ad;
+            kd.lblSoyAdi.Text = p.Soyad;
+            kd.circularPictureBox1.Image = Resources.icons8_businessman_48;
+            kd.Dock = DockStyle.Right;
+            pnlFooter.Controls.Add(kd);
+            if (u.YetkiDüzeyi=="Eleman" || u.YetkiDüzeyi =="Kasiyer")
+            {
+                btnKampanya.Visible = false;
+                button7.Visible = false;
+                btnRapor.Visible = false;
+                button8.Visible = false;
+                pnlPersoneSekme.Visible = false;
+                button4.Visible = false;
+            }
+            
+            
+
+        
 
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(0, 0);
             timer3.Start();
             lblTarih.Text = DateTime.Now.ToString("hh:mm:ss tt");
             lbltoday.Text = DateTime.Today.ToShortDateString();
+
+
+
         }       
 
   
@@ -138,13 +166,14 @@ namespace PL
 
         private void btnBilgiler_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             frmBilgilerim frm = new frmBilgilerim();
             FormAc(frm);
-           
         }
 
         private void btnGörevlerim_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             frmGorevlerim frm = new frmGorevlerim();
             FormAc(frm);
         }
@@ -183,20 +212,22 @@ namespace PL
 
         private void btnPersoneller_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             Personel.Personeller frm = new Personel.Personeller();
             FormAc(frm);
         }
 
         private void btnGorevAta_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             GorevAtama frm = new GorevAtama();
             FormAc(frm);
         }
 
         private void btnKasa_Click(object sender, EventArgs e)
         {
-            //frmSatisIslemleri frm = new frmSatisIslemleri();
-            //FormAc(frm);
+            frmSatisIslemleri frm = new frmSatisIslemleri();
+            FormAc(frm);
         }
 
         private void btnUrun_Click(object sender, EventArgs e)
@@ -211,37 +242,52 @@ namespace PL
 
         private void btnKategoriekle_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             frmKategoriEkle frm = new frmKategoriEkle();
             FormAc(frm);
         }
 
         private void btnUrunEk_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             frmUrunEkle frm = new frmUrunEkle();
             FormAc(frm);
         }
 
         private void btnStok_Click(object sender, EventArgs e)
         {
+            timer2.Start();
             frmUrunStokİslemleri frm = new frmUrunStokİslemleri();
             FormAc(frm);
         }
 
         private void btnUrun1_Click(object sender, EventArgs e)
         {
-            //frmSatisIslemleri frm = new frmSatisIslemleri();
-            //FormAc(frm);
+            timer2.Start();
+            frmSatisIslemleri frm = new frmSatisIslemleri();
+            FormAc(frm);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-     
-        private void pnlContent_Paint(object sender, PaintEventArgs e)
-        {
 
-            
+        private void btnRapor_Click(object sender, EventArgs e)
+        {
+            timer2.Start();
+        }
+
+        private void btnKampanya_Click(object sender, EventArgs e)
+        {
+            timer2.Start();
+        }
+
+        private void btnOturum_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form n = new frmGiris();
+            n.Show();
 
         }
     }

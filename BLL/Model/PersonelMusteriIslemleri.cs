@@ -223,5 +223,19 @@ namespace BLL.Model
         {
             return ent.Personels.Where(m => m.TCKNo == TC).FirstOrDefault();
         }
+        public User UserGetir(string UserName)
+        {
+            User userg = new User();
+            try
+            {
+                userg = (from p in ent.Users where p.KullaniciAdi == UserName select p).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return userg;
+        }
     }
 }
