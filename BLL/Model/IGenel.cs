@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BLL.Model
 {
@@ -11,7 +12,7 @@ namespace BLL.Model
     {
         int giris(string KullaniciAdi, string parola);
         bool ParolaSifirla(string prsnlID,string YeniParola);
-        void Temizle();
         void FormAcikmi();
+        void Temizle(Panel p);
     }
 }

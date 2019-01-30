@@ -33,10 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\DAL\bin\Debug\DAL.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -69,6 +65,36 @@
     <Compile Include="frmGiris.Designer.cs">
       <DependentUpon>frmGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kampanyalar\frmKampanyalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kampanyalar\frmKampanyalar.Designer.cs">
+      <DependentUpon>frmKampanyalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmUrunIade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmUrunIade.Designer.cs">
+      <DependentUpon>frmUrunIade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmUyeKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmUyeKayit.Designer.cs">
+      <DependentUpon>frmUyeKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmUyeMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmUyeMusteri.Designer.cs">
+      <DependentUpon>frmUyeMusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmSatisIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KasaIslemleri\frmSatisIslemleri.Designer.cs">
+      <DependentUpon>frmSatisIslemleri.cs</DependentUpon>
+    </Compile>
     <Compile Include="KullaniciDetay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,12 +106,6 @@
     </Compile>
     <Compile Include="Personel\frmPersonel.Designer.cs">
       <DependentUpon>frmPersonel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Personel\frmTümünüSorgula.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Personel\frmTümünüSorgula.Designer.cs">
-      <DependentUpon>frmTümünüSorgula.cs</DependentUpon>
     </Compile>
     <Compile Include="Personel\GorevAtama.cs">
       <SubType>Form</SubType>
@@ -120,6 +140,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlar\Raporlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar\Raporlar.Designer.cs">
+      <DependentUpon>Raporlar.cs</DependentUpon>
     </Compile>
     <Compile Include="Urunler\frmKategoriEkle.cs">
       <SubType>Form</SubType>
@@ -163,6 +189,21 @@
     <EmbeddedResource Include="frmGiris.resx">
       <DependentUpon>frmGiris.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kampanyalar\frmKampanyalar.resx">
+      <DependentUpon>frmKampanyalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KasaIslemleri\frmUrunIade.resx">
+      <DependentUpon>frmUrunIade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KasaIslemleri\frmUyeKayit.resx">
+      <DependentUpon>frmUyeKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KasaIslemleri\frmUyeMusteri.resx">
+      <DependentUpon>frmUyeMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KasaIslemleri\frmSatisIslemleri.resx">
+      <DependentUpon>frmSatisIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KullaniciDetay.resx">
       <DependentUpon>KullaniciDetay.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,9 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Personel\frmPersonel.resx">
       <DependentUpon>frmPersonel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Personel\frmTümünüSorgula.resx">
-      <DependentUpon>frmTümünüSorgula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personel\GorevAtama.resx">
       <DependentUpon>GorevAtama.cs</DependentUpon>
@@ -191,6 +229,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\Raporlar.resx">
+      <DependentUpon>Raporlar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Urunler\frmKategoriEkle.resx">
       <DependentUpon>frmKategoriEkle.cs</DependentUpon>
@@ -217,54 +258,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\cashregister.png" />
-    <None Include="Resources\cash_register-512.png" />
-    <None Include="Resources\chart.png" />
-    <None Include="Resources\deleteWhite.png" />
-    <None Include="Resources\downbutton.png" />
-    <None Include="Resources\employee.png" />
-    <None Include="Resources\employee2.png" />
-    <None Include="Resources\hanger.png" />
-    <None Include="Resources\help.png" />
-    <None Include="Resources\icons8-bow-tie-32.png" />
-    <None Include="Resources\icons8-bow-tie-64.png" />
-    <None Include="Resources\icons8-businessman-48.png" />
-    <None Include="Resources\icons8-cancel-48.png" />
-    <None Include="Resources\icons8-circled-user-male-skin-type-6-48.png" />
-    <None Include="Resources\icons8-cook-48.png" />
-    <None Include="Resources\icons8-female-profile-48.png" />
-    <None Include="Resources\icons8-horizontal-line-32 %281%29.png" />
-    <None Include="Resources\icons8-menu-32.png" />
-    <None Include="Resources\icons8-menu-64.png" />
-    <None Include="Resources\icons8-multiply-32 %282%29.png" />
-    <None Include="Resources\icons8-ok-48.png" />
-    <None Include="Resources\icons8-plus-24.png" />
-    <None Include="Resources\icons8-plus-48.png" />
-    <None Include="Resources\icons8-school-director-48.png" />
-    <None Include="Resources\icons8-sophia-loren-48 %281%29.png" />
-    <None Include="Resources\icons8-sophia-loren-48.png" />
-    <None Include="Resources\icons8-user-male-48.png" />
-    <None Include="Resources\icons8-virtual-machine-32 %282%29.png" />
-    <None Include="Resources\images.png" />
-    <None Include="Resources\images1.png" />
-    <None Include="Resources\kampanya.png" />
-    <None Include="Resources\launchpad.png" />
-    <None Include="Resources\logo.png" />
-    <None Include="Resources\marketin2.png" />
-    <None Include="Resources\marketing.png" />
-    <None Include="Resources\marketing3.png" />
-    <None Include="Resources\money.png" />
-    <None Include="Resources\notifred.png" />
-    <None Include="Resources\people.png" />
-    <None Include="Resources\personelFoto.png" />
-    <None Include="Resources\persons.png" />
-    <None Include="Resources\plus.png" />
-    <None Include="Resources\product.png" />
-    <None Include="Resources\product2.png" />
-    <None Include="Resources\profile.png" />
-    <None Include="Resources\profileicon.png" />
-    <None Include="Resources\uparrow.png" />
-    <None Include="Resources\user_badge-512.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -272,39 +265,209 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_register-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_badge-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashregister.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kampanya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marketin2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marketing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marketing3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\persons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profileicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uparrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hanger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\launchpad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personelFoto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-virtual-machine-32 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-multiply-32 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-horizontal-line-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notifred.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bow-tie-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bow-tie-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{d72dfd94-d25d-4225-aa67-580b4475cc3f}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{86dae353-ccdf-48fa-aa49-0a30d301c909}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Accept-icon %281%29.png" />
-    <Content Include="Resources\Accept-icon.png" />
-    <Content Include="Resources\BüşraMelek.png" />
-    <Content Include="Resources\CanUlu.png" />
-    <Content Include="Resources\CemKara.png" />
-    <Content Include="Resources\ErhanUslu.png" />
-    <Content Include="Resources\ErkanHoyman.png" />
-    <Content Include="Resources\FerhatUlusoy.png" />
-    <Content Include="Resources\GamzeUzgör.png" />
-    <Content Include="Resources\MelekBaşer.png" />
-    <Content Include="Resources\personaddyeni.png" />
-    <Content Include="Resources\resim.jpg" />
-    <Content Include="Resources\uyemusterııcon.png" />
-    <Content Include="Resources\ÖzlemBilir.png" />
-    <Content Include="Resources\İlyasÖzkaya.png" />
+    <None Include="Resources\icons8-plus-24.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-shutdown-64.png" />
+    <None Include="Resources\icons8-plus-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-shutdown-32.png" />
+    <None Include="Resources\icons8-ok-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-available-updates-32.png" />
+    <None Include="Resources\icons8-cancel-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-available-updates-321.png" />
+    <None Include="Resources\icons8-businessman-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-circled-user-male-skin-type-6-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cook-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-female-profile-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-school-director-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sophia-loren-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sophia-loren-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-male-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\activity-feed-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-user-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-2-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-5-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-5-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\available-updates-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-2-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-christmas-gift-filled-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-import-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-import-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-christmas-gift-filled-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-import-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-christmas-gift-filled-322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-christmas-gift-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-christmas-gift-42.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

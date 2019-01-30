@@ -30,26 +30,23 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.PnlPersonelArama = new System.Windows.Forms.Panel();
+            this.BtnÇıkışVerme = new System.Windows.Forms.Button();
+            this.BtnYeniPersonel = new System.Windows.Forms.Button();
+            this.BtnListele = new System.Windows.Forms.Button();
+            this.BtnSorgula = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSoyadı = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAdı = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgvPersoneller = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.PnlPersonelArama.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPersoneller)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,194 +55,215 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 85);
+            this.panel1.Size = new System.Drawing.Size(1067, 53);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(35, 32);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 26);
+            this.label1.Size = new System.Drawing.Size(674, 34);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Personeller";
+            this.label1.Text = "                                                         PERSONELLER";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel2
+            // PnlPersonelArama
             // 
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 85);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(212, 365);
-            this.panel2.TabIndex = 1;
+            this.PnlPersonelArama.Controls.Add(this.BtnÇıkışVerme);
+            this.PnlPersonelArama.Controls.Add(this.BtnYeniPersonel);
+            this.PnlPersonelArama.Controls.Add(this.BtnListele);
+            this.PnlPersonelArama.Controls.Add(this.BtnSorgula);
+            this.PnlPersonelArama.Controls.Add(this.label4);
+            this.PnlPersonelArama.Controls.Add(this.txtSoyadı);
+            this.PnlPersonelArama.Controls.Add(this.label3);
+            this.PnlPersonelArama.Controls.Add(this.label2);
+            this.PnlPersonelArama.Controls.Add(this.txtAdı);
+            this.PnlPersonelArama.Controls.Add(this.txtID);
+            this.PnlPersonelArama.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PnlPersonelArama.Location = new System.Drawing.Point(0, 53);
+            this.PnlPersonelArama.Margin = new System.Windows.Forms.Padding(4);
+            this.PnlPersonelArama.Name = "PnlPersonelArama";
+            this.PnlPersonelArama.Size = new System.Drawing.Size(283, 501);
+            this.PnlPersonelArama.TabIndex = 1;
             // 
-            // button2
+            // BtnÇıkışVerme
             // 
-            this.button2.BackColor = System.Drawing.Color.SteelBlue;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(108, 248);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 38);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Çıkış Verme";
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnÇıkışVerme.BackColor = System.Drawing.Color.SteelBlue;
+            this.BtnÇıkışVerme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnÇıkışVerme.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnÇıkışVerme.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnÇıkışVerme.Image = global::PL.Properties.Resources.remove_user_32;
+            this.BtnÇıkışVerme.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnÇıkışVerme.Location = new System.Drawing.Point(19, 314);
+            this.BtnÇıkışVerme.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnÇıkışVerme.Name = "BtnÇıkışVerme";
+            this.BtnÇıkışVerme.Size = new System.Drawing.Size(179, 47);
+            this.BtnÇıkışVerme.TabIndex = 12;
+            this.BtnÇıkışVerme.Text = "      Çıkış Verme";
+            this.BtnÇıkışVerme.UseVisualStyleBackColor = false;
+            this.BtnÇıkışVerme.Click += new System.EventHandler(this.BtnÇıkışVerme_Click);
             // 
-            // button1
+            // BtnYeniPersonel
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(3, 248);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 38);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Yeni Personel";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnYeniPersonel.BackColor = System.Drawing.Color.SteelBlue;
+            this.BtnYeniPersonel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnYeniPersonel.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnYeniPersonel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnYeniPersonel.Image = global::PL.Properties.Resources.add_user_2_32;
+            this.BtnYeniPersonel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnYeniPersonel.Location = new System.Drawing.Point(16, 380);
+            this.BtnYeniPersonel.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnYeniPersonel.Name = "BtnYeniPersonel";
+            this.BtnYeniPersonel.Size = new System.Drawing.Size(185, 47);
+            this.BtnYeniPersonel.TabIndex = 11;
+            this.BtnYeniPersonel.Text = "      Yeni Personel";
+            this.BtnYeniPersonel.UseVisualStyleBackColor = false;
+            this.BtnYeniPersonel.Click += new System.EventHandler(this.BtnYeniPersonel_Click);
             // 
-            // button4
+            // BtnListele
             // 
-            this.button4.BackColor = System.Drawing.Color.SteelBlue;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(9, 153);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 35);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Tümünü Listele";
-            this.button4.UseVisualStyleBackColor = false;
+            this.BtnListele.BackColor = System.Drawing.Color.SteelBlue;
+            this.BtnListele.FlatAppearance.BorderSize = 0;
+            this.BtnListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnListele.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnListele.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnListele.Image = global::PL.Properties.Resources.activity_feed_32;
+            this.BtnListele.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnListele.Location = new System.Drawing.Point(19, 190);
+            this.BtnListele.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnListele.Name = "BtnListele";
+            this.BtnListele.Size = new System.Drawing.Size(179, 43);
+            this.BtnListele.TabIndex = 10;
+            this.BtnListele.Text = "           Tümünü Listele";
+            this.BtnListele.UseVisualStyleBackColor = false;
+            this.BtnListele.Click += new System.EventHandler(this.BtnListele_Click);
             // 
-            // button3
+            // BtnSorgula
             // 
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(113, 153);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(93, 35);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Sorgula";
-            this.button3.UseVisualStyleBackColor = false;
+            this.BtnSorgula.BackColor = System.Drawing.Color.SteelBlue;
+            this.BtnSorgula.FlatAppearance.BorderSize = 0;
+            this.BtnSorgula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSorgula.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnSorgula.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnSorgula.Image = global::PL.Properties.Resources.zoom_32;
+            this.BtnSorgula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSorgula.Location = new System.Drawing.Point(22, 252);
+            this.BtnSorgula.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSorgula.Name = "BtnSorgula";
+            this.BtnSorgula.Size = new System.Drawing.Size(179, 43);
+            this.BtnSorgula.TabIndex = 9;
+            this.BtnSorgula.Text = "Sorgula";
+            this.BtnSorgula.UseVisualStyleBackColor = false;
+            this.BtnSorgula.Click += new System.EventHandler(this.BtnSorgula_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 109);
+            this.label4.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(16, 130);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Soyad";
+            this.label4.Text = "Soyad :";
             // 
-            // textBox3
+            // txtSoyadı
             // 
-            this.textBox3.Location = new System.Drawing.Point(92, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 4;
+            this.txtSoyadı.Location = new System.Drawing.Point(123, 130);
+            this.txtSoyadı.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoyadı.Name = "txtSoyadı";
+            this.txtSoyadı.Size = new System.Drawing.Size(132, 22);
+            this.txtSoyadı.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 75);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(16, 88);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 13);
+            this.label3.Size = new System.Drawing.Size(36, 17);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Ad";
+            this.label3.Text = "Ad :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 37);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(16, 42);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.Size = new System.Drawing.Size(97, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Personel ID";
+            this.label2.Text = "Personel ID :";
             // 
-            // textBox2
+            // txtAdı
             // 
-            this.textBox2.Location = new System.Drawing.Point(92, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtAdı.Location = new System.Drawing.Point(123, 85);
+            this.txtAdı.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAdı.Name = "txtAdı";
+            this.txtAdı.Size = new System.Drawing.Size(132, 22);
+            this.txtAdı.TabIndex = 1;
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtID.Location = new System.Drawing.Point(123, 42);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(132, 22);
+            this.txtID.TabIndex = 0;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.flowLayoutPanel1);
-            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.DgvPersoneller);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(212, 85);
+            this.panel3.Location = new System.Drawing.Point(283, 53);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(588, 365);
+            this.panel3.Size = new System.Drawing.Size(784, 501);
             this.panel3.TabIndex = 2;
             // 
-            // flowLayoutPanel1
+            // DgvPersoneller
             // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 163);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(588, 202);
-            this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(588, 163);
-            this.panel4.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(588, 163);
-            this.dataGridView1.TabIndex = 1;
+            this.DgvPersoneller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPersoneller.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvPersoneller.Location = new System.Drawing.Point(0, 0);
+            this.DgvPersoneller.MultiSelect = false;
+            this.DgvPersoneller.Name = "DgvPersoneller";
+            this.DgvPersoneller.ReadOnly = true;
+            this.DgvPersoneller.RowTemplate.Height = 24;
+            this.DgvPersoneller.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvPersoneller.Size = new System.Drawing.Size(784, 501);
+            this.DgvPersoneller.TabIndex = 0;
+            this.DgvPersoneller.DoubleClick += new System.EventHandler(this.DgvPersoneller_DoubleClick);
             // 
             // Personeller
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.PnlPersonelArama);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Personeller";
             this.Text = "PersonelEkleCikar";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.PnlPersonelArama.ResumeLayout(false);
+            this.PnlPersonelArama.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPersoneller)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -254,20 +272,18 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel PnlPersonelArama;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSoyadı;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAdı;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button BtnListele;
+        private System.Windows.Forms.Button BtnSorgula;
+        private System.Windows.Forms.Button BtnÇıkışVerme;
+        private System.Windows.Forms.Button BtnYeniPersonel;
+        private System.Windows.Forms.DataGridView DgvPersoneller;
     }
 }

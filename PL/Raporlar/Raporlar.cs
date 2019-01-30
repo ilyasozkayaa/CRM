@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PL.Personel
+namespace PL
 {
-    public partial class frmTümünüSorgula : Form
+    public partial class Raporlar : Form
     {
-        public frmTümünüSorgula()
+        public Raporlar()
         {
             InitializeComponent();
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using DAL.Context;
 
 namespace BLL.Model
@@ -54,11 +55,16 @@ namespace BLL.Model
             return sonuc;
         }
 
-        public void Temizle()
+        public void Temizle(Panel p)
         {
-            throw new NotImplementedException();
+            foreach (Control c in p.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = "";
+                }
+            }
         }
-
     }
 
     public class Degiskentanimla

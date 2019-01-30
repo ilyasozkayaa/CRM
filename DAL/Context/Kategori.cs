@@ -22,5 +22,10 @@ namespace DAL.Context
         public bool Silindi { get; set; }
         
         public virtual List<Urun> Uruns { get; set; }
+
+        public override string ToString()
+        {
+            return KategoriAdi;
+        }
     }
 }

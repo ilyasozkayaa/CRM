@@ -1,6 +1,4 @@
-﻿using BLL.Model;
-using DAL.Context;
-using PL.KasaIslemleri;
+﻿using PL.KasaIslemleri;
 using PL.Personel;
 using PL.Profilim;
 using PL.Properties;
@@ -52,26 +50,13 @@ namespace PL
         private void Form1_Load(object sender, EventArgs e)
         {
             DAL.Context.Personel p = new DAL.Context.Personel();
-            User u = new User();
-            p = pmi.PersonelGetir(GenelDegiskenler.PersonId);
-            u = pmi.UserGetir(GenelDegiskenler.UserName);
+            p=pmi.PersonelGetir(GenelDegiskenler.PersonId);
             KullaniciDetay kd = new KullaniciDetay();
             kd.lblAdi.Text = p.Ad;
             kd.lblSoyAdi.Text = p.Soyad;
             kd.circularPictureBox1.Image = Resources.icons8_businessman_48;
             kd.Dock = DockStyle.Right;
             pnlFooter.Controls.Add(kd);
-            if (u.YetkiDüzeyi=="Eleman" || u.YetkiDüzeyi =="Kasiyer")
-            {
-                btnKampanya.Visible = false;
-                button7.Visible = false;
-                btnRapor.Visible = false;
-                button8.Visible = false;
-                pnlPersoneSekme.Visible = false;
-                button4.Visible = false;
-            }
-            
-            
 
         
 
@@ -169,6 +154,7 @@ namespace PL
             timer2.Start();
             frmBilgilerim frm = new frmBilgilerim();
             FormAc(frm);
+           
         }
 
         private void btnGörevlerim_Click(object sender, EventArgs e)
@@ -226,8 +212,8 @@ namespace PL
 
         private void btnKasa_Click(object sender, EventArgs e)
         {
-            frmSatisIslemleri frm = new frmSatisIslemleri();
-            FormAc(frm);
+            //frmSatisIslemleri frm = new frmSatisIslemleri();
+            //FormAc(frm);
         }
 
         private void btnUrun_Click(object sender, EventArgs e)
@@ -263,7 +249,6 @@ namespace PL
 
         private void btnUrun1_Click(object sender, EventArgs e)
         {
-            timer2.Start();
             frmSatisIslemleri frm = new frmSatisIslemleri();
             FormAc(frm);
         }
@@ -271,23 +256,7 @@ namespace PL
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void btnRapor_Click(object sender, EventArgs e)
-        {
-            timer2.Start();
-        }
-
-        private void btnKampanya_Click(object sender, EventArgs e)
-        {
-            timer2.Start();
-        }
-
-        private void btnOturum_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Form n = new frmGiris();
-            n.Show();
+            
 
         }
     }

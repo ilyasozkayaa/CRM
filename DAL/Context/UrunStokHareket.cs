@@ -15,11 +15,13 @@ namespace DAL.Context
         [Key]
         public int Id { get; set; }
         //[Required]
-        //public int UrunId { get; set; }       
+        public int UrunId { get; set; }       
         [Required]
         public int Miktar { get; set; }
         [Required]
         public string IslemTürü { get; set; }
+        [Required]
+        public DateTime IslemTarihi { get; set; }
 
         //[ForeignKey("UrunId")]
         public virtual Urun Urun { get; set; }

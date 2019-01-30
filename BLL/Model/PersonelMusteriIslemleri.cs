@@ -73,6 +73,23 @@ namespace BLL.Model
 
         }
 
+        public Musteri MusteriKayitlimi(string TelNO)
+        {
+            Musteri musteri = new Musteri();
+            try
+            {
+                musteri = (from m in ent.Musteris where m.Telefon == TelNO select m).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+
+
+            return musteri;
+        }
+
         public List<Musteri> musterileriGetir()
         {
             List<Musteri> MusteriListesi = new List<Musteri>();
@@ -137,6 +154,26 @@ namespace BLL.Model
                 string message = ex.Message;
             }
             return prsnl;
+        }
+
+     
+
+        public List<Personel> PersonelGetir(string Ad, string Soyad)
+        {
+            List<Personel> PersonelListesi = new List<Personel>();
+
+            try
+            {
+
+                PersonelListesi = (from P in ent.Personels where P.Ad == Ad && P.Soyad == Soyad select P).ToList();
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+
+            return PersonelListesi;
         }
 
         public bool personelGüncelle(Personel p)
