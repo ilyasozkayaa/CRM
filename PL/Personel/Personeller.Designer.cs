@@ -42,11 +42,11 @@
             this.txtAdı = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgvPersoneller = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.PnlPersonelArama.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPersoneller)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -109,6 +109,7 @@
             this.BtnÇıkışVerme.TabIndex = 12;
             this.BtnÇıkışVerme.Text = "      Çıkış Verme";
             this.BtnÇıkışVerme.UseVisualStyleBackColor = false;
+            this.BtnÇıkışVerme.Click += new System.EventHandler(this.BtnÇıkışVerme_Click);
             // 
             // BtnYeniPersonel
             // 
@@ -223,22 +224,27 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.DgvPersoneller);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(283, 53);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(784, 501);
             this.panel3.TabIndex = 2;
             // 
-            // dataGridView1
+            // DgvPersoneller
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(784, 501);
-            this.dataGridView1.TabIndex = 0;
+            this.DgvPersoneller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPersoneller.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvPersoneller.Location = new System.Drawing.Point(0, 0);
+            this.DgvPersoneller.MultiSelect = false;
+            this.DgvPersoneller.Name = "DgvPersoneller";
+            this.DgvPersoneller.ReadOnly = true;
+            this.DgvPersoneller.RowTemplate.Height = 24;
+            this.DgvPersoneller.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvPersoneller.Size = new System.Drawing.Size(784, 501);
+            this.DgvPersoneller.TabIndex = 0;
+            this.DgvPersoneller.DoubleClick += new System.EventHandler(this.DgvPersoneller_DoubleClick);
             // 
             // Personeller
             // 
@@ -257,7 +263,7 @@
             this.PnlPersonelArama.ResumeLayout(false);
             this.PnlPersonelArama.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPersoneller)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -278,6 +284,6 @@
         private System.Windows.Forms.Button BtnSorgula;
         private System.Windows.Forms.Button BtnÇıkışVerme;
         private System.Windows.Forms.Button BtnYeniPersonel;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvPersoneller;
     }
 }

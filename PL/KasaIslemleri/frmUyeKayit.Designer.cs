@@ -48,9 +48,9 @@
             this.BtnKaydet = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.TxtMaskedTelefon = new System.Windows.Forms.MaskedTextBox();
             this.DTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.TxtMaskedTelefon = new System.Windows.Forms.MaskedTextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -280,14 +280,12 @@
             this.panel3.Size = new System.Drawing.Size(779, 526);
             this.panel3.TabIndex = 5;
             // 
-            // panel4
+            // DTimePicker
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(699, 43);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(425, 526);
-            this.panel4.TabIndex = 6;
+            this.DTimePicker.Location = new System.Drawing.Point(196, 150);
+            this.DTimePicker.Name = "DTimePicker";
+            this.DTimePicker.Size = new System.Drawing.Size(133, 22);
+            this.DTimePicker.TabIndex = 5;
             // 
             // TxtMaskedTelefon
             // 
@@ -298,12 +296,14 @@
             this.TxtMaskedTelefon.TabIndex = 4;
             this.TxtMaskedTelefon.ValidatingType = typeof(int);
             // 
-            // DTimePicker
+            // panel4
             // 
-            this.DTimePicker.Location = new System.Drawing.Point(196, 150);
-            this.DTimePicker.Name = "DTimePicker";
-            this.DTimePicker.Size = new System.Drawing.Size(133, 22);
-            this.DTimePicker.TabIndex = 5;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(699, 43);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(425, 526);
+            this.panel4.TabIndex = 6;
             // 
             // frmUyeKayit
             // 
