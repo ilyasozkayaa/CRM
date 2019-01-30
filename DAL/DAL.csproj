@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\CRMContext.cs" />
+    <Compile Include="Context\GenelDegiskenTanimlama.cs" />
     <Compile Include="Context\Gorev.cs" />
     <Compile Include="Context\GorevDetay.cs" />
     <Compile Include="Context\GorevKayit.cs" />

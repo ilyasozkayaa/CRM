@@ -63,7 +63,7 @@ namespace BLL.Model
 
     public class Degiskentanimla
     {
-        public int Id { get; set; }
-        public string imagePath { get; set; }
+       
+        public static string imagePath;
     }
 }
