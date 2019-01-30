@@ -18,7 +18,9 @@ namespace DAL.Context
         [Required]
         public int GorevId { get; set; }
         [Required]
-        public string DetayAdi { get; set; }        
+        public string DetayAdi { get; set; }
+        [DefaultValue(false)]
+        public bool Tamamlandı { get; set; }
         [DefaultValue(false)]
         public bool Silindi { get; set; }
 

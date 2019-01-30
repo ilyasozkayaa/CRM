@@ -151,6 +151,25 @@ namespace BLL.Model
             return GorevLst;
 
         }
+        public bool GorevDetayGüncelle(string GorevDetayAdı)
+        {
+            
+            bool sonuc = true;
+            GorevDetay DegisecekDetay = (from g in ent.GorevDetays where g.DetayAdi ==GorevDetayAdı select g).FirstOrDefault();
+            try
+            {
+                DegisecekDetay.Tamamlandı = true;
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            return sonuc;
+
+        }
     }
 
 }

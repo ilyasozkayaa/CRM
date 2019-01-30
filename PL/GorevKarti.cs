@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL.Model;
 
 namespace PL
 {
@@ -56,7 +57,26 @@ namespace PL
             
 
         }
-
-     
+        GorevHareketler gh = new GorevHareketler();
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            int a = 0;
+            
+            foreach (string item in clbDetay.CheckedItems)
+            {
+                if (gh.GorevDetayGüncelle(item))
+                {
+                    a++;
+                }
+                else
+                {
+                    MessageBox.Show("Güncelleme sırasında bir sorun oluştu!");
+                }
+            }
+            if(a>0)
+            {
+                MessageBox.Show("Güncelleme işlemi başarıyla gerçekleşti.");
+            }
+        }
     }
 }

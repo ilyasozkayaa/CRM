@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlheader = new System.Windows.Forms.Panel();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.lblGorevAdi = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
             this.pnlGorevDetay = new System.Windows.Forms.Panel();
@@ -39,7 +40,6 @@
             this.lblBaslangic = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.pnlheader.SuspendLayout();
             this.pnlGorevDetay.SuspendLayout();
             this.pnlMembers.SuspendLayout();
@@ -56,6 +56,19 @@
             this.pnlheader.Size = new System.Drawing.Size(304, 29);
             this.pnlheader.TabIndex = 3;
             this.pnlheader.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlheader_MouseClick);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Image = global::PL.Properties.Resources.icons8_available_updates_32;
+            this.btnUpdate.Location = new System.Drawing.Point(263, 0);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(38, 29);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // lblGorevAdi
             // 
@@ -143,18 +156,6 @@
             // 
             this.timer1.Interval = 15;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Image = global::PL.Properties.Resources.icons8_available_updates_32;
-            this.btnUpdate.Location = new System.Drawing.Point(263, 0);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(38, 29);
-            this.btnUpdate.TabIndex = 1;
-            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // pnlGorevKarti
             // 

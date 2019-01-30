@@ -26,6 +26,7 @@ namespace PL
        
         private void frmGorevlerim_Load(object sender, EventArgs e)
         {
+           
             ArrayList grvId = new ArrayList();
             List<GorevDetay> grvdtys = new List<GorevDetay>();
             GorevDetay gty = new GorevDetay();
@@ -71,8 +72,10 @@ namespace PL
             }
 
         }
+       
         private void GorevGetir()
         {
+            
             ArrayList grvId = new ArrayList();
             List<GorevDetay> grvdtys = new List<GorevDetay>();
             GorevDetay gty = new GorevDetay();
@@ -121,6 +124,10 @@ namespace PL
         private void button1_Click(object sender, EventArgs e)
         {
             GorevGetir();
+        }
+        private void Guncelle()
+        {
+            
         }
     }
 }
