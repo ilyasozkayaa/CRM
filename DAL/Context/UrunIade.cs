@@ -20,6 +20,7 @@ namespace DAL.Context
         public string IadeSebebi { get; set; }
         public int IadeAdedi { get; set; }
         public int UrunID { get; set; }
+        public decimal Ucret { get; set; } //yeni eklendi.
 
 
         [ForeignKey("SatisId")]

@@ -254,7 +254,7 @@ namespace BLL.Model
         public List<SatisDetay> SatısDetaylariniGetir(int ID)
         {
             List<SatisDetay> sd = new List<SatisDetay>();
-            sd = (from sdetay in ent.SatisDetays where sdetay.SatısId == ID select sdetay).ToList();
+            sd = (from sdetay in ent.SatisDetays where sdetay.SatısId == ID && sdetay.Silindi==false select sdetay).ToList();
             return sd;
         }
 
