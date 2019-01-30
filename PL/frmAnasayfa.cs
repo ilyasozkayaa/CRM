@@ -1,4 +1,5 @@
 ﻿using BLL.Model;
+using DAL.Context;
 using PL.KasaIslemleri;
 using PL.Personel;
 using PL.Profilim;
@@ -51,13 +52,26 @@ namespace PL
         private void Form1_Load(object sender, EventArgs e)
         {
             DAL.Context.Personel p = new DAL.Context.Personel();
-            p=pmi.PersonelGetir(GenelDegiskenler.PersonId);
+            User u = new User();
+            p = pmi.PersonelGetir(GenelDegiskenler.PersonId);
+            u = pmi.UserGetir(GenelDegiskenler.UserName);
             KullaniciDetay kd = new KullaniciDetay();
             kd.lblAdi.Text = p.Ad;
             kd.lblSoyAdi.Text = p.Soyad;
             kd.circularPictureBox1.Image = Resources.icons8_businessman_48;
             kd.Dock = DockStyle.Right;
             pnlFooter.Controls.Add(kd);
+            if (u.YetkiDüzeyi=="Eleman" || u.YetkiDüzeyi =="Kasiyer")
+            {
+                btnKampanya.Visible = false;
+                button7.Visible = false;
+                btnRapor.Visible = false;
+                button8.Visible = false;
+                pnlPersoneSekme.Visible = false;
+                button4.Visible = false;
+            }
+            
+            
 
         
 

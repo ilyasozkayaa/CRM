@@ -15,7 +15,7 @@ namespace BLL.Model
         List<Personel> personelleriGetir();
         Personel PersonelGetir(int ID);
 
-
+        User UserGetir(string UserName);
         bool musteriEkle(Musteri p);
         bool musteriSil(int ID);
         bool musteriGüncelle(Musteri p);

@@ -30,6 +30,7 @@ namespace PL
             PersonelMusteriIslemleri prm = new PersonelMusteriIslemleri();
             if (txtId.Text.Trim() != "" && txtParola.Text.Trim() != "")
             {
+                GenelDegiskenler.UserName = txtId.Text;
                 int GirisId = Gnl.giris(txtId.Text, txtParola.Text);
                 GenelDegiskenler.PersonId= prm.UsersIdyeGorePersoneliGetirme(GirisId);
                 
