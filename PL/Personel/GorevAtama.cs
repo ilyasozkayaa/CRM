@@ -100,6 +100,7 @@ namespace PL.Personel
             gk.lblGorevAdi.Text = lblGorevAdi.Text;
             gk.pnlGorevDetay.Controls.Add(clbGorevBolum);
             gk.lblGorevAdi = lblGorevAdi;
+            gk.clbDetay.Visible = false;
             gk.pnlMembers.Controls.Add(b.circularPictureBox1);
             pnlGorevKartlarim.Controls.Add(gk);
         }

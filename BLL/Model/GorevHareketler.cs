@@ -1,5 +1,6 @@
 ﻿using DAL.Context;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -96,12 +97,12 @@ namespace BLL.Model
             }
             return grv;
         }
-        public GorevDetay GorevHareketGetir(int ID)
+        public List<GorevDetay> GorevDetayGetirbyGorevId(int ID)
         {
-            GorevDetay grvh = new GorevDetay();
+            List<GorevDetay> grvh = new List<GorevDetay>();
             try
             {
-                grvh = (from g in ent.GorevDetays where g.Id == ID select g).FirstOrDefault();
+                grvh = (from g in ent.GorevDetays where g.GorevId == ID select g).ToList();
             }
             catch (Exception ex)
             {
@@ -110,18 +111,59 @@ namespace BLL.Model
             }
             return grvh;
         }
-        //public List<GorevKayit> KayıtListGetir(int PersonelId)
-        //{
-        //    List<GorevKayit> PersonelListesi = new List<GorevKayit>();
+        public List<GorevKayit> KayıtListGetir(int PersonelId)
+        {
+            List<GorevKayit> Gorevlg = new List<GorevKayit>();
 
-        //    Gorevlg=(from g in ent.GorevKayits where g.PersonelId == PersonelId select g).ToList();
+            Gorevlg = (from g in ent.GorevKayits where g.PersonelId == PersonelId select g).ToList();
 
-        //    return Gorevlg
-          
-        //}
+            return Gorevlg;
+
+        }
+        public ArrayList GorevIdArrayGetir(int PersonelId)
+        {
+            List<GorevKayit> Gorevlg = new List<GorevKayit>();
+            ArrayList grv = new ArrayList();
+            Gorevlg = (from g in ent.GorevKayits where g.PersonelId == PersonelId select g).ToList();
+            foreach (GorevKayit item in Gorevlg)
+            {
+                grv.Add(item.GorevId);
+            }
+
+            return grv;
+
+        }
+        public List<Gorev> GorevListGetir(int Id)
+        {
+            List<Gorev> GorevLst = new List<Gorev>();
+
+            GorevLst = (from g in ent.Gorevs where g.Id == Id select g).ToList();
+
+            return GorevLst;
+
+        }
+        public List<Gorev> BitmemisGorevListGetir(int Id)
+        {
+            List<Gorev> GorevLst = new List<Gorev>();
+
+            GorevLst = (from g in ent.Gorevs where g.Id == Id && g.Tamamlandi == false select g).ToList();
+
+            return GorevLst;
+
+        }
+        public List<Gorev> BaslamamisGorevListGetir(int Id, DateTime today)
+        {
+            List<Gorev> GorevLst = new List<Gorev>();
+
+            GorevLst = (from g in ent.Gorevs where g.Id == Id && g.BaslangicTarihi >= today select g).ToList();
+
+            return GorevLst;
+
+        }
+
 
     
-    
+
     }
 
 }

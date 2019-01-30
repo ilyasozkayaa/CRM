@@ -33,10 +33,12 @@
             this.lblGorevAdi = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pnlGorevDetay = new System.Windows.Forms.Panel();
+            this.clbDetay = new System.Windows.Forms.CheckedListBox();
             this.pnlMembers = new System.Windows.Forms.Panel();
             this.lblYuzde = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlheader.SuspendLayout();
+            this.pnlGorevDetay.SuspendLayout();
             this.pnlMembers.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +75,7 @@
             // pnlGorevDetay
             // 
             this.pnlGorevDetay.BackColor = System.Drawing.Color.White;
+            this.pnlGorevDetay.Controls.Add(this.clbDetay);
             this.pnlGorevDetay.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlGorevDetay.Location = new System.Drawing.Point(0, 29);
             this.pnlGorevDetay.MaximumSize = new System.Drawing.Size(304, 99);
@@ -80,6 +83,15 @@
             this.pnlGorevDetay.Name = "pnlGorevDetay";
             this.pnlGorevDetay.Size = new System.Drawing.Size(304, 99);
             this.pnlGorevDetay.TabIndex = 4;
+            // 
+            // clbDetay
+            // 
+            this.clbDetay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clbDetay.FormattingEnabled = true;
+            this.clbDetay.Location = new System.Drawing.Point(0, 0);
+            this.clbDetay.Name = "clbDetay";
+            this.clbDetay.Size = new System.Drawing.Size(304, 99);
+            this.clbDetay.TabIndex = 0;
             // 
             // pnlMembers
             // 
@@ -123,6 +135,7 @@
             this.Size = new System.Drawing.Size(304, 160);
             this.pnlheader.ResumeLayout(false);
             this.pnlheader.PerformLayout();
+            this.pnlGorevDetay.ResumeLayout(false);
             this.pnlMembers.ResumeLayout(false);
             this.pnlMembers.PerformLayout();
             this.ResumeLayout(false);
@@ -137,5 +150,6 @@
         public System.Windows.Forms.Panel pnlMembers;
         public System.Windows.Forms.ProgressBar progressBar1;
         public System.Windows.Forms.Label lblYuzde;
+        public System.Windows.Forms.CheckedListBox clbDetay;
     }
 }
