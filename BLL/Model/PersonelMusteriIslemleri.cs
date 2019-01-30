@@ -217,9 +217,5 @@ namespace BLL.Model
             return sonuc;
 
         }
-        public Personel Sec(string TC)
-        {
-            return ent.Personels.Where(m => m.TCKNo == TC).FirstOrDefault();
-        }
     }
 }

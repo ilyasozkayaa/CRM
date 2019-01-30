@@ -18,7 +18,11 @@ namespace PL.Personel
             InitializeComponent();
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPersonel form = new frmPersonel();
+            FormAc(form);
+        }
         private void FormAc(Form AF)
         {
             foreach (Control F in this.panel3.Controls)
@@ -33,12 +37,6 @@ namespace PL.Personel
             this.panel3.Controls.Add(AF);
             AF.Dock = DockStyle.Fill;
             AF.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmPersonel form = new frmPersonel();
-            form.ShowDialog();
         }
     }
 }

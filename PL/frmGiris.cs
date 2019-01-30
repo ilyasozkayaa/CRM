@@ -1,5 +1,4 @@
 ﻿using BLL.Model;
-using DAL.Context;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +18,7 @@ namespace PL
             InitializeComponent();
         }
         Genel Gnl = new Genel();
-
+        Degiskentanimla deg = new Degiskentanimla();
         private void frmGiris_Load(object sender, EventArgs e)
         {
             pnlDegis.Visible =false;
@@ -32,7 +31,7 @@ namespace PL
             if (txtId.Text.Trim()!="" && txtParola.Text.Trim()!="")
             {
                 int GirisId = Gnl.giris(txtId.Text, txtParola.Text);
-                GenelDegiskenTanimlama.Id = prm.UsersIdyeGorePersoneliGetirme(GirisId);
+                deg.Id = prm.UsersIdyeGorePersoneliGetirme(GirisId);
                 
                 if (GirisId!=0)
                 {

@@ -355,7 +355,7 @@
             this.panelGenelBilgi.Name = "panelGenelBilgi";
             this.panelGenelBilgi.Size = new System.Drawing.Size(220, 395);
             this.panelGenelBilgi.TabIndex = 13;
-        
+            this.panelGenelBilgi.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGenelGilgi_Paint);
             // 
             // txtTCKNo
             // 
@@ -406,7 +406,7 @@
             this.panelIsBilgileri.Name = "panelIsBilgileri";
             this.panelIsBilgileri.Size = new System.Drawing.Size(220, 395);
             this.panelIsBilgileri.TabIndex = 14;
-   
+            this.panelIsBilgileri.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIsBilgileri_Paint);
             // 
             // txtEngel
             // 
@@ -455,7 +455,7 @@
             this.panelIletisimBilgileri.Name = "panelIletisimBilgileri";
             this.panelIletisimBilgileri.Size = new System.Drawing.Size(220, 395);
             this.panelIletisimBilgileri.TabIndex = 15;
-          //  this.panelIletisimBilgileri.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIletisimBilgileri_Paint);
+            this.panelIletisimBilgileri.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIletisimBilgileri_Paint);
             // 
             // txtAdres
             // 
@@ -490,7 +490,7 @@
             this.panelGenelPerformans.Name = "panelGenelPerformans";
             this.panelGenelPerformans.Size = new System.Drawing.Size(394, 395);
             this.panelGenelPerformans.TabIndex = 16;
-           // this.panelGenelPerformans.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGenelPerformans_Paint);
+            this.panelGenelPerformans.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGenelPerformans_Paint);
             // 
             // label1
             // 

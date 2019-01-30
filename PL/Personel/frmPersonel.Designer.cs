@@ -36,7 +36,6 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panelHeader2 = new System.Windows.Forms.Panel();
             this.panelPersonelKisisel = new System.Windows.Forms.Panel();
-            this.cbMedeni = new System.Windows.Forms.ComboBox();
             this.dateİseGiris = new System.Windows.Forms.DateTimePicker();
             this.cbCinsiyet = new System.Windows.Forms.ComboBox();
             this.cbEngel = new System.Windows.Forms.ComboBox();
@@ -76,7 +75,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.pbFoto = new System.Windows.Forms.PictureBox();
-            this.btnKaydetDeneme = new System.Windows.Forms.Button();
+            this.cbMedeni = new System.Windows.Forms.ComboBox();
             this.panelHeader1.SuspendLayout();
             this.panelPersonelKisisel.SuspendLayout();
             this.panelPersonelResim.SuspendLayout();
@@ -143,7 +142,6 @@
             // 
             // panelPersonelKisisel
             // 
-            this.panelPersonelKisisel.Controls.Add(this.btnKaydetDeneme);
             this.panelPersonelKisisel.Controls.Add(this.cbMedeni);
             this.panelPersonelKisisel.Controls.Add(this.dateİseGiris);
             this.panelPersonelKisisel.Controls.Add(this.cbCinsiyet);
@@ -180,19 +178,6 @@
             this.panelPersonelKisisel.Name = "panelPersonelKisisel";
             this.panelPersonelKisisel.Size = new System.Drawing.Size(663, 401);
             this.panelPersonelKisisel.TabIndex = 103;
-            // 
-            // cbMedeni
-            // 
-            this.cbMedeni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbMedeni.FormattingEnabled = true;
-            this.cbMedeni.Items.AddRange(new object[] {
-            "E",
-            "K"});
-            this.cbMedeni.Location = new System.Drawing.Point(466, 47);
-            this.cbMedeni.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.cbMedeni.Name = "cbMedeni";
-            this.cbMedeni.Size = new System.Drawing.Size(157, 28);
-            this.cbMedeni.TabIndex = 189;
             // 
             // dateİseGiris
             // 
@@ -525,6 +510,7 @@
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(135, 26);
             this.txtAd.TabIndex = 155;
+            this.txtAd.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // panelPersonelResim
             // 
@@ -541,6 +527,7 @@
             this.panelPersonelResim.Name = "panelPersonelResim";
             this.panelPersonelResim.Size = new System.Drawing.Size(527, 401);
             this.panelPersonelResim.TabIndex = 104;
+            this.panelPersonelResim.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPersonelResim_Paint);
             // 
             // cbPozisyon
             // 
@@ -579,7 +566,7 @@
             this.btnKaydet.TabIndex = 180;
             this.btnKaydet.Text = " KAYDET";
             this.btnKaydet.UseVisualStyleBackColor = false;
-           // this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // txtKullaniciSifre
             // 
@@ -590,6 +577,7 @@
             this.txtKullaniciSifre.ReadOnly = true;
             this.txtKullaniciSifre.Size = new System.Drawing.Size(148, 30);
             this.txtKullaniciSifre.TabIndex = 177;
+            this.txtKullaniciSifre.Visible = false;
             // 
             // txtKullaniciAd
             // 
@@ -600,6 +588,7 @@
             this.txtKullaniciAd.ReadOnly = true;
             this.txtKullaniciAd.Size = new System.Drawing.Size(148, 28);
             this.txtKullaniciAd.TabIndex = 176;
+            this.txtKullaniciAd.Visible = false;
             // 
             // label24
             // 
@@ -635,17 +624,20 @@
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbFoto.TabIndex = 175;
             this.pbFoto.TabStop = false;
-            this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click);
+            this.pbFoto.Click += new System.EventHandler(this.pbFoto_Click_1);
             // 
-            // btnKaydetDeneme
+            // cbMedeni
             // 
-            this.btnKaydetDeneme.Location = new System.Drawing.Point(446, 328);
-            this.btnKaydetDeneme.Name = "btnKaydetDeneme";
-            this.btnKaydetDeneme.Size = new System.Drawing.Size(75, 23);
-            this.btnKaydetDeneme.TabIndex = 190;
-            this.btnKaydetDeneme.Text = "button1";
-            this.btnKaydetDeneme.UseVisualStyleBackColor = true;
-            this.btnKaydetDeneme.Click += new System.EventHandler(this.btnKaydetDeneme_Click);
+            this.cbMedeni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbMedeni.FormattingEnabled = true;
+            this.cbMedeni.Items.AddRange(new object[] {
+            "E",
+            "K"});
+            this.cbMedeni.Location = new System.Drawing.Point(466, 47);
+            this.cbMedeni.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.cbMedeni.Name = "cbMedeni";
+            this.cbMedeni.Size = new System.Drawing.Size(157, 28);
+            this.cbMedeni.TabIndex = 189;
             // 
             // frmPersonel
             // 
@@ -723,6 +715,5 @@
         private System.Windows.Forms.ComboBox cbPozisyon;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbMedeni;
-        private System.Windows.Forms.Button btnKaydetDeneme;
     }
 }

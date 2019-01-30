@@ -22,7 +22,7 @@ namespace PL
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new  PL.Personel.Personeller());
+            Application.Run(new  frmGiris());
         }
     }
 }
