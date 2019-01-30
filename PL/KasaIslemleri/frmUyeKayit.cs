@@ -23,9 +23,9 @@ namespace PL.KasaIslemleri
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            
 
-            if (TxtMaskedTelefon.Text.Trim().Length>=10)
+
+            if (TxtMaskedTelefon.Text.Trim().Length >= 10 && txtAdi.Text.Trim() != "" && txtSoyadi.Text.Trim() != "" && txtTCKNo.Text.Trim() != "" && txtEMail.Text.Trim()!="" &&txtAdres.Text.Trim()!="" && txtSehir.Text.Trim()!="")
             {
                 Musteri musterı = new Musteri();
                 musterı.Ad = txtAdi.Text;

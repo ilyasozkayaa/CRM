@@ -19,6 +19,7 @@ namespace PL.Urunler
             InitializeComponent();
         }
         UrunIslemleri Uislem = new UrunIslemleri();
+        Genel gnl = new Genel();
         int IslemYapılacakUrunID = 0;
         private void BtnSorgula_Click(object sender, EventArgs e)
         {
@@ -39,25 +40,7 @@ namespace PL.Urunler
 
         private void btnStokEkle_Click(object sender, EventArgs e)
         {
-            int Miktar = 0;
-
-            if (int.TryParse(txtEklenenStok.Text, out Miktar))
-            {
-                if (Uislem.StokEkle(IslemYapılacakUrunID, Miktar))
-                {
-                    MessageBox.Show("Stok Ekleme İşlemi Tamamlandı", "İşlem Başarılı");
-                    dgvUrunler.DataSource = Uislem.TumUrunleriGetir();
-                    txtSonStok.Text = Uislem.urunBul(IslemYapılacakUrunID).StokMiktarı.ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Stok Arttırma İşlemi  Başarısız.", "Hata!!!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Eklenecek Stok Adedini Sayısal Değer Girmelisiniz!","Hata!!!");
-            }
+            
         }
 
 
@@ -77,6 +60,30 @@ namespace PL.Urunler
             lblBeden.Text = dgvUrunler.SelectedRows[0].Cells[4].Value.ToString();
             lblRenk.Text = dgvUrunler.SelectedRows[0].Cells[6].Value.ToString();
             lblAdet.Text = dgvUrunler.SelectedRows[0].Cells[8].Value.ToString();
+        }
+
+        private void btnStokEkle_Click_1(object sender, EventArgs e)
+        {
+            int Miktar = 0;
+
+            if (int.TryParse(txtEklenenStok.Text, out Miktar))
+            {
+                if (Uislem.StokEkle(IslemYapılacakUrunID, Miktar))
+                {
+                    MessageBox.Show("Stok Ekleme İşlemi Tamamlandı", "İşlem Başarılı");
+                    dgvUrunler.DataSource = Uislem.TumUrunleriGetir();
+                    txtSonStok.Text = Uislem.urunBul(IslemYapılacakUrunID).StokMiktarı.ToString();
+                    gnl.Temizle(panel1);
+                }
+                else
+                {
+                    MessageBox.Show("Stok Arttırma İşlemi  Başarısız.", "Hata!!!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Eklenecek Stok Adedini Sayısal Değer Girmelisiniz!", "Hata!!!");
+            }
         }
     }
 }

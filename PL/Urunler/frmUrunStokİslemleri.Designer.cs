@@ -35,26 +35,26 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtUrunId = new System.Windows.Forms.TextBox();
             this.panelStok = new System.Windows.Forms.Panel();
-            this.paneldgvStok = new System.Windows.Forms.Panel();
-            this.dgvUrunler = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtEklenenStok = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtSonStok = new System.Windows.Forms.TextBox();
+            this.btnStokEkle = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.lblAD = new System.Windows.Forms.Label();
             this.lblBeden = new System.Windows.Forms.Label();
             this.lblRenk = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblAdet = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtEklenenStok = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtSonStok = new System.Windows.Forms.TextBox();
-            this.btnStokEkle = new System.Windows.Forms.Button();
+            this.paneldgvStok = new System.Windows.Forms.Panel();
+            this.dgvUrunler = new System.Windows.Forms.DataGridView();
             this.panelHeader1.SuspendLayout();
             this.panelHeader2.SuspendLayout();
             this.panelStok.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.paneldgvStok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelHeader1
@@ -143,30 +143,6 @@
             this.panelStok.Size = new System.Drawing.Size(703, 464);
             this.panelStok.TabIndex = 10;
             // 
-            // paneldgvStok
-            // 
-            this.paneldgvStok.Controls.Add(this.dgvUrunler);
-            this.paneldgvStok.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.paneldgvStok.Location = new System.Drawing.Point(703, 148);
-            this.paneldgvStok.Margin = new System.Windows.Forms.Padding(4);
-            this.paneldgvStok.Name = "paneldgvStok";
-            this.paneldgvStok.Size = new System.Drawing.Size(702, 464);
-            this.paneldgvStok.TabIndex = 11;
-            // 
-            // dgvUrunler
-            // 
-            this.dgvUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvUrunler.Location = new System.Drawing.Point(0, 0);
-            this.dgvUrunler.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvUrunler.MultiSelect = false;
-            this.dgvUrunler.Name = "dgvUrunler";
-            this.dgvUrunler.ReadOnly = true;
-            this.dgvUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUrunler.Size = new System.Drawing.Size(702, 464);
-            this.dgvUrunler.TabIndex = 0;
-            this.dgvUrunler.DoubleClick += new System.EventHandler(this.dgvUrunler_DoubleClick);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label7);
@@ -185,6 +161,66 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(703, 464);
             this.panel1.TabIndex = 62;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(74, 298);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(147, 23);
+            this.label7.TabIndex = 64;
+            this.label7.Text = "Eklenen Stok :";
+            // 
+            // txtEklenenStok
+            // 
+            this.txtEklenenStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtEklenenStok.Location = new System.Drawing.Point(287, 293);
+            this.txtEklenenStok.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEklenenStok.Multiline = true;
+            this.txtEklenenStok.Name = "txtEklenenStok";
+            this.txtEklenenStok.Size = new System.Drawing.Size(195, 41);
+            this.txtEklenenStok.TabIndex = 66;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(74, 373);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(190, 23);
+            this.label8.TabIndex = 63;
+            this.label8.Text = "Son Stok Durumu :";
+            // 
+            // txtSonStok
+            // 
+            this.txtSonStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSonStok.Location = new System.Drawing.Point(287, 363);
+            this.txtSonStok.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSonStok.Multiline = true;
+            this.txtSonStok.Name = "txtSonStok";
+            this.txtSonStok.ReadOnly = true;
+            this.txtSonStok.Size = new System.Drawing.Size(195, 41);
+            this.txtSonStok.TabIndex = 65;
+            // 
+            // btnStokEkle
+            // 
+            this.btnStokEkle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnStokEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStokEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnStokEkle.ForeColor = System.Drawing.Color.White;
+            this.btnStokEkle.Image = global::PL.Properties.Resources.plus_5_32;
+            this.btnStokEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStokEkle.Location = new System.Drawing.Point(516, 320);
+            this.btnStokEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnStokEkle.Name = "btnStokEkle";
+            this.btnStokEkle.Size = new System.Drawing.Size(111, 46);
+            this.btnStokEkle.TabIndex = 67;
+            this.btnStokEkle.Text = "       Ekle";
+            this.btnStokEkle.UseVisualStyleBackColor = false;
+            this.btnStokEkle.Click += new System.EventHandler(this.btnStokEkle_Click_1);
             // 
             // lblID
             // 
@@ -264,64 +300,29 @@
             this.lblAdet.TabIndex = 57;
             this.lblAdet.Text = "Adet:";
             // 
-            // label7
+            // paneldgvStok
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(74, 298);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(147, 23);
-            this.label7.TabIndex = 64;
-            this.label7.Text = "Eklenen Stok :";
+            this.paneldgvStok.Controls.Add(this.dgvUrunler);
+            this.paneldgvStok.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneldgvStok.Location = new System.Drawing.Point(703, 148);
+            this.paneldgvStok.Margin = new System.Windows.Forms.Padding(4);
+            this.paneldgvStok.Name = "paneldgvStok";
+            this.paneldgvStok.Size = new System.Drawing.Size(702, 464);
+            this.paneldgvStok.TabIndex = 11;
             // 
-            // txtEklenenStok
+            // dgvUrunler
             // 
-            this.txtEklenenStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtEklenenStok.Location = new System.Drawing.Point(287, 293);
-            this.txtEklenenStok.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEklenenStok.Multiline = true;
-            this.txtEklenenStok.Name = "txtEklenenStok";
-            this.txtEklenenStok.Size = new System.Drawing.Size(195, 41);
-            this.txtEklenenStok.TabIndex = 66;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(74, 373);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(190, 23);
-            this.label8.TabIndex = 63;
-            this.label8.Text = "Son Stok Durumu :";
-            // 
-            // txtSonStok
-            // 
-            this.txtSonStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSonStok.Location = new System.Drawing.Point(287, 363);
-            this.txtSonStok.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSonStok.Multiline = true;
-            this.txtSonStok.Name = "txtSonStok";
-            this.txtSonStok.ReadOnly = true;
-            this.txtSonStok.Size = new System.Drawing.Size(195, 41);
-            this.txtSonStok.TabIndex = 65;
-            // 
-            // btnStokEkle
-            // 
-            this.btnStokEkle.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnStokEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStokEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnStokEkle.ForeColor = System.Drawing.Color.White;
-            this.btnStokEkle.Image = global::PL.Properties.Resources.plus_5_32;
-            this.btnStokEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStokEkle.Location = new System.Drawing.Point(516, 320);
-            this.btnStokEkle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnStokEkle.Name = "btnStokEkle";
-            this.btnStokEkle.Size = new System.Drawing.Size(111, 46);
-            this.btnStokEkle.TabIndex = 67;
-            this.btnStokEkle.Text = "       Ekle";
-            this.btnStokEkle.UseVisualStyleBackColor = false;
+            this.dgvUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvUrunler.Location = new System.Drawing.Point(0, 0);
+            this.dgvUrunler.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvUrunler.MultiSelect = false;
+            this.dgvUrunler.Name = "dgvUrunler";
+            this.dgvUrunler.ReadOnly = true;
+            this.dgvUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUrunler.Size = new System.Drawing.Size(702, 464);
+            this.dgvUrunler.TabIndex = 0;
+            this.dgvUrunler.DoubleClick += new System.EventHandler(this.dgvUrunler_DoubleClick);
             // 
             // frmUrunStokİslemleri
             // 
@@ -342,10 +343,10 @@
             this.panelHeader2.ResumeLayout(false);
             this.panelHeader2.PerformLayout();
             this.panelStok.ResumeLayout(false);
-            this.paneldgvStok.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.paneldgvStok.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).EndInit();
             this.ResumeLayout(false);
 
         }

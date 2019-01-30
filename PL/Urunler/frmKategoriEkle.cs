@@ -19,6 +19,7 @@ namespace PL.Urunler
             InitializeComponent();
         }
         UrunIslemleri Uislem = new UrunIslemleri();
+        Genel gnl = new Genel();
         int ktgID = 0;
 
         private void btnUrunEkle_Click(object sender, EventArgs e)
@@ -39,6 +40,7 @@ namespace PL.Urunler
                     {
                         MessageBox.Show("Kayıt İşlemi Tamamlandı.", "Kayıt Başarılı");
                         dgKatagoriListe.DataSource = Uislem.KategoriListesi();
+                        gnl.Temizle(panelKategoriEkle);
 
                     }
                     else
@@ -72,6 +74,7 @@ namespace PL.Urunler
                     {
                         MessageBox.Show("Kategori Güncellendi.", "İşlem Başarılı.");
                         dgKatagoriListe.DataSource = Uislem.KategoriListesi();
+                        gnl.Temizle(panelKategoriEkle);
                     }
                     else
                     {
@@ -95,6 +98,7 @@ namespace PL.Urunler
                 {
                     MessageBox.Show("Kategori Silindi.", "Silme İşlemi Başarılı.");
                     dgKatagoriListe.DataSource = Uislem.KategoriListesi();
+                    gnl.Temizle(panelKategoriEkle);
                 }
                 else
                 {

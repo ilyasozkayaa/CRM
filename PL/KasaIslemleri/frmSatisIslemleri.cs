@@ -43,6 +43,8 @@ namespace PL.KasaIslemleri
 
         private void btnUyesiz_Click(object sender, EventArgs e)
         {
+            btnUyemusteri.Enabled = false;
+            btnYeniMust.Enabled = false;
             frmUyeMusteri frm = new frmUyeMusteri();
             frm.pnlMusteri.Visible = false;
             FormAc(frm);

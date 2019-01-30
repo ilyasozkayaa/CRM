@@ -23,6 +23,7 @@ namespace PL
         PromosyonPrimIslemleri ppi = new PromosyonPrimIslemleri();
         UrunIslemleri Uislem = new UrunIslemleri();
         Musteri IslemYapılanMusteri = new Musteri();
+        Genel gnl = new Genel();
         int personelID = 2;
         Urun u = new Urun();
         decimal Toplam = 0;
@@ -34,12 +35,21 @@ namespace PL
 
         private void frmUyeMusteri_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(frmSatisIslemleri.MusteriID.ToString());
+            
             IslemYapılanMusteri = pmi.musteriGetir(frmSatisIslemleri.MusteriID);
             int personelID = 15;  //Veri Çekilecek
-            lblAD.Text = IslemYapılanMusteri.Ad;
-            lblSoyad.Text = IslemYapılanMusteri.Soyad;
-            lblMusteriNo.Text = IslemYapılanMusteri.Id.ToString();
+            try
+            {
+                lblAD.Text = IslemYapılanMusteri.Ad;
+                lblSoyad.Text = IslemYapılanMusteri.Soyad;  //uye olmayan musteri eklenecek
+                lblMusteriNo.Text = IslemYapılanMusteri.Id.ToString();
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+            
             dgvSatis.ColumnCount = 35;
             dgvSatis.Columns[0].Name = "Ürün Adı";
             dgvSatis.Columns[1].Name = "Adet";
@@ -96,6 +106,7 @@ namespace PL
                         lblIndirimMiktari.Text = p.PromosyonAdi + " " + p.PromosyonOrani;
                     }
                     lblGenelToplam.Text = GenelToplam.ToString();
+                    gnl.Temizle(panel2);
                 }
             }
             else

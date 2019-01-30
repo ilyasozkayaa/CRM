@@ -32,6 +32,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlMusteri = new System.Windows.Forms.Panel();
+            this.lblMusteriNo = new System.Windows.Forms.Label();
+            this.lblSoyad = new System.Windows.Forms.Label();
+            this.lblAD = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -48,6 +51,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.lblIndirimMiktari = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtAdet = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -55,11 +60,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnSatis = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.lblAD = new System.Windows.Forms.Label();
-            this.lblSoyad = new System.Windows.Forms.Label();
-            this.lblMusteriNo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtAdet = new System.Windows.Forms.TextBox();
             this.pnlHeader.SuspendLayout();
             this.pnlMusteri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSatis)).BeginInit();
@@ -114,6 +114,33 @@
             this.pnlMusteri.Name = "pnlMusteri";
             this.pnlMusteri.Size = new System.Drawing.Size(267, 84);
             this.pnlMusteri.TabIndex = 5;
+            // 
+            // lblMusteriNo
+            // 
+            this.lblMusteriNo.AutoSize = true;
+            this.lblMusteriNo.Location = new System.Drawing.Point(118, 55);
+            this.lblMusteriNo.Name = "lblMusteriNo";
+            this.lblMusteriNo.Size = new System.Drawing.Size(46, 17);
+            this.lblMusteriNo.TabIndex = 8;
+            this.lblMusteriNo.Text = "label3";
+            // 
+            // lblSoyad
+            // 
+            this.lblSoyad.AutoSize = true;
+            this.lblSoyad.Location = new System.Drawing.Point(85, 28);
+            this.lblSoyad.Name = "lblSoyad";
+            this.lblSoyad.Size = new System.Drawing.Size(46, 17);
+            this.lblSoyad.TabIndex = 7;
+            this.lblSoyad.Text = "label2";
+            // 
+            // lblAD
+            // 
+            this.lblAD.AutoSize = true;
+            this.lblAD.Location = new System.Drawing.Point(53, 4);
+            this.lblAD.Name = "lblAD";
+            this.lblAD.Size = new System.Drawing.Size(46, 17);
+            this.lblAD.TabIndex = 6;
+            this.lblAD.Text = "label1";
             // 
             // label16
             // 
@@ -292,6 +319,22 @@
             this.panel2.Size = new System.Drawing.Size(1124, 74);
             this.panel2.TabIndex = 12;
             // 
+            // txtAdet
+            // 
+            this.txtAdet.Location = new System.Drawing.Point(384, 28);
+            this.txtAdet.Name = "txtAdet";
+            this.txtAdet.Size = new System.Drawing.Size(100, 22);
+            this.txtAdet.TabIndex = 86;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(321, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.TabIndex = 85;
+            this.label1.Text = "ADET";
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.SteelBlue;
@@ -373,7 +416,7 @@
             this.btnSatis.Name = "btnSatis";
             this.btnSatis.Size = new System.Drawing.Size(130, 46);
             this.btnSatis.TabIndex = 83;
-            this.btnSatis.Text = "          EKLE";
+            this.btnSatis.Text = "        Satiş";
             this.btnSatis.UseVisualStyleBackColor = false;
             this.btnSatis.Click += new System.EventHandler(this.btnSatis_Click);
             // 
@@ -392,49 +435,6 @@
             this.button2.Text = "  KULLAN";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // lblAD
-            // 
-            this.lblAD.AutoSize = true;
-            this.lblAD.Location = new System.Drawing.Point(53, 4);
-            this.lblAD.Name = "lblAD";
-            this.lblAD.Size = new System.Drawing.Size(46, 17);
-            this.lblAD.TabIndex = 6;
-            this.lblAD.Text = "label1";
-            // 
-            // lblSoyad
-            // 
-            this.lblSoyad.AutoSize = true;
-            this.lblSoyad.Location = new System.Drawing.Point(85, 28);
-            this.lblSoyad.Name = "lblSoyad";
-            this.lblSoyad.Size = new System.Drawing.Size(46, 17);
-            this.lblSoyad.TabIndex = 7;
-            this.lblSoyad.Text = "label2";
-            // 
-            // lblMusteriNo
-            // 
-            this.lblMusteriNo.AutoSize = true;
-            this.lblMusteriNo.Location = new System.Drawing.Point(118, 55);
-            this.lblMusteriNo.Name = "lblMusteriNo";
-            this.lblMusteriNo.Size = new System.Drawing.Size(46, 17);
-            this.lblMusteriNo.TabIndex = 8;
-            this.lblMusteriNo.Text = "label3";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(321, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
-            this.label1.TabIndex = 85;
-            this.label1.Text = "ADET";
-            // 
-            // txtAdet
-            // 
-            this.txtAdet.Location = new System.Drawing.Point(384, 28);
-            this.txtAdet.Name = "txtAdet";
-            this.txtAdet.Size = new System.Drawing.Size(100, 22);
-            this.txtAdet.TabIndex = 86;
             // 
             // frmUyeMusteri
             // 

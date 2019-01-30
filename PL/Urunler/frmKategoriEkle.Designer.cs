@@ -139,7 +139,6 @@
             this.panelKategoriEkle.Name = "panelKategoriEkle";
             this.panelKategoriEkle.Size = new System.Drawing.Size(703, 464);
             this.panelKategoriEkle.TabIndex = 37;
-            
             // 
             // btnUrunEkle
             // 

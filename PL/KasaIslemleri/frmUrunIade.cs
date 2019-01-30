@@ -66,6 +66,7 @@ namespace PL.KasaIslemleri
                         iade.Ucret = (Convert.ToDecimal(dgvSatisDetaylar.SelectedRows[0].Cells[4].Value)/Convert.ToDecimal(dgvSatisDetaylar.SelectedRows[0].Cells[3].Value))*IadeAdet;
                         Uislem.UrunIadeHareket(iade);
                         MessageBox.Show("İade İşlemi Gerçekleşti, Müşterimize "+iade.Ucret+" TL İade Ediniz!!!", "İşlem Başarılı");
+                        dgvSatisDetaylar.DataSource = Uislem.SatısDetaylariniGetir(Convert.ToInt32(textBox1.Text));
                     }
                 }
                 else

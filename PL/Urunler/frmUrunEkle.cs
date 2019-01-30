@@ -19,12 +19,14 @@ namespace PL.Urunler
             InitializeComponent();
         }
         UrunIslemleri Uislem = new UrunIslemleri();
+        Genel gnl = new Genel();
         int ktgID = 0;
         int UrunID = 0;
         private void frmUrunEkle_Load(object sender, EventArgs e)
         {
             cbKategori.DataSource = Uislem.KategoriListesi();
             dgvUrunler.DataSource = Uislem.TumUrunleriGetir();
+            cbUretimYeri.SelectedIndex = 0;
         }
 
         private void btnUrunSil_Click(object sender, EventArgs e)
@@ -35,6 +37,7 @@ namespace PL.Urunler
                 {
                     MessageBox.Show("Silme İşlemi Başarılı.", "Ürün Silindi.");
                     dgvUrunler.DataSource = Uislem.TumUrunleriGetir();
+                    gnl.Temizle(panelUunBilgileri);
                 }
                 else
                 {
@@ -115,6 +118,7 @@ namespace PL.Urunler
                     {
                         MessageBox.Show("Urun Ekleme İşlemi Tamamlandı.", "İşlem Başarılı");
                         dgvUrunler.DataSource = Uislem.TumUrunleriGetir();
+                        gnl.Temizle(panelUunBilgileri);
                     }
                     else
                     {
@@ -213,6 +217,7 @@ namespace PL.Urunler
                     {
                         MessageBox.Show("Ürün Güncelleme İşlemi Tamamlandı.", "İşlem Başarılı");
                         dgvUrunler.DataSource = Uislem.TumUrunleriGetir();
+                        gnl.Temizle(panelUunBilgileri);
                     }
                     else
                     {
