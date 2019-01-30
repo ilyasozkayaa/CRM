@@ -43,6 +43,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.flpYapilacak.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -55,6 +56,7 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlHeader.Controls.Add(this.button1);
             this.pnlHeader.Controls.Add(this.label4);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -208,6 +210,21 @@
             this.panel5.Size = new System.Drawing.Size(55, 462);
             this.panel5.TabIndex = 9;
             // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::PL.Properties.Resources.icons8_available_updates_321;
+            this.button1.Location = new System.Drawing.Point(1007, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(47, 35);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmGorevlerim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,5 +274,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }

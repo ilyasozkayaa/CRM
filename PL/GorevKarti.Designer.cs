@@ -30,15 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlheader = new System.Windows.Forms.Panel();
-            this.lbl = new System.Windows.Forms.Label();
             this.lblGorevAdi = new System.Windows.Forms.Label();
+            this.lbl = new System.Windows.Forms.Label();
             this.pnlGorevDetay = new System.Windows.Forms.Panel();
             this.clbDetay = new System.Windows.Forms.CheckedListBox();
             this.pnlMembers = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblBaslangic = new System.Windows.Forms.Label();
             this.lblBitis = new System.Windows.Forms.Label();
+            this.lblBaslangic = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.pnlheader.SuspendLayout();
             this.pnlGorevDetay.SuspendLayout();
             this.pnlMembers.SuspendLayout();
@@ -47,6 +48,7 @@
             // pnlheader
             // 
             this.pnlheader.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlheader.Controls.Add(this.btnUpdate);
             this.pnlheader.Controls.Add(this.lblGorevAdi);
             this.pnlheader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlheader.Location = new System.Drawing.Point(0, 0);
@@ -54,15 +56,6 @@
             this.pnlheader.Size = new System.Drawing.Size(304, 29);
             this.pnlheader.TabIndex = 3;
             this.pnlheader.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlheader_MouseClick);
-            // 
-            // lbl
-            // 
-            this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(3, 3);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(82, 13);
-            this.lbl.TabIndex = 1;
-            this.lbl.Text = "Başlangıç Tarihi";
             // 
             // lblGorevAdi
             // 
@@ -74,6 +67,15 @@
             this.lblGorevAdi.Size = new System.Drawing.Size(79, 20);
             this.lblGorevAdi.TabIndex = 0;
             this.lblGorevAdi.Text = "Görev Adı";
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Location = new System.Drawing.Point(3, 3);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(82, 13);
+            this.lbl.TabIndex = 1;
+            this.lbl.Text = "Başlangıç Tarihi";
             // 
             // pnlGorevDetay
             // 
@@ -110,19 +112,14 @@
             this.pnlMembers.Size = new System.Drawing.Size(304, 35);
             this.pnlMembers.TabIndex = 5;
             // 
-            // timer1
+            // lblBitis
             // 
-            this.timer1.Interval = 15;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Bitiş Tarihi";
+            this.lblBitis.AutoSize = true;
+            this.lblBitis.Location = new System.Drawing.Point(91, 19);
+            this.lblBitis.Name = "lblBitis";
+            this.lblBitis.Size = new System.Drawing.Size(55, 13);
+            this.lblBitis.TabIndex = 4;
+            this.lblBitis.Text = "Bitiş Tarihi";
             // 
             // lblBaslangic
             // 
@@ -133,14 +130,31 @@
             this.lblBaslangic.TabIndex = 3;
             this.lblBaslangic.Text = "Başlangıç Tarihi";
             // 
-            // lblBitis
+            // label1
             // 
-            this.lblBitis.AutoSize = true;
-            this.lblBitis.Location = new System.Drawing.Point(91, 19);
-            this.lblBitis.Name = "lblBitis";
-            this.lblBitis.Size = new System.Drawing.Size(55, 13);
-            this.lblBitis.TabIndex = 4;
-            this.lblBitis.Text = "Bitiş Tarihi";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Bitiş Tarihi";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 15;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Image = global::PL.Properties.Resources.icons8_available_updates_32;
+            this.btnUpdate.Location = new System.Drawing.Point(263, 0);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(38, 29);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // pnlGorevKarti
             // 
@@ -173,5 +187,6 @@
         public System.Windows.Forms.Label lblBitis;
         public System.Windows.Forms.Label lblBaslangic;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnUpdate;
     }
 }
