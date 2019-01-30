@@ -71,9 +71,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="resm\1327-p.jpg" />
-    <Content Include="resm\IMG_20141221_181030.jpg" />
-    <Content Include="resm\resim.jpeg" />
+    <Content Include="resm\BüşraMelek.png" />
+    <Content Include="resm\CanUlu.png" />
+    <Content Include="resm\CemKara.png" />
+    <Content Include="resm\ErhanUslu.png" />
+    <Content Include="resm\ErkanHoyman.png" />
+    <Content Include="resm\FerhatUlusoy.png" />
+    <Content Include="resm\GamzeUzgör.png" />
+    <Content Include="resm\MelekBaşer.png" />
+    <Content Include="resm\ÖzlemBilir.png" />
+    <Content Include="resm\İlyasÖzkaya.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

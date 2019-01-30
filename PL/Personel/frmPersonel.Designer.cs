@@ -625,7 +625,7 @@
             this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFoto.ErrorImage = null;
             this.pbFoto.ImageLocation = "";
-            this.pbFoto.Location = new System.Drawing.Point(154, 19);
+            this.pbFoto.Location = new System.Drawing.Point(164, 19);
             this.pbFoto.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(165, 179);

@@ -42,6 +42,7 @@ namespace PL.Profilim
             txtEmail.Text = prsl.Email;
             txtAdres.Text = prsl.Adres;
             circularPictureBox1.ImageLocation = prsl.Image;
+            
 
 
 
