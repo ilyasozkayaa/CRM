@@ -22,7 +22,7 @@ namespace PL
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new  frmAnasayfa());
+            Application.Run(new  frmGiris());
         }
     }
 }
