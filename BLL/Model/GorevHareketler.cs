@@ -152,8 +152,7 @@ namespace BLL.Model
 
         }
         public bool GorevDetayGüncelle(string GorevDetayAdı)
-        {
-            
+        {            
             bool sonuc = true;
             GorevDetay DegisecekDetay = (from g in ent.GorevDetays where g.DetayAdi ==GorevDetayAdı select g).FirstOrDefault();
             try
@@ -169,6 +168,20 @@ namespace BLL.Model
             }
             return sonuc;
 
+        }
+        public bool DetayGuncelle()
+        {
+            bool Sonuc = false;
+            try
+            {
+                ent.SaveChanges();
+                Sonuc = true;
+            }
+            catch (Exception ex)
+            {
+                string hata = ex.Message;
+            }
+            return Sonuc;
         }
     }
 

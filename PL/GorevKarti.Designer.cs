@@ -34,6 +34,7 @@
             this.lblGorevAdi = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
             this.pnlGorevDetay = new System.Windows.Forms.Panel();
+            this.dgvDetay = new System.Windows.Forms.DataGridView();
             this.clbDetay = new System.Windows.Forms.CheckedListBox();
             this.pnlMembers = new System.Windows.Forms.Panel();
             this.lblBitis = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlheader.SuspendLayout();
             this.pnlGorevDetay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetay)).BeginInit();
             this.pnlMembers.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +70,6 @@
             this.btnUpdate.Size = new System.Drawing.Size(38, 29);
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // lblGorevAdi
             // 
@@ -93,6 +94,7 @@
             // pnlGorevDetay
             // 
             this.pnlGorevDetay.BackColor = System.Drawing.Color.White;
+            this.pnlGorevDetay.Controls.Add(this.dgvDetay);
             this.pnlGorevDetay.Controls.Add(this.clbDetay);
             this.pnlGorevDetay.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlGorevDetay.Location = new System.Drawing.Point(0, 29);
@@ -101,6 +103,24 @@
             this.pnlGorevDetay.Name = "pnlGorevDetay";
             this.pnlGorevDetay.Size = new System.Drawing.Size(304, 99);
             this.pnlGorevDetay.TabIndex = 4;
+            // 
+            // dgvDetay
+            // 
+            this.dgvDetay.AllowUserToAddRows = false;
+            this.dgvDetay.AllowUserToDeleteRows = false;
+            this.dgvDetay.AllowUserToResizeColumns = false;
+            this.dgvDetay.AllowUserToResizeRows = false;
+            this.dgvDetay.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvDetay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDetay.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvDetay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDetay.Location = new System.Drawing.Point(0, 0);
+            this.dgvDetay.Name = "dgvDetay";
+            this.dgvDetay.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvDetay.RowHeadersVisible = false;
+            this.dgvDetay.Size = new System.Drawing.Size(304, 99);
+            this.dgvDetay.TabIndex = 1;
             // 
             // clbDetay
             // 
@@ -171,6 +191,7 @@
             this.pnlheader.ResumeLayout(false);
             this.pnlheader.PerformLayout();
             this.pnlGorevDetay.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetay)).EndInit();
             this.pnlMembers.ResumeLayout(false);
             this.pnlMembers.PerformLayout();
             this.ResumeLayout(false);
@@ -189,5 +210,6 @@
         public System.Windows.Forms.Label lblBaslangic;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btnUpdate;
+        public System.Windows.Forms.DataGridView dgvDetay;
     }
 }

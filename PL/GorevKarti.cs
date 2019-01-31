@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL.Model;
+using System.Collections;
 
 namespace PL
 {
@@ -17,9 +18,11 @@ namespace PL
         {
             InitializeComponent();
             this.Size = MinimumSize;
-            
-           
-                
+
+
+
+
+
 
 
         }
@@ -51,32 +54,12 @@ namespace PL
         {
             timer1.Start();
         }
-        
+
         private void clbGorevİcerik_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
 
-        }
-        GorevHareketler gh = new GorevHareketler();
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            int a = 0;
-            
-            foreach (string item in clbDetay.CheckedItems)
-            {
-                if (gh.GorevDetayGüncelle(item))
-                {
-                    a++;
-                }
-                else
-                {
-                    MessageBox.Show("Güncelleme sırasında bir sorun oluştu!");
-                }
-            }
-            if(a>0)
-            {
-                MessageBox.Show("Güncelleme işlemi başarıyla gerçekleşti.");
-            }
-        }
+
+        } 
     }
 }
+
