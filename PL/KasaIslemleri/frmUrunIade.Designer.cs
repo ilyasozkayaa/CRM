@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvSatisDetaylar = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSatısID = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUrunAd = new System.Windows.Forms.TextBox();
@@ -102,14 +102,15 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "SATIŞ ID :";
             // 
-            // textBox1
+            // txtSatısID
             // 
-            this.textBox1.Location = new System.Drawing.Point(104, 23);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(107, 22);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtSatısID.Location = new System.Drawing.Point(104, 23);
+            this.txtSatısID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSatısID.Name = "txtSatısID";
+            this.txtSatısID.Size = new System.Drawing.Size(107, 22);
+            this.txtSatısID.TabIndex = 3;
+            this.txtSatısID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtSatısID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSatısID_KeyPress);
             // 
             // button1
             // 
@@ -198,6 +199,7 @@
             this.txtİadeAdet.Name = "txtİadeAdet";
             this.txtİadeAdet.Size = new System.Drawing.Size(91, 22);
             this.txtİadeAdet.TabIndex = 9;
+            this.txtİadeAdet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtİadeAdet_KeyPress);
             // 
             // label6
             // 
@@ -231,7 +233,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtSatısID);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 43);
@@ -311,7 +313,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvSatisDetaylar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSatısID;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUrunAd;

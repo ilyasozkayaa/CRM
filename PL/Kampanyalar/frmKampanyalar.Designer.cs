@@ -28,23 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dtimebitis = new System.Windows.Forms.DateTimePicker();
+            this.dtimebaslangıc = new System.Windows.Forms.DateTimePicker();
             this.txtPromosyonOranı = new System.Windows.Forms.TextBox();
+            this.txtPromosyonAdi = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dgvpromosyonlar = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.btnPromosyonEkle = new System.Windows.Forms.Button();
             this.btnPromosyonSil = new System.Windows.Forms.Button();
             this.btnPromosyonGuncelle = new System.Windows.Forms.Button();
-            this.txtPromosyonAdi = new System.Windows.Forms.TextBox();
-            this.dgvpromosyonlar = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dtimebaslangıc = new System.Windows.Forms.DateTimePicker();
-            this.dtimebitis = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpromosyonlar)).BeginInit();
@@ -112,20 +114,19 @@
             this.panel2.Size = new System.Drawing.Size(404, 407);
             this.panel2.TabIndex = 3;
             // 
-            // button1
+            // dtimebitis
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::PL.Properties.Resources.icons8_christmas_gift_42;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(93, 335);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(209, 73);
-            this.button1.TabIndex = 85;
-            this.button1.Text = "Promosyon Bilgi";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.dtimebitis.Location = new System.Drawing.Point(174, 157);
+            this.dtimebitis.Name = "dtimebitis";
+            this.dtimebitis.Size = new System.Drawing.Size(203, 22);
+            this.dtimebitis.TabIndex = 86;
+            // 
+            // dtimebaslangıc
+            // 
+            this.dtimebaslangıc.Location = new System.Drawing.Point(174, 110);
+            this.dtimebaslangıc.Name = "dtimebaslangıc";
+            this.dtimebaslangıc.Size = new System.Drawing.Size(203, 22);
+            this.dtimebaslangıc.TabIndex = 86;
             // 
             // txtPromosyonOranı
             // 
@@ -133,6 +134,78 @@
             this.txtPromosyonOranı.Name = "txtPromosyonOranı";
             this.txtPromosyonOranı.Size = new System.Drawing.Size(203, 22);
             this.txtPromosyonOranı.TabIndex = 84;
+            this.toolTip1.SetToolTip(this.txtPromosyonOranı, "Boş Bırakmayınız !");
+            this.txtPromosyonOranı.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPromosyonOranı_KeyPress);
+            // 
+            // txtPromosyonAdi
+            // 
+            this.txtPromosyonAdi.Location = new System.Drawing.Point(174, 6);
+            this.txtPromosyonAdi.Name = "txtPromosyonAdi";
+            this.txtPromosyonAdi.Size = new System.Drawing.Size(203, 22);
+            this.txtPromosyonAdi.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtPromosyonAdi, "Boş Bırakmayınız !");
+            this.txtPromosyonAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPromosyonAdi_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(27, 161);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 18);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Bitiş Tarihi : ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(14, 114);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 18);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Başlangıç Tarihi :";
+            // 
+            // dgvpromosyonlar
+            // 
+            this.dgvpromosyonlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvpromosyonlar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvpromosyonlar.Location = new System.Drawing.Point(0, 0);
+            this.dgvpromosyonlar.Name = "dgvpromosyonlar";
+            this.dgvpromosyonlar.ReadOnly = true;
+            this.dgvpromosyonlar.RowTemplate.Height = 24;
+            this.dgvpromosyonlar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvpromosyonlar.Size = new System.Drawing.Size(645, 407);
+            this.dgvpromosyonlar.TabIndex = 82;
+            this.dgvpromosyonlar.DoubleClick += new System.EventHandler(this.dgvpromosyonlar_DoubleClick);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dgvpromosyonlar);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(404, 100);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(645, 407);
+            this.panel3.TabIndex = 4;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::PL.Properties.Resources.icons8_christmas_gift_filled_323;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(115, 335);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 61);
+            this.button1.TabIndex = 85;
+            this.button1.Text = "           Promosyon Bilgi";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnPromosyonEkle
             // 
@@ -179,74 +252,11 @@
             this.btnPromosyonGuncelle.Location = new System.Drawing.Point(115, 279);
             this.btnPromosyonGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnPromosyonGuncelle.Name = "btnPromosyonGuncelle";
-            this.btnPromosyonGuncelle.Size = new System.Drawing.Size(170, 49);
+            this.btnPromosyonGuncelle.Size = new System.Drawing.Size(175, 49);
             this.btnPromosyonGuncelle.TabIndex = 79;
             this.btnPromosyonGuncelle.Text = "        GÜNCELLE";
             this.btnPromosyonGuncelle.UseVisualStyleBackColor = false;
             this.btnPromosyonGuncelle.Click += new System.EventHandler(this.btnPromosyonGuncelle_Click);
-            // 
-            // txtPromosyonAdi
-            // 
-            this.txtPromosyonAdi.Location = new System.Drawing.Point(174, 6);
-            this.txtPromosyonAdi.Name = "txtPromosyonAdi";
-            this.txtPromosyonAdi.Size = new System.Drawing.Size(203, 22);
-            this.txtPromosyonAdi.TabIndex = 2;
-            // 
-            // dgvpromosyonlar
-            // 
-            this.dgvpromosyonlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvpromosyonlar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvpromosyonlar.Location = new System.Drawing.Point(0, 0);
-            this.dgvpromosyonlar.Name = "dgvpromosyonlar";
-            this.dgvpromosyonlar.ReadOnly = true;
-            this.dgvpromosyonlar.RowTemplate.Height = 24;
-            this.dgvpromosyonlar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvpromosyonlar.Size = new System.Drawing.Size(645, 407);
-            this.dgvpromosyonlar.TabIndex = 82;
-            this.dgvpromosyonlar.DoubleClick += new System.EventHandler(this.dgvpromosyonlar_DoubleClick);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.dgvpromosyonlar);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(404, 100);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(645, 407);
-            this.panel3.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(14, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 18);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Başlangıç Tarihi :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(27, 161);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 18);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Bitiş Tarihi : ";
-            // 
-            // dtimebaslangıc
-            // 
-            this.dtimebaslangıc.Location = new System.Drawing.Point(174, 110);
-            this.dtimebaslangıc.Name = "dtimebaslangıc";
-            this.dtimebaslangıc.Size = new System.Drawing.Size(203, 22);
-            this.dtimebaslangıc.TabIndex = 86;
-            // 
-            // dtimebitis
-            // 
-            this.dtimebitis.Location = new System.Drawing.Point(174, 157);
-            this.dtimebitis.Name = "dtimebitis";
-            this.dtimebitis.Size = new System.Drawing.Size(203, 22);
-            this.dtimebitis.TabIndex = 86;
             // 
             // frmKampanyalar
             // 
@@ -289,5 +299,6 @@
         private System.Windows.Forms.DateTimePicker dtimebaslangıc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

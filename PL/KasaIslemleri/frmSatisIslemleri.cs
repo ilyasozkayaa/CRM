@@ -19,7 +19,7 @@ namespace PL.KasaIslemleri
             InitializeComponent();
         }
         PersonelMusteriIslemleri pmi = new PersonelMusteriIslemleri();
-        public static int MusteriID = 1177;
+        public static int MusteriID = 102;  //Son databaseye Gore UyeOlmayanMusteri ID si girilecek
         private void FormAc(Form AF)
         {
             foreach (Control F in this.pnlContent.Controls)
@@ -64,24 +64,36 @@ namespace PL.KasaIslemleri
 
         private void txtTelNO_TextChanged(object sender, EventArgs e)
         {
+         
             if (txtTelNO.Text.Trim().Length == 10)
             {
                 Musteri m = new Musteri();
                 m = pmi.MusteriKayitlimi(txtTelNO.Text);
                 if (m != null)
                 {
-                    MusteriID = m.Id;
-                    MessageBox.Show("Müşteri Adı : " + m.Ad);
+                    MusteriID = m.Id;                   
                     frmUyeMusteri frm = new frmUyeMusteri();
                     FormAc(frm);
+                    btnUyemusteri.Enabled = true;
                     btnUyesiz.Enabled = false;
                     btnYeniMust.Enabled = false;
                 }
                 else
                 {
                     MessageBox.Show("Bu telefon numarası sistemde kayıtlı değil!", "Yeni Müşteri");
+                    btnUyemusteri.Enabled = false;
                 }
             }
+        }
+
+        private void txtTelNO_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);    //sadece rakam girişi
+        }
+
+        private void pnlContent_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

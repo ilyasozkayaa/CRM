@@ -44,8 +44,12 @@ namespace PL.Personel
         }
 
         private void BtnSorgula_Click(object sender, EventArgs e)
-        {
+        {  
             DgvPersoneller.DataSource = pmi.PersonelGetir(txtAdı.Text, txtSoyadı.Text);
+            if(DgvPersoneller.RowCount!=0)
+            {
+                txtID.Text = DgvPersoneller.SelectedRows[0].Cells[0].Value.ToString();
+            }
         }
 
         private void BtnÇıkışVerme_Click(object sender, EventArgs e)
@@ -88,6 +92,18 @@ namespace PL.Personel
             }
             
 
+        }
+
+        private void txtAdı_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void txtSoyadı_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                && !char.IsSeparator(e.KeyChar);
         }
     }
 }

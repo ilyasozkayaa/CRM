@@ -21,11 +21,15 @@ namespace PL.Kampanyalar
         }
         CRMContext ent = new CRMContext();
         PromosyonPrimIslemleri ppi = new PromosyonPrimIslemleri();
-
+        Genel gnl = new Genel();
         int prmID = 0;
 
         private void frmKampanyalar_Load(object sender, EventArgs e)
         {
+           
+
+
+
             dgvpromosyonlar.DataSource = ppi.promosyonlarıGetir();
             dgvpromosyonlar.Columns[0].Visible = false;
             dgvpromosyonlar.Columns[5].Visible = false;
@@ -61,7 +65,7 @@ namespace PL.Kampanyalar
                         {
                             MessageBox.Show("Kayıt İşlemi Tamamlandı.", "Kayıt Başarılı");
                             dgvpromosyonlar.DataSource = ppi.promosyonlarıGetir();
-
+                            gnl.Temizle(panel2);
                         }
                         else
                         {
@@ -85,21 +89,30 @@ namespace PL.Kampanyalar
 
         private void btnPromosyonSil_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Silmek İstediğinize Emin misiniz?", "Bilgileri Silinmek Üzere!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (txtPromosyonAdi.Text.Trim()!="" && txtPromosyonOranı.Text.Trim()!="")
             {
-               
+                if (MessageBox.Show("Silmek İstediğinize Emin misiniz?", "Bilgileri Silinmek Üzere!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
 
                     if (ppi.promosyonSil(prmID))
                     {
                         MessageBox.Show("Promosyon Silindi.", "Silme İşlemi Başarılı.");
                         dgvpromosyonlar.DataSource = ppi.promosyonlarıGetir();
+                        gnl.Temizle(panel2);
                     }
                     else
                     {
                         MessageBox.Show("Promosyon Silme İşlemi Başarısız", "Hata!!!");
                     }
-              
+
+                }
             }
+            else
+            {
+                MessageBox.Show("Listeden Silmek İstediğiniz Promosyonu Çift Tıklayarak Seçiniz!!!", "Seçim Yapılmadı.");
+            }
+            
         }
 
         private void btnPromosyonGuncelle_Click(object sender, EventArgs e)
@@ -120,11 +133,15 @@ namespace PL.Kampanyalar
                         Promosyon DegisecekPRM = new Promosyon();
                         DegisecekPRM.PromosyonAdi = txtPromosyonAdi.Text;
                         DegisecekPRM.PromosyonOrani = poranı;
+                        DegisecekPRM.BaslangıcTarihi = dtimebaslangıc.Value;
+                        DegisecekPRM.BitisTarihi = dtimebitis.Value;
                         DegisecekPRM.Id = prmID;
                         if (ppi.promosyonGuncelle(DegisecekPRM))
                         {
                             MessageBox.Show("Promosyon Güncellendi.", "İşlem Başarılı.");
                             dgvpromosyonlar.DataSource = ppi.promosyonlarıGetir();
+                            gnl.Temizle(panel2);
+
                         }
                         else
                         {
@@ -152,6 +169,8 @@ namespace PL.Kampanyalar
             prmID = Convert.ToInt32(dgvpromosyonlar.SelectedRows[0].Cells[0].Value);
             txtPromosyonAdi.Text = dgvpromosyonlar.SelectedRows[0].Cells[1].Value.ToString();
             txtPromosyonOranı.Text = dgvpromosyonlar.SelectedRows[0].Cells[2].Value.ToString();
+            dtimebaslangıc.Value=(DateTime) dgvpromosyonlar.SelectedRows[0].Cells[3].Value;
+             dtimebitis.Value = (DateTime)dgvpromosyonlar.SelectedRows[0].Cells[4].Value;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -164,6 +183,20 @@ namespace PL.Kampanyalar
                 MessageBox.Show("Günün Promosyonu >>" + " " + p.PromosyonAdi + " " +" Oranı = " +  p.PromosyonOrani);
             }
 }
+
+        private void txtPromosyonAdi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                && !char.IsSeparator(e.KeyChar);
+
+        }
+
+        private void txtPromosyonOranı_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+      
     }
 }
 

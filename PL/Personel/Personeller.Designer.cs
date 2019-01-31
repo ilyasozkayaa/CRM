@@ -182,6 +182,7 @@
             this.txtSoyadı.Name = "txtSoyadı";
             this.txtSoyadı.Size = new System.Drawing.Size(132, 22);
             this.txtSoyadı.TabIndex = 4;
+            this.txtSoyadı.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoyadı_KeyPress);
             // 
             // label3
             // 
@@ -212,6 +213,7 @@
             this.txtAdı.Name = "txtAdı";
             this.txtAdı.Size = new System.Drawing.Size(132, 22);
             this.txtAdı.TabIndex = 1;
+            this.txtAdı.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdı_KeyPress);
             // 
             // txtID
             // 

@@ -88,6 +88,7 @@
             this.textBox1.Size = new System.Drawing.Size(81, 37);
             this.textBox1.TabIndex = 4;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // pnlHeader
             // 
@@ -321,10 +322,11 @@
             // 
             // txtAdet
             // 
-            this.txtAdet.Location = new System.Drawing.Point(384, 28);
+            this.txtAdet.Location = new System.Drawing.Point(384, 27);
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(100, 22);
             this.txtAdet.TabIndex = 86;
+            this.txtAdet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdet_KeyPress);
             // 
             // label1
             // 

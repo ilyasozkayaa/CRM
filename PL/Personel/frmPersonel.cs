@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL.Model;
+using DAL.Context;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,53 +22,90 @@ namespace PL.Personeller
         string dosyayolu;
         //Bitmap bmp;
 
-      
-        
 
-        
-        private void pbFoto_Click(object sender, EventArgs e)
+
+        PersonelMusteriIslemleri pmi = new PersonelMusteriIslemleri();
+        CRMContext ent = new CRMContext();
+
+
+        private void pbFoto_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog dosya1 = new OpenFileDialog();
             dosya1.ShowDialog();
             dosyayolu = dosya1.FileName;
             pbFoto.ImageLocation = dosyayolu;
+            MessageBox.Show(dosyayolu);
 
-        }
-
-        private void btnResimKaydet_Click(object sender, EventArgs e)
-        {
-           
             SaveFileDialog dosya = new SaveFileDialog();  //yeni bir kaydetme diyaloğu oluşturuyoruz.
 
             dosya.Filter = "jpeg dosyası(*.jpg)|*.jpg|Bitmap(*.bmp)|*.bmp";//.bmp veya .jpg olarak kayıt imkanı sağlıyoruz.
 
-            dosya.Title = "Kayıt";//diğaloğumuzun başlığını belirliyoruz.
+            dosya.Title = "Kayıt";//diğaloğumuzun başlığını belirliyoruz.  
+                                  //File.Copy(dosyayolu, hedef);
+            File.Move(dosyayolu, "C:\\Users\\Büşra\\source\\repos\\ilyasozkayaa\\CRM\\PL\\Resources\\" + txtAd.Text + "" + txtSoyad.Text + ".jpg");
+            string hedef = Path.Combine("C:\\Users\\Büşra\\source\\repos\\ilyasozkayaa\\CRM\\PL\\Resources\\" + txtAd.Text + "" + txtSoyad.Text + ".jpg");
+            GenelDegiskenTanimlama.imagePath = hedef;
 
-            dosya.FileName = "resim.jpeg";//kaydedilen resmimizin adını 'resim' olarak belirliyoruz.
+        }
 
-            //pbFoto.Image.Save("C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm");
-            //dosya.InitialDirectory = "C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm";
-
-           
-
-            
-            
-        
-                string hedef = Path.Combine("C: \\Users\\ÖZLEM\\Desktop\\CRM\\DAL\\resm", dosya.FileName);
-                File.Copy(dosyayolu, hedef);
-             
+        private void btnKaydet_Click_1(object sender, EventArgs e)
+        {
+            User user = new User();
+            DAL.Context.Personel personelList = new DAL.Context.Personel();
+            string KullaniciAdi, KullaniciSifre;
+            KullaniciAdi = txtSoyad.Text + txtAd.Text.Substring(0, 1);
+            KullaniciSifre = txtSoyad.Text.Substring(0, 1) + dtpDogumT.Value.Year + txtTCKNo.Text.Substring(3);
+            txtKullaniciAd.Text = KullaniciAdi;
+            txtKullaniciSifre.Text = KullaniciSifre;
+            user.KullaniciAdi = KullaniciAdi;
+            user.Parola = KullaniciSifre;
+            user.YetkiDüzeyi = cbPozisyon.SelectedItem.ToString();
+            bool result = pmi.UserEkle(user);
+            if (result)
+            {
+                MessageBox.Show("User kaydı  basarılı");
 
             }
+            else
+            {
+                MessageBox.Show("User kaydı basarısız");
+            }
 
-        private void panelPersonelResim_Paint(object sender, PaintEventArgs e)
-        {
+            personelList.Ad = txtAd.Text;
+            personelList.Soyad = txtSoyad.Text;
+            personelList.TCKNo = txtTCKNo.Text;
+            personelList.Telefon = txtTelefon.Text;
+            personelList.DogumTarihi = dtpDogumT.Value;
+            personelList.DogumYeri = cbDogumYeri.SelectedItem.ToString();
+            personelList.Adres = txtAdres.Text;
+            personelList.Email = txtEmail.Text;
+            personelList.AskerlikDurumu = cbAskerlik.SelectedItem.ToString();
+            personelList.EgitimDurumu = cbEgitim.SelectedItem.ToString();
+            personelList.EngelDurumu = cbEngel.ToString();
+            personelList.MedeniHal = cbMedeni.SelectedItem.ToString();
+            personelList.Image = GenelDegiskenTanimlama.imagePath;
+            personelList.Cinsiyet = cbCinsiyet.SelectedItem.ToString();
+            personelList.IseGirisTarihi = dateİseGiris.Value;
+            personelList.IstenCikisTarihi = dateİseGiris.Value;
+            personelList.UserId = user.Id;
 
-        }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
+
+            bool sonuc = pmi.personelEkle(personelList);
+            if (sonuc)
+            {
+                MessageBox.Show("Personel kaydı basarılı");
+
+            }
+            else
+            {
+                MessageBox.Show("Personel kaydı basarısız");
+            }
+
+
+
 
         }
     }
-    }
+}
 

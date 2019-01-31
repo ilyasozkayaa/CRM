@@ -182,6 +182,7 @@
             this.txtEklenenStok.Name = "txtEklenenStok";
             this.txtEklenenStok.Size = new System.Drawing.Size(195, 41);
             this.txtEklenenStok.TabIndex = 66;
+            this.txtEklenenStok.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEklenenStok_KeyPress);
             // 
             // label8
             // 

@@ -85,5 +85,10 @@ namespace PL.Urunler
                 MessageBox.Show("Eklenecek Stok Adedini Sayısal Değer Girmelisiniz!", "Hata!!!");
             }
         }
+
+        private void txtEklenenStok_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

@@ -27,9 +27,9 @@ namespace PL.KasaIslemleri
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             List<SatisDetay> sd = new List<SatisDetay>();
-            if (textBox1.Text.Trim() != "")
+            if (txtSatısID.Text.Trim() != "")
             {
-                sd = Uislem.SatısDetaylariniGetir(Convert.ToInt32(textBox1.Text));
+                sd = Uislem.SatısDetaylariniGetir(Convert.ToInt32(txtSatısID.Text));
                 if (sd != null)
                 {
                     dgvSatisDetaylar.DataSource = sd;
@@ -61,12 +61,12 @@ namespace PL.KasaIslemleri
                         iade.IadeAdedi = IadeAdet;
                         iade.IadeSebebi = cbIade.SelectedItem.ToString();
                         iade.IadeTarihi = DateTime.Now;
-                        iade.SatisId = Convert.ToInt32(textBox1.Text);
+                        iade.SatisId = Convert.ToInt32(txtSatısID.Text);
                         iade.UrunID = IadeEdilenUrun.Id;
                         iade.Ucret = (Convert.ToDecimal(dgvSatisDetaylar.SelectedRows[0].Cells[4].Value)/Convert.ToDecimal(dgvSatisDetaylar.SelectedRows[0].Cells[3].Value))*IadeAdet;
                         Uislem.UrunIadeHareket(iade);
                         MessageBox.Show("İade İşlemi Gerçekleşti, Müşterimize "+iade.Ucret+" TL İade Ediniz!!!", "İşlem Başarılı");
-                        dgvSatisDetaylar.DataSource = Uislem.SatısDetaylariniGetir(Convert.ToInt32(textBox1.Text));
+                        dgvSatisDetaylar.DataSource = Uislem.SatısDetaylariniGetir(Convert.ToInt32(txtSatısID.Text));
                     }
                 }
                 else
@@ -82,5 +82,20 @@ namespace PL.KasaIslemleri
             }
 
         }
+
+        private void txtSatısID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar); //sadece rakam girişi
+        }
+
+        private void txtİadeAdet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+
+      
+
+
     }
 }

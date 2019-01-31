@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnlHeader.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -60,7 +62,7 @@
             this.pnlHeader.Controls.Add(this.label1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1405, 43);
             this.pnlHeader.TabIndex = 0;
@@ -70,7 +72,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1405, 12);
             this.panel1.TabIndex = 1;
@@ -94,7 +96,7 @@
             this.button1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(16, 261);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 53);
             this.button1.TabIndex = 1;
@@ -123,7 +125,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(136, 7);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 4;
@@ -139,7 +141,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 43);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(281, 569);
             this.panel2.TabIndex = 5;
@@ -154,7 +156,7 @@
             this.panel4.Controls.Add(this.pnlBilgi);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(281, 569);
             this.panel4.TabIndex = 6;
@@ -169,7 +171,7 @@
             this.btnIade.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnIade.ForeColor = System.Drawing.Color.White;
             this.btnIade.Location = new System.Drawing.Point(0, 275);
-            this.btnIade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIade.Margin = new System.Windows.Forms.Padding(4);
             this.btnIade.Name = "btnIade";
             this.btnIade.Size = new System.Drawing.Size(281, 62);
             this.btnIade.TabIndex = 14;
@@ -187,7 +189,7 @@
             this.btnYeniMust.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnYeniMust.ForeColor = System.Drawing.Color.White;
             this.btnYeniMust.Location = new System.Drawing.Point(0, 213);
-            this.btnYeniMust.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnYeniMust.Margin = new System.Windows.Forms.Padding(4);
             this.btnYeniMust.Name = "btnYeniMust";
             this.btnYeniMust.Size = new System.Drawing.Size(281, 62);
             this.btnYeniMust.TabIndex = 13;
@@ -205,7 +207,7 @@
             this.btnUyesiz.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUyesiz.ForeColor = System.Drawing.Color.White;
             this.btnUyesiz.Location = new System.Drawing.Point(0, 151);
-            this.btnUyesiz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUyesiz.Margin = new System.Windows.Forms.Padding(4);
             this.btnUyesiz.Name = "btnUyesiz";
             this.btnUyesiz.Size = new System.Drawing.Size(281, 62);
             this.btnUyesiz.TabIndex = 12;
@@ -223,7 +225,7 @@
             this.btnUyemusteri.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUyemusteri.ForeColor = System.Drawing.Color.White;
             this.btnUyemusteri.Location = new System.Drawing.Point(0, 89);
-            this.btnUyemusteri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUyemusteri.Margin = new System.Windows.Forms.Padding(4);
             this.btnUyemusteri.Name = "btnUyemusteri";
             this.btnUyemusteri.Size = new System.Drawing.Size(281, 62);
             this.btnUyemusteri.TabIndex = 11;
@@ -238,7 +240,7 @@
             this.pnlBilgi.Controls.Add(this.label4);
             this.pnlBilgi.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBilgi.Location = new System.Drawing.Point(0, 0);
-            this.pnlBilgi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBilgi.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBilgi.Name = "pnlBilgi";
             this.pnlBilgi.Size = new System.Drawing.Size(281, 89);
             this.pnlBilgi.TabIndex = 10;
@@ -246,11 +248,12 @@
             // txtTelNO
             // 
             this.txtTelNO.Location = new System.Drawing.Point(140, 23);
-            this.txtTelNO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelNO.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelNO.Name = "txtTelNO";
             this.txtTelNO.Size = new System.Drawing.Size(132, 22);
             this.txtTelNO.TabIndex = 4;
             this.txtTelNO.TextChanged += new System.EventHandler(this.txtTelNO_TextChanged);
+            this.txtTelNO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelNO_KeyPress);
             // 
             // label4
             // 
@@ -269,7 +272,7 @@
             this.button2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(136, 39);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 33);
             this.button2.TabIndex = 5;
@@ -283,7 +286,7 @@
             this.button3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(147, 261);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 53);
             this.button3.TabIndex = 1;
@@ -295,10 +298,11 @@
             this.pnlContent.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(281, 43);
-            this.pnlContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlContent.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(1124, 569);
             this.pnlContent.TabIndex = 6;
+            this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContent_Paint);
             // 
             // frmSatisIslemleri
             // 
@@ -310,7 +314,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSatisIslemleri";
             this.Text = "frmKasaIslemleri";
             this.pnlHeader.ResumeLayout(false);
@@ -346,5 +350,6 @@
         private System.Windows.Forms.Button btnUyemusteri;
         private System.Windows.Forms.Panel pnlBilgi;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

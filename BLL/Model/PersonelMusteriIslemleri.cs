@@ -230,5 +230,23 @@ namespace BLL.Model
             return sonuc;
             
         }
+        public bool UserEkle(User u)
+        {
+            bool sonuc = false;
+            try
+            {
+                ent.Users.Add(u);
+                ent.SaveChanges();
+                sonuc = true;
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+
+            }
+            return sonuc;
+
+        }
     }
 }

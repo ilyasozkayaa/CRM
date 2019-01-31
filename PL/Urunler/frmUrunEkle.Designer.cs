@@ -285,6 +285,7 @@
             this.txtAlisFiyati.Name = "txtAlisFiyati";
             this.txtAlisFiyati.Size = new System.Drawing.Size(207, 30);
             this.txtAlisFiyati.TabIndex = 67;
+            this.txtAlisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAlisFiyati_KeyPress);
             // 
             // txtSatisFiyati
             // 
@@ -294,6 +295,7 @@
             this.txtSatisFiyati.Name = "txtSatisFiyati";
             this.txtSatisFiyati.Size = new System.Drawing.Size(207, 30);
             this.txtSatisFiyati.TabIndex = 68;
+            this.txtSatisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSatisFiyati_KeyPress);
             // 
             // txtRenk
             // 
@@ -303,6 +305,7 @@
             this.txtRenk.Name = "txtRenk";
             this.txtRenk.Size = new System.Drawing.Size(207, 30);
             this.txtRenk.TabIndex = 66;
+            this.txtRenk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRenk_KeyPress);
             // 
             // txtKritikEsik
             // 
@@ -312,6 +315,7 @@
             this.txtKritikEsik.Name = "txtKritikEsik";
             this.txtKritikEsik.Size = new System.Drawing.Size(207, 30);
             this.txtKritikEsik.TabIndex = 66;
+            this.txtKritikEsik.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKritikEsik_KeyPress);
             // 
             // txtUrunAdi
             // 
@@ -321,6 +325,7 @@
             this.txtUrunAdi.Name = "txtUrunAdi";
             this.txtUrunAdi.Size = new System.Drawing.Size(207, 30);
             this.txtUrunAdi.TabIndex = 65;
+            this.txtUrunAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUrunAdi_KeyPress);
             // 
             // txtStokMiktari
             // 
@@ -330,6 +335,7 @@
             this.txtStokMiktari.Name = "txtStokMiktari";
             this.txtStokMiktari.Size = new System.Drawing.Size(207, 30);
             this.txtStokMiktari.TabIndex = 65;
+            this.txtStokMiktari.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStokMiktari_KeyPress);
             // 
             // label9
             // 

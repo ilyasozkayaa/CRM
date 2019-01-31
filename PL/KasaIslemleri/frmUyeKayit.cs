@@ -26,7 +26,9 @@ namespace PL.KasaIslemleri
 
 
             if (TxtMaskedTelefon.Text.Trim().Length >= 10 && txtAdi.Text.Trim() != "" && txtSoyadi.Text.Trim() != "" && txtTCKNo.Text.Trim() != "" && txtEMail.Text.Trim()!="" &&txtAdres.Text.Trim()!="" && txtSehir.Text.Trim()!="")
-            {
+
+             {
+               
                 Musteri musterı = new Musteri();
                 musterı.Ad = txtAdi.Text;
                 musterı.Soyad = txtSoyadi.Text;
@@ -49,6 +51,78 @@ namespace PL.KasaIslemleri
             {
                 MessageBox.Show("Telefon numarasını doğru girdiğinize emin misiniz ?", "Hatalı Veri Girişi");
             }
+
+           
+            
+
+
+
+
+
+
+
+
+
+
         }
+
+        private void txtAdi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void txtSoyadi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void txtSehir_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void txtTCKNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+
+        }
+
+      
     }
 }
+
+
+
+
+
+//string tckimlik;
+//                try
+//                {
+//                    tckimlik = txtTCKNo.Text;
+//                    int index = 0;
+//int toplam = 0;
+//                    foreach (char n in tckimlik)
+//                    {
+//                        if (index< 10)
+//                        {
+//                            toplam += Convert.ToInt32(char.ToString(n));
+//                        }
+//                        index++;
+//                    }
+//                    if (toplam % 10 == Convert.ToInt32(tckimlik[10].ToString()))
+//                    {
+//                        MessageBox.Show("Geçerli TC Kimlik Numarası");
+//                    }
+//                    else
+//                    {
+//                        MessageBox.Show("Geçersiz Tc Kimlik Numarası");
+//                    }
+//                }
+//                catch
+//                {
+//                    MessageBox.Show("Girdiğiniz Tc kimlik numarası 11 haneli değil");
+//                }

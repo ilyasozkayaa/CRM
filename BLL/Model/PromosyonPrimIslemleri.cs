@@ -71,6 +71,8 @@ namespace BLL.Model
             {
                 promosyon.PromosyonAdi = p.PromosyonAdi;
                 promosyon.PromosyonOrani = p.PromosyonOrani;
+                promosyon.BaslangıcTarihi = p.BaslangıcTarihi;
+                promosyon.BitisTarihi = p.BitisTarihi;
                 ent.SaveChanges();
                 sonuc = true;
             }

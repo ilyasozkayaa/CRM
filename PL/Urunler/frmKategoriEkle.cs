@@ -92,18 +92,26 @@ namespace PL.Urunler
 
         private void btnUrunSil_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Silmek İstediğinize Emin misiniz?", "Bilgileri Silinmek Üzere!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+            if(txtAciklama.Text.Trim()!="" && txtKategoriAd.Text.Trim()!="")
             {
-                if (Uislem.kategoriSil(Convert.ToInt32(ktgID)))
+                if (MessageBox.Show("Silmek İstediğinize Emin misiniz?", "Bilgileri Silinmek Üzere!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Kategori Silindi.", "Silme İşlemi Başarılı.");
-                    dgKatagoriListe.DataSource = Uislem.KategoriListesi();
-                    gnl.Temizle(panelKategoriEkle);
+                    if (Uislem.kategoriSil(Convert.ToInt32(ktgID)))
+                    {
+                        MessageBox.Show("Kategori Silindi.", "Silme İşlemi Başarılı.");
+                        dgKatagoriListe.DataSource = Uislem.KategoriListesi();
+                        gnl.Temizle(panelKategoriEkle);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kategori Silme İşlemi Başarısız", "Hata!!!");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Kategori Silme İşlemi Başarısız", "Hata!!!");
-                }
+            }
+            else
+            {
+                MessageBox.Show("Silmek İstediğiniz Kategoriyi Listeden Çift Tıklayarak Seçiniz!!!", "Seçim Yapılmadı");
             }
         }
 
@@ -123,6 +131,16 @@ namespace PL.Urunler
             dgKatagoriListe.Columns[3].Visible = false;
         }
 
-     
+        private void txtKategoriAd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void txtAciklama_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                && !char.IsSeparator(e.KeyChar);
+        }
     }
 }

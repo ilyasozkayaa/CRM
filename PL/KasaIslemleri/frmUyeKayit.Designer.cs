@@ -187,6 +187,7 @@
             this.txtSehir.Name = "txtSehir";
             this.txtSehir.Size = new System.Drawing.Size(132, 22);
             this.txtSehir.TabIndex = 2;
+            this.txtSehir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSehir_KeyPress);
             // 
             // txtAdi
             // 
@@ -195,6 +196,7 @@
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(132, 22);
             this.txtAdi.TabIndex = 2;
+            this.txtAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdi_KeyPress);
             // 
             // txtSoyadi
             // 
@@ -203,6 +205,7 @@
             this.txtSoyadi.Name = "txtSoyadi";
             this.txtSoyadi.Size = new System.Drawing.Size(132, 22);
             this.txtSoyadi.TabIndex = 2;
+            this.txtSoyadi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoyadi_KeyPress);
             // 
             // txtTCKNo
             // 
@@ -211,6 +214,7 @@
             this.txtTCKNo.Name = "txtTCKNo";
             this.txtTCKNo.Size = new System.Drawing.Size(132, 22);
             this.txtTCKNo.TabIndex = 2;
+            this.txtTCKNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTCKNo_KeyPress);
             // 
             // txtAdres
             // 
@@ -236,7 +240,8 @@
             this.BtnKaydet.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnKaydet.ForeColor = System.Drawing.Color.White;
             this.BtnKaydet.Image = global::PL.Properties.Resources.add_user_2_321;
-            this.BtnKaydet.Location = new System.Drawing.Point(196, 417);
+            this.BtnKaydet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnKaydet.Location = new System.Drawing.Point(196, 419);
             this.BtnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(132, 41);

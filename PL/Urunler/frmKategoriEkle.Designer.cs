@@ -102,16 +102,18 @@
             this.txtKategoriAd.Name = "txtKategoriAd";
             this.txtKategoriAd.Size = new System.Drawing.Size(300, 30);
             this.txtKategoriAd.TabIndex = 31;
+            this.txtKategoriAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKategoriAd_KeyPress);
             // 
             // txtAciklama
             // 
             this.txtAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAciklama.Location = new System.Drawing.Point(279, 106);
+            this.txtAciklama.Location = new System.Drawing.Point(279, 104);
             this.txtAciklama.Margin = new System.Windows.Forms.Padding(4);
             this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Size = new System.Drawing.Size(300, 141);
             this.txtAciklama.TabIndex = 31;
+            this.txtAciklama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAciklama_KeyPress);
             // 
             // panelHeader2
             // 
