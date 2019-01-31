@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlheader = new System.Windows.Forms.Panel();
+            this.btnupdate = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblGorevAdi = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
@@ -41,7 +43,6 @@
             this.lblBaslangic = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnupdate = new System.Windows.Forms.Button();
             this.pnlheader.SuspendLayout();
             this.pnlGorevDetay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetay)).BeginInit();
@@ -60,6 +61,19 @@
             this.pnlheader.Size = new System.Drawing.Size(304, 29);
             this.pnlheader.TabIndex = 3;
             this.pnlheader.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlheader_MouseClick);
+            // 
+            // btnupdate
+            // 
+            this.btnupdate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnupdate.FlatAppearance.BorderSize = 0;
+            this.btnupdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnupdate.Image = global::PL.Properties.Resources.icons8_available_updates_32;
+            this.btnupdate.Location = new System.Drawing.Point(228, 0);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(38, 29);
+            this.btnupdate.TabIndex = 3;
+            this.btnupdate.UseVisualStyleBackColor = true;
             // 
             // btnClose
             // 
@@ -117,12 +131,19 @@
             this.dgvDetay.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvDetay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDetay.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvDetay.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvDetay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetay.ColumnHeadersVisible = false;
             this.dgvDetay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDetay.Location = new System.Drawing.Point(0, 0);
             this.dgvDetay.Name = "dgvDetay";
             this.dgvDetay.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvDetay.RowHeadersVisible = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvDetay.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDetay.Size = new System.Drawing.Size(304, 99);
             this.dgvDetay.TabIndex = 1;
             // 
@@ -180,19 +201,6 @@
             // 
             this.timer1.Interval = 15;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnupdate
-            // 
-            this.btnupdate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnupdate.FlatAppearance.BorderSize = 0;
-            this.btnupdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnupdate.Image = global::PL.Properties.Resources.icons8_available_updates_32;
-            this.btnupdate.Location = new System.Drawing.Point(228, 0);
-            this.btnupdate.Name = "btnupdate";
-            this.btnupdate.Size = new System.Drawing.Size(38, 29);
-            this.btnupdate.TabIndex = 3;
-            this.btnupdate.UseVisualStyleBackColor = true;
             // 
             // pnlGorevKarti
             // 

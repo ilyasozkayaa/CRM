@@ -44,20 +44,21 @@ namespace PL
                 grvk.lblBaslangic.Text = grv.BaslangicTarihi.ToShortDateString();
                 grvk.lblBitis.Text = grv.BitisTarihi.ToShortDateString();
                 grvk.btnClose.Visible = false;
+                
                 grvk.dgvDetay.DataSource = gh.GorevDetayGetirbyGorevId(item);
                 grvk.dgvDetay.Columns[0].Visible = false;
                 grvk.dgvDetay.Columns[1].Visible = false;
                 grvk.dgvDetay.Columns[4].Visible = false;
                 grvk.dgvDetay.Columns[5].Visible = false;
                 grvk.dgvDetay.Columns[3].Width = 20;
-                grvk.dgvDetay.Columns[3].HeaderText = "";
-                grvk.dgvDetay.Columns[2].HeaderText = "Yapılacaklar";
+                grvk.dgvDetay.Columns[2].DisplayIndex = 2;
+                grvk.dgvDetay.Columns[3].DisplayIndex = 1;
 
 
                 //cpbx.Image = Resources.icons8_businessman_48;
                 //cpbx.Dock = DockStyle.Left;
                 //grvk.pnlMembers.Controls.Add(cpbx);
-                    if (grv.Tamamlandi)
+                if (grv.Tamamlandi)
                     {
                         flpBitmis.Controls.Add(grvk);
                     }

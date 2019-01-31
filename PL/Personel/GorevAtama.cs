@@ -62,24 +62,24 @@ namespace PL.Personel
         PersonelMusteriIslemleri pb = new PersonelMusteriIslemleri();
         ArrayList pers = new ArrayList();
         KullaniciDetay b = new KullaniciDetay();
+        public List<KullaniciDetay> kullaniciDetays = new List<KullaniciDetay>();
         private void cpbPersEkle_Click(object sender, EventArgs e)
-        {
-         
-            
+        {           
            
-            int pid = Convert.ToInt32(txtPersonelId.Text);
             KullaniciDetay b = new KullaniciDetay();
             DAL.Context.Personel p = new DAL.Context.Personel();
 
-
             try
             {
+                int pid = Convert.ToInt32(txtPersonelId.Text);
                 p = pb.PersonelGetir(pid);
                 b.lblAdi.Text = p.Ad;
                 b.lblSoyAdi.Text = p.Soyad;
                 b.circularPictureBox1.Image = Resources.icons8_businessman_48;
+                b.lblId.Text = p.Id.ToString();
                 flpPersList.Controls.Add(b);
-                pers.Add(p.Id);
+                kullaniciDetays.Add(b);
+                
             }
             catch (Exception)
             {
@@ -92,21 +92,22 @@ namespace PL.Personel
 
         }
 
-
+       
         pnlGorevKarti gk = new pnlGorevKarti();
         private void btnKartEkle_Click(object sender, EventArgs e)
-        {          
-            
-            gk.lblGorevAdi.Text = lblGorevAdi.Text;
-            gk.pnlGorevDetay.Controls.Add(clbGorevBolum);
-            gk.lblGorevAdi = lblGorevAdi;
-            gk.lblBaslangic.Text = dtpGiris.MinDate.ToShortDateString();
-            gk.lblBitis.Text = dtpCikis.MinDate.ToShortDateString() ;
-            gk.clbDetay.Visible = false;
-            gk.btnupdate.Visible = false;
-            gk.pnlMembers.Controls.Add(b.circularPictureBox1);
-            pnlGorevKartlarim.Controls.Add(gk);
+        {
+           
+                gk.lblGorevAdi.Text = lblGorevAdi.Text;
+                gk.pnlGorevDetay.Controls.Add(clbGorevBolum);
+                gk.lblGorevAdi = lblGorevAdi;
+                gk.lblBaslangic.Text = dtpGiris.MinDate.ToShortDateString();
+                gk.lblBitis.Text = dtpCikis.MinDate.ToShortDateString() ;
+                gk.clbDetay.Visible = false;
+                gk.btnupdate.Visible = false;
+                gk.pnlMembers.Controls.Add(b.circularPictureBox1);
+                pnlGorevKartlarim.Controls.Add(gk);
         }
+     
 
         private void btnGorevAta_Click(object sender, EventArgs e)
         {
@@ -126,20 +127,36 @@ namespace PL.Personel
 
 
             List<GorevKayit> gkd = new List<GorevKayit>();
-            if (pers.Count > 0)
-            {
-                foreach (int p in pers)
+            
+                foreach (KullaniciDetay item in kullaniciDetays)
                 {
-                    GorevKayit gkyt = new GorevKayit();
-                    gkyt.PersonelId = p;
-                    gkyt.GorevId = grv.Id;
-                    gkd.Add(gkyt);
+                    if (item.Visible == true)
+                    {
+                        GorevKayit gkyt = new GorevKayit();
+                        gkyt.PersonelId = Convert.ToInt32(item.lblId.Text);
+                        gkyt.GorevId = grv.Id;
+                        gkd.Add(gkyt);
+                    }
                 }
-
                 hareket.GorevKayıtEkle(gkd);
-            }
-            else
-                MessageBox.Show("En az 1 tane personel atanmalı.", "Items", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
+
+
+            //Eski Kodlar
+            //if (pers.Count > 0)
+            //{
+            //    foreach (int p in pers)
+            //    {
+            //        GorevKayit gkyt = new GorevKayit();
+            //        gkyt.PersonelId = p;
+            //        gkyt.GorevId = grv.Id;
+            //        gkd.Add(gkyt);
+            //    }
+
+            //    hareket.GorevKayıtEkle(gkd);
+            //}
+            //else
+            //    MessageBox.Show("En az 1 tane personel atanmalı.", "Items", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             List<GorevDetay> gd = new List<GorevDetay>();
@@ -169,6 +186,9 @@ namespace PL.Personel
         private void cppGsil_Click(object sender, EventArgs e)
         {
             lblGorevAdi.Text="";
+            
         }
+
+      
     }
 }

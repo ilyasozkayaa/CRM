@@ -34,6 +34,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.circularPictureBox1 = new PL.CircularPictureBox();
+            this.lblId = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
@@ -63,9 +64,11 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblId);
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.lblSoyAdi);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.panel2.Location = new System.Drawing.Point(129, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(75, 50);
@@ -76,9 +79,9 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::PL.Properties.Resources.icons8_multiply_32__2_;
-            this.btnClose.Location = new System.Drawing.Point(48, 0);
+            this.btnClose.Location = new System.Drawing.Point(60, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(27, 24);
+            this.btnClose.Size = new System.Drawing.Size(12, 12);
             this.btnClose.TabIndex = 14;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -101,6 +104,15 @@
             this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.circularPictureBox1.TabIndex = 9;
             this.circularPictureBox1.TabStop = false;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(0, 0);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(4, 2);
+            this.lblId.TabIndex = 15;
+            this.lblId.Text = "Id";
             // 
             // KullaniciDetay
             // 
@@ -128,5 +140,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Button btnClose;
+        public System.Windows.Forms.Label lblId;
     }
 }
