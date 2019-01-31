@@ -57,8 +57,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnCikart = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnCikart = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnSatis = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -75,7 +75,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(16, 28);
+            this.label4.Location = new System.Drawing.Point(16, 29);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 18);
@@ -84,11 +84,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(126, 27);
+            this.textBox1.Location = new System.Drawing.Point(108, 27);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(81, 37);
+            this.textBox1.Size = new System.Drawing.Size(81, 22);
             this.textBox1.TabIndex = 4;
             this.toolTip1.SetToolTip(this.textBox1, "Boş Bırakmayınız !");
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -326,7 +326,7 @@
             // 
             // txtAdet
             // 
-            this.txtAdet.Location = new System.Drawing.Point(384, 27);
+            this.txtAdet.Location = new System.Drawing.Point(278, 28);
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(100, 22);
             this.txtAdet.TabIndex = 86;
@@ -336,11 +336,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(321, 28);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(207, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.Size = new System.Drawing.Size(56, 18);
             this.label1.TabIndex = 85;
-            this.label1.Text = "ADET";
+            this.label1.Text = "ADET :";
             // 
             // button3
             // 
@@ -370,7 +371,6 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnCikart);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(857, 158);
@@ -379,19 +379,10 @@
             this.panel4.Size = new System.Drawing.Size(267, 411);
             this.panel4.TabIndex = 14;
             // 
-            // btnCikart
-            // 
-            this.btnCikart.Location = new System.Drawing.Point(19, 61);
-            this.btnCikart.Name = "btnCikart";
-            this.btnCikart.Size = new System.Drawing.Size(104, 54);
-            this.btnCikart.TabIndex = 9;
-            this.btnCikart.Text = "Çıkart";
-            this.btnCikart.UseVisualStyleBackColor = true;
-            this.btnCikart.Click += new System.EventHandler(this.btnCikart_Click);
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.btnCikart);
             this.panel5.Controls.Add(this.comboBox1);
             this.panel5.Controls.Add(this.btnSatis);
             this.panel5.Controls.Add(this.dgvSatis);
@@ -413,13 +404,30 @@
             this.panel5.Size = new System.Drawing.Size(638, 411);
             this.panel5.TabIndex = 15;
             // 
+            // btnCikart
+            // 
+            this.btnCikart.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCikart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCikart.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCikart.ForeColor = System.Drawing.Color.White;
+            this.btnCikart.Image = global::PL.Properties.Resources.icons8_minus_32;
+            this.btnCikart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCikart.Location = new System.Drawing.Point(482, 352);
+            this.btnCikart.Name = "btnCikart";
+            this.btnCikart.Size = new System.Drawing.Size(138, 46);
+            this.btnCikart.TabIndex = 9;
+            this.btnCikart.Text = "        ÇIKART";
+            this.btnCikart.UseVisualStyleBackColor = false;
+            this.btnCikart.Click += new System.EventHandler(this.btnCikart_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 205);
+            this.comboBox1.Location = new System.Drawing.Point(102, 224);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(131, 24);
             this.comboBox1.TabIndex = 84;
+            this.toolTip1.SetToolTip(this.comboBox1, "Seçim Yapınız !");
             // 
             // btnSatis
             // 
@@ -427,14 +435,14 @@
             this.btnSatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSatis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSatis.ForeColor = System.Drawing.Color.White;
-            this.btnSatis.Image = global::PL.Properties.Resources.plus_5_321;
+            this.btnSatis.Image = global::PL.Properties.Resources.icons8_cash_in_hand_42;
             this.btnSatis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSatis.Location = new System.Drawing.Point(437, 345);
+            this.btnSatis.Location = new System.Drawing.Point(331, 352);
             this.btnSatis.Margin = new System.Windows.Forms.Padding(4);
             this.btnSatis.Name = "btnSatis";
-            this.btnSatis.Size = new System.Drawing.Size(130, 46);
+            this.btnSatis.Size = new System.Drawing.Size(124, 46);
             this.btnSatis.TabIndex = 83;
-            this.btnSatis.Text = "        Satiş";
+            this.btnSatis.Text = "      SATIŞ";
             this.btnSatis.UseVisualStyleBackColor = false;
             this.btnSatis.Click += new System.EventHandler(this.btnSatis_Click);
             // 
@@ -445,10 +453,10 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::PL.Properties.Resources.icons8_christmas_gift_filled_32;
-            this.button2.Location = new System.Drawing.Point(102, 253);
+            this.button2.Location = new System.Drawing.Point(102, 270);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 57);
+            this.button2.Size = new System.Drawing.Size(131, 49);
             this.button2.TabIndex = 7;
             this.button2.Text = "  KULLAN";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -457,7 +465,7 @@
             // toolTip1
             // 
             this.toolTip1.AutomaticDelay = 50;
-            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.AutoPopDelay = 1000;
             this.toolTip1.BackColor = System.Drawing.Color.SteelBlue;
             this.toolTip1.ForeColor = System.Drawing.Color.White;
             this.toolTip1.InitialDelay = 50;

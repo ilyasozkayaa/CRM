@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelHeader1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -41,6 +42,7 @@
             this.btnUrunGuncelle = new System.Windows.Forms.Button();
             this.panelDataGridView = new System.Windows.Forms.Panel();
             this.dgKatagoriListe = new System.Windows.Forms.DataGridView();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelHeader1.SuspendLayout();
             this.panelKategoriEkle.SuspendLayout();
             this.panelDataGridView.SuspendLayout();
@@ -102,6 +104,7 @@
             this.txtKategoriAd.Name = "txtKategoriAd";
             this.txtKategoriAd.Size = new System.Drawing.Size(300, 30);
             this.txtKategoriAd.TabIndex = 31;
+            this.toolTip1.SetToolTip(this.txtKategoriAd, "Boş Bırakmayınız !");
             this.txtKategoriAd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKategoriAd_KeyPress);
             // 
             // txtAciklama
@@ -113,6 +116,7 @@
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Size = new System.Drawing.Size(300, 141);
             this.txtAciklama.TabIndex = 31;
+            this.toolTip1.SetToolTip(this.txtAciklama, "Boş Bırakmayınız !");
             this.txtAciklama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAciklama_KeyPress);
             // 
             // panelHeader2
@@ -217,6 +221,14 @@
             this.dgKatagoriListe.TabIndex = 0;
             this.dgKatagoriListe.DoubleClick += new System.EventHandler(this.dgKatagoriListe_DoubleClick);
             // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 50;
+            this.toolTip1.AutoPopDelay = 1000;
+            this.toolTip1.InitialDelay = 50;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 10;
+            // 
             // frmKategoriEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -256,5 +268,6 @@
         private System.Windows.Forms.Button btnUrunEkle;
         private System.Windows.Forms.Button btnUrunSil;
         private System.Windows.Forms.Button btnUrunGuncelle;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

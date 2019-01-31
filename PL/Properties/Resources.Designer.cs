@@ -233,6 +233,26 @@ namespace PL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cash_in_hand_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cash-in-hand-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_cash_in_hand_42 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cash-in-hand-42", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_christmas_gift_42 {
             get {
                 object obj = ResourceManager.GetObject("icons8-christmas-gift-42", resourceCulture);
@@ -376,6 +396,16 @@ namespace PL.Properties {
         internal static System.Drawing.Bitmap icons8_menu_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-menu-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_minus_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-minus-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

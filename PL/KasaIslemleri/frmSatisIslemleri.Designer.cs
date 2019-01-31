@@ -247,10 +247,10 @@
             // 
             // txtTelNO
             // 
-            this.txtTelNO.Location = new System.Drawing.Point(140, 23);
+            this.txtTelNO.Location = new System.Drawing.Point(161, 26);
             this.txtTelNO.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelNO.Name = "txtTelNO";
-            this.txtTelNO.Size = new System.Drawing.Size(132, 22);
+            this.txtTelNO.Size = new System.Drawing.Size(104, 22);
             this.txtTelNO.TabIndex = 4;
             this.toolTip1.SetToolTip(this.txtTelNO, "Boş Bırakmayınız !");
             this.txtTelNO.TextChanged += new System.EventHandler(this.txtTelNO_TextChanged);
@@ -259,10 +259,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.Location = new System.Drawing.Point(8, 27);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 17);
+            this.label4.Size = new System.Drawing.Size(145, 18);
             this.label4.TabIndex = 2;
             this.label4.Text = "Telefon Numarası:";
             // 
@@ -303,11 +304,14 @@
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(1124, 569);
             this.pnlContent.TabIndex = 6;
-            this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContent_Paint);
             // 
             // toolTip1
             // 
+            this.toolTip1.AutomaticDelay = 50;
+            this.toolTip1.AutoPopDelay = 1000;
+            this.toolTip1.InitialDelay = 50;
             this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 10;
             // 
             // frmSatisIslemleri
             // 

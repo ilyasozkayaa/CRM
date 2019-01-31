@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelHeader1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panelHeader2 = new System.Windows.Forms.Panel();
@@ -60,6 +61,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelUrundgv = new System.Windows.Forms.Panel();
             this.dgvUrunler = new System.Windows.Forms.DataGridView();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelHeader1.SuspendLayout();
             this.panelUunBilgileri.SuspendLayout();
             this.panelUrundgv.SuspendLayout();
@@ -144,7 +146,7 @@
             this.btnUrunEkle.ForeColor = System.Drawing.Color.White;
             this.btnUrunEkle.Image = global::PL.Properties.Resources.plus_5_321;
             this.btnUrunEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrunEkle.Location = new System.Drawing.Point(90, 370);
+            this.btnUrunEkle.Location = new System.Drawing.Point(89, 385);
             this.btnUrunEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnUrunEkle.Name = "btnUrunEkle";
             this.btnUrunEkle.Size = new System.Drawing.Size(152, 49);
@@ -161,10 +163,10 @@
             this.btnUrunSil.ForeColor = System.Drawing.Color.White;
             this.btnUrunSil.Image = global::PL.Properties.Resources.delete_32;
             this.btnUrunSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrunSil.Location = new System.Drawing.Point(468, 370);
+            this.btnUrunSil.Location = new System.Drawing.Point(467, 385);
             this.btnUrunSil.Margin = new System.Windows.Forms.Padding(4);
             this.btnUrunSil.Name = "btnUrunSil";
-            this.btnUrunSil.Size = new System.Drawing.Size(133, 49);
+            this.btnUrunSil.Size = new System.Drawing.Size(152, 49);
             this.btnUrunSil.TabIndex = 77;
             this.btnUrunSil.Text = "   SİL";
             this.btnUrunSil.UseVisualStyleBackColor = false;
@@ -178,7 +180,7 @@
             this.btnUrunGuncelle.ForeColor = System.Drawing.Color.White;
             this.btnUrunGuncelle.Image = global::PL.Properties.Resources.available_updates_32;
             this.btnUrunGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUrunGuncelle.Location = new System.Drawing.Point(287, 370);
+            this.btnUrunGuncelle.Location = new System.Drawing.Point(278, 385);
             this.btnUrunGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.btnUrunGuncelle.Name = "btnUrunGuncelle";
             this.btnUrunGuncelle.Size = new System.Drawing.Size(152, 49);
@@ -212,8 +214,9 @@
             this.cbUretimYeri.Location = new System.Drawing.Point(467, 102);
             this.cbUretimYeri.Margin = new System.Windows.Forms.Padding(4);
             this.cbUretimYeri.Name = "cbUretimYeri";
-            this.cbUretimYeri.Size = new System.Drawing.Size(207, 33);
+            this.cbUretimYeri.Size = new System.Drawing.Size(215, 33);
             this.cbUretimYeri.TabIndex = 75;
+            this.toolTip1.SetToolTip(this.cbUretimYeri, "Seçim Yapınız  !");
             // 
             // cbMalzeme
             // 
@@ -231,6 +234,7 @@
             this.cbMalzeme.Name = "cbMalzeme";
             this.cbMalzeme.Size = new System.Drawing.Size(215, 33);
             this.cbMalzeme.TabIndex = 74;
+            this.toolTip1.SetToolTip(this.cbMalzeme, "Seçim Yapınız  !");
             // 
             // cbKalip
             // 
@@ -243,11 +247,12 @@
             "L",
             "XL",
             "XXL"});
-            this.cbKalip.Location = new System.Drawing.Point(108, 273);
+            this.cbKalip.Location = new System.Drawing.Point(107, 272);
             this.cbKalip.Margin = new System.Windows.Forms.Padding(4);
             this.cbKalip.Name = "cbKalip";
-            this.cbKalip.Size = new System.Drawing.Size(213, 33);
+            this.cbKalip.Size = new System.Drawing.Size(215, 33);
             this.cbKalip.TabIndex = 73;
+            this.toolTip1.SetToolTip(this.cbKalip, "Seçim Yapınız  !");
             // 
             // cbBeden
             // 
@@ -260,143 +265,151 @@
             "L",
             "XL",
             "XXL"});
-            this.cbBeden.Location = new System.Drawing.Point(108, 231);
+            this.cbBeden.Location = new System.Drawing.Point(107, 229);
             this.cbBeden.Margin = new System.Windows.Forms.Padding(4);
             this.cbBeden.Name = "cbBeden";
-            this.cbBeden.Size = new System.Drawing.Size(213, 33);
+            this.cbBeden.Size = new System.Drawing.Size(215, 33);
             this.cbBeden.TabIndex = 71;
+            this.toolTip1.SetToolTip(this.cbBeden, "Seçim Yapınız  !");
             // 
             // cbKategori
             // 
             this.cbKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbKategori.FormattingEnabled = true;
-            this.cbKategori.Location = new System.Drawing.Point(105, 106);
+            this.cbKategori.Location = new System.Drawing.Point(107, 106);
             this.cbKategori.Margin = new System.Windows.Forms.Padding(4);
             this.cbKategori.Name = "cbKategori";
-            this.cbKategori.Size = new System.Drawing.Size(213, 33);
+            this.cbKategori.Size = new System.Drawing.Size(215, 33);
             this.cbKategori.TabIndex = 70;
+            this.toolTip1.SetToolTip(this.cbKategori, "Seçim Yapınız  !");
             this.cbKategori.SelectedIndexChanged += new System.EventHandler(this.cbKategori_SelectedIndexChanged);
             // 
             // txtAlisFiyati
             // 
             this.txtAlisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAlisFiyati.Location = new System.Drawing.Point(467, 233);
+            this.txtAlisFiyati.Location = new System.Drawing.Point(467, 228);
             this.txtAlisFiyati.Margin = new System.Windows.Forms.Padding(4);
             this.txtAlisFiyati.Name = "txtAlisFiyati";
-            this.txtAlisFiyati.Size = new System.Drawing.Size(207, 30);
+            this.txtAlisFiyati.Size = new System.Drawing.Size(215, 30);
             this.txtAlisFiyati.TabIndex = 67;
+            this.toolTip1.SetToolTip(this.txtAlisFiyati, "Boş Bırakmayınız !");
             this.txtAlisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAlisFiyati_KeyPress);
             // 
             // txtSatisFiyati
             // 
             this.txtSatisFiyati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSatisFiyati.Location = new System.Drawing.Point(467, 272);
+            this.txtSatisFiyati.Location = new System.Drawing.Point(467, 269);
             this.txtSatisFiyati.Margin = new System.Windows.Forms.Padding(4);
             this.txtSatisFiyati.Name = "txtSatisFiyati";
-            this.txtSatisFiyati.Size = new System.Drawing.Size(207, 30);
+            this.txtSatisFiyati.Size = new System.Drawing.Size(215, 30);
             this.txtSatisFiyati.TabIndex = 68;
+            this.toolTip1.SetToolTip(this.txtSatisFiyati, "Boş Bırakmayınız !");
             this.txtSatisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSatisFiyati_KeyPress);
             // 
             // txtRenk
             // 
             this.txtRenk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtRenk.Location = new System.Drawing.Point(107, 192);
+            this.txtRenk.Location = new System.Drawing.Point(107, 189);
             this.txtRenk.Margin = new System.Windows.Forms.Padding(4);
             this.txtRenk.Name = "txtRenk";
-            this.txtRenk.Size = new System.Drawing.Size(207, 30);
+            this.txtRenk.Size = new System.Drawing.Size(215, 30);
             this.txtRenk.TabIndex = 66;
+            this.toolTip1.SetToolTip(this.txtRenk, "Boş Bırakmayınız !");
             this.txtRenk.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRenk_KeyPress);
             // 
             // txtKritikEsik
             // 
             this.txtKritikEsik.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKritikEsik.Location = new System.Drawing.Point(467, 190);
+            this.txtKritikEsik.Location = new System.Drawing.Point(467, 187);
             this.txtKritikEsik.Margin = new System.Windows.Forms.Padding(4);
             this.txtKritikEsik.Name = "txtKritikEsik";
-            this.txtKritikEsik.Size = new System.Drawing.Size(207, 30);
+            this.txtKritikEsik.Size = new System.Drawing.Size(215, 30);
             this.txtKritikEsik.TabIndex = 66;
+            this.toolTip1.SetToolTip(this.txtKritikEsik, "Boş Bırakmayınız !");
             this.txtKritikEsik.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKritikEsik_KeyPress);
             // 
             // txtUrunAdi
             // 
             this.txtUrunAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunAdi.Location = new System.Drawing.Point(105, 148);
+            this.txtUrunAdi.Location = new System.Drawing.Point(107, 149);
             this.txtUrunAdi.Margin = new System.Windows.Forms.Padding(4);
             this.txtUrunAdi.Name = "txtUrunAdi";
-            this.txtUrunAdi.Size = new System.Drawing.Size(207, 30);
+            this.txtUrunAdi.Size = new System.Drawing.Size(215, 30);
             this.txtUrunAdi.TabIndex = 65;
+            this.toolTip1.SetToolTip(this.txtUrunAdi, "Boş Bırakmayınız !");
             this.txtUrunAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUrunAdi_KeyPress);
             // 
             // txtStokMiktari
             // 
             this.txtStokMiktari.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtStokMiktari.Location = new System.Drawing.Point(468, 148);
+            this.txtStokMiktari.Location = new System.Drawing.Point(467, 146);
             this.txtStokMiktari.Margin = new System.Windows.Forms.Padding(4);
             this.txtStokMiktari.Name = "txtStokMiktari";
-            this.txtStokMiktari.Size = new System.Drawing.Size(207, 30);
+            this.txtStokMiktari.Size = new System.Drawing.Size(215, 30);
             this.txtStokMiktari.TabIndex = 65;
+            this.toolTip1.SetToolTip(this.txtStokMiktari, "Boş Bırakmayınız !");
             this.txtStokMiktari.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStokMiktari_KeyPress);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(340, 112);
+            this.label9.Location = new System.Drawing.Point(342, 111);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 21);
+            this.label9.Size = new System.Drawing.Size(117, 21);
             this.label9.TabIndex = 64;
-            this.label9.Text = "Üretim Yeri";
+            this.label9.Text = "Üretim Yeri :";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(344, 276);
+            this.label12.Location = new System.Drawing.Point(342, 275);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(104, 21);
+            this.label12.Size = new System.Drawing.Size(115, 21);
             this.label12.TabIndex = 63;
-            this.label12.Text = "Satış Fiyatı";
+            this.label12.Text = "Satış Fiyatı :";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(344, 233);
+            this.label11.Location = new System.Drawing.Point(342, 234);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 21);
+            this.label11.Size = new System.Drawing.Size(104, 21);
             this.label11.TabIndex = 62;
-            this.label11.Text = "Alış Fiyatı";
+            this.label11.Text = "Alış Fiyatı :";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(344, 192);
+            this.label10.Location = new System.Drawing.Point(342, 193);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 21);
+            this.label10.Size = new System.Drawing.Size(106, 21);
             this.label10.TabIndex = 61;
-            this.label10.Text = "Kritik Eşik";
+            this.label10.Text = "Kritik Eşik :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(340, 153);
+            this.label5.Location = new System.Drawing.Point(342, 152);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 21);
+            this.label5.Size = new System.Drawing.Size(124, 21);
             this.label5.TabIndex = 60;
-            this.label5.Text = "Stok Miktarı";
+            this.label5.Text = "Stok Miktarı :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(3, 315);
+            this.label8.Location = new System.Drawing.Point(3, 316);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(96, 21);
@@ -407,7 +420,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(3, 231);
+            this.label4.Location = new System.Drawing.Point(3, 234);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 21);
@@ -418,7 +431,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(3, 273);
+            this.label3.Location = new System.Drawing.Point(3, 275);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 21);
@@ -428,11 +441,11 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label16.Location = new System.Drawing.Point(13, 43);
+            this.label16.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.Location = new System.Drawing.Point(4, 42);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(177, 25);
+            this.label16.Size = new System.Drawing.Size(184, 24);
             this.label16.TabIndex = 55;
             this.label16.Text = "ÜRÜN BİLGİLERİ";
             // 
@@ -440,7 +453,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(3, 106);
+            this.label7.Location = new System.Drawing.Point(3, 111);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 21);
@@ -451,7 +464,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(3, 148);
+            this.label2.Location = new System.Drawing.Point(3, 152);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 21);
@@ -462,7 +475,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(3, 190);
+            this.label1.Location = new System.Drawing.Point(3, 193);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 21);
@@ -492,6 +505,14 @@
             this.dgvUrunler.Size = new System.Drawing.Size(702, 464);
             this.dgvUrunler.TabIndex = 0;
             this.dgvUrunler.DoubleClick += new System.EventHandler(this.dgvUrunler_DoubleClick);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 50;
+            this.toolTip1.AutoPopDelay = 1000;
+            this.toolTip1.InitialDelay = 50;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 10;
             // 
             // frmUrunEkle
             // 
@@ -551,5 +572,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtRenk;
         private System.Windows.Forms.TextBox txtUrunAdi;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

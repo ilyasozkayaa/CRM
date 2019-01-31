@@ -287,7 +287,11 @@
             // 
             // toolTip1
             // 
+            this.toolTip1.AutomaticDelay = 50;
+            this.toolTip1.AutoPopDelay = 1000;
+            this.toolTip1.InitialDelay = 50;
             this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 10;
             // 
             // frmUrunIade
             // 

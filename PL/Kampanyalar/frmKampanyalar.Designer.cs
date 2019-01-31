@@ -120,7 +120,7 @@
             this.dtimebitis.Name = "dtimebitis";
             this.dtimebitis.Size = new System.Drawing.Size(203, 22);
             this.dtimebitis.TabIndex = 86;
-            this.toolTip1.SetToolTip(this.dtimebitis, "Tarih Seçimi Yapınız !");
+            this.toolTip1.SetToolTip(this.dtimebitis, "Seçim Yapınız  !");
             // 
             // dtimebaslangıc
             // 
@@ -128,7 +128,7 @@
             this.dtimebaslangıc.Name = "dtimebaslangıc";
             this.dtimebaslangıc.Size = new System.Drawing.Size(203, 22);
             this.dtimebaslangıc.TabIndex = 86;
-            this.toolTip1.SetToolTip(this.dtimebaslangıc, "Tarih Seçimi Yapınız !");
+            this.toolTip1.SetToolTip(this.dtimebaslangıc, "Seçim Yapınız  !");
             // 
             // button1
             // 
@@ -257,7 +257,11 @@
             // 
             // toolTip1
             // 
+            this.toolTip1.AutomaticDelay = 50;
+            this.toolTip1.AutoPopDelay = 1000;
+            this.toolTip1.InitialDelay = 50;
             this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 10;
             // 
             // frmKampanyalar
             // 

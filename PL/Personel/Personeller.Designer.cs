@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.PnlPersonelArama = new System.Windows.Forms.Panel();
@@ -43,6 +44,7 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.DgvPersoneller = new System.Windows.Forms.DataGridView();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.PnlPersonelArama.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -182,6 +184,7 @@
             this.txtSoyadı.Name = "txtSoyadı";
             this.txtSoyadı.Size = new System.Drawing.Size(132, 22);
             this.txtSoyadı.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.txtSoyadı, "Boş Bırakmayınız !");
             this.txtSoyadı.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoyadı_KeyPress);
             // 
             // label3
@@ -213,6 +216,7 @@
             this.txtAdı.Name = "txtAdı";
             this.txtAdı.Size = new System.Drawing.Size(132, 22);
             this.txtAdı.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txtAdı, "Boş Bırakmayınız !");
             this.txtAdı.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdı_KeyPress);
             // 
             // txtID
@@ -247,6 +251,14 @@
             this.DgvPersoneller.Size = new System.Drawing.Size(784, 501);
             this.DgvPersoneller.TabIndex = 0;
             this.DgvPersoneller.DoubleClick += new System.EventHandler(this.DgvPersoneller_DoubleClick);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 50;
+            this.toolTip1.AutoPopDelay = 1000;
+            this.toolTip1.InitialDelay = 50;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 10;
             // 
             // Personeller
             // 
@@ -287,5 +299,6 @@
         private System.Windows.Forms.Button BtnÇıkışVerme;
         private System.Windows.Forms.Button BtnYeniPersonel;
         private System.Windows.Forms.DataGridView DgvPersoneller;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

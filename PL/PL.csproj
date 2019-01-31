@@ -350,6 +350,9 @@
     <Content Include="Resources\ErkanHoyman.png" />
     <Content Include="Resources\FerhatUlusoy.png" />
     <Content Include="Resources\GamzeUzgör.png" />
+    <None Include="Resources\icons8-cash-in-hand-32.png" />
+    <None Include="Resources\icons8-cash-in-hand-42.png" />
+    <None Include="Resources\icons8-minus-32.png" />
     <Content Include="Resources\iRCMHFAYB.jpg" />
     <Content Include="Resources\iT7LKBH9A.jpg" />
     <Content Include="Resources\MelekBaşer.png" />
