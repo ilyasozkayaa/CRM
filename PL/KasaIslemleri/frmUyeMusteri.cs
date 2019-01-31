@@ -169,5 +169,25 @@ namespace PL
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void btnCikart_Click(object sender, EventArgs e)
+        {
+            dgvSatis.Rows.RemoveAt(dgvSatis.SelectedRows[0].Index);
+            int Aratoplam = 0;
+            for (int i = 0; i < dgvSatis.RowCount - 1; i++)
+            {
+                Aratoplam += Convert.ToInt32(dgvSatis.Rows[i].Cells[2].Value);
+            }
+            lblAraToplam.Text = Aratoplam.ToString();
+            Toplam = Convert.ToDecimal(Aratoplam + (Aratoplam * 0.18));
+            lblToplam.Text = Toplam.ToString();
+            GenelToplam = Toplam;
+            foreach (Promosyon p in ppi.AktifPromosyonlar(DateTime.Now))
+            {
+                GenelToplam -= GenelToplam * p.PromosyonOrani;
+                lblIndirimMiktari.Text = p.PromosyonAdi + " " + p.PromosyonOrani;
+            }
+            lblGenelToplam.Text = GenelToplam.ToString();
+        }
     }
 }

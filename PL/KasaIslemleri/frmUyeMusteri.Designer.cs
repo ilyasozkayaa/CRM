@@ -60,6 +60,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnSatis = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnCikart = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlMusteri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSatis)).BeginInit();
@@ -365,6 +366,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnCikart);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(857, 158);
@@ -438,6 +440,16 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // btnCikart
+            // 
+            this.btnCikart.Location = new System.Drawing.Point(19, 61);
+            this.btnCikart.Name = "btnCikart";
+            this.btnCikart.Size = new System.Drawing.Size(104, 54);
+            this.btnCikart.TabIndex = 9;
+            this.btnCikart.Text = "Çıkart";
+            this.btnCikart.UseVisualStyleBackColor = true;
+            this.btnCikart.Click += new System.EventHandler(this.btnCikart_Click);
+            // 
             // frmUyeMusteri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -500,5 +512,6 @@
         private System.Windows.Forms.Label lblAD;
         private System.Windows.Forms.TextBox txtAdet;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCikart;
     }
 }
