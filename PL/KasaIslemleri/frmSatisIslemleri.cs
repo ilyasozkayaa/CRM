@@ -91,9 +91,6 @@ namespace PL.KasaIslemleri
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);    //sadece rakam girişi
         }
 
-        private void pnlContent_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
     }
 }
