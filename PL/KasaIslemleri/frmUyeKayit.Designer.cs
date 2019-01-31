@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
             this.DTimePicker = new System.Windows.Forms.DateTimePicker();
             this.TxtMaskedTelefon = new System.Windows.Forms.MaskedTextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -187,6 +189,7 @@
             this.txtSehir.Name = "txtSehir";
             this.txtSehir.Size = new System.Drawing.Size(132, 22);
             this.txtSehir.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtSehir, "Boş Bırakmayınız !");
             this.txtSehir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSehir_KeyPress);
             // 
             // txtAdi
@@ -196,6 +199,7 @@
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(132, 22);
             this.txtAdi.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtAdi, "Boş Bırakmayınız !");
             this.txtAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdi_KeyPress);
             // 
             // txtSoyadi
@@ -205,6 +209,7 @@
             this.txtSoyadi.Name = "txtSoyadi";
             this.txtSoyadi.Size = new System.Drawing.Size(132, 22);
             this.txtSoyadi.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtSoyadi, "Boş Bırakmayınız !");
             this.txtSoyadi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoyadi_KeyPress);
             // 
             // txtTCKNo
@@ -214,6 +219,7 @@
             this.txtTCKNo.Name = "txtTCKNo";
             this.txtTCKNo.Size = new System.Drawing.Size(132, 22);
             this.txtTCKNo.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtTCKNo, "Boş Bırakmayınız !");
             this.txtTCKNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTCKNo_KeyPress);
             // 
             // txtAdres
@@ -224,6 +230,7 @@
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(132, 104);
             this.txtAdres.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtAdres, "Boş Bırakmayınız !");
             // 
             // txtEMail
             // 
@@ -232,6 +239,7 @@
             this.txtEMail.Name = "txtEMail";
             this.txtEMail.Size = new System.Drawing.Size(132, 22);
             this.txtEMail.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtEMail, "Boş Bırakmayınız !");
             // 
             // BtnKaydet
             // 
@@ -291,6 +299,7 @@
             this.DTimePicker.Name = "DTimePicker";
             this.DTimePicker.Size = new System.Drawing.Size(133, 22);
             this.DTimePicker.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.DTimePicker, "Tarih Seçimi Yapınız !");
             // 
             // TxtMaskedTelefon
             // 
@@ -299,6 +308,7 @@
             this.TxtMaskedTelefon.Name = "TxtMaskedTelefon";
             this.TxtMaskedTelefon.Size = new System.Drawing.Size(133, 22);
             this.TxtMaskedTelefon.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.TxtMaskedTelefon, "Boş Bırakmayınız !");
             this.TxtMaskedTelefon.ValidatingType = typeof(int);
             // 
             // panel4
@@ -309,6 +319,10 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(425, 526);
             this.panel4.TabIndex = 6;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
             // 
             // frmUyeKayit
             // 
@@ -358,5 +372,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DateTimePicker DTimePicker;
         private System.Windows.Forms.MaskedTextBox TxtMaskedTelefon;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

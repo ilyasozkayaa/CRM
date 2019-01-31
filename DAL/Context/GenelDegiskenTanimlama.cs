@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.Model
+namespace DAL.Context
 {
-   public class GenelDegiskenTanimlama
+    public class GenelDegiskenTanimlama
     {
         public static int Id;
         public static string imagePath;

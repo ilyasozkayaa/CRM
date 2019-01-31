@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Genel.cs" />
-    <Compile Include="Model\GenelDegiskenTanimlama.cs" />
+    <Compile Include="Model\GenelDegiskenler.cs" />
     <Compile Include="Model\GorevHareketler.cs" />
     <Compile Include="Model\IGenel.cs" />
     <Compile Include="Model\IGorevHareketIer.cs" />

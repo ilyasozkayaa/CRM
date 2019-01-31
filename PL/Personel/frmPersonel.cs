@@ -42,8 +42,10 @@ namespace PL.Personeller
 
             dosya.Title = "Kayıt";//diğaloğumuzun başlığını belirliyoruz.  
                                   //File.Copy(dosyayolu, hedef);
-            File.Move(dosyayolu, "C:\\Users\\Büşra\\source\\repos\\ilyasozkayaa\\CRM\\PL\\Resources\\" + txtAd.Text + "" + txtSoyad.Text + ".jpg");
-            string hedef = Path.Combine("C:\\Users\\Büşra\\source\\repos\\ilyasozkayaa\\CRM\\PL\\Resources\\" + txtAd.Text + "" + txtSoyad.Text + ".jpg");
+            string projeadres = Application.StartupPath;
+            string adres = projeadres + @"\\Resim\\";
+            File.Move(dosyayolu, adres + txtAd.Text + "" + txtSoyad.Text + ".jpg");
+            string hedef = Path.Combine(adres + txtAd.Text + "" + txtSoyad.Text + ".jpg");
             GenelDegiskenTanimlama.imagePath = hedef;
 
         }
@@ -104,6 +106,11 @@ namespace PL.Personeller
 
 
 
+
+        }
+
+        private void panelHeader2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

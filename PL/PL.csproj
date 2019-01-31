@@ -258,119 +258,77 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\activity-feed-32.png" />
+    <None Include="Resources\add-user-2-32.png" />
+    <None Include="Resources\add-user-2-321.png" />
+    <None Include="Resources\available-updates-32.png" />
+    <None Include="Resources\cashregister.png" />
+    <None Include="Resources\cash_register-512.png" />
+    <None Include="Resources\chart.png" />
+    <None Include="Resources\delete-32.png" />
+    <None Include="Resources\deleteWhite.png" />
+    <None Include="Resources\downbutton.png" />
+    <None Include="Resources\employee.png" />
+    <None Include="Resources\employee2.png" />
+    <None Include="Resources\hanger.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\icons8-bow-tie-32.png" />
+    <None Include="Resources\icons8-bow-tie-64.png" />
+    <None Include="Resources\icons8-businessman-48.png" />
+    <None Include="Resources\icons8-cancel-48.png" />
+    <None Include="Resources\icons8-christmas-gift-42.png" />
+    <None Include="Resources\icons8-christmas-gift-50.png" />
+    <None Include="Resources\icons8-christmas-gift-filled-32.png" />
+    <None Include="Resources\icons8-christmas-gift-filled-321.png" />
+    <None Include="Resources\icons8-christmas-gift-filled-322.png" />
+    <None Include="Resources\icons8-christmas-gift-filled-323.png" />
+    <None Include="Resources\icons8-circled-user-male-skin-type-6-48.png" />
+    <None Include="Resources\icons8-cook-48.png" />
+    <None Include="Resources\icons8-female-profile-48.png" />
+    <None Include="Resources\icons8-horizontal-line-32 %281%29.png" />
+    <None Include="Resources\icons8-import-32 %281%29.png" />
+    <None Include="Resources\icons8-import-32.png" />
+    <None Include="Resources\icons8-import-48.png" />
+    <None Include="Resources\icons8-menu-32.png" />
+    <None Include="Resources\icons8-menu-64.png" />
+    <None Include="Resources\icons8-multiply-32 %282%29.png" />
+    <None Include="Resources\icons8-ok-48.png" />
+    <None Include="Resources\icons8-plus-24.png" />
+    <None Include="Resources\icons8-plus-48.png" />
+    <None Include="Resources\icons8-school-director-48.png" />
+    <None Include="Resources\icons8-sophia-loren-48 %281%29.png" />
+    <None Include="Resources\icons8-sophia-loren-48.png" />
+    <None Include="Resources\icons8-user-male-48.png" />
+    <None Include="Resources\icons8-virtual-machine-32 %282%29.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\images1.png" />
+    <None Include="Resources\kampanya.png" />
+    <None Include="Resources\launchpad.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\marketin2.png" />
+    <None Include="Resources\marketing.png" />
+    <None Include="Resources\marketing3.png" />
+    <None Include="Resources\money.png" />
+    <None Include="Resources\notifred.png" />
+    <None Include="Resources\people.png" />
+    <None Include="Resources\personelFoto.png" />
+    <None Include="Resources\persons.png" />
+    <None Include="Resources\plus-5-32.png" />
+    <None Include="Resources\plus-5-321.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\product.png" />
+    <None Include="Resources\product2.png" />
+    <None Include="Resources\profile.png" />
+    <None Include="Resources\profileicon.png" />
+    <None Include="Resources\remove-user-32.png" />
+    <None Include="Resources\uparrow.png" />
+    <None Include="Resources\user_badge-512.png" />
+    <None Include="Resources\zoom-32.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cash_register-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\user_badge-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cashregister.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\employee.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\employee2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kampanya.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\marketin2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\marketing.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\marketing3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\product.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\product2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\profile.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\persons.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\profileicon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\uparrow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\people.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hanger.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\money.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\launchpad.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\chart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-menu-64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-menu-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\downbutton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\personelFoto.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\deleteWhite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-virtual-machine-32 %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-multiply-32 %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-horizontal-line-32 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\notifred.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\help.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-bow-tie-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-bow-tie-64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -383,94 +341,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-plus-24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-plus-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-ok-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-cancel-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-businessman-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-circled-user-male-skin-type-6-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-cook-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-female-profile-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-school-director-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-sophia-loren-48 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-sophia-loren-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-user-male-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\activity-feed-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\zoom-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\remove-user-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add-user-2-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus-5-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\plus-5-321.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\available-updates-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\add-user-2-321.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-christmas-gift-filled-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-import-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-import-32 %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-christmas-gift-filled-321.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-import-48.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-christmas-gift-filled-322.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-christmas-gift-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-christmas-gift-42.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-christmas-gift-filled-323.png" />
+    <Content Include="Resources\Accept-icon %281%29.png" />
+    <Content Include="Resources\Accept-icon.png" />
+    <Content Include="Resources\BüşraMelek.png" />
+    <Content Include="Resources\CanUlu.png" />
+    <Content Include="Resources\CemKara.png" />
+    <Content Include="Resources\ErhanUslu.png" />
+    <Content Include="Resources\ErkanHoyman.png" />
+    <Content Include="Resources\FerhatUlusoy.png" />
+    <Content Include="Resources\GamzeUzgör.png" />
+    <Content Include="Resources\iRCMHFAYB.jpg" />
+    <Content Include="Resources\iT7LKBH9A.jpg" />
+    <Content Include="Resources\MelekBaşer.png" />
+    <Content Include="Resources\ÖzlemBilir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

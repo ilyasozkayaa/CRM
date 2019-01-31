@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvSatisDetaylar = new System.Windows.Forms.DataGridView();
@@ -48,6 +49,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSatisDetaylar)).BeginInit();
             this.panel2.SuspendLayout();
@@ -104,11 +106,12 @@
             // 
             // txtSatısID
             // 
-            this.txtSatısID.Location = new System.Drawing.Point(104, 23);
+            this.txtSatısID.Location = new System.Drawing.Point(111, 22);
             this.txtSatısID.Margin = new System.Windows.Forms.Padding(4);
             this.txtSatısID.Name = "txtSatısID";
             this.txtSatısID.Size = new System.Drawing.Size(107, 22);
             this.txtSatısID.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.txtSatısID, "Boş Bırakmayınız !");
             this.txtSatısID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtSatısID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSatısID_KeyPress);
             // 
@@ -199,6 +202,7 @@
             this.txtİadeAdet.Name = "txtİadeAdet";
             this.txtİadeAdet.Size = new System.Drawing.Size(91, 22);
             this.txtİadeAdet.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.txtİadeAdet, "Boş Bırakmayınız !");
             this.txtİadeAdet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtİadeAdet_KeyPress);
             // 
             // label6
@@ -281,6 +285,10 @@
             this.panel5.Size = new System.Drawing.Size(644, 458);
             this.panel5.TabIndex = 14;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            // 
             // frmUrunIade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -329,5 +337,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

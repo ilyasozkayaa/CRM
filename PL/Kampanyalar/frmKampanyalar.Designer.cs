@@ -36,17 +36,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dtimebitis = new System.Windows.Forms.DateTimePicker();
             this.dtimebaslangıc = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtPromosyonOranı = new System.Windows.Forms.TextBox();
+            this.btnPromosyonEkle = new System.Windows.Forms.Button();
+            this.btnPromosyonSil = new System.Windows.Forms.Button();
+            this.btnPromosyonGuncelle = new System.Windows.Forms.Button();
             this.txtPromosyonAdi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvpromosyonlar = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnPromosyonEkle = new System.Windows.Forms.Button();
-            this.btnPromosyonSil = new System.Windows.Forms.Button();
-            this.btnPromosyonGuncelle = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvpromosyonlar)).BeginInit();
@@ -120,6 +120,7 @@
             this.dtimebitis.Name = "dtimebitis";
             this.dtimebitis.Size = new System.Drawing.Size(203, 22);
             this.dtimebitis.TabIndex = 86;
+            this.toolTip1.SetToolTip(this.dtimebitis, "Tarih Seçimi Yapınız !");
             // 
             // dtimebaslangıc
             // 
@@ -127,6 +128,22 @@
             this.dtimebaslangıc.Name = "dtimebaslangıc";
             this.dtimebaslangıc.Size = new System.Drawing.Size(203, 22);
             this.dtimebaslangıc.TabIndex = 86;
+            this.toolTip1.SetToolTip(this.dtimebaslangıc, "Tarih Seçimi Yapınız !");
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::PL.Properties.Resources.icons8_christmas_gift_filled_323;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(115, 335);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 61);
+            this.button1.TabIndex = 85;
+            this.button1.Text = "           Promosyon Bilgi";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtPromosyonOranı
             // 
@@ -135,7 +152,57 @@
             this.txtPromosyonOranı.Size = new System.Drawing.Size(203, 22);
             this.txtPromosyonOranı.TabIndex = 84;
             this.toolTip1.SetToolTip(this.txtPromosyonOranı, "Boş Bırakmayınız !");
-          
+            // 
+            // btnPromosyonEkle
+            // 
+            this.btnPromosyonEkle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnPromosyonEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPromosyonEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPromosyonEkle.ForeColor = System.Drawing.Color.White;
+            this.btnPromosyonEkle.Image = global::PL.Properties.Resources.plus_5_321;
+            this.btnPromosyonEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPromosyonEkle.Location = new System.Drawing.Point(17, 222);
+            this.btnPromosyonEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPromosyonEkle.Name = "btnPromosyonEkle";
+            this.btnPromosyonEkle.Size = new System.Drawing.Size(170, 49);
+            this.btnPromosyonEkle.TabIndex = 81;
+            this.btnPromosyonEkle.Text = "   EKLE";
+            this.btnPromosyonEkle.UseVisualStyleBackColor = false;
+            this.btnPromosyonEkle.Click += new System.EventHandler(this.btnPromosyonEkle_Click);
+            // 
+            // btnPromosyonSil
+            // 
+            this.btnPromosyonSil.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnPromosyonSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPromosyonSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPromosyonSil.ForeColor = System.Drawing.Color.White;
+            this.btnPromosyonSil.Image = global::PL.Properties.Resources.delete_32;
+            this.btnPromosyonSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPromosyonSil.Location = new System.Drawing.Point(207, 222);
+            this.btnPromosyonSil.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPromosyonSil.Name = "btnPromosyonSil";
+            this.btnPromosyonSil.Size = new System.Drawing.Size(170, 49);
+            this.btnPromosyonSil.TabIndex = 80;
+            this.btnPromosyonSil.Text = "   SİL";
+            this.btnPromosyonSil.UseVisualStyleBackColor = false;
+            this.btnPromosyonSil.Click += new System.EventHandler(this.btnPromosyonSil_Click);
+            // 
+            // btnPromosyonGuncelle
+            // 
+            this.btnPromosyonGuncelle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnPromosyonGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPromosyonGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPromosyonGuncelle.ForeColor = System.Drawing.Color.White;
+            this.btnPromosyonGuncelle.Image = global::PL.Properties.Resources.available_updates_32;
+            this.btnPromosyonGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPromosyonGuncelle.Location = new System.Drawing.Point(115, 279);
+            this.btnPromosyonGuncelle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPromosyonGuncelle.Name = "btnPromosyonGuncelle";
+            this.btnPromosyonGuncelle.Size = new System.Drawing.Size(175, 49);
+            this.btnPromosyonGuncelle.TabIndex = 79;
+            this.btnPromosyonGuncelle.Text = "        GÜNCELLE";
+            this.btnPromosyonGuncelle.UseVisualStyleBackColor = false;
+            this.btnPromosyonGuncelle.Click += new System.EventHandler(this.btnPromosyonGuncelle_Click);
             // 
             // txtPromosyonAdi
             // 
@@ -191,72 +258,6 @@
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::PL.Properties.Resources.icons8_christmas_gift_filled_323;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(115, 335);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 61);
-            this.button1.TabIndex = 85;
-            this.button1.Text = "           Promosyon Bilgi";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnPromosyonEkle
-            // 
-            this.btnPromosyonEkle.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnPromosyonEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPromosyonEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPromosyonEkle.ForeColor = System.Drawing.Color.White;
-            this.btnPromosyonEkle.Image = global::PL.Properties.Resources.plus_5_321;
-            this.btnPromosyonEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPromosyonEkle.Location = new System.Drawing.Point(17, 222);
-            this.btnPromosyonEkle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPromosyonEkle.Name = "btnPromosyonEkle";
-            this.btnPromosyonEkle.Size = new System.Drawing.Size(170, 49);
-            this.btnPromosyonEkle.TabIndex = 81;
-            this.btnPromosyonEkle.Text = "   EKLE";
-            this.btnPromosyonEkle.UseVisualStyleBackColor = false;
-            this.btnPromosyonEkle.Click += new System.EventHandler(this.btnPromosyonEkle_Click);
-            // 
-            // btnPromosyonSil
-            // 
-            this.btnPromosyonSil.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnPromosyonSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPromosyonSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPromosyonSil.ForeColor = System.Drawing.Color.White;
-            this.btnPromosyonSil.Image = global::PL.Properties.Resources.delete_32;
-            this.btnPromosyonSil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPromosyonSil.Location = new System.Drawing.Point(207, 222);
-            this.btnPromosyonSil.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPromosyonSil.Name = "btnPromosyonSil";
-            this.btnPromosyonSil.Size = new System.Drawing.Size(170, 49);
-            this.btnPromosyonSil.TabIndex = 80;
-            this.btnPromosyonSil.Text = "   SİL";
-            this.btnPromosyonSil.UseVisualStyleBackColor = false;
-            this.btnPromosyonSil.Click += new System.EventHandler(this.btnPromosyonSil_Click);
-            // 
-            // btnPromosyonGuncelle
-            // 
-            this.btnPromosyonGuncelle.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnPromosyonGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPromosyonGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnPromosyonGuncelle.ForeColor = System.Drawing.Color.White;
-            this.btnPromosyonGuncelle.Image = global::PL.Properties.Resources.available_updates_32;
-            this.btnPromosyonGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPromosyonGuncelle.Location = new System.Drawing.Point(115, 279);
-            this.btnPromosyonGuncelle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPromosyonGuncelle.Name = "btnPromosyonGuncelle";
-            this.btnPromosyonGuncelle.Size = new System.Drawing.Size(175, 49);
-            this.btnPromosyonGuncelle.TabIndex = 79;
-            this.btnPromosyonGuncelle.Text = "        GÜNCELLE";
-            this.btnPromosyonGuncelle.UseVisualStyleBackColor = false;
-            this.btnPromosyonGuncelle.Click += new System.EventHandler(this.btnPromosyonGuncelle_Click);
             // 
             // frmKampanyalar
             // 

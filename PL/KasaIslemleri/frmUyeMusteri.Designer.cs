@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
@@ -56,11 +57,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnCikart = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnSatis = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnCikart = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnlHeader.SuspendLayout();
             this.pnlMusteri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSatis)).BeginInit();
@@ -88,6 +90,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(81, 37);
             this.textBox1.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.textBox1, "Boş Bırakmayınız !");
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -327,6 +330,7 @@
             this.txtAdet.Name = "txtAdet";
             this.txtAdet.Size = new System.Drawing.Size(100, 22);
             this.txtAdet.TabIndex = 86;
+            this.toolTip1.SetToolTip(this.txtAdet, "Boş Bırakmayınız !");
             this.txtAdet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdet_KeyPress);
             // 
             // label1
@@ -374,6 +378,16 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(267, 411);
             this.panel4.TabIndex = 14;
+            // 
+            // btnCikart
+            // 
+            this.btnCikart.Location = new System.Drawing.Point(19, 61);
+            this.btnCikart.Name = "btnCikart";
+            this.btnCikart.Size = new System.Drawing.Size(104, 54);
+            this.btnCikart.TabIndex = 9;
+            this.btnCikart.Text = "Çıkart";
+            this.btnCikart.UseVisualStyleBackColor = true;
+            this.btnCikart.Click += new System.EventHandler(this.btnCikart_Click);
             // 
             // panel5
             // 
@@ -440,15 +454,15 @@
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // btnCikart
+            // toolTip1
             // 
-            this.btnCikart.Location = new System.Drawing.Point(19, 61);
-            this.btnCikart.Name = "btnCikart";
-            this.btnCikart.Size = new System.Drawing.Size(104, 54);
-            this.btnCikart.TabIndex = 9;
-            this.btnCikart.Text = "Çıkart";
-            this.btnCikart.UseVisualStyleBackColor = true;
-            this.btnCikart.Click += new System.EventHandler(this.btnCikart_Click);
+            this.toolTip1.AutomaticDelay = 50;
+            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.BackColor = System.Drawing.Color.SteelBlue;
+            this.toolTip1.ForeColor = System.Drawing.Color.White;
+            this.toolTip1.InitialDelay = 50;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 10;
             // 
             // frmUyeMusteri
             // 
@@ -513,5 +527,6 @@
         private System.Windows.Forms.TextBox txtAdet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCikart;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

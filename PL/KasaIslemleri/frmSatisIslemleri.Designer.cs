@@ -252,6 +252,7 @@
             this.txtTelNO.Name = "txtTelNO";
             this.txtTelNO.Size = new System.Drawing.Size(132, 22);
             this.txtTelNO.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.txtTelNO, "Boş Bırakmayınız !");
             this.txtTelNO.TextChanged += new System.EventHandler(this.txtTelNO_TextChanged);
             this.txtTelNO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelNO_KeyPress);
             // 
@@ -303,6 +304,10 @@
             this.pnlContent.Size = new System.Drawing.Size(1124, 569);
             this.pnlContent.TabIndex = 6;
             this.pnlContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContent_Paint);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
             // 
             // frmSatisIslemleri
             // 
