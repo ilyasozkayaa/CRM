@@ -135,7 +135,7 @@
             this.txtPromosyonOranı.Size = new System.Drawing.Size(203, 22);
             this.txtPromosyonOranı.TabIndex = 84;
             this.toolTip1.SetToolTip(this.txtPromosyonOranı, "Boş Bırakmayınız !");
-            this.txtPromosyonOranı.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPromosyonOranı_KeyPress);
+          
             // 
             // txtPromosyonAdi
             // 

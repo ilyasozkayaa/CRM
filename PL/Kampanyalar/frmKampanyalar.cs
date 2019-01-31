@@ -182,6 +182,10 @@ namespace PL.Kampanyalar
             {
                 MessageBox.Show("Günün Promosyonu >>" + " " + p.PromosyonAdi + " " +" Oranı = " +  p.PromosyonOrani);
             }
+          if(GununPromosyonu.Count==0 )
+            {
+                MessageBox.Show("Aktif Promosyon İndirimi Bulunmamaktadır !");
+            }
 }
 
         private void txtPromosyonAdi_KeyPress(object sender, KeyPressEventArgs e)
@@ -191,10 +195,7 @@ namespace PL.Kampanyalar
 
         }
 
-        private void txtPromosyonOranı_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
+     
 
       
     }

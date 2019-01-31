@@ -41,7 +41,7 @@ namespace PL.KasaIslemleri
         private void dgvSatisDetaylar_DoubleClick(object sender, EventArgs e)
         {
             IadeEdilenUrun = Uislem.urunBul(Convert.ToInt32(dgvSatisDetaylar.SelectedRows[0].Cells[2].Value));
-            txtUrunId.Text = dgvSatisDetaylar.SelectedRows[0].Cells[3].Value.ToString();
+            txtUrunId.Text = dgvSatisDetaylar.SelectedRows[0].Cells[2].Value.ToString();
             txtAdet.Text = dgvSatisDetaylar.SelectedRows[0].Cells[3].Value.ToString();
             txtUrunAd.Text = IadeEdilenUrun.UrunAdi;
         }
@@ -54,7 +54,9 @@ namespace PL.KasaIslemleri
             {
                 if (txtİadeAdet.Text.Trim() != "" && Convert.ToInt32(txtAdet.Text) >= IadeAdet)
                 {
-                    // Uislem.StokEkle(IadeEdilenUrun.Id, IadeAdet);
+                    decimal para = Convert.ToDecimal(dgvSatisDetaylar.SelectedRows[0].Cells[4].Value);
+                    int Satisadet = Convert.ToInt32(dgvSatisDetaylar.SelectedRows[0].Cells[3].Value);
+                    decimal ıadeUcret = (para / Satisadet) * IadeAdet;
                     if (Uislem.TekKategorideIade(Convert.ToInt32(dgvSatisDetaylar.SelectedRows[0].Cells[0].Value), IadeEdilenUrun.Id, IadeAdet))
                     {
                         UrunIade iade = new UrunIade();
@@ -63,9 +65,8 @@ namespace PL.KasaIslemleri
                         iade.IadeTarihi = DateTime.Now;
                         iade.SatisId = Convert.ToInt32(txtSatısID.Text);
                         iade.UrunID = IadeEdilenUrun.Id;
-                        iade.Ucret = (Convert.ToDecimal(dgvSatisDetaylar.SelectedRows[0].Cells[4].Value)/Convert.ToDecimal(dgvSatisDetaylar.SelectedRows[0].Cells[3].Value))*IadeAdet;
+                        iade.Ucret = ıadeUcret;
                         Uislem.UrunIadeHareket(iade);
-                        MessageBox.Show("İade İşlemi Gerçekleşti, Müşterimize "+iade.Ucret+" TL İade Ediniz!!!", "İşlem Başarılı");
                         dgvSatisDetaylar.DataSource = Uislem.SatısDetaylariniGetir(Convert.ToInt32(txtSatısID.Text));
                     }
                 }

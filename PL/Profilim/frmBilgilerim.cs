@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,23 +18,29 @@ namespace PL.Profilim
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
-        private void circularPictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
+        PersonelMusteriIslemleri per = new PersonelMusteriIslemleri();
+        DAL.Context.Personel prsl = new DAL.Context.Personel();
 
         private void frmBilgilerim_Load(object sender, EventArgs e)
         {
+
+            //int gelenId = per.UsersIdyeGorePersoneliGetirme();
+            prsl = per.PersonelGetir(GenelDegiskenTanimlama.Id);
+            labelAd.Text = prsl.Ad;
+            labelSoyad.Text = prsl.Soyad;
+            txtTCKNo.Text = prsl.TCKNo;
+            txtDogumYeri.Text = prsl.DogumYeri;
+            txtDogumT.Text = prsl.DogumTarihi.ToShortDateString();
+            txtEgitimDurumu.Text = prsl.EgitimDurumu;
+            txtBaslangicT.Text = prsl.IseGirisTarihi.ToShortDateString(); ;
+            txtMedeniHal.Text = prsl.MedeniHal;
+            txtAskerlikDurumu.Text = prsl.AskerlikDurumu;
+            txtEngel.Text = prsl.EngelDurumu;
+            txtTel.Text = prsl.Telefon;
+            txtEmail.Text = prsl.Email;
+            txtAdres.Text = prsl.Adres;
+            circularPictureBox1.ImageLocation = prsl.Image;
+
 
         }
     }

@@ -35,7 +35,7 @@ namespace PL
 
         private void frmUyeMusteri_Load(object sender, EventArgs e)
         {
-            
+
             IslemYapılanMusteri = pmi.musteriGetir(frmSatisIslemleri.MusteriID);
             int personelID = 15;  //Veri Çekilecek
             try
@@ -49,7 +49,7 @@ namespace PL
 
                 string message = ex.Message;
             }
-            
+
             dgvSatis.ColumnCount = 35;
             dgvSatis.Columns[0].Name = "Ürün Adı";
             dgvSatis.Columns[1].Name = "Adet";
@@ -92,7 +92,7 @@ namespace PL
                     dgvSatis.Rows.Add(u.UrunAdi, txtAdet.Text, (Adet * u.SatisFiyat), u.Id, u.SatisFiyat);
 
                     int Aratoplam = 0;
-                    for (int i = 0; i < dgvSatis.RowCount; i++)
+                    for (int i = 0; i < dgvSatis.RowCount - 1; i++)
                     {
                         Aratoplam += Convert.ToInt32(dgvSatis.Rows[i].Cells[2].Value);
                     }
@@ -135,18 +135,23 @@ namespace PL
             }
 
             SatisDetay sd = new SatisDetay();
-            for (int i = 0; i < dgvSatis.RowCount; i++)
+            for (int i = 0; i < dgvSatis.RowCount - 1; i++)
             {
-                sd.PromosyonId = 0;
+                sd.PromosyonId = 2;
+
+                decimal fiyat = (Convert.ToDecimal(dgvSatis.Rows[i].Cells[1].Value) * Convert.ToDecimal(dgvSatis.Rows[i].Cells[4].Value));
+
+                fiyat += Convert.ToDecimal(fiyat * 18 / 100);
                 if (ppi.AktifPromosyonlar(DateTime.Now) != null)
                 {
                     foreach (Promosyon p in ppi.AktifPromosyonlar(DateTime.Now))
                     {
                         sd.PromosyonId = p.Id;
-                        sd.SatisFiyati = GenelToplam;
+                        fiyat -= fiyat * p.PromosyonOrani;
                     }
                 }
                 sd.SatısId = SonSatisID;
+                sd.SatisFiyati = fiyat;
                 sd.UrunId = Convert.ToInt32(dgvSatis.Rows[i].Cells[3].Value);
                 sd.Miktar = Convert.ToInt32(dgvSatis.Rows[i].Cells[1].Value);
                 sd.Silindi = false;

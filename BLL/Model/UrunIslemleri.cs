@@ -316,9 +316,11 @@ namespace BLL.Model
 
         public bool TekKategorideIade(int SatisDetayId, int UrunID, int Miktar)
         {
-            bool sonuc = true;
+            bool sonuc = false;
             SatisDetay sd = (from s in ent.SatisDetays where s.Id == SatisDetayId select s).FirstOrDefault();
             Urun IadeEdilenUrun = (from u in ent.Uruns where u.Id == sd.UrunId select u).FirstOrDefault();
+            decimal IadeUcreti = (sd.SatisFiyati / sd.Miktar) * Miktar;
+            MessageBox.Show("Musterimize " + IadeUcreti.ToString() + " TL İadeEdiniz.");
             try
             {
                 if (sd.Miktar == Miktar)
@@ -329,6 +331,8 @@ namespace BLL.Model
                 }
                 else
                 {
+
+                    sd.SatisFiyati -= (sd.SatisFiyati / sd.Miktar) * Miktar;
                     sd.Miktar -= Miktar;
                     IadeEdilenUrun.StokMiktarı += Miktar;
                     ent.SaveChanges();
