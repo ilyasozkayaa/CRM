@@ -59,6 +59,7 @@ namespace PL
             kd.lblAdi.Text = p.Ad;
             kd.lblSoyAdi.Text = p.Soyad;
             kd.circularPictureBox1.Image = Resources.icons8_businessman_48;
+            kd.btnClose.Visible = false;
             kd.Dock = DockStyle.Right;
             pnlFooter.Controls.Add(kd);
             if (u.YetkiDüzeyi=="Eleman" || u.YetkiDüzeyi =="Kasiyer")

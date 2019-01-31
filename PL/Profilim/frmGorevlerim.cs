@@ -43,7 +43,7 @@ namespace PL
                 grvk.lblGorevAdi.Text = grv.GorevAdi;
                 grvk.lblBaslangic.Text = grv.BaslangicTarihi.ToShortDateString();
                 grvk.lblBitis.Text = grv.BitisTarihi.ToShortDateString();
-                
+                grvk.btnClose.Visible = false;
                 grvk.dgvDetay.DataSource = gh.GorevDetayGetirbyGorevId(item);
                 grvk.dgvDetay.Columns[0].Visible = false;
                 grvk.dgvDetay.Columns[1].Visible = false;

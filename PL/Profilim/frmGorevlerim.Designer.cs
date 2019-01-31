@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flpYapilacak = new System.Windows.Forms.FlowLayoutPanel();
@@ -43,7 +44,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnGuncelle = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.flpYapilacak.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -63,6 +63,19 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1054, 35);
             this.pnlHeader.TabIndex = 1;
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnGuncelle.FlatAppearance.BorderSize = 0;
+            this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuncelle.Image = global::PL.Properties.Resources.icons8_available_updates_321;
+            this.btnGuncelle.Location = new System.Drawing.Point(1001, 0);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(53, 35);
+            this.btnGuncelle.TabIndex = 1;
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // label4
             // 
@@ -209,19 +222,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(55, 462);
             this.panel5.TabIndex = 9;
-            // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnGuncelle.FlatAppearance.BorderSize = 0;
-            this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuncelle.Image = global::PL.Properties.Resources.icons8_available_updates_321;
-            this.btnGuncelle.Location = new System.Drawing.Point(1001, 0);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(53, 35);
-            this.btnGuncelle.TabIndex = 1;
-            this.btnGuncelle.UseVisualStyleBackColor = true;
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // frmGorevlerim
             // 

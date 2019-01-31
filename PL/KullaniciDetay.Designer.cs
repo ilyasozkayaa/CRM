@@ -31,6 +31,7 @@
             this.lblAdi = new System.Windows.Forms.Label();
             this.lblSoyAdi = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.circularPictureBox1 = new PL.CircularPictureBox();
             this.panel2.SuspendLayout();
@@ -62,18 +63,31 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.lblSoyAdi);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(139, 0);
+            this.panel2.Location = new System.Drawing.Point(129, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(75, 50);
             this.panel2.TabIndex = 0;
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::PL.Properties.Resources.icons8_multiply_32__2_;
+            this.btnClose.Location = new System.Drawing.Point(48, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(27, 24);
+            this.btnClose.TabIndex = 14;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.lblAdi);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(73, 0);
+            this.panel3.Location = new System.Drawing.Point(63, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(66, 50);
             this.panel3.TabIndex = 13;
@@ -97,7 +111,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.circularPictureBox1);
             this.Name = "KullaniciDetay";
-            this.Size = new System.Drawing.Size(214, 50);
+            this.Size = new System.Drawing.Size(204, 50);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -113,5 +127,6 @@
         public System.Windows.Forms.Label lblSoyAdi;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Button btnClose;
     }
 }

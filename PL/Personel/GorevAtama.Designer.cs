@@ -300,7 +300,7 @@
             // 
             // pnlBolumleri
             // 
-            this.pnlBolumleri.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlBolumleri.BackColor = System.Drawing.Color.Transparent;
             this.pnlBolumleri.Controls.Add(this.clbGorevBolum);
             this.pnlBolumleri.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBolumleri.Location = new System.Drawing.Point(0, 60);
@@ -311,12 +311,12 @@
             // clbGorevBolum
             // 
             this.clbGorevBolum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clbGorevBolum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clbGorevBolum.Dock = System.Windows.Forms.DockStyle.Top;
             this.clbGorevBolum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.clbGorevBolum.FormattingEnabled = true;
             this.clbGorevBolum.Location = new System.Drawing.Point(0, 0);
             this.clbGorevBolum.Name = "clbGorevBolum";
-            this.clbGorevBolum.Size = new System.Drawing.Size(427, 183);
+            this.clbGorevBolum.Size = new System.Drawing.Size(427, 168);
             this.clbGorevBolum.TabIndex = 0;
             this.clbGorevBolum.SelectedIndexChanged += new System.EventHandler(this.clbGorevBolum_SelectedIndexChanged);
             // 
@@ -385,7 +385,7 @@
             this.pnlGorevIcerik.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlGorevIcerik.Controls.Add(this.panel2);
             this.pnlGorevIcerik.Controls.Add(this.panel1);
-            this.pnlGorevIcerik.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGorevIcerik.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGorevIcerik.Location = new System.Drawing.Point(430, 140);
             this.pnlGorevIcerik.Name = "pnlGorevIcerik";
             this.pnlGorevIcerik.Size = new System.Drawing.Size(624, 357);
@@ -396,7 +396,7 @@
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.pnlGorevKartlarim);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(292, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(332, 357);
@@ -526,14 +526,15 @@
             // btnKartEkle
             // 
             this.btnKartEkle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnKartEkle.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnKartEkle.FlatAppearance.BorderSize = 0;
             this.btnKartEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKartEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKartEkle.ForeColor = System.Drawing.Color.White;
             this.btnKartEkle.Image = global::PL.Properties.Resources.plus;
-            this.btnKartEkle.Location = new System.Drawing.Point(0, -1);
+            this.btnKartEkle.Location = new System.Drawing.Point(0, -2);
             this.btnKartEkle.Name = "btnKartEkle";
-            this.btnKartEkle.Size = new System.Drawing.Size(106, 43);
+            this.btnKartEkle.Size = new System.Drawing.Size(292, 43);
             this.btnKartEkle.TabIndex = 3;
             this.btnKartEkle.Text = "Ekle";
             this.btnKartEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

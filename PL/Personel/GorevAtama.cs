@@ -103,7 +103,7 @@ namespace PL.Personel
             gk.lblBaslangic.Text = dtpGiris.MinDate.ToShortDateString();
             gk.lblBitis.Text = dtpCikis.MinDate.ToShortDateString() ;
             gk.clbDetay.Visible = false;
-            gk.btnUpdate.Visible = false;
+            gk.btnupdate.Visible = false;
             gk.pnlMembers.Controls.Add(b.circularPictureBox1);
             pnlGorevKartlarim.Controls.Add(gk);
         }

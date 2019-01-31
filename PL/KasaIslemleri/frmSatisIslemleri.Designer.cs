@@ -46,7 +46,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pnlContent = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -56,7 +55,6 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.SteelBlue;
-            this.pnlHeader.Controls.Add(this.panel1);
             this.pnlHeader.Controls.Add(this.label1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -146,7 +144,6 @@
             this.btnIade.BackColor = System.Drawing.Color.SteelBlue;
             this.btnIade.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnIade.FlatAppearance.BorderSize = 0;
-            this.btnIade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
             this.btnIade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIade.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnIade.ForeColor = System.Drawing.Color.White;
@@ -163,7 +160,6 @@
             this.btnYeniMust.BackColor = System.Drawing.Color.SteelBlue;
             this.btnYeniMust.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnYeniMust.FlatAppearance.BorderSize = 0;
-            this.btnYeniMust.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
             this.btnYeniMust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYeniMust.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnYeniMust.ForeColor = System.Drawing.Color.White;
@@ -180,7 +176,6 @@
             this.btnUyesiz.BackColor = System.Drawing.Color.SteelBlue;
             this.btnUyesiz.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUyesiz.FlatAppearance.BorderSize = 0;
-            this.btnUyesiz.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
             this.btnUyesiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUyesiz.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUyesiz.ForeColor = System.Drawing.Color.White;
@@ -197,7 +192,6 @@
             this.btnUyemusteri.BackColor = System.Drawing.Color.SteelBlue;
             this.btnUyemusteri.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUyemusteri.FlatAppearance.BorderSize = 0;
-            this.btnUyemusteri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkRed;
             this.btnUyemusteri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUyemusteri.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUyemusteri.ForeColor = System.Drawing.Color.White;
@@ -271,15 +265,6 @@
             this.pnlContent.Size = new System.Drawing.Size(843, 462);
             this.pnlContent.TabIndex = 6;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1054, 10);
-            this.panel1.TabIndex = 1;
-            // 
             // frmSatisIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,6 +309,5 @@
         private System.Windows.Forms.Button btnUyesiz;
         private System.Windows.Forms.Button btnUyemusteri;
         private System.Windows.Forms.Panel pnlBilgi;
-        private System.Windows.Forms.Panel panel1;
     }
 }

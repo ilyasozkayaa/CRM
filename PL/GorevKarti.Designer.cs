@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlheader = new System.Windows.Forms.Panel();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.lblGorevAdi = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
             this.pnlGorevDetay = new System.Windows.Forms.Panel();
@@ -41,6 +41,7 @@
             this.lblBaslangic = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnupdate = new System.Windows.Forms.Button();
             this.pnlheader.SuspendLayout();
             this.pnlGorevDetay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetay)).BeginInit();
@@ -50,7 +51,8 @@
             // pnlheader
             // 
             this.pnlheader.BackColor = System.Drawing.Color.SteelBlue;
-            this.pnlheader.Controls.Add(this.btnUpdate);
+            this.pnlheader.Controls.Add(this.btnupdate);
+            this.pnlheader.Controls.Add(this.btnClose);
             this.pnlheader.Controls.Add(this.lblGorevAdi);
             this.pnlheader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlheader.Location = new System.Drawing.Point(0, 0);
@@ -59,17 +61,19 @@
             this.pnlheader.TabIndex = 3;
             this.pnlheader.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pnlheader_MouseClick);
             // 
-            // btnUpdate
+            // btnClose
             // 
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Image = global::PL.Properties.Resources.icons8_available_updates_32;
-            this.btnUpdate.Location = new System.Drawing.Point(263, 0);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(38, 29);
-            this.btnUpdate.TabIndex = 1;
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = global::PL.Properties.Resources.icons8_multiply_32__2_;
+            this.btnClose.Location = new System.Drawing.Point(266, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(38, 29);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblGorevAdi
             // 
@@ -177,6 +181,19 @@
             this.timer1.Interval = 15;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnupdate
+            // 
+            this.btnupdate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnupdate.FlatAppearance.BorderSize = 0;
+            this.btnupdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnupdate.Image = global::PL.Properties.Resources.icons8_available_updates_32;
+            this.btnupdate.Location = new System.Drawing.Point(228, 0);
+            this.btnupdate.Name = "btnupdate";
+            this.btnupdate.Size = new System.Drawing.Size(38, 29);
+            this.btnupdate.TabIndex = 3;
+            this.btnupdate.UseVisualStyleBackColor = true;
+            // 
             // pnlGorevKarti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,7 +226,8 @@
         public System.Windows.Forms.Label lblBitis;
         public System.Windows.Forms.Label lblBaslangic;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Button btnUpdate;
         public System.Windows.Forms.DataGridView dgvDetay;
+        public System.Windows.Forms.Button btnClose;
+        public System.Windows.Forms.Button btnupdate;
     }
 }

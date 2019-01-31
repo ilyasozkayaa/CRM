@@ -69,6 +69,8 @@
             this.lblTarih = new System.Windows.Forms.Label();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
@@ -80,6 +82,7 @@
             this.pnlUrun.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             this.pnlSaat.SuspendLayout();
+            this.pnlContent.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -637,11 +640,31 @@
             // 
             // pnlContent
             // 
+            this.pnlContent.Controls.Add(this.panel5);
+            this.pnlContent.Controls.Add(this.panel4);
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(206, 50);
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(834, 500);
             this.pnlContent.TabIndex = 11;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(834, 3);
+            this.panel5.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.ForeColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(0, 497);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(834, 3);
+            this.panel4.TabIndex = 0;
             // 
             // timer4
             // 
@@ -678,6 +701,7 @@
             this.pnlFooter.ResumeLayout(false);
             this.pnlSaat.ResumeLayout(false);
             this.pnlSaat.PerformLayout();
+            this.pnlContent.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -726,6 +750,8 @@
         private System.Windows.Forms.Button btnKampanya;
         public System.Windows.Forms.Button btnPersonicon;
         private System.Windows.Forms.Button btnOturum;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 
