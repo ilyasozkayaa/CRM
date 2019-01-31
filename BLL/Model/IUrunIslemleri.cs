@@ -39,5 +39,7 @@ namespace BLL.Model
         List<SatisDetay> SatısDetaylariniGetir(int ID);
         bool StokAzalt(int UrunID, int Miktar);
         bool UrunIadeHareket(UrunIade Uiade);
+        void KritikEsikKontrol(int UrunID);
+        bool SatisStokKontrol(int UrunID, int SatisMiktari);
     }
 }

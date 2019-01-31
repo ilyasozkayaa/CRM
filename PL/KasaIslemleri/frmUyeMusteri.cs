@@ -118,6 +118,7 @@ namespace PL
 
         private void btnSatis_Click(object sender, EventArgs e)
         {
+
             int SonSatisID = 0;
             Satis YeniSatis = new Satis();
             YeniSatis.MusteriId = IslemYapılanMusteri.Id;
@@ -127,7 +128,7 @@ namespace PL
             if (Uislem.SatisEkle(YeniSatis))
             {
                 SonSatisID = Uislem.SonSatisIDBul();
-                MessageBox.Show("Satış İşlemi Gerçekleşti.", "Satış Yapıldı.");
+                //MessageBox.Show("Satış İşlemi Gerçekleşti.", "Satış Yapıldı.");
             }
             else
             {
@@ -135,28 +136,51 @@ namespace PL
             }
 
             SatisDetay sd = new SatisDetay();
+            bool stokDurumu = true;
             for (int i = 0; i < dgvSatis.RowCount - 1; i++)
             {
-                sd.PromosyonId = 2;
-
-                decimal fiyat = (Convert.ToDecimal(dgvSatis.Rows[i].Cells[1].Value) * Convert.ToDecimal(dgvSatis.Rows[i].Cells[4].Value));
-
-                fiyat += Convert.ToDecimal(fiyat * 18 / 100);
-                if (ppi.AktifPromosyonlar(DateTime.Now) != null)
+                if(Uislem.SatisStokKontrol(Convert.ToInt32(dgvSatis.Rows[i].Cells[3].Value), Convert.ToInt32(dgvSatis.Rows[i].Cells[1].Value)))
                 {
-                    foreach (Promosyon p in ppi.AktifPromosyonlar(DateTime.Now))
-                    {
-                        sd.PromosyonId = p.Id;
-                        fiyat -= fiyat * p.PromosyonOrani;
-                    }
+                    
+                } 
+                else
+                {
+                    stokDurumu = false;
                 }
-                sd.SatısId = SonSatisID;
-                sd.SatisFiyati = fiyat;
-                sd.UrunId = Convert.ToInt32(dgvSatis.Rows[i].Cells[3].Value);
-                sd.Miktar = Convert.ToInt32(dgvSatis.Rows[i].Cells[1].Value);
-                sd.Silindi = false;
-                Uislem.SatisDetayEkle(sd);
-                Uislem.StokAzalt(sd.UrunId, sd.Miktar);
+            }
+            if(stokDurumu)
+            {
+                for (int i = 0; i < dgvSatis.RowCount - 1; i++)
+                {
+                    sd.PromosyonId = 2;
+
+                    decimal fiyat = (Convert.ToDecimal(dgvSatis.Rows[i].Cells[1].Value) * Convert.ToDecimal(dgvSatis.Rows[i].Cells[4].Value));
+
+                    fiyat += Convert.ToDecimal(fiyat * 18 / 100);
+                    if (ppi.AktifPromosyonlar(DateTime.Now) != null)
+                    {
+                        foreach (Promosyon p in ppi.AktifPromosyonlar(DateTime.Now))
+                        {
+                            sd.PromosyonId = p.Id;
+                            fiyat -= fiyat * p.PromosyonOrani;
+                        }
+                    }
+                    sd.SatısId = SonSatisID;
+                    sd.SatisFiyati = fiyat;
+                    sd.UrunId = Convert.ToInt32(dgvSatis.Rows[i].Cells[3].Value);
+                    sd.Miktar = Convert.ToInt32(dgvSatis.Rows[i].Cells[1].Value);
+                    sd.Silindi = false;
+                    Uislem.SatisDetayEkle(sd);
+                    Uislem.StokAzalt(sd.UrunId, sd.Miktar);
+                }
+                dgvSatis.Rows.Clear();
+                MessageBox.Show("Satış İşlemi Tamamlandı.", "İşlem Başarılı");
+                lblAraToplam.Text = "";
+                lblToplam.Text = "";
+                lblIndirimMiktari.Text = "";
+                lblGenelToplam.Text = "";
+
+            
             }
         }
 
@@ -191,3 +215,9 @@ namespace PL
         }
     }
 }
+
+
+
+
+
+

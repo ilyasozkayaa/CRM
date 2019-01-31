@@ -193,6 +193,15 @@ namespace BLL.Model
             return KategoriyeGoreUrunListesi;
         }
 
+        public void KritikEsikKontrol(int UrunID)
+        {
+             Urun KontrolEdilenUrun = urunBul(UrunID);
+            if(KontrolEdilenUrun.StokMiktarı<=KontrolEdilenUrun.KritikEsik)
+            {
+                //Yöneticiye Mesaj Gönderilecek
+            }
+        }
+
         public bool SatisDetayEkle(SatisDetay sd)
         {
             bool sonuc = false;
@@ -246,6 +255,21 @@ namespace BLL.Model
                     string message = ex.Message;
                 }           
             }
+
+
+            return sonuc;
+        }
+
+        public bool SatisStokKontrol(int UrunID, int SatisMiktari)
+        {
+            bool sonuc = true; ;
+            Urun StoguKontrolEdilen = urunBul(UrunID);
+            if(StoguKontrolEdilen.StokMiktarı<SatisMiktari)
+            {
+                MessageBox.Show(StoguKontrolEdilen.UrunAdi + " Adlı Üründen Depomuzda " + StoguKontrolEdilen.StokMiktarı + " Adet Bulunmaktadır.");
+                sonuc = false;
+            }
+
 
 
             return sonuc;
@@ -537,8 +561,6 @@ namespace BLL.Model
             }
             return sonuc;
         }
-    }
-
-       
+    }       
     
 }
