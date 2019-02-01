@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL.Context;
+using System.Net.Mail;
 
 namespace BLL.Model
 {
@@ -195,10 +196,27 @@ namespace BLL.Model
 
         public void KritikEsikKontrol(int UrunID)
         {
-             Urun KontrolEdilenUrun = urunBul(UrunID);
-            if(KontrolEdilenUrun.StokMiktarı<=KontrolEdilenUrun.KritikEsik)
+            MailMessage KampanyaMesaji = new MailMessage();
+            SmtpClient istemci = new SmtpClient();
+            istemci.Credentials = new System.Net.NetworkCredential("CRMGiyim@gmail.com", "Wissen12345w");
+            istemci.Port = 587;
+            istemci.Host = "smtp.gmail.com";
+            istemci.EnableSsl = true;
+
+            Urun KontrolEdilenUrun = urunBul(UrunID);
+            List<Personel> yetkiliListesi = (from p in ent.Personels where p.Ad == "İlyas" select p).ToList();
+
+            if (KontrolEdilenUrun.StokMiktarı <= KontrolEdilenUrun.KritikEsik)
             {
-                //Yöneticiye Mesaj Gönderilecek
+                foreach (Personel p in yetkiliListesi)
+                {
+                    KampanyaMesaji.To.Add(p.Email);
+                    KampanyaMesaji.From = new MailAddress("CRMGiyim@gmail.com");
+                    KampanyaMesaji.Subject = "Ürün Stoğu Tükeniyor!!!";
+                    KampanyaMesaji.Body = "Sayın " + p.Ad + " " + p.Soyad + " " + KontrolEdilenUrun.UrunAdi + " Adlı üründen stoğunuzda " + KontrolEdilenUrun.StokMiktarı + " adet kalmıştır, Bilginize...";
+                    istemci.Send(KampanyaMesaji);
+                }
+
             }
         }
 

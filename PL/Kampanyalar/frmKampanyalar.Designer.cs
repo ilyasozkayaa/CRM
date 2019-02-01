@@ -34,6 +34,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbKategoriler = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.dtimebitis = new System.Windows.Forms.DateTimePicker();
             this.dtimebaslangıc = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
@@ -96,6 +98,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.cbKategoriler);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.dtimebitis);
             this.panel2.Controls.Add(this.dtimebaslangıc);
             this.panel2.Controls.Add(this.button1);
@@ -114,9 +118,27 @@
             this.panel2.Size = new System.Drawing.Size(404, 407);
             this.panel2.TabIndex = 3;
             // 
+            // cbKategoriler
+            // 
+            this.cbKategoriler.FormattingEnabled = true;
+            this.cbKategoriler.Location = new System.Drawing.Point(174, 162);
+            this.cbKategoriler.Name = "cbKategoriler";
+            this.cbKategoriler.Size = new System.Drawing.Size(203, 24);
+            this.cbKategoriler.TabIndex = 88;
+            this.cbKategoriler.SelectedIndexChanged += new System.EventHandler(this.cbKategoriler_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 162);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(151, 17);
+            this.label6.TabIndex = 87;
+            this.label6.Text = "Uygulanacağı Kategori";
+            // 
             // dtimebitis
             // 
-            this.dtimebitis.Location = new System.Drawing.Point(174, 157);
+            this.dtimebitis.Location = new System.Drawing.Point(174, 118);
             this.dtimebitis.Name = "dtimebitis";
             this.dtimebitis.Size = new System.Drawing.Size(203, 22);
             this.dtimebitis.TabIndex = 86;
@@ -124,7 +146,7 @@
             // 
             // dtimebaslangıc
             // 
-            this.dtimebaslangıc.Location = new System.Drawing.Point(174, 110);
+            this.dtimebaslangıc.Location = new System.Drawing.Point(174, 85);
             this.dtimebaslangıc.Name = "dtimebaslangıc";
             this.dtimebaslangıc.Size = new System.Drawing.Size(203, 22);
             this.dtimebaslangıc.TabIndex = 86;
@@ -217,7 +239,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(27, 161);
+            this.label5.Location = new System.Drawing.Point(27, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 18);
             this.label5.TabIndex = 1;
@@ -227,7 +249,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(14, 114);
+            this.label4.Location = new System.Drawing.Point(14, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 18);
             this.label4.TabIndex = 1;
@@ -305,5 +327,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ComboBox cbKategoriler;
+        private System.Windows.Forms.Label label6;
     }
 }

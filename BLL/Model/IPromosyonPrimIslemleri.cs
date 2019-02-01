@@ -16,5 +16,6 @@ namespace BLL.Model
         bool PromosyonGuncelleKontrol(int PromosyonID, string PromosyonAdi);
         List<Promosyon> promosyonlarıGetir();
         List<Promosyon> AktifPromosyonlar(DateTime Tarih);
+        void KampanyaMesajıGönder(Kategori k,Promosyon p);
     }
 }

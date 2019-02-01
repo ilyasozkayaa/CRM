@@ -139,16 +139,16 @@ namespace PL
             bool stokDurumu = true;
             for (int i = 0; i < dgvSatis.RowCount - 1; i++)
             {
-                if(Uislem.SatisStokKontrol(Convert.ToInt32(dgvSatis.Rows[i].Cells[3].Value), Convert.ToInt32(dgvSatis.Rows[i].Cells[1].Value)))
+                if (Uislem.SatisStokKontrol(Convert.ToInt32(dgvSatis.Rows[i].Cells[3].Value), Convert.ToInt32(dgvSatis.Rows[i].Cells[1].Value)))
                 {
-                    
-                } 
+
+                }
                 else
                 {
                     stokDurumu = false;
                 }
             }
-            if(stokDurumu)
+            if (stokDurumu)
             {
                 for (int i = 0; i < dgvSatis.RowCount - 1; i++)
                 {
@@ -172,6 +172,7 @@ namespace PL
                     sd.Silindi = false;
                     Uislem.SatisDetayEkle(sd);
                     Uislem.StokAzalt(sd.UrunId, sd.Miktar);
+                    Uislem.KritikEsikKontrol(sd.UrunId);
                 }
                 dgvSatis.Rows.Clear();
                 MessageBox.Show("Satış İşlemi Tamamlandı.", "İşlem Başarılı");
@@ -180,7 +181,7 @@ namespace PL
                 lblIndirimMiktari.Text = "";
                 lblGenelToplam.Text = "";
 
-            
+
             }
         }
 

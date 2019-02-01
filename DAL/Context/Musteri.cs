@@ -19,6 +19,8 @@ namespace DAL.Context
         [Required]
         public string Soyad { get; set; }
         [Required]
+        public string Cinsiyet { get; set; }
+        [Required]
         public DateTime DogumTarihi { get; set; }
         [Required]
         public string TCKNo { get; set; }

@@ -22,6 +22,7 @@ namespace DAL.Context
         public DateTime BaslangıcTarihi { get; set; }
         [Required]
         public DateTime BitisTarihi { get; set; }
+        public int KategoriNO { get; set; }
         [DefaultValue(false)]
         public bool Silindi { get; set; }
 

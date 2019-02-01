@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Context;
+using System.Net.Mail;
 
 namespace BLL.Model
 {
@@ -22,6 +23,53 @@ namespace BLL.Model
                 }
             }
             return AktifPromosyonListesi;
+        }
+
+        public void KampanyaMesajıGönder(Kategori k, Promosyon p)
+        {
+            MailMessage KampanyaMesaji = new MailMessage();
+            SmtpClient istemci = new SmtpClient();
+            istemci.Credentials = new System.Net.NetworkCredential("CRMGiyim@gmail.com", "Wissen12345w");
+            istemci.Port = 587;
+            istemci.Host = "smtp.gmail.com";
+            istemci.EnableSsl = true;
+           
+            if (k.Id == 0)
+            {
+                List<Musteri> MesajGonderilecekMusteriListesi = ent.Musteris.ToList();
+                foreach (Musteri m in MesajGonderilecekMusteriListesi)
+                {
+                    KampanyaMesaji.To.Add(m.EMail);
+                    KampanyaMesaji.From = new MailAddress("CRMGiyim@gmail.com");
+                    KampanyaMesaji.Subject = "İndirim Fırsatını Kaçırmayın!!!";
+                    KampanyaMesaji.Body = "Sayın " + m.Ad + " " + m.Soyad + " " + p.BaslangıcTarihi.ToShortDateString() + " ile " + p.BitisTarihi.ToShortDateString() + " tarihleri arasında mağazamızda " + p.PromosyonAdi + " Koleksiyonunda " + p.PromosyonOrani + " İndirim vardır, kampanyamızdan yararlanmak için belirtilen tarihler arasında mağazamıza bekleriz..Keyifli alışverişler dileriz :)";
+                    istemci.Send(KampanyaMesaji);
+                }
+            }
+            else if (p.KategoriNO > 21 && p.KategoriNO < 35)
+            {
+                List<Musteri> mesajgonderilecekmusteri = (from m in ent.Musteris where m.Cinsiyet == "E" select m).ToList();
+                foreach (Musteri m in mesajgonderilecekmusteri)
+                {
+                    KampanyaMesaji.To.Add(m.EMail);
+                    KampanyaMesaji.From = new MailAddress("appinventer.ilyas@gmail.com");
+                    KampanyaMesaji.Subject = "İndirim Fırsatını Kaçırmayın!!!";
+                    KampanyaMesaji.Body = "Sayın " + m.Ad + " " + m.Soyad + " " + p.BaslangıcTarihi.ToShortDateString() + " ile " + p.BitisTarihi.ToShortDateString() + " tarihleri arasında magazamızda " + p.PromosyonAdi + " Kategorisinde " + p.PromosyonOrani + " indirim vardır, kampanydan yararlanmak için Belirtilen tarihler arasında mağazamıza ugrayınız.Keyifli alışverişler dileriz...";
+                    istemci.Send(KampanyaMesaji);
+                }
+            }
+            else
+            {
+                List<Musteri> mesajgonderilecekmusteri = (from m in ent.Musteris where m.Cinsiyet == "K" select m).ToList();
+                foreach (Musteri m in mesajgonderilecekmusteri)
+                {
+                    KampanyaMesaji.To.Add(m.EMail);
+                    KampanyaMesaji.From = new MailAddress("appinventer.ilyas@gmail.com");
+                    KampanyaMesaji.Subject = "İndirim Fırsatını Kaçırmayın!!!";
+                    KampanyaMesaji.Body = "Sayın " + m.Ad + " " + m.Soyad + " " + p.BaslangıcTarihi.ToShortDateString() + " ile " + p.BitisTarihi.ToShortDateString() + " tarihleri arasında magazamızda " + p.PromosyonAdi + " Kategorisinde " + p.PromosyonOrani + " indirim vardır, kampanydan yararlanmak için Belirtilen tarihler arasında mağazamıza ugrayınız.Keyifli alışverişler dileriz...";
+                    istemci.Send(KampanyaMesaji);
+                }
+            }
         }
 
         public bool promosyonekle(Promosyon p)

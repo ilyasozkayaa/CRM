@@ -26,10 +26,15 @@ namespace PL.Kampanyalar
 
         private void frmKampanyalar_Load(object sender, EventArgs e)
         {
-           
 
-
-
+            List<Kategori> Klistesi = ent.Kategoris.ToList();
+            Kategori yeni = new Kategori();
+            yeni.Id = 0;
+            yeni.KategoriAdi = "Tümüne Uygula";
+            yeni.Aciklama = "edfgerg";
+            yeni.Silindi = false;
+            Klistesi.Insert(0, yeni);
+            cbKategoriler.DataSource = Klistesi;
             dgvpromosyonlar.DataSource = ppi.promosyonlarıGetir();
             dgvpromosyonlar.Columns[0].Visible = false;
             dgvpromosyonlar.Columns[5].Visible = false;
@@ -59,10 +64,13 @@ namespace PL.Kampanyalar
                         Yeniprm.PromosyonOrani = porani;
                         Yeniprm.BaslangıcTarihi = dtimebaslangıc.Value;
                         Yeniprm.BitisTarihi = dtimebitis.Value;
+                        Kategori yeni = (Kategori)cbKategoriler.SelectedItem;
+                        Yeniprm.KategoriNO = yeni.Id;
                         Yeniprm.Silindi = false;
 
                         if (ppi.promosyonekle(Yeniprm))
                         {
+                            ppi.KampanyaMesajıGönder(yeni,Yeniprm);
                             MessageBox.Show("Kayıt İşlemi Tamamlandı.", "Kayıt Başarılı");
                             dgvpromosyonlar.DataSource = ppi.promosyonlarıGetir();
                             gnl.Temizle(panel2);
@@ -195,9 +203,10 @@ namespace PL.Kampanyalar
 
         }
 
-     
+        private void cbKategoriler_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-      
+        }
     }
 }
 
