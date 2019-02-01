@@ -92,16 +92,16 @@ namespace PL.Personel
 
         }
 
-       
+
         pnlGorevKarti gk = new pnlGorevKarti();
         private void btnKartEkle_Click(object sender, EventArgs e)
         {
-           
+                
+                gk.Visible = true;
                 gk.lblGorevAdi.Text = lblGorevAdi.Text;
                 gk.pnlGorevDetay.Controls.Add(clbGorevBolum);
-                gk.lblGorevAdi = lblGorevAdi;
-                gk.lblBaslangic.Text = dtpGiris.MinDate.ToShortDateString();
-                gk.lblBitis.Text = dtpCikis.MinDate.ToShortDateString() ;
+                gk.lblBaslangic.Text = dtpGiris.Value.ToShortDateString();
+                gk.lblBitis.Text = dtpCikis.Value.ToShortDateString() ;
                 gk.clbDetay.Visible = false;
                 gk.btnupdate.Visible = false;
                 gk.pnlMembers.Controls.Add(b.circularPictureBox1);
@@ -118,7 +118,7 @@ namespace PL.Personel
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-
+            
             grv.BaslangicTarihi = dtpGiris.Value;
             grv.BitisTarihi = dtpCikis.Value;
             grv.GorevAdi = lblGorevAdi.Text;
@@ -139,25 +139,6 @@ namespace PL.Personel
                     }
                 }
                 hareket.GorevKayıtEkle(gkd);
-           
-
-
-            //Eski Kodlar
-            //if (pers.Count > 0)
-            //{
-            //    foreach (int p in pers)
-            //    {
-            //        GorevKayit gkyt = new GorevKayit();
-            //        gkyt.PersonelId = p;
-            //        gkyt.GorevId = grv.Id;
-            //        gkd.Add(gkyt);
-            //    }
-
-            //    hareket.GorevKayıtEkle(gkd);
-            //}
-            //else
-            //    MessageBox.Show("En az 1 tane personel atanmalı.", "Items", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
 
             List<GorevDetay> gd = new List<GorevDetay>();
             if (clbGorevBolum.Items.Count > 0)
@@ -172,10 +153,17 @@ namespace PL.Personel
                
                 hareket.GorevDetayEkle(gd);
                 MessageBox.Show("Görev kartı başarıyla oluşturuldu.");
-                gk.Visible = false;
                 txtGorevAdi.Clear();
                 txtGorevBolumu.Clear();
+                lblGorevAdi.Text = "";
                 txtPersonelId.Clear();
+                clbGorevBolum.Items.Clear();
+                pnlBolumleri.Controls.Add(clbGorevBolum);
+                kullaniciDetays.Clear();
+                gk.Visible = false;
+                gd.Clear();
+                flpPersList.Controls.Remove(gk);
+                btnGorevAta.Enabled = true;
                 txtGorevAdi.Focus();
             }
             else

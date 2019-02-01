@@ -34,14 +34,10 @@
             this.pnlPersonelHeader = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.PnlPersonelEkle = new System.Windows.Forms.Panel();
-            this.cppGsil = new PL.CircularPictureBox();
             this.dtpCikis = new System.Windows.Forms.DateTimePicker();
             this.dtpGiris = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbpsil = new PL.CircularPictureBox();
-            this.circularPictureBox1 = new PL.CircularPictureBox();
-            this.cpbEkle = new PL.CircularPictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtGorevBolumu = new System.Windows.Forms.TextBox();
@@ -65,18 +61,18 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.Personel = new System.Windows.Forms.Label();
             this.txtPersonelId = new System.Windows.Forms.TextBox();
-            this.cpbPersEkle = new PL.CircularPictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnKartEkle = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.cpbPersEkle = new PL.CircularPictureBox();
+            this.cppGsil = new PL.CircularPictureBox();
+            this.cbpsil = new PL.CircularPictureBox();
+            this.circularPictureBox1 = new PL.CircularPictureBox();
+            this.cpbEkle = new PL.CircularPictureBox();
             this.nlHeader.SuspendLayout();
             this.flwPersonelsec.SuspendLayout();
             this.pnlPersonelHeader.SuspendLayout();
             this.PnlPersonelEkle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cppGsil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbpsil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpbEkle)).BeginInit();
             this.pnlEklenenler.SuspendLayout();
             this.pnlBolumleri.SuspendLayout();
             this.pnlGorevAdi.SuspendLayout();
@@ -87,9 +83,13 @@
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpbPersEkle)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbPersEkle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cppGsil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbpsil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbEkle)).BeginInit();
             this.SuspendLayout();
             // 
             // nlHeader
@@ -171,17 +171,6 @@
             this.PnlPersonelEkle.Size = new System.Drawing.Size(427, 159);
             this.PnlPersonelEkle.TabIndex = 1;
             // 
-            // cppGsil
-            // 
-            this.cppGsil.Image = global::PL.Properties.Resources.icons8_cancel_48;
-            this.cppGsil.Location = new System.Drawing.Point(300, 6);
-            this.cppGsil.Name = "cppGsil";
-            this.cppGsil.Size = new System.Drawing.Size(48, 48);
-            this.cppGsil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cppGsil.TabIndex = 14;
-            this.cppGsil.TabStop = false;
-            this.cppGsil.Click += new System.EventHandler(this.cppGsil_Click);
-            // 
             // dtpCikis
             // 
             this.dtpCikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -217,39 +206,6 @@
             this.label7.Size = new System.Drawing.Size(125, 20);
             this.label7.TabIndex = 9;
             this.label7.Text = "Görev Başlangıç";
-            // 
-            // cbpsil
-            // 
-            this.cbpsil.Image = global::PL.Properties.Resources.icons8_cancel_48;
-            this.cbpsil.Location = new System.Drawing.Point(354, 46);
-            this.cbpsil.Name = "cbpsil";
-            this.cbpsil.Size = new System.Drawing.Size(48, 48);
-            this.cbpsil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cbpsil.TabIndex = 7;
-            this.cbpsil.TabStop = false;
-            this.cbpsil.Click += new System.EventHandler(this.circularPictureBox2_Click);
-            // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.Image = global::PL.Properties.Resources.icons8_ok_48;
-            this.circularPictureBox1.Location = new System.Drawing.Point(256, 6);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.circularPictureBox1.TabIndex = 6;
-            this.circularPictureBox1.TabStop = false;
-            this.circularPictureBox1.Click += new System.EventHandler(this.circularPictureBox1_Click);
-            // 
-            // cpbEkle
-            // 
-            this.cpbEkle.Image = global::PL.Properties.Resources.icons8_plus_48;
-            this.cpbEkle.Location = new System.Drawing.Point(354, 46);
-            this.cpbEkle.Name = "cpbEkle";
-            this.cpbEkle.Size = new System.Drawing.Size(48, 48);
-            this.cpbEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cpbEkle.TabIndex = 5;
-            this.cpbEkle.TabStop = false;
-            this.cpbEkle.Click += new System.EventHandler(this.cpbEkle_Click);
             // 
             // label6
             // 
@@ -503,17 +459,6 @@
             this.txtPersonelId.Size = new System.Drawing.Size(100, 26);
             this.txtPersonelId.TabIndex = 7;
             // 
-            // cpbPersEkle
-            // 
-            this.cpbPersEkle.Image = global::PL.Properties.Resources.icons8_ok_48;
-            this.cpbPersEkle.Location = new System.Drawing.Point(230, 6);
-            this.cpbPersEkle.Name = "cpbPersEkle";
-            this.cpbPersEkle.Size = new System.Drawing.Size(48, 48);
-            this.cpbPersEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cpbPersEkle.TabIndex = 9;
-            this.cpbPersEkle.TabStop = false;
-            this.cpbPersEkle.Click += new System.EventHandler(this.cpbPersEkle_Click);
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btnKartEkle);
@@ -546,6 +491,61 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // cpbPersEkle
+            // 
+            this.cpbPersEkle.Image = global::PL.Properties.Resources.icons8_ok_48;
+            this.cpbPersEkle.Location = new System.Drawing.Point(230, 6);
+            this.cpbPersEkle.Name = "cpbPersEkle";
+            this.cpbPersEkle.Size = new System.Drawing.Size(48, 48);
+            this.cpbPersEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cpbPersEkle.TabIndex = 9;
+            this.cpbPersEkle.TabStop = false;
+            this.cpbPersEkle.Click += new System.EventHandler(this.cpbPersEkle_Click);
+            // 
+            // cppGsil
+            // 
+            this.cppGsil.Image = global::PL.Properties.Resources.icons8_cancel_48;
+            this.cppGsil.Location = new System.Drawing.Point(300, 6);
+            this.cppGsil.Name = "cppGsil";
+            this.cppGsil.Size = new System.Drawing.Size(48, 48);
+            this.cppGsil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cppGsil.TabIndex = 14;
+            this.cppGsil.TabStop = false;
+            this.cppGsil.Click += new System.EventHandler(this.cppGsil_Click);
+            // 
+            // cbpsil
+            // 
+            this.cbpsil.Image = global::PL.Properties.Resources.icons8_cancel_48;
+            this.cbpsil.Location = new System.Drawing.Point(354, 46);
+            this.cbpsil.Name = "cbpsil";
+            this.cbpsil.Size = new System.Drawing.Size(48, 48);
+            this.cbpsil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbpsil.TabIndex = 7;
+            this.cbpsil.TabStop = false;
+            this.cbpsil.Click += new System.EventHandler(this.circularPictureBox2_Click);
+            // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.Image = global::PL.Properties.Resources.icons8_ok_48;
+            this.circularPictureBox1.Location = new System.Drawing.Point(256, 6);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.circularPictureBox1.TabIndex = 6;
+            this.circularPictureBox1.TabStop = false;
+            this.circularPictureBox1.Click += new System.EventHandler(this.circularPictureBox1_Click);
+            // 
+            // cpbEkle
+            // 
+            this.cpbEkle.Image = global::PL.Properties.Resources.icons8_plus_48;
+            this.cpbEkle.Location = new System.Drawing.Point(354, 46);
+            this.cpbEkle.Name = "cpbEkle";
+            this.cpbEkle.Size = new System.Drawing.Size(48, 48);
+            this.cpbEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cpbEkle.TabIndex = 5;
+            this.cpbEkle.TabStop = false;
+            this.cpbEkle.Click += new System.EventHandler(this.cpbEkle_Click);
+            // 
             // GorevAtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -567,10 +567,6 @@
             this.pnlPersonelHeader.PerformLayout();
             this.PnlPersonelEkle.ResumeLayout(false);
             this.PnlPersonelEkle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cppGsil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbpsil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cpbEkle)).EndInit();
             this.pnlEklenenler.ResumeLayout(false);
             this.pnlBolumleri.ResumeLayout(false);
             this.pnlGorevAdi.ResumeLayout(false);
@@ -585,9 +581,13 @@
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cpbPersEkle)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbPersEkle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cppGsil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbpsil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbEkle)).EndInit();
             this.ResumeLayout(false);
 
         }
