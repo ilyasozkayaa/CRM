@@ -252,9 +252,9 @@
             this.BtnKaydet.Location = new System.Drawing.Point(196, 419);
             this.BtnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(132, 41);
+            this.BtnKaydet.Size = new System.Drawing.Size(132, 53);
             this.BtnKaydet.TabIndex = 3;
-            this.BtnKaydet.Text = "         Kaydet";
+            this.BtnKaydet.Text = "         KAYDET";
             this.BtnKaydet.UseVisualStyleBackColor = false;
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 

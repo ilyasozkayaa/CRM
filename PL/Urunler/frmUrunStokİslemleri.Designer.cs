@@ -177,37 +177,37 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(141, 366);
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(296, 413);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 18);
+            this.label4.Size = new System.Drawing.Size(56, 18);
             this.label4.TabIndex = 68;
-            this.label4.Text = "ADET";
+            this.label4.Text = "ADET :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(139, 281);
+            this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(427, 335);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 18);
+            this.label6.Size = new System.Drawing.Size(59, 18);
             this.label6.TabIndex = 68;
-            this.label6.Text = "RENK";
+            this.label6.Text = "RENK :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(135, 201);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(427, 271);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 18);
+            this.label3.Size = new System.Drawing.Size(68, 18);
             this.label3.TabIndex = 68;
-            this.label3.Text = "BEDEN";
+            this.label3.Text = "BEDEN :";
             // 
             // txtSonStok
             // 
             this.txtSonStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSonStok.Location = new System.Drawing.Point(512, 196);
+            this.txtSonStok.Location = new System.Drawing.Point(363, 81);
             this.txtSonStok.Margin = new System.Windows.Forms.Padding(4);
             this.txtSonStok.Multiline = true;
             this.txtSonStok.Name = "txtSonStok";
@@ -218,7 +218,7 @@
             // txtEklenenStok
             // 
             this.txtEklenenStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtEklenenStok.Location = new System.Drawing.Point(512, 136);
+            this.txtEklenenStok.Location = new System.Drawing.Point(363, 21);
             this.txtEklenenStok.Margin = new System.Windows.Forms.Padding(4);
             this.txtEklenenStok.Multiline = true;
             this.txtEklenenStok.Name = "txtEklenenStok";
@@ -230,28 +230,28 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(122, 136);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(84, 336);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 18);
+            this.label2.Size = new System.Drawing.Size(94, 18);
             this.label2.TabIndex = 68;
-            this.label2.Text = "ÜRÜN ADI";
+            this.label2.Text = "ÜRÜN ADI :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(127, 57);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(84, 272);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 18);
+            this.label1.Size = new System.Drawing.Size(84, 18);
             this.label1.TabIndex = 68;
-            this.label1.Text = "ÜRÜN ID";
+            this.label1.Text = "ÜRÜN ID :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(314, 147);
+            this.label7.Location = new System.Drawing.Point(165, 32);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(147, 23);
@@ -262,7 +262,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(314, 209);
+            this.label8.Location = new System.Drawing.Point(165, 94);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(190, 23);
@@ -277,10 +277,10 @@
             this.btnStokEkle.ForeColor = System.Drawing.Color.White;
             this.btnStokEkle.Image = global::PL.Properties.Resources.plus_5_32;
             this.btnStokEkle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStokEkle.Location = new System.Drawing.Point(436, 298);
+            this.btnStokEkle.Location = new System.Drawing.Point(305, 170);
             this.btnStokEkle.Margin = new System.Windows.Forms.Padding(4);
             this.btnStokEkle.Name = "btnStokEkle";
-            this.btnStokEkle.Size = new System.Drawing.Size(111, 46);
+            this.btnStokEkle.Size = new System.Drawing.Size(120, 57);
             this.btnStokEkle.TabIndex = 67;
             this.btnStokEkle.Text = "       EKLE";
             this.btnStokEkle.UseVisualStyleBackColor = false;
@@ -292,7 +292,7 @@
             this.lblID.BackColor = System.Drawing.Color.SteelBlue;
             this.lblID.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(116, 75);
+            this.lblID.Location = new System.Drawing.Point(179, 267);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(91, 24);
@@ -305,7 +305,7 @@
             this.lblAD.BackColor = System.Drawing.Color.SteelBlue;
             this.lblAD.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAD.ForeColor = System.Drawing.Color.White;
-            this.lblAD.Location = new System.Drawing.Point(112, 154);
+            this.lblAD.Location = new System.Drawing.Point(179, 331);
             this.lblAD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAD.Name = "lblAD";
             this.lblAD.Size = new System.Drawing.Size(99, 24);
@@ -318,7 +318,7 @@
             this.lblBeden.BackColor = System.Drawing.Color.SteelBlue;
             this.lblBeden.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBeden.ForeColor = System.Drawing.Color.White;
-            this.lblBeden.Location = new System.Drawing.Point(124, 219);
+            this.lblBeden.Location = new System.Drawing.Point(522, 266);
             this.lblBeden.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBeden.Name = "lblBeden";
             this.lblBeden.Size = new System.Drawing.Size(74, 24);
@@ -331,7 +331,7 @@
             this.lblRenk.BackColor = System.Drawing.Color.SteelBlue;
             this.lblRenk.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblRenk.ForeColor = System.Drawing.Color.White;
-            this.lblRenk.Location = new System.Drawing.Point(130, 299);
+            this.lblRenk.Location = new System.Drawing.Point(522, 330);
             this.lblRenk.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRenk.Name = "lblRenk";
             this.lblRenk.Size = new System.Drawing.Size(62, 24);
@@ -344,7 +344,7 @@
             this.lblAdet.BackColor = System.Drawing.Color.SteelBlue;
             this.lblAdet.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAdet.ForeColor = System.Drawing.Color.White;
-            this.lblAdet.Location = new System.Drawing.Point(133, 384);
+            this.lblAdet.Location = new System.Drawing.Point(386, 408);
             this.lblAdet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdet.Name = "lblAdet";
             this.lblAdet.Size = new System.Drawing.Size(57, 24);

@@ -413,6 +413,16 @@ namespace PL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_minus_321 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-minus-321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_multiply_32__2_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-multiply-32 (2)", resourceCulture);

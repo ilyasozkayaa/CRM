@@ -351,10 +351,10 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::PL.Properties.Resources.plus_5_321;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(727, 20);
+            this.button3.Location = new System.Drawing.Point(727, 19);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 46);
+            this.button3.Size = new System.Drawing.Size(130, 47);
             this.button3.TabIndex = 84;
             this.button3.Text = "          EKLE";
             this.button3.UseVisualStyleBackColor = false;
@@ -412,11 +412,11 @@
             this.btnCikart.ForeColor = System.Drawing.Color.White;
             this.btnCikart.Image = global::PL.Properties.Resources.icons8_minus_32;
             this.btnCikart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCikart.Location = new System.Drawing.Point(482, 352);
+            this.btnCikart.Location = new System.Drawing.Point(472, 345);
             this.btnCikart.Name = "btnCikart";
-            this.btnCikart.Size = new System.Drawing.Size(138, 46);
+            this.btnCikart.Size = new System.Drawing.Size(138, 53);
             this.btnCikart.TabIndex = 9;
-            this.btnCikart.Text = "        ÇIKART";
+            this.btnCikart.Text = "       ÇIKART";
             this.btnCikart.UseVisualStyleBackColor = false;
             this.btnCikart.Click += new System.EventHandler(this.btnCikart_Click);
             // 
@@ -437,10 +437,10 @@
             this.btnSatis.ForeColor = System.Drawing.Color.White;
             this.btnSatis.Image = global::PL.Properties.Resources.icons8_cash_in_hand_42;
             this.btnSatis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSatis.Location = new System.Drawing.Point(331, 352);
+            this.btnSatis.Location = new System.Drawing.Point(317, 345);
             this.btnSatis.Margin = new System.Windows.Forms.Padding(4);
             this.btnSatis.Name = "btnSatis";
-            this.btnSatis.Size = new System.Drawing.Size(124, 46);
+            this.btnSatis.Size = new System.Drawing.Size(138, 53);
             this.btnSatis.TabIndex = 83;
             this.btnSatis.Text = "      SATIŞ";
             this.btnSatis.UseVisualStyleBackColor = false;
@@ -456,9 +456,9 @@
             this.button2.Location = new System.Drawing.Point(102, 270);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 49);
+            this.button2.Size = new System.Drawing.Size(131, 54);
             this.button2.TabIndex = 7;
-            this.button2.Text = "  KULLAN";
+            this.button2.Text = "    KULLAN";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             // 
