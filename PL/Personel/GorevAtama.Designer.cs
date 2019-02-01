@@ -60,7 +60,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlPersList = new System.Windows.Forms.Panel();
+            this.flpPersList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.Personel = new System.Windows.Forms.Label();
             this.txtPersonelId = new System.Windows.Forms.TextBox();
@@ -68,6 +68,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnKartEkle = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.cpbPersEkle = new PL.CircularPictureBox();
+            this.cbpsil = new PL.CircularPictureBox();
+            this.circularPictureBox1 = new PL.CircularPictureBox();
+            this.cpbEkle = new PL.CircularPictureBox();
             this.nlHeader.SuspendLayout();
             this.flwPersonelsec.SuspendLayout();
             this.pnlPersonelHeader.SuspendLayout();
@@ -88,6 +92,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.cpbPersEkle)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbPersEkle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbpsil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbEkle)).BeginInit();
             this.SuspendLayout();
             // 
             // nlHeader
@@ -156,6 +164,7 @@
             // PnlPersonelEkle
             // 
             this.PnlPersonelEkle.BackColor = System.Drawing.Color.White;
+            this.PnlPersonelEkle.Controls.Add(this.cppGsil);
             this.PnlPersonelEkle.Controls.Add(this.dtpCikis);
             this.PnlPersonelEkle.Controls.Add(this.dtpGiris);
             this.PnlPersonelEkle.Controls.Add(this.label9);
@@ -304,7 +313,7 @@
             // 
             // pnlBolumleri
             // 
-            this.pnlBolumleri.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlBolumleri.BackColor = System.Drawing.Color.Transparent;
             this.pnlBolumleri.Controls.Add(this.clbGorevBolum);
             this.pnlBolumleri.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBolumleri.Location = new System.Drawing.Point(0, 74);
@@ -316,13 +325,13 @@
             // clbGorevBolum
             // 
             this.clbGorevBolum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clbGorevBolum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clbGorevBolum.Dock = System.Windows.Forms.DockStyle.Top;
             this.clbGorevBolum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.clbGorevBolum.FormattingEnabled = true;
             this.clbGorevBolum.Location = new System.Drawing.Point(0, 0);
             this.clbGorevBolum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clbGorevBolum.Name = "clbGorevBolum";
-            this.clbGorevBolum.Size = new System.Drawing.Size(569, 225);
+            this.clbGorevBolum.Size = new System.Drawing.Size(427, 183);
             this.clbGorevBolum.TabIndex = 0;
             this.clbGorevBolum.SelectedIndexChanged += new System.EventHandler(this.clbGorevBolum_SelectedIndexChanged);
             // 
@@ -397,8 +406,7 @@
             this.pnlGorevIcerik.Controls.Add(this.panel2);
             this.pnlGorevIcerik.Controls.Add(this.panel1);
             this.pnlGorevIcerik.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlGorevIcerik.Location = new System.Drawing.Point(573, 172);
-            this.pnlGorevIcerik.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlGorevIcerik.Location = new System.Drawing.Point(430, 140);
             this.pnlGorevIcerik.Name = "pnlGorevIcerik";
             this.pnlGorevIcerik.Size = new System.Drawing.Size(832, 439);
             this.pnlGorevIcerik.TabIndex = 3;
@@ -409,8 +417,7 @@
             this.panel2.Controls.Add(this.pnlGorevKartlarim);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(389, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(292, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(443, 439);
             this.panel2.TabIndex = 1;
@@ -442,6 +449,7 @@
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKaydet.UseVisualStyleBackColor = false;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // panel3
             // 
@@ -470,7 +478,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pnlPersList);
+            this.panel1.Controls.Add(this.flpPersList);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -480,13 +488,12 @@
             this.panel1.Size = new System.Drawing.Size(389, 439);
             this.panel1.TabIndex = 0;
             // 
-            // pnlPersList
+            // flpPersList
             // 
             this.pnlPersList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPersList.Location = new System.Drawing.Point(0, 80);
-            this.pnlPersList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlPersList.Location = new System.Drawing.Point(0, 65);
             this.pnlPersList.Name = "pnlPersList";
-            this.pnlPersList.Size = new System.Drawing.Size(389, 309);
+            this.pnlPersList.Size = new System.Drawing.Size(292, 251);
             this.pnlPersList.TabIndex = 12;
             // 
             // panel6
@@ -549,15 +556,15 @@
             // btnKartEkle
             // 
             this.btnKartEkle.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnKartEkle.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnKartEkle.FlatAppearance.BorderSize = 0;
             this.btnKartEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKartEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKartEkle.ForeColor = System.Drawing.Color.White;
             this.btnKartEkle.Image = global::PL.Properties.Resources.plus;
             this.btnKartEkle.Location = new System.Drawing.Point(0, -1);
-            this.btnKartEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKartEkle.Name = "btnKartEkle";
-            this.btnKartEkle.Size = new System.Drawing.Size(141, 53);
+            this.btnKartEkle.Size = new System.Drawing.Size(106, 43);
             this.btnKartEkle.TabIndex = 3;
             this.btnKartEkle.Text = "Ekle";
             this.btnKartEkle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -568,6 +575,50 @@
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // cpbPersEkle
+            // 
+            this.cpbPersEkle.Image = global::PL.Properties.Resources.icons8_ok_48;
+            this.cpbPersEkle.Location = new System.Drawing.Point(230, 6);
+            this.cpbPersEkle.Name = "cpbPersEkle";
+            this.cpbPersEkle.Size = new System.Drawing.Size(48, 48);
+            this.cpbPersEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cpbPersEkle.TabIndex = 9;
+            this.cpbPersEkle.TabStop = false;
+            this.cpbPersEkle.Click += new System.EventHandler(this.cpbPersEkle_Click);
+            // 
+            // cbpsil
+            // 
+            this.cbpsil.Image = global::PL.Properties.Resources.icons8_cancel_48;
+            this.cbpsil.Location = new System.Drawing.Point(354, 46);
+            this.cbpsil.Name = "cbpsil";
+            this.cbpsil.Size = new System.Drawing.Size(48, 48);
+            this.cbpsil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cbpsil.TabIndex = 7;
+            this.cbpsil.TabStop = false;
+            this.cbpsil.Click += new System.EventHandler(this.circularPictureBox2_Click);
+            // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.Image = global::PL.Properties.Resources.icons8_ok_48;
+            this.circularPictureBox1.Location = new System.Drawing.Point(256, 6);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.circularPictureBox1.TabIndex = 6;
+            this.circularPictureBox1.TabStop = false;
+            this.circularPictureBox1.Click += new System.EventHandler(this.circularPictureBox1_Click);
+            // 
+            // cpbEkle
+            // 
+            this.cpbEkle.Image = global::PL.Properties.Resources.icons8_plus_48;
+            this.cpbEkle.Location = new System.Drawing.Point(354, 46);
+            this.cpbEkle.Name = "cpbEkle";
+            this.cpbEkle.Size = new System.Drawing.Size(48, 48);
+            this.cpbEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.cpbEkle.TabIndex = 5;
+            this.cpbEkle.TabStop = false;
+            this.cpbEkle.Click += new System.EventHandler(this.cpbEkle_Click);
             // 
             // GorevAtama
             // 
@@ -611,6 +662,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.cpbPersEkle)).EndInit();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbPersEkle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbpsil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cpbEkle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -645,7 +700,6 @@
         private System.Windows.Forms.Panel pnlGorevAdi;
         private System.Windows.Forms.Label lblGorevAdi;
         private CircularPictureBox cbpsil;
-        private System.Windows.Forms.Panel pnlPersList;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label Personel;
         private System.Windows.Forms.TextBox txtPersonelId;
@@ -657,5 +711,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.FlowLayoutPanel flpPersList;
+        private CircularPictureBox cppGsil;
     }
 }

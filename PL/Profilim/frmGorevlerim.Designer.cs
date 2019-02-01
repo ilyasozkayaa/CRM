@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flpYapilacak = new System.Windows.Forms.FlowLayoutPanel();
@@ -55,6 +56,7 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlHeader.Controls.Add(this.btnGuncelle);
             this.pnlHeader.Controls.Add(this.label4);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -62,6 +64,19 @@
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1405, 43);
             this.pnlHeader.TabIndex = 1;
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnGuncelle.FlatAppearance.BorderSize = 0;
+            this.btnGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuncelle.Image = global::PL.Properties.Resources.icons8_available_updates_321;
+            this.btnGuncelle.Location = new System.Drawing.Point(1001, 0);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(53, 35);
+            this.btnGuncelle.TabIndex = 1;
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // label4
             // 
@@ -92,10 +107,9 @@
             this.flpYapilacak.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flpYapilacak.Controls.Add(this.panel6);
             this.flpYapilacak.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flpYapilacak.Location = new System.Drawing.Point(47, 43);
-            this.flpYapilacak.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpYapilacak.Location = new System.Drawing.Point(35, 35);
             this.flpYapilacak.Name = "flpYapilacak";
-            this.flpYapilacak.Size = new System.Drawing.Size(405, 569);
+            this.flpYapilacak.Size = new System.Drawing.Size(304, 462);
             this.flpYapilacak.TabIndex = 4;
             // 
             // panel6
@@ -127,10 +141,9 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Enabled = false;
-            this.panel3.Location = new System.Drawing.Point(452, 43);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(339, 35);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(47, 569);
+            this.panel3.Size = new System.Drawing.Size(35, 462);
             this.panel3.TabIndex = 5;
             // 
             // flpYapilan
@@ -138,10 +151,9 @@
             this.flpYapilan.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flpYapilan.Controls.Add(this.panel7);
             this.flpYapilan.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flpYapilan.Location = new System.Drawing.Point(499, 43);
-            this.flpYapilan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpYapilan.Location = new System.Drawing.Point(374, 35);
             this.flpYapilan.Name = "flpYapilan";
-            this.flpYapilan.Size = new System.Drawing.Size(405, 569);
+            this.flpYapilan.Size = new System.Drawing.Size(304, 462);
             this.flpYapilan.TabIndex = 6;
             // 
             // panel7
@@ -172,10 +184,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(904, 43);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(678, 35);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(47, 569);
+            this.panel4.Size = new System.Drawing.Size(35, 462);
             this.panel4.TabIndex = 7;
             // 
             // flpBitmis
@@ -183,10 +194,9 @@
             this.flpBitmis.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flpBitmis.Controls.Add(this.panel8);
             this.flpBitmis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpBitmis.Location = new System.Drawing.Point(951, 43);
-            this.flpBitmis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpBitmis.Location = new System.Drawing.Point(713, 35);
             this.flpBitmis.Name = "flpBitmis";
-            this.flpBitmis.Size = new System.Drawing.Size(454, 569);
+            this.flpBitmis.Size = new System.Drawing.Size(341, 462);
             this.flpBitmis.TabIndex = 8;
             // 
             // panel8
@@ -217,10 +227,9 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(1358, 43);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Location = new System.Drawing.Point(1019, 35);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(47, 569);
+            this.panel5.Size = new System.Drawing.Size(35, 462);
             this.panel5.TabIndex = 9;
             // 
             // frmGorevlerim
@@ -273,5 +282,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnGuncelle;
     }
 }
