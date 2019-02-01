@@ -17,6 +17,10 @@ namespace DAL.Context
         public int SatisId { get; set; }
         [Required]
         public DateTime IadeTarihi { get; set; }
+        public string IadeSebebi { get; set; }
+        public int IadeAdedi { get; set; }
+        public int UrunID { get; set; }
+        public decimal Ucret { get; set; } //yeni eklendi.
 
 
         [ForeignKey("SatisId")]

@@ -73,6 +73,23 @@ namespace BLL.Model
 
         }
 
+        public Musteri MusteriKayitlimi(string TelNO)
+        {
+            Musteri musteri = new Musteri();
+            try
+            {
+                musteri = (from m in ent.Musteris where m.Telefon == TelNO select m).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+
+
+            return musteri;
+        }
+
         public List<Musteri> musterileriGetir()
         {
             List<Musteri> MusteriListesi = new List<Musteri>();
@@ -98,6 +115,12 @@ namespace BLL.Model
                 string message = ex.Message;
             }
             return sonuc;
+        }
+        public int UsersIdyeGorePersoneliGetirme(int ID)// personel tablosundaki UsersId kolonunagore arama yapıpo satırı getirdım ve return gelen satırdalkı  ıd yı aldım.
+        {
+            Personel prsnl = new Personel();
+            prsnl = (from p in ent.Personels where p.UserId == ID select p).FirstOrDefault();
+            return prsnl.Id;
         }
 
         public bool personelEkle(Personel p)
@@ -131,6 +154,26 @@ namespace BLL.Model
                 string message = ex.Message;
             }
             return prsnl;
+        }
+
+     
+
+        public List<Personel> PersonelGetir(string Ad, string Soyad)
+        {
+            List<Personel> PersonelListesi = new List<Personel>();
+
+            try
+            {
+
+                PersonelListesi = (from P in ent.Personels where P.Ad == Ad && P.Soyad == Soyad select P).ToList();
+            }
+            catch (Exception ex)
+            {
+
+                string message = ex.Message;
+            }
+
+            return PersonelListesi;
         }
 
         public bool personelGüncelle(Personel p)
@@ -193,25 +236,23 @@ namespace BLL.Model
             return sonuc;
             
         }
-        public int UsersIdyeGorePersoneliGetirme(int ID)// personel tablosundaki UsersId kolonunagore arama yapıpo satırı getirdım ve return gelen satırdalkı  ıd yı aldım.
+        public bool UserEkle(User u)
         {
-            Personel prsnl = new Personel();
-            prsnl = (from p in ent.Personels where p.UserId == ID select p).FirstOrDefault();
-            return prsnl.Id;
-        }
-        public User UserGetir(string UserName)
-        {
-            User userg = new User();
+            bool sonuc = false;
             try
             {
-                userg = (from p in ent.Users where p.KullaniciAdi == UserName select p).FirstOrDefault();
+                ent.Users.Add(u);
+                ent.SaveChanges();
+                sonuc = true;
             }
             catch (Exception ex)
             {
 
                 string message = ex.Message;
+
             }
-            return userg;
+            return sonuc;
+
         }
     }
 }
